@@ -36,9 +36,17 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/style-resources',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  // based on https://dev.to/wearethreebears/globally-accessible-css-and-scss-in-your-nuxt-component-files-1ann
+  styleResources: {
+    scss: [
+      '~/assets/style/main.scss',
+    ]
   }
 }
