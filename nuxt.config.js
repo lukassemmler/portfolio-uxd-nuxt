@@ -32,6 +32,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,5 +49,15 @@ export default {
     scss: [
       '~/assets/style/main.scss',
     ]
+  },
+
+  // see https://www.npmjs.com/package/@nuxtjs/fontawesome
+  fontawesome: {
+    component: 'FontAwesome',
+    icons: {
+      solid: [
+        "faBriefcase"
+      ]
+    }
   }
 }

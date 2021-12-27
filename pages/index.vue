@@ -1,6 +1,7 @@
 <template>
   <div>
     <NuxtLogo />
+    <FontAwesome icon="briefcase"/>
     <Tutorial />
   </div>
 </template>
