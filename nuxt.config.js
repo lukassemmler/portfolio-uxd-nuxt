@@ -33,6 +33,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/fontawesome',
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -59,5 +60,10 @@ export default {
         "faBriefcase"
       ]
     }
+  },
+
+  // see https://image.nuxtjs.org/api/options/
+  image: {
+    // Options
   }
 }
