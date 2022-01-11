@@ -39,6 +39,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/i18n',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -65,5 +66,18 @@ export default {
   // see https://image.nuxtjs.org/api/options/
   image: {
     // Options
+  },
+
+  // see https://i18n.nuxtjs.org/options-reference
+  i18n: {
+    langDir: "~/locales/",
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json' },
+      { code: 'de', iso: 'de-DE', file: 'de.json' }
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+    }
   }
 }
