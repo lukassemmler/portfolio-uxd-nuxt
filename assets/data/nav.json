@@ -1,0 +1,78 @@
+{
+  "activeLink": "",
+  "main": [
+    {
+      "path": "",
+      "label": "meta-title_index",
+      "visible": false,
+      "children": []
+    },
+    {
+      "path": "projects",
+      "label": "meta-title_projects",
+      "visible": true,
+      "children": [
+        {
+          "path": "projects/3d-modelling",
+          "label": "meta-title_3d-modelling",
+          "visible": true,
+          "children": []
+        },
+        {
+          "path": "projects/data-visualization",
+          "label": "meta-title_data-visualization",
+          "visible": true,
+          "children": []
+        },
+        {
+          "path": "projects/design-booklet",
+          "label": "meta-title_design-booklet",
+          "visible": true,
+          "children": []
+        },
+        {
+          "path": "projects/infotainment-system",
+          "label": "meta-title_infotainment-system",
+          "visible": true,
+          "children": []
+        },
+        {
+          "path": "projects/steering-wheel",
+          "label": "meta-title_steering-wheel",
+          "visible": true,
+          "children": []
+        },
+        {
+          "path": "projects/thi-move",
+          "label": "meta-title_thi-move",
+          "visible": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "path": "about",
+      "label": "meta-title_about",
+      "visible": true,
+      "children": []
+    },
+    {
+      "path": "contact",
+      "label": "meta-title_contact",
+      "visible": true,
+      "children": []
+    },
+    {
+      "path": "imprint",
+      "label": "meta-title_imprint",
+      "visible": false,
+      "children": []
+    },
+    {
+      "path": "privacy-policy",
+      "label": "meta-title_privacy-policy",
+      "visible": false,
+      "children": []
+    }
+  ]
+}
