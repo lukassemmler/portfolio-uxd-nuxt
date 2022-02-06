@@ -23,6 +23,12 @@ export default {
   css: [
   ],
 
+  // Based on https://router.vuejs.org/api/#exact-active-class
+  router: {
+    linkActiveClass: 'link-active',
+    linkExactActiveClass: 'link-exact-active',
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/directive.client.js',
