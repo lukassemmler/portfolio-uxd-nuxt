@@ -34,6 +34,7 @@ export default {
   buildModules: [
     '@nuxtjs/fontawesome',
     '@nuxt/image',
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
