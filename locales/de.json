@@ -1,3 +1,1131 @@
 {
-  "welcome": "Willkommen!"
+  "alt_3d-modelling_donuts": "Zwei Donuts liegen auf einem Teller auf einem Tisch.",
+  "alt_3d-modelling_light-bulbs": "Eine Glühbirne leuchtet unter vielen anderen, die aus sind. Das Licht scheint durch die Gläser hindurch. ",
+  "alt_3d-modelling_man-bust": "Die Büste eines finster dreinblickenden Mannes. ",
+  "alt_about_portrait": "Lukas Semmler Porträt",
+  "alt_data-visualization_data-analysis": "Die erhobenen Daten, in einer Tabelle eingetragen. ",
+  "alt_data-visualization_data-pivot": "Die ausgewerteten Daten. Man sieht die Zusammenhänge zwischen mehreren Datensätzen. ",
+  "alt_data-visualization_making-of-1": "1. Schritt: Das Format wird auf DIN A1 festgelegt und eine Kartenvorlage der bayrischen Landkreise eingebunden. ",
+  "alt_data-visualization_making-of-2": "2. Schritt: Die Positionen werden mit dem THI-Logo verbunden. Unten links ist die Verteilung der Verkehrsmittel. Jeder Punkt ist eine Dateneinheit. ",
+  "alt_data-visualization_making-of-3": "3. Schritt: Das Layout, die Farbgebung und der Abstand der einzelnen Elemente zueinander wurden angepasst. Bei den Kreisdiagrammen sind jetzt Icons dabei. ",
+  "alt_data-visualization_poster-final": "Das Plakat der Datenvisualisierung. Auf einer Karte sind die Herkunftsorte der Studenten eingetragen. ",
+  "alt_data-visualization_questionnaire": "Ein ausgefüllter Fragebogen. ",
+  "alt_data-visualization_sketch_sunburst": "Jeder Landkreis, aus dem Studenten kommen, ist nach Verkehrsarten aufgeteilt. Die Icons habe ich für das finale Plakat wieder aufgegriffen. ",
+  "alt_data-visualization_sketch_traffic": "Jeder Punkt auf der Karte zeigt, woher die Studenten zur THI kommen. ",
+  "alt_data-visualization_sketch_transport-means": "Eine Illustration, die die Verkehrsmittel nach Verwendung nebeneinander aufreiht. Dieses Konzept war mit den vorhandenen Daten leider nicht umsetzbar. ",
+  "alt_design-booklet_binding": "Eine Nahaufnahme eines Bildes, bei dem man die metallene Spiralisierung sieht. ",
+  "alt_design-booklet_front": "Das Booklet liegt mit dem Rücken auf einem holzähnlichem PVC-Boden. ",
+  "alt_design-booklet_sketches": "Man sieht die Skizzen des Mensch-Maschine-Plakates. ",
+  "alt_design-booklet_squares-heading": "Eine aufgeschlagene Kapitelübersicht. Es sind nach hinten abfallende Quadrate zu sehen. ",
+  "alt_infotainment-system_grid": "Herleitung des Rasters mithilfe von Skizzen. ",
+  "alt_infotainment-system_icons-finished": "Die fertiggstellten Icons, die für das Screendesign von Google verwendet wurden. ",
+  "alt_infotainment-system_icons-sketch": "Skizzen der Icons, die als Basis für die Icons von Mercedes dienten. ",
+  "alt_infotainment-system_making-of_google_first": "Die erste Version des Screendesigns von Google. ",
+  "alt_infotainment-system_making-of_google_last": "Die letzte Version des Screendesigns von Google. ",
+  "alt_infotainment-system_making-of_mercedes_first": "Die erste Version des Screendesigns von Mercedes. ",
+  "alt_infotainment-system_making-of_mercedes_last": "Die letzte Version des Screendesigns von Mercedes. ",
+  "alt_infotainment-system_prototype": "Eine Seite des Prototypen des Infotainmentsystems. ",
+  "alt_infotainment-system_wireframes": "Ein Wireframe des Infotainmentsystems. ",
+  "alt_lukas-hello": "Lukas winkt dem Betrachter zu. ",
+  "alt_power-ui_asset-render_civilian-building-1": "Asset Render - Ziviles Gebäude 1",
+  "alt_power-ui_asset-render_lastwagen": "Asset Render - Lastwagen",
+  "alt_power-ui_asset-render_plant-biogas": "Asset Render - Biogas-Kraftwerk",
+  "alt_power-ui_asset-render_plant-coal": "Asset Render - Kohle-Kraftwerk",
+  "alt_power-ui_asset-render_plant-gas-turbine": "Asset Render - Gasturbinen-Kraftwerk",
+  "alt_power-ui_asset-render_plant-nuclear-power": "Asset Render - Atom-Kraftwerk",
+  "alt_power-ui_asset-render_plant-oil": "Asset Render - Öl-Kraftwerk",
+  "alt_power-ui_asset-render_powerpole": "Asset Render - Strommasten",
+  "alt_power-ui_asset-render_strasse-no": "Asset Render - Straße",
+  "alt_power-ui_asset-render_truck-station": "Asset Render - LKW-Hangar",
+  "alt_power-ui_asset-sketch_bucket-excavator": "Asset-Skizze - Schaufelradbagger",
+  "alt_power-ui_asset-sketch_canal": "Asset-Skizze - Kanal",
+  "alt_power-ui_asset-sketch_civilian-building-1": "Asset-Skizze - Ziviles Gebäude 1",
+  "alt_power-ui_asset-sketch_civilian-building-2": "Asset-Skizze - Ziviles Gebäude 2",
+  "alt_power-ui_asset-sketch_civilian-building-3": "Asset-Skizze - Ziviles Gebäude 3",
+  "alt_power-ui_asset-sketch_corn-field": "Asset-Skizze - Maisfeld",
+  "alt_power-ui_asset-sketch_freight-port": "Asset-Skizze - Frachthafen",
+  "alt_power-ui_asset-sketch_hydro-electric-dam": "Asset-Skizze - Elektrischer Staudamm",
+  "alt_power-ui_asset-sketch_natural-gas-rig": "Asset-Skizze - Erdgas-Bohrturm",
+  "alt_power-ui_asset-sketch_nuclear-fuel-factory": "Asset-Skizze - Brennelement-Fabrik",
+  "alt_power-ui_asset-sketch_nuclear-waste-disposal": "Asset-Skizze - Atommüll-Endlager",
+  "alt_power-ui_asset-sketch_pipeline": "Asset-Skizze - Pipeline",
+  "alt_power-ui_asset-sketch_plant-biogas": "Asset-Skizze - Biogas-Kraftwerk",
+  "alt_power-ui_asset-sketch_plant-coal": "Asset-Skizze - Kohle-Kraftwerk",
+  "alt_power-ui_asset-sketch_plant-garbage-incineration": "Asset-Skizze - Müllverbrennungs-Anlage",
+  "alt_power-ui_asset-sketch_plant-gas-turbine": "Asset-Skizze - Gasturbinen-Kraftwerk",
+  "alt_power-ui_asset-sketch_plant-nuclear-power": "Asset-Skizze - Atomkraftwerk",
+  "alt_power-ui_asset-sketch_plant-oil": "Asset-Skizze - Ölkraftwerk",
+  "alt_power-ui_asset-sketch_plant-photovoltaic": "Asset-Skizze - Photovoltaik-Anlage",
+  "alt_power-ui_asset-sketch_plant-pumped-storage": "Asset-Skizze - Pumpspeicher-Kraftwerk",
+  "alt_power-ui_asset-sketch_powerpole": "Asset-Skizze - Strommasten",
+  "alt_power-ui_asset-sketch_pumpjack": "Asset-Skizze - Ölförderturm",
+  "alt_power-ui_asset-sketch_recycling-depot": "Asset-Skizze - Wertstoffhof",
+  "alt_power-ui_asset-sketch_refinery": "Asset-Skizze - Raffinerie",
+  "alt_power-ui_asset-sketch_research-center": "Asset-Skizze - Forschungszentrum",
+  "alt_power-ui_asset-sketch_road": "Asset-Skizze - Straße",
+  "alt_power-ui_asset-sketch_tracks": "Asset-Skizze - Gleise",
+  "alt_power-ui_asset-sketch_trading-center": "Asset-Skizze - Handelszentrum",
+  "alt_power-ui_asset-sketch_train-station": "Asset-Skizze - Bahnhof",
+  "alt_power-ui_asset-sketch_truck-station": "Asset-Skizze - LKW-Hangar",
+  "alt_power-ui_asset-sketch_uranium-mine": "Asset-Skizze - Uran-Mine",
+  "alt_power-ui_asset-sketch_warehouse": "Asset-Skizze - Warenhaus",
+  "alt_power-ui_asset-sketch_wind-turbine": "Asset-Skizze - Windrad",
+  "alt_power-ui_color-board": "Color Board des Power-UI Screen-Design-Mockups. ",
+  "alt_power-ui_global-game-jam_group-shot": "Gruppenfoto des Teams 'Quick and Dirty' beim Global Game Jam 2020 in Ansbach. ",
+  "alt_power-ui_prototype_axure_demolishing-building-modal": "Prototyp Axure - Modal beim Abriss eines Gebäudes",
+  "alt_power-ui_prototype_axure_finance-management": "Prototyp Axure - Finanzverwaltung",
+  "alt_power-ui_prototype_axure_info-window-power-plant": "Prototyp Axure - Infofenster eines Kraftwerkes",
+  "alt_power-ui_prototype_axure_overview": "Prototyp Axure - Übersicht",
+  "alt_power-ui_prototype_axure_placing-building": "Prototyp Axure - Platzieren eines Gebäudes",
+  "alt_power-ui_prototype_axure_power-overview": "Prototyp Axure - Übersicht",
+  "alt_power-ui_prototype_phaser_build-menu": "Prototyp Phaser - Bau-Menü",
+  "alt_power-ui_prototype_phaser_build-menu-modal": "Prototyp Phaser - Bau-Menü mit Modal",
+  "alt_power-ui_prototype_phaser_building-placement": "Prototyp Phaser - Platzieren eines Gebäudes",
+  "alt_power-ui_prototype_phaser_finances-window": "Prototyp Phaser - Finanzfenster",
+  "alt_power-ui_prototype_phaser_overview": "Prototyp Phaser - Übersicht",
+  "alt_power-ui_prototype_phaser_power-plant-info": "Prototyp Phaser - Infofenster eines Kraftwerkes",
+  "alt_power-ui_prototype_phaser_tiles-demo": "Demo der Kacheln des Phaser-Prototypens",
+  "alt_power-ui_prototype_unity_network-breakdown": "Prototyp Unity - Aufbau eines Stromnetzes",
+  "alt_power-ui_prototype_unity_network-formation": "Prototyp Unity - Auflösen eines Stromnetzes",
+  "alt_power-ui_prototype_unity_powerplant-dragging": "Prototyp Unity - Platzieren eines Kraftwerkes in der Spielwelt. ",
+  "alt_power-ui_screendesign_smart-tv_contrasts": "Kontraste im Screen-Design",
+  "alt_power-ui_screendesign_smart-tv_overview": "Screendesign der Smart-TV-Ansicht",
+  "alt_power-ui_sketch_concept-mobile_detail-view_variant-b": "Wireframes Mobile - Kraftwerk-Detailansicht",
+  "alt_power-ui_sketch_concept-mobile_finances_asset-list": "Wireframes Mobile - Posten der Finanzübersicht",
+  "alt_power-ui_sketch_concept-mobile_finances_history": "Wireframes Mobile - Finanzverlauf",
+  "alt_power-ui_sketch_concept-mobile_overview": "Wireframes Mobile - Übersicht",
+  "alt_power-ui_sketch_concept-mobile_power_current-production": "Wireframes Mobile - Aktuelle Strom-Produktion",
+  "alt_power-ui_sketch_concept-mobile_power_facility-list": "Wireframes Mobile - Stromgebäude",
+  "alt_power-ui_sketch_concept-mobile_research_tree": "Wireframes Mobile - Forschungsbaum",
+  "alt_power-ui_sketch_concept-mobile_resources_trading": "Wireframes Mobile - Ressourcen-Handel",
+  "alt_power-ui_user-test_1-title": "Nutzertest - 1 Titel",
+  "alt_power-ui_user-test_2-time-sheet": "Nutzertest - 2 Zeitplan",
+  "alt_power-ui_user-test_3-data-agreement": "Nutzertest - 3 Datenschutzerklärung",
+  "alt_power-ui_user-test_4-participant-data": "Nutzertest - 4 Probandendaten",
+  "alt_power-ui_user-test_5-use-cases": "Nutzertest - 5 Use Cases",
+  "alt_power-ui_user-test_6-ueq": "Nutzertest - 6 UEQ",
+  "alt_power-ui_user-test_7-sus": "Nutzertest - 7 SUS",
+  "alt_screendesign-google_call": "Screen Google – Ein Kontakt wird gerade angerufen. ",
+  "alt_screendesign-google_climate": "Screen Google – Einstellungen für die Klimatisierung sind angeschalten. ",
+  "alt_screendesign-google_contacts": "Screen Google – Ein Eintrag aus der Liste der Kontakte wird ausgewählt. ",
+  "alt_screendesign-google_dial": "Screen Google – Eine Rufnummer wird eingegeben. ",
+  "alt_screendesign-google_landing-screen": "Screen Google – Startbildschirm. ",
+  "alt_screendesign-google_playlist": "Screen Google – Ein Lied aus der Playlist wird angehört. ",
+  "alt_screendesign-google_radio": "Screen Google – Ein Radiosender wird angehört. ",
+  "alt_screendesign-mercedes_call": "Screen Mercedes – Ein Kontakt wird gerade angerufen. ",
+  "alt_screendesign-mercedes_climate": "Screen Mercedes – Einstellungen für die Klimatisierung sind angeschalten. ",
+  "alt_screendesign-mercedes_contacts": "Screen Mercedes – Ein Eintrag aus der Liste der Kontakte wird ausgewählt. ",
+  "alt_screendesign-mercedes_dial": "Screen Mercedes – Eine Rufnummer wird eingegeben. ",
+  "alt_screendesign-mercedes_landing-screen": "Screen Mercedes – Startbildschirm. ",
+  "alt_screendesign-mercedes_playlist": "Screen Mercedes – Ein Lied aus der Playlist wird angehört. ",
+  "alt_screendesign-mercedes_radio": "Screen Mercedes – Ein Radiosender wird angehört. ",
+  "alt_steering-wheel_back-side": "Die Rückseite des Lenkrades. ",
+  "alt_steering-wheel_close-up": "Eine Nahaufnahme des Lenkrades. ",
+  "alt_steering-wheel_front-side": "Das Lenkrad für autonomes Fahren ist im Zuge eines Wettbewerbes eines 3D-Konstruktionsprogrammes entstanden. ",
+  "alt_steering-wheel_in-use": "Das Lenkrad in einer Arbeitssituation während der Fahrt. ",
+  "alt_thi-move_moodboard": "Das Moodboard ist eine Hilfestellung für das Screendesign. ",
+  "alt_thi-move_movie-wip-1": "Der erste Schritt des Filmens: Entwickeln eines Storyboards. ",
+  "alt_thi-move_movie-wip-2": "Der zweite Schritt des Filmens: Drehen des nötigen Filmmaterials. ",
+  "alt_thi-move_movie-wip-3": "Der dritte Schritt des Filmens: Animieren der Webseite. ",
+  "alt_thi-move_movie-wip-4": "Die letzte Version des Screendesigns von Mercedes. ",
+  "alt_thi-move_paper-prototype-1": "Besprechung der Papier-Prototypen. ",
+  "alt_thi-move_paper-prototype-2": "Mein Projektpartner legt den Papier-Prototypen zurecht. ",
+  "alt_thi-move_prototype-done": "Zum Vergleich der fertiggestaltete Screen der Fragebogenergebnisse. ",
+  "alt_thi-move_prototype-raw": "Der Prototyp zeigt eine Seite mit Fragebogenergebnissen. ",
+  "alt_thi-move_screen-design_checklist": "Seite, die eine Checkliste zeigt. ",
+  "alt_thi-move_screen-design_login": "Seite, auf der man sich anmelden kann. ",
+  "alt_thi-move_screen-design_partners": "Seite, die die Informationsseite einer Partnerhochschule zeigt. ",
+  "alt_thi-move_screen-design_questionnaire": "Seite, die die Ergebnisse eines Fragebogens zeigen. ",
+  "alt_thi-move_screen-design_review": "Seite, die ein Formular zum Schreiben eines Reiseberichtes zeigt. ",
+  "alt_thi-move_screen-design_world-map": "Seite, auf der man die Weltkarte sieht. ",
+  "alt_thumbnail_3d-modelling": "3D-Modellierung – Modellieren, Rendern. ",
+  "alt_thumbnail_data-visualization": "Datenvisualisierung – Datenerhebung, Datenvisualisierung, Icondesign. ",
+  "alt_thumbnail_design-booklet": "Gestaltungsbooklet – Layout. ",
+  "alt_thumbnail_general": "Lukas Semmler",
+  "alt_thumbnail_infotainment-system": "Infotainmentsystem – Screendesign, Icondesign. ",
+  "alt_thumbnail_power-ui": "Power-UI – Wireframing, UI-Design, Asset-Erstellung, Spiel-Programmierung, Nutzertests. ",
+  "alt_thumbnail_steering-wheel": "Lenkrad für autonomes Fahren – Modellieren und Konstruieren. ",
+  "alt_thumbnail_thi-move": "THI move – Screendesign, Animation, Filmen. ",
+  "caption_data-visualization_data-analysis": "Die Daten habe ich zuerst in einer Tabelle eingetragen und aufbereitet. ",
+  "caption_data-visualization_data-pivot": "Im Anschluss habe ich versucht, mithilfe von Pivot-Tabellen Zusammenhänge zwischen einzelne Werte festzustellen. ",
+  "caption_data-visualization_making-of-1": "Das Format wird auf DIN A1 festgelegt und eine Kartenvorlage der bayrischen Landkreise eingebunden. ",
+  "caption_data-visualization_making-of-2": "Die Positionen werden mit dem THI-Logo verbunden. Unten links ist die Verteilung der Verkehrsmittel. Jeder Punkt ist eine Daten&shy;einheit. ",
+  "caption_data-visualization_making-of-3": "Das Layout, die Farbgebung und der Abstand der einzelnen Elemente zueinander wurden angepasst. Bei den Kreisdiagrammen sind jetzt Icons dabei. ",
+  "caption_data-visualization_questionnaire": "Ein ausgefüllter Fragebogen. Insgesamt kamen 75 Fragebögen zum Einsatz. ",
+  "caption_data-visualization_sketch_sunburst": "Jeder Landkreis, aus dem Studenten kommen, ist nach Verkehrsarten aufgeteilt. Die Icons habe ich für das finale Plakat wieder aufgegriffen. ",
+  "caption_data-visualization_sketch_traffic": "Jeder Punkt auf der Karte zeigt, woher die Studenten zur THI kommen. Ich habe mich für dieses Konzept entschieden. ",
+  "caption_data-visualization_sketch_transport-means": "Eine Illustration, die die Verkehrsmittel nach Verwendung nebeneinander aufreiht. Dieses Konzept war mit den vorhandenen Daten leider nicht umsetzbar. ",
+  "caption_infotainment-system_grid": "Entwicklung des Rasters für das Layout.",
+  "caption_infotainment-system_icons-finished": "Eine Auswahl der fertig&shy;gestellten Icons für Google. Sie sind schlicht und geometrisch gestaltet, um freundlich zu wirken. ",
+  "caption_infotainment-system_icons-sketch": "Skizzen der Icons für Mercedes. Der Detailreichtum soll einen Eindruck von Luxus vermitteln. ",
+  "caption_infotainment-system_prototype": "... und einen klickbaren Prototyp bekommen. ",
+  "caption_infotainment-system_wireframes": "Als Grundlage für die Gestaltung habe ich von meinen Kollegen aus dem 4. Semester Skizzen...",
+  "caption_power-ui_screendesign_smart-tv_contrasts": "Gute Kontraste waren wichtig für Klarheit und Lesbarkeit. ",
+  "caption_thi-move_moodboard": "Das Moodboard. Das Screendesign soll Klarheit, Struktur und Freundlichkeit vermitteln.",
+  "caption_thi-move_movie-wip-1": "1.&nbsp;Schritt: <br>Das Storyboard diente als Hilfestellung für das Drehen. Darin waren grob der Ablauf und die Kameraeinstellungen festgelegt. ",
+  "caption_thi-move_movie-wip-2": "2.&nbsp;Schritt: <br>Wir haben einen Studenten gefilmt, der ins Ausland gehen möchte und mithilfe von THI&nbsp;move diese Herausforderung meistern kann. ",
+  "caption_thi-move_movie-wip-3": "3.&nbsp;Schritt: <br>Um die Webseite zum Leben zu erwecken, haben wir sie mit Adobe After Effects animiert. Das beinhaltete realistische Mauszeiger&shy;bewegungen, Bildschirm&shy;scrollen und das Klicken auf Webseiten&shy;elemente. ",
+  "caption_thi-move_movie-wip-4": "4.&nbsp;Schritt: <br>Mithilfe eines Greenscreens wurden die Animationen dann in das Video übertragen. Beim Schneiden war es vor allem wichtig, das Timing abzustimmen und die Szenen passend aneinander zu schneiden. ",
+  "caption_thi-move_paper-prototypes": "Paperprototypes. ",
+  "caption_thi-move_prototype": "Vom Prototypen zum fertigen Screendesign. ",
+  "debug_any-link": "Ein Link",
+  "error_go-back-to-start-page": "Bene das Alpaca hat jetzt Angst. <br>Geh lieber <a href=\"%s\">zurück zur Startseite...</a> ",
+  "error_oopsie": "Hoppla! :(",
+  "error_page-not-found": "Die gewünschte Seite konnte nicht gefunden werden",
+  "error_something-went-wrong": "Oh nein! Es ist was schiefgelaufen!",
+  "heading_about_drawing": "Zeichnen",
+  "heading_about_education": "Ausbildung",
+  "heading_about_knowledge": "Kenntnisse",
+  "heading_about_knowledge-coding": "Coding",
+  "heading_about_knowledge-language": "Sprachkenntnisse",
+  "heading_about_knowledge-software": "Software",
+  "heading_about_work-experience": "Berufserfahrung",
+  "heading_contact": "Kontakt",
+  "heading_data-visualization_concept": "Konzeption",
+  "heading_data-visualization_data-collection-and-evaluation": "Datenerhebung und -auswertung",
+  "heading_data-visualization_design-process": "Gestaltungsverlauf",
+  "heading_data-visualization_icon-design": "Icondesign",
+  "heading_data-visualization_implementation": "Umsetzung",
+  "heading_data-visualization_sketch_sunburst": "Konzept Sunburst",
+  "heading_data-visualization_sketch_traffic": "Konzept Landkarte",
+  "heading_data-visualization_sketch_transport-means": "Konzept Verkehrsmittel",
+  "heading_imprint": "Impressum",
+  "heading_imprint_accountability-for-content": "Haftung für Inhalte",
+  "heading_imprint_accountability-for-links": "Haftung für Links",
+  "heading_imprint_address": "Angaben gemäß § 5 TMG:",
+  "heading_imprint_contact": "Kontakt",
+  "heading_imprint_copyright": "Urheberrecht",
+  "heading_index_projects": "Projekte",
+  "heading_infotainment-system_concept": "Konzeption",
+  "heading_infotainment-system_google": "Google",
+  "heading_infotainment-system_icon-design": "Icondesign",
+  "heading_infotainment-system_mercedes": "Mercedes",
+  "heading_infotainment-system_screen-design": "Screendesign",
+  "heading_infotainment-system_screen-design_final": "Final",
+  "heading_infotainment-system_screen-design_wip": "Zwischenstand",
+  "heading_overview": "Übersicht",
+  "heading_power-ui_assets": "Assets",
+  "heading_power-ui_axure": "Axure",
+  "heading_power-ui_concept": "Konzept",
+  "heading_power-ui_conclusion": "Zusammenfassung",
+  "heading_power-ui_design": "Design",
+  "heading_power-ui_icon-design": "Icon-Design",
+  "heading_power-ui_implementation": "Implementierung",
+  "heading_power-ui_phaser-and-vue-js": "Phaser + VueJS",
+  "heading_power-ui_prototype-axure": "Axure",
+  "heading_power-ui_prototype-phaser-and-vue-js": "Phaser &amp; VueJS",
+  "heading_power-ui_prototype-unity": "Unity",
+  "heading_power-ui_screen-design": "Screen-Design",
+  "heading_power-ui_terrain": "Terrain",
+  "heading_power-ui_unity": "Unity",
+  "heading_power-ui_user-testing": "Nutzertests",
+  "heading_privacy-policy": "Datenschutz&shy;erklärung",
+  "heading_privacy-policy_data-protection": "Datenschutz",
+  "heading_privacy-policy_log-files": "Server-Log-Files",
+  "heading_projects": "Projekte",
+  "heading_thi-move_movie": "Film",
+  "heading_thi-move_paper-prototype": "Paperprototyping",
+  "heading_thi-move_persona-and-moodboard": "Persona &amp; Moodboard",
+  "heading_thi-move_screen-design": "Screendesign",
+  "label_continue-reading": "Weiter...",
+  "label_copyright": "&copy; 2020",
+  "label_data_visualization_icon_commute": "Fahrtweg",
+  "label_data_visualization_icon_cost": "Kosten",
+  "label_data_visualization_icon_driving-alone": "Fahren Solo",
+  "label_data_visualization_icon_driving-car-pool": "Fahrgemeinschaft",
+  "label_data_visualization_icon_going-by-bike": "Fahrrad",
+  "label_data_visualization_icon_going-by-bus": "Bus",
+  "label_data_visualization_icon_going-by-car": "Auto",
+  "label_data_visualization_icon_going-by-foot": "Fuß",
+  "label_data_visualization_icon_going-by-train": "Zug",
+  "label_data_visualization_icon_living-in-dorm": "Studenten&shy;wohnheim",
+  "label_data_visualization_icon_living-in-shared-community": "Wohn&shy;gemeinschaft",
+  "label_data_visualization_icon_living-single": "Wohnen Solo",
+  "label_data_visualization_icon_living-with-parents": "Wohnen bei Eltern",
+  "label_data_visualization_icon_living-with-partner": "Wohnen mit Partner",
+  "label_lang_const_english": "En<span class=\"full-name\">glish</span>",
+  "label_lang_const_german": "De<span class=\"full-name\">utsch</span>",
+  "label_lang_default": "Sprache",
+  "label_lang_english": "Englisch",
+  "label_lang_german": "Deutsch",
+  "label_lang_italian": "It<span class=\"full-name\">alienisch</span>",
+  "label_lang-level_advanced": "Fortgeschritten",
+  "label_lang-level_beginner": "Anfänger",
+  "label_lang-level_first-language": "Muttersprache",
+  "label_lang-level_fluent": "Fließend",
+  "label_learn-more": "Mehr erfahren...",
+  "label_logo": "Lu<span class=\"full-name\">kas Semmler</span>",
+  "label_owner": "Lukas Semmler",
+  "label_owner-description": "User Experience Designer",
+  "label_power-ui_asset-sketch_bucket-excavator": "Schaufelradbagger",
+  "label_power-ui_asset-sketch_canal": "Kanal",
+  "label_power-ui_asset-sketch_civilian-building-1": "Ziviles Gebäude 1",
+  "label_power-ui_asset-sketch_civilian-building-2": "Ziviles Gebäude 2",
+  "label_power-ui_asset-sketch_civilian-building-3": "Ziviles Gebäude 3",
+  "label_power-ui_asset-sketch_corn-field": "Maisfeld",
+  "label_power-ui_asset-sketch_freight-port": "Frachthafen",
+  "label_power-ui_asset-sketch_hydro-electric-dam": "Elektrischer Staudamm",
+  "label_power-ui_asset-sketch_natural-gas-rig": "Erdgas-Bohrturm",
+  "label_power-ui_asset-sketch_nuclear-fuel-factory": "Brennelement-Fabrik",
+  "label_power-ui_asset-sketch_nuclear-waste-disposal": "Atommüll-Endlager",
+  "label_power-ui_asset-sketch_pipeline": "Pipeline",
+  "label_power-ui_asset-sketch_plant-biogas": "Biogas-Kraftwerk",
+  "label_power-ui_asset-sketch_plant-coal": "Kohle-Kraftwerk",
+  "label_power-ui_asset-sketch_plant-garbage-incineration": "Müllverbrennungs-Anlage",
+  "label_power-ui_asset-sketch_plant-gas-turbine": "Gasturbinen-Kraftwerk",
+  "label_power-ui_asset-sketch_plant-nuclear-power": "Atomkraftwerk",
+  "label_power-ui_asset-sketch_plant-oil": "Ölkraftwerk",
+  "label_power-ui_asset-sketch_plant-photovoltaic": "Photovoltaik-Anlage",
+  "label_power-ui_asset-sketch_plant-pumped-storage": "Pumpspeicher-Kraftwerk",
+  "label_power-ui_asset-sketch_powerpole": "Strommasten",
+  "label_power-ui_asset-sketch_pumpjack": "Ölförderturm",
+  "label_power-ui_asset-sketch_recycling-depot": "Wertstoffhof",
+  "label_power-ui_asset-sketch_refinery": "Raffinerie",
+  "label_power-ui_asset-sketch_research-center": "Forschungszentrum",
+  "label_power-ui_asset-sketch_road": "Straße",
+  "label_power-ui_asset-sketch_tracks": "Gleise",
+  "label_power-ui_asset-sketch_trading-center": "Handelszentrum",
+  "label_power-ui_asset-sketch_train-station": "Bahnhof",
+  "label_power-ui_asset-sketch_truck-station": "LKW-Hangar",
+  "label_power-ui_asset-sketch_uranium-mine": "Uran-Mine",
+  "label_power-ui_asset-sketch_warehouse": "Warenhaus",
+  "label_power-ui_asset-sketch_wind-turbine": "Windrad",
+  "label_power-ui_design_assets_category_infrastructure": "Infrastruktur",
+  "label_power-ui_design_assets_category_logistics": "Logistik",
+  "label_power-ui_design_assets_category_other-buildings": "Andere Gebäude",
+  "label_power-ui_design_assets_category_power-plants": "Kraftwerke",
+  "label_power-ui_design_assets_category_resources": "Ressourcen",
+  "label_power-ui_icon_crude_atomic-energy": "Atom-Energie",
+  "label_power-ui_icon_crude_back-arrow": "Zurück",
+  "label_power-ui_icon_crude_bulldozer": "Bulldozer",
+  "label_power-ui_icon_crude_canal": "Kanal",
+  "label_power-ui_icon_crude_catastrophe": "Katastrophe",
+  "label_power-ui_icon_crude_coal": "Kohle",
+  "label_power-ui_icon_crude_construction": "Konstruktion",
+  "label_power-ui_icon_crude_corn-cob": "Maiskolben",
+  "label_power-ui_icon_crude_crude-oil": "Rohöl",
+  "label_power-ui_icon_crude_danger-atomic": "Achtung Atomar",
+  "label_power-ui_icon_crude_danger-electricity": "Achtung Strom",
+  "label_power-ui_icon_crude_danger-generic": "Achtung Allgemein",
+  "label_power-ui_icon_crude_explore-map": "Karte erkunden",
+  "label_power-ui_icon_crude_factory": "Fabrik",
+  "label_power-ui_icon_crude_insurance": "Versicherung",
+  "label_power-ui_icon_crude_load-shedding": "Lastabwurf",
+  "label_power-ui_icon_crude_loan": "Kredit",
+  "label_power-ui_icon_crude_mine": "Mine",
+  "label_power-ui_icon_crude_money": "Geld",
+  "label_power-ui_icon_crude_natural-gas": "Erdgas",
+  "label_power-ui_icon_crude_nuclear-waste": "Atommüll",
+  "label_power-ui_icon_crude_organic": "Bio",
+  "label_power-ui_icon_crude_politics": "Politik",
+  "label_power-ui_icon_crude_pollution": "Verschmutzung",
+  "label_power-ui_icon_crude_power-a": "Strom A",
+  "label_power-ui_icon_crude_power-b": "Strom B",
+  "label_power-ui_icon_crude_power-plant-coal": "Kraftwerk Kohle",
+  "label_power-ui_icon_crude_power-plant-generic": "Kraftwerk Allgemein",
+  "label_power-ui_icon_crude_power-plant-nuclear": "Kraftwerk Nuklear",
+  "label_power-ui_icon_crude_power-plant-sun": "Kraftwerk Solar",
+  "label_power-ui_icon_crude_power-plant-wind": "Kraftwerk Wind",
+  "label_power-ui_icon_crude_power-plug": "Stromstecker",
+  "label_power-ui_icon_crude_power-pole": "Strommasten",
+  "label_power-ui_icon_crude_question-mark": "Fragezeichen",
+  "label_power-ui_icon_crude_research": "Forschung",
+  "label_power-ui_icon_crude_resources": "Ressourcen",
+  "label_power-ui_icon_crude_road": "Straße",
+  "label_power-ui_icon_crude_ship": "Frachter",
+  "label_power-ui_icon_crude_sigma-sign": "Sigma",
+  "label_power-ui_icon_crude_stats": "Statistik",
+  "label_power-ui_icon_crude_tracks": "Gleise",
+  "label_power-ui_icon_crude_trading-power": "Handel Strom",
+  "label_power-ui_icon_crude_trading-ressources": "Handel Ressourcen",
+  "label_power-ui_icon_crude_train": "Zug",
+  "label_power-ui_icon_crude_trash-can": "Mülleimer",
+  "label_power-ui_icon_crude_truck": "Lastwagen",
+  "label_power-ui_icon_crude_uranium": "Uran",
+  "label_power-ui_icon_crude_wrench": "Schraubschlüssel",
+  "label_power-ui_icon_menu_bulldozer": "Bulldozer",
+  "label_power-ui_icon_menu_burger-menu": "Burger-Menu",
+  "label_power-ui_icon_menu_coal": "Kohle",
+  "label_power-ui_icon_menu_coin": "Münze",
+  "label_power-ui_icon_menu_crane": "Kran",
+  "label_power-ui_icon_menu_emotion-1-happy": "Emotion Glücklich",
+  "label_power-ui_icon_menu_emotion-2-friendly": "Emotion Freundlich",
+  "label_power-ui_icon_menu_emotion-3-indifferent": "Emotion Neutral",
+  "label_power-ui_icon_menu_emotion-4-bad": "Emotion Schlecht",
+  "label_power-ui_icon_menu_emotion-5-angry": "Emotion Wütend",
+  "label_power-ui_icon_menu_finances": "Finanzen",
+  "label_power-ui_icon_menu_goal": "Ziel",
+  "label_power-ui_icon_menu_house": "Haus",
+  "label_power-ui_icon_menu_logistics": "Logistik",
+  "label_power-ui_icon_menu_mail": "Brief",
+  "label_power-ui_icon_menu_management": "Management",
+  "label_power-ui_icon_menu_other-buildings": "Andere Gebäude",
+  "label_power-ui_icon_menu_pollution": "Verschmutzung",
+  "label_power-ui_icon_menu_power": "Strom",
+  "label_power-ui_icon_menu_power-plant": "Kraftwerk",
+  "label_power-ui_icon_menu_power-pole": "Strommasten",
+  "label_power-ui_icon_menu_research": "Forschung",
+  "label_power-ui_icon_menu_resources": "Ressourcen",
+  "label_power-ui_icon_menu_zoom": "Zoom",
+  "label_power-ui_user-testing_number-of-participants": "19 ",
+  "label_power-ui_user-testing_participants": "Probanden",
+  "label_power-ui_user-testing_test-1": "Test 1",
+  "label_power-ui_user-testing_test-2": "Test 2",
+  "label_product_adobe-illustrator": "Illustrator",
+  "label_product_adobe-indesign": "InDesign",
+  "label_product_adobe-lightroom": "Lightroom",
+  "label_product_adobe-photoshop": "Photoshop",
+  "label_product_adobe-xd": "Adobe XD",
+  "label_product_android": "Android Studio",
+  "label_product_axure": "Axure",
+  "label_product_blender": "Blender",
+  "label_product_c-sharp": "C#",
+  "label_product_cinema-4d": "Cinema4D",
+  "label_product_git": "Git",
+  "label_product_godot": "Godot",
+  "label_product_gulp": "Gulp",
+  "label_product_html": "HTML &amp; CSS",
+  "label_product_java": "Java",
+  "label_product_javascript": "JavaScript",
+  "label_product_jira": "Jira",
+  "label_product_microsoft-power-point": "PowerPoint",
+  "label_product_microsoft-word": "Word",
+  "label_product_mysql": "MySQL",
+  "label_product_node-js": "NodeJS",
+  "label_product_phaser": "Phaser",
+  "label_product_sass": "SASS",
+  "label_product_unity": "Unity",
+  "label_product_visual-studio-code": "VS Code",
+  "label_product_vue-js": "VueJS",
+  "label_product_webstorm": "Webstorm",
+  "label_project-nav_current": "Aktuelles Projekt",
+  "label_project-nav_next": "Nächstes Projekt",
+  "label_project-nav_previous": "Vorheriges Projekt",
+  "label_project-summary_date": "Datum",
+  "label_project-summary_format": "Format",
+  "label_project-summary_lecture": "Vorlesung",
+  "label_project-summary_name": "Name",
+  "label_project-summary_tasks": "Aufgaben",
+  "label_select-language": "Sprache auswählen",
+  "label_site-name": "Lukas Semmler Portfolio",
+  "label_step": "Schritt",
+  "label_tag_3d-modelling": "3D-Modellierung",
+  "label_tag_asset-creation": "Asset-Erstellung",
+  "label_tag_coding-games": "Game-Coding",
+  "label_tag_contest": "Wettbewerb",
+  "label_tag_design-icon": "Icon-Design",
+  "label_tag_design-poster": "Poster-Design",
+  "label_tag_design-ui": "UI-Design",
+  "label_tag_layout": "Layout",
+  "label_tag_prototyping": "Prototyping",
+  "label_tag_sketches": "Skizzen",
+  "label_tag_user-survey": "Umfrage",
+  "label_tag_ux-testing": "UX Testing",
+  "meta-author_3d-modelling": "Lukas Semmler",
+  "meta-author_404": "Lukas Semmler",
+  "meta-author_about": "Lukas Semmler",
+  "meta-author_contact": "Lukas Semmler",
+  "meta-author_data-visualization": "Lukas Semmler",
+  "meta-author_design-booklet": "Lukas Semmler",
+  "meta-author_imprint": "Lukas Semmler",
+  "meta-author_index": "Lukas Semmler",
+  "meta-author_infotainment-system": "Lukas Semmler",
+  "meta-author_power-ui": "Lukas Semmler",
+  "meta-author_privacy-policy": "Lukas Semmler",
+  "meta-author_projects": "Lukas Semmler",
+  "meta-author_steering-wheel": "Lukas Semmler",
+  "meta-author_thi-move": "Lukas Semmler",
+  "meta-description_3d-modelling": "Gerenderte Szenen, die mit Blender und Sculptris erstellt wurden. Dafür waren Kenntnisse über Modelling, Rendern und Post-Produktion notwendig. ",
+  "meta-description_404": "Lukas Semmler ist studierter User Experience Design. Leider konnte diese Seite nicht gefunden werden. ",
+  "meta-description_about": "Lukas Semmler ist studierter User Experience Designer. Er gestaltet die digitalen Schnittstellen zwischen Mensch und Maschine. ",
+  "meta-description_contact": "Kontakt über kontakt@lukassemmler.de. ",
+  "meta-description_data-visualization": "Plakat, das zeigt, wie Studenten zur THI kommen. Das Projekt hat sich mit Datenerhebung, Datenanalyse und Präsentation von Daten beschäftigt. ",
+  "meta-description_design-booklet": "Das Booklet ist eine Zusammenfassung aller Übungen des 1. Semesters. Es beschäftigt sich mit Themen wie Komposition, Gestaltungsgesetze und Typografie. ",
+  "meta-description_imprint": "Kontakt, Haftung für Inhalte, Haftung für Links und Urheberrecht. ",
+  "meta-description_index": "Lukas Semmler ist studierter User Experience Designer. Er gestaltet die digitalen Schnittstellen zwischen Mensch und Maschine. ",
+  "meta-description_infotainment-system": "Es wurde ein Infotainmentsystem für zwei Unternehmen, Google und Mercedes, gestaltet. Die visuelle Gestaltung ging dabei in zwei unterschiedliche Ansätze. ",
+  "meta-description_power-ui": "Konzept, Design und prototypische Implementierung eines UIs für ein fiktionales Videospiel. Es ist ein Kraftwerk-Management-Spiel für den Mobile-Markt. ",
+  "meta-description_privacy-policy": "Erklärung zu Datenschutz und Server-Log-Files. ",
+  "meta-description_projects": "Die Projekte beschäftigen sich mit Themen wie Screendesign, Icondesign und Konzeption. ",
+  "meta-description_steering-wheel": "Ein Lenkrad, das Schreiben während der Autonomen Fahrt ermöglicht. Das Konzept zeigt eine Möglichkeit, während einer autonomen Fahrt zu arbeiten. ",
+  "meta-description_thi-move": "THI move ist eine Plattform, die Studenten hilft, im Ausland zu studieren. Das Konzept wurde für die Technische Hochschule Ingolstadt entwickelt. ",
+  "meta-keywords_3d-modelling": "User Experience Design, Portfolio",
+  "meta-keywords_404": "User Experience Design, Portfolio",
+  "meta-keywords_about": "User Experience Design, Portfolio, Über mich",
+  "meta-keywords_contact": "User Experience Design, Portfolio, Kontakt",
+  "meta-keywords_data-visualization": "User Experience Design, Portfolio, Screendesign, Icondesign",
+  "meta-keywords_design-booklet": "User Experience Design, Portfolio, Booklet",
+  "meta-keywords_imprint": "User Experience Design, Portfolio, Impressum",
+  "meta-keywords_index": "User Experience Design, Portfolio",
+  "meta-keywords_infotainment-system": "User Experience Design, Portfolio, Screendesign, Icondesign",
+  "meta-keywords_power-ui": "Game Prototype, Game UI, Concept, Stromnetz",
+  "meta-keywords_privacy-policy": "User Experience Design, Portfolio, Datenschutzerklärung",
+  "meta-keywords_projects": "User Experience Design, Portfolio, Übersicht",
+  "meta-keywords_steering-wheel": "User Experience Design, Portfolio, Lenkrad, Autonomes Fahren",
+  "meta-keywords_thi-move": "User Experience Design, Portfolio, Imagefilm, Online-Plattform",
+  "meta-title_3d-modelling": "3D-Modellierung",
+  "meta-title_404": "404",
+  "meta-title_about": "Über mich",
+  "meta-title_contact": "Kontakt",
+  "meta-title_data-visualization": "Datenvisualisierung",
+  "meta-title_design-booklet": "Gestaltungsbooklet",
+  "meta-title_imprint": "Impressum",
+  "meta-title_index": "Startseite",
+  "meta-title_infotainment-system": "Infotainment-System",
+  "meta-title_power-ui": "Power-UI",
+  "meta-title_privacy-policy": "Datenschutzerklärung",
+  "meta-title_projects": "Projekte",
+  "meta-title_steering-wheel": "Lenkrad für autonomes Fahren",
+  "meta-title_thi-move": "THI move",
+  "project-description_3d-modelling": [
+    "Ich interessiere mich für 3D-Modellierung und habe daher in meiner Freizeit mit Blender und Sculptris gearbeitet. "
+  ],
+  "project-description_data-visualization": [
+    "Das Plakat zeigt, wie Studenten zur Technischen Hochschule Ingolstadt kommen und wie sich deren Transportwege unterscheiden. ",
+    "Dabei haben wir in Gruppenarbeit eine Umfrage gemacht und dann einzeln ein Plakat gestaltet. "
+  ],
+  "project-description_design-booklet": [
+    "Das Gestaltungsbooklet ist eine Zusammenfassung aller Gestaltungsübungen meines ersten Semesters. ",
+    "Es beschäftigt sich mit Themen wie Komposition, Gestaltungsgesetze und Typografie. "
+  ],
+  "project-description_infotainment-system": [
+    "Das Infotainmentsystem von Google und Mercedes zeigt, wie sich die Gestaltung eines Infotainmentsystems je nach Corporate Identity unterscheidet. ",
+    "Das Projekt wurde für eine Studie gemacht, die den Einfluss von Gestaltung auf Vertrauens&shy;würdigkeit untersuchte. "
+  ],
+  "project-description_power-ui": [
+    "Konzept für ein Aufbau-Simulationsspiel mit einem Responsive UI. ",
+    "Wireframes, Icons, Assets, Screen-Design und dreie Spiele-Prototypen wurden erstellt. ",
+    "Bachelorarbeit, aufbauend auf dem User-Centered Design-Prozess. ",
+    "Basierend auf dem Thema der Stromversorgung und Energiewende. "
+  ],
+  "project-description_steering-wheel": [
+    "Das Lenkrad für autonome Fahren ist das Arbeitsgerät der Zukunft. ",
+    "Die Tastatur auf der Rückseite ermöglicht es, während der Autofahrt zu arbeiten und in Ernstfällen dennoch rechtzeitig einzugreifen. "
+  ],
+  "project-description_thi-move": [
+    "THI move ist eine Onlineplattform für Studenten, die im Ausland studieren oder ihr Praxissemester ablegen wollen. ",
+    "Für das Konzept habe ich mit meinem Teamkollegen ein Konzept entworfen, die Plattform gestaltet, die Webseite animiert und in einem Film präsentiert. "
+  ],
+  "project-link-title_3d-modelling": "3D-Modellierung",
+  "project-link-title_data-visualization": "Datenvisualisierung",
+  "project-link-title_design-booklet": "Gestaltungsbooklet",
+  "project-link-title_infotainment-system": "Infotainment-System",
+  "project-link-title_power-ui": "Power UI",
+  "project-link-title_steering-wheel": "Lenkrad für autonomes Fahren",
+  "project-link-title_thi-move": "THI move",
+  "project-nav_3d-modelling": "3D-Modellierung",
+  "project-nav_data-visualization": "Datenvisualisierung",
+  "project-nav_design-booklet": "Gestaltungsbooklet",
+  "project-nav_infotainment-system": "Infotainmentsystem",
+  "project-nav_power-ui": "Power-UI",
+  "project-nav_steering-wheel": "Lenkrad für autonomes Fahren",
+  "project-nav_thi-move": "THI move",
+  "project-subtitle_3d-modelling": "Modellier-Übungen",
+  "project-subtitle_data-visualization": "Weg zur Hochschule als Poster",
+  "project-subtitle_design-booklet": "gesammelte Design-Übungen",
+  "project-subtitle_infotainment-system": "zwei UI-Konzepte für zwei Marken",
+  "project-subtitle_power-ui": "Power-Management-Game-UI",
+  "project-subtitle_steering-wheel": "Gewinner eines Produkt-Design-Wettbewerbes",
+  "project-subtitle_thi-move": "Plattform für Auslands-Studenten",
+  "project-summary-date_3d-modelling": "März 2018",
+  "project-summary-date_data-visualization": "Juli 2017",
+  "project-summary-date_design-booklet": "Januar 2017",
+  "project-summary-date_infotainment-system": "Mai 2017",
+  "project-summary-date_power-ui": "März 2020",
+  "project-summary-date_steering-wheel": "April 2018",
+  "project-summary-date_thi-move": "Januar 2018",
+  "project-summary-format_3d-modelling": "Bildschirm, Full&nbsp;HD",
+  "project-summary-format_data-visualization": "Plakat, DIN A1",
+  "project-summary-format_design-booklet": "Booklet, 30cm x 30cm",
+  "project-summary-format_infotainment-system": "Tablet, 2560 x 1800",
+  "project-summary-format_power-ui": "Spiele-Prototypen",
+  "project-summary-format_steering-wheel": "Bildschirm, Full HD",
+  "project-summary-format_thi-move": "Bildschirm, Full&nbsp;HD",
+  "project-summary-lecture_3d-modelling": "Freie Arbeit",
+  "project-summary-lecture_data-visualization": "Grundlagen der Gestaltung 2 (2. Semester)",
+  "project-summary-lecture_design-booklet": "Grundlagen der Gestaltung 1 (1. Semester)",
+  "project-summary-lecture_infotainment-system": "Grundlagen der Gestaltung 2 (2. Semester)",
+  "project-summary-lecture_power-ui": "Bachelorarbeit",
+  "project-summary-lecture_steering-wheel": "Software Prototyping und Usability Testing",
+  "project-summary-lecture_thi-move": "Design der Mensch-Maschine-Schnittstellen (3.&nbsp;Semester)",
+  "project-summary-name_3d-modelling": "Donuts, Kopf, Glühbirne",
+  "project-summary-name_data-visualization": "Der Weg zur THI",
+  "project-summary-name_design-booklet": "Übungen des 1. Semesters – Grundlagen der Gestaltung",
+  "project-summary-name_infotainment-system": "Infotainmentsystem Google/Mercedes",
+  "project-summary-name_power-ui": "Power-UI",
+  "project-summary-name_steering-wheel": "Lenkrad für autonomes Fahren",
+  "project-summary-name_thi-move": "THI&nbsp;move",
+  "project-summary-tasks_3d-modelling": "Modellieren, Rendern",
+  "project-summary-tasks_data-visualization": "Datenerhebung, Datenvisualisierung und Plakatgestaltung",
+  "project-summary-tasks_design-booklet": "Layout",
+  "project-summary-tasks_infotainment-system": "Icondesign, Screendesign",
+  "project-summary-tasks_power-ui": "Wireframing, UI-Design, Asset-Erstellung, Spiel-Programmierung, Nutzertests",
+  "project-summary-tasks_steering-wheel": "Modellieren, Konstruieren",
+  "project-summary-tasks_thi-move": "Screendesign, Animation, Filmen",
+  "project-title-raw_3d-modelling": "3D-Model&shy;lierung",
+  "project-title-raw_data-visualization": "Daten&shy;visuali&shy;sierung",
+  "project-title-raw_design-booklet": "Gestaltungs&shy;booklet",
+  "project-title-raw_infotainment-system": "Infotainment&shy;system",
+  "project-title-raw_power-ui": "Power UI",
+  "project-title-raw_steering-wheel": "Lenkrad für autonomes Fahren",
+  "project-title-raw_thi-move": "THI move",
+  "text_3d-modelling_general": [
+    "Ich interessiere mich für 3D-Modellierung und habe daher ",
+    "in meiner Freizeit mit Blender und Sculptris gearbeitet. "
+  ],
+  "text_about_blurb": [
+    "Ich habe <a href=\"http://uxd.thi.de/\" title=\"User Experience Design – Technische Hochschule Ingolstadt\">User Experience Design</a>",
+    "an der <a href=\"https://www.thi.de/\" title=\"Technische Hochschule Ingolstadt\">THI</a> studiert. ",
+    "UI-Konzepte zu erstellen und zu designen ist meine Leidenschaft. ",
+    "Coding ist mir auch wichtig, damit ich Ideen umsetzen kann. ",
+    "Das umfasst Web- und Spiel-Entwicklung. ",
+    "Daneben zeichne ich gern. "
+  ],
+  "text_about_description": [
+    "Ich heiße Lukas und <br>ich bin ein UX Designer. "
+  ],
+  "text_about_drawing": [
+    "Hier sind ein paar Zeichnungen, die ich zwischen November 2019 und Juli 2020 gemacht habe. ",
+    "Hauptsächlich anthropomorphe Charakter oder Porträt-Studien. ",
+    "Es ist etwas, das mich wirklich glücklich macht und ich hoffe, es bringt auch anderen Freude. "
+  ],
+  "text_about_drawing_checkout-instagram": [
+    "Mehr Zeichnungen kann man unter meinem Instagram-Account finden: "
+  ],
+  "text_about_education-1_description": [
+    "Studium der benutzerzentrierter Gestaltung und UI-Design (UXD). ",
+    "Lernen von Design, Nutzertests, Programmieren und Psychologie. Abschluss mit 1,3. "
+  ],
+  "text_about_education-1_location": [
+    "Ingolstadt"
+  ],
+  "text_about_education-1_organization": [
+    "Technische Hochschule Ingolstadt"
+  ],
+  "text_about_education-1_time-span": [
+    "Okt 2016 &ndash; Mrz 2020"
+  ],
+  "text_about_education-1_title": [
+    "UX Design B.Sc."
+  ],
+  "text_about_education-2_description": [
+    "UI-Konzept für ein Simulationsspiel nach dem User-Centered-Design-Prozess. ",
+    "Recherche, Wireframes, Skizzen, UI-Design, Prototyping, Programmierung, User Testing, Unity, Phaser. (1,3)"
+  ],
+  "text_about_education-2_location": [
+    "Ingolstadt"
+  ],
+  "text_about_education-2_organization": [
+    "Bachelorarbeit"
+  ],
+  "text_about_education-2_time-span": [
+    "Okt 2019 &ndash; Mrz 2020"
+  ],
+  "text_about_education-2_title": [
+    "Videospiel-UI"
+  ],
+  "text_about_education-3_description": [
+    "Förderung durch Seminare wie Rhetorikkurse, Infoakademien zu gesellschaftspolitischen Themen, Kontakt zu Mitstipendiaten."
+  ],
+  "text_about_education-3_location": [
+    "München"
+  ],
+  "text_about_education-3_organization": [
+    "Hanns-Seidel-Stiftung"
+  ],
+  "text_about_education-3_time-span": [
+    "Apr 2018 &ndash; Mrz 2020"
+  ],
+  "text_about_education-3_title": [
+    "Altstpidendiat"
+  ],
+  "text_about_education-4_description": [
+    "<<EMPTY>>"
+  ],
+  "text_about_education-4_location": [
+    "Ingolstadt"
+  ],
+  "text_about_education-4_organization": [
+    "DesignNow Autodesk Fusion 360"
+  ],
+  "text_about_education-4_time-span": [
+    "Apr 2018"
+  ],
+  "text_about_education-4_title": [
+    "1. Platz, Design-Wettbewerb"
+  ],
+  "text_about_hello": [
+    "Hallo! "
+  ],
+  "text_about_location": [
+    "München, Deutschland"
+  ],
+  "text_about_work-experience-1_description": [
+    "Entwickeln der neuen Unternehmens-Webseite mit Magnolia und FreeMarker. ",
+    "Prototyping in HTML & CSS. Design von Werbebannern. ",
+    "Java Bootcamp mit Spring Framework. Wireframes für Webseite. "
+  ],
+  "text_about_work-experience-1_location": [
+    "München"
+  ],
+  "text_about_work-experience-1_organization": [
+    "eForce21 GmbH"
+  ],
+  "text_about_work-experience-1_time-span": [
+    "Aug 2018 &ndash; Dez 2018"
+  ],
+  "text_about_work-experience-1_title": [
+    "Praktikumssemester"
+  ],
+  "text_about_work-experience-2_description": [
+    "Arbeiten an digitalen Schulbüchern. ",
+    "Konzeption von Hausaufgaben-Korrekturen. ",
+    "Schneiden eines Hörbuches. ",
+    "Recherche-Arbeit für Schreibprozess. "
+  ],
+  "text_about_work-experience-2_location": [
+    "Eichstätt"
+  ],
+  "text_about_work-experience-2_organization": [
+    "Cornelsen mBook Verlag"
+  ],
+  "text_about_work-experience-2_time-span": [
+    "Jul 2017 &ndash; Sept 2017"
+  ],
+  "text_about_work-experience-2_title": [
+    "Praktikum"
+  ],
+  "text_contact": [
+    "<em>Lukas Semmler</em><br>",
+    "User Experience Designer<br>",
+    "<br>",
+    "Telefon: <a href=\"tel:+4917639203916\">+49 176 39203916</a><br> ",
+    "Email: <a href=\"mailto:kontakt@lukassemmler.de\">kontakt@lukassemmler.de</a><br>",
+    "<br>",
+    "<a href=\"%s\">Impressum</a> <br>",
+    "<a href=\"%s\">Datenschutz&shy;erklärung</a><br> ",
+    "<br>",
+    "&copy; %s"
+  ],
+  "text_data-visualization_concepts": [
+    "Nach der Datenauswertung hatte ich verschiedene Ideen und hab mir dann verschiedene Konzepte überlegt, wie ich die Daten attraktiv präsentieren kann. "
+  ],
+  "text_data-visualization_data-collection": [
+    "Für die Datenerhebung haben meine zwei Kollegen und ich insgesamt 75 Leute an der Hochschule befragt. ",
+    "Dafür haben wir einen Fragebogen mit Fragen rund um Transport geschrieben. "
+  ],
+  "text_data-visualization_data-evaluation": [
+    "Nach der Datenerhebung habe ich sie ausgewertet. ",
+    "Die Werte habe ich dann mit der Pivot-Tabelle in Abhängigkeit zueinander gestellt, um Zusammenhänge herauszufinden. "
+  ],
+  "text_data-visualization_icon-design": [
+    "Für die Umsetzung des Plakates habe ich auch einige Icons gestaltet. ",
+    "Das war die spaßigste Aufgabe!"
+  ],
+  "text_data-visualization_implementation": [
+    "Ich habe mich für das Konzept der Landkarte entschieden. ",
+    "Die drei Kreisdiagramme unten am Plakat geben noch mehr Informationen, wie genau die Studenten zur THI kommen. <br>"
+  ],
+  "text_data-visualization_intro": [
+    "Das Plakat zeigt, wie Studenten zur Technischen Hochschule Ingolstadt kommen und wie sich deren Transportwege unterscheiden. ",
+    "Dabei haben wir in Gruppenarbeit eine Umfrage gemacht und dann einzeln ein Plakat gestaltet. <br>",
+    "<br>",
+    "Ich habe mich dafür entschieden, die Herkunftsorte der Studenten zu visualisieren. ",
+    "In Ingolstadt ist es oft schwierig, einen Parkplatz zu finden – meistens dann, wenn man eh schon zu spät zur Vorlesung kommt. "
+  ],
+  "text_design-booklet": [
+    "Das Gestaltungsbooklet ist eine Zusammenfassung aller Gestaltungsübungen meines ersten Semesters. ",
+    "Es beschäftigt sich mit Themen wie Komposition, Gestaltungsgesetze und Typografie. "
+  ],
+  "text_imprint_accountability-for-content": [
+    "<p>",
+    "  Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen ",
+    "  Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, ",
+    "  übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine ",
+    "  rechtswidrige Tätigkeit hinweisen.",
+    "</p> ",
+    "<p>",
+    "  Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. ",
+    "  Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. ",
+    "  Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.",
+    "</p> "
+  ],
+  "text_imprint_accountability-for-links": [
+    "<p>",
+    "  Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb ",
+    "  können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist ",
+    "  stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt ",
+    "  der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung ",
+    "  nicht erkennbar.",
+    "</p> ",
+    "<p>",
+    "  Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. ",
+    "  Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen. ",
+    "</p> "
+  ],
+  "text_imprint_address": [
+    "<p>",
+    "  Lukas Semmler<br>",
+    "  Kevenhüll H 4<br>",
+    "  92339 Beilngries",
+    "</p> "
+  ],
+  "text_imprint_contact": [
+    "<p>",
+    "  Telefon: <a href=\"tel:+4917639203916\">+49 176 39203916</a><br> ",
+    "  E-Mail: <a href=\"mailto:kontakt@lukassemmler.de\">kontakt@lukassemmler.de</a> ",
+    "</p> "
+  ],
+  "text_imprint_copyright": [
+    "<p>",
+    "  Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen ",
+    "  Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen ",
+    "  des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und ",
+    "  Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.",
+    "</p> ",
+    "<p>",
+    "  Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter ",
+    "  beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine ",
+    "  Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von ",
+    "  Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.",
+    "</p> "
+  ],
+  "text_imprint_source": [
+    "Quelle: <a href=\"https://www.e-recht24.de\">eRecht24</a> "
+  ],
+  "text_index_hello": [
+    "Mein Name ist Lukas und <br>ich bin ein UX-Designer. "
+  ],
+  "text_index_motivation": [
+    "Ich will Menschen mit schönen <br>und spaßigen UIs helfen. "
+  ],
+  "text_infotainment-system_background": [
+    "Das Projekt ist im Rahmen einer Studie durchgeführt worden. Dabei habe ich mit zwei Studenten aus dem höheren ",
+    "Semester zusammengearbeitet. Diese haben ein Infotainmentsystem konzipiert und die Aufgabe der jüngeren ",
+    "Semester war es, eine Gestaltung für ihren Prototypen zu erstellen. <br>",
+    "<br>",
+    "Der Gewinner des Wettbewerbes wurde in einer Usability-Studie mit der Washington University in St. Louis und ",
+    "der Technischen Hochschule Ingolstadt verwendet. <br>",
+    "<br>",
+    "Jedes Team der höheren Semester hat vier bis sechs Screendesigns bekommen. Bei meiner Gruppe wurde letztlich ",
+    "mein Screendesign von Google umgesetzt. "
+  ],
+  "text_infotainment-system_icons": [
+    "Um ein stimmiges Screendesign für beide Unternehmen zu entwickeln, habe ich passende Icons für das ",
+    "Infotainmentsystem entworfen. "
+  ],
+  "text_infotainment-system_intro": [
+    "Das Infotainmentsystem von Google und Mercedes zeigt, wie sich die Gestaltung eines Infotainmentsystems je ",
+    "nach <span lang=\"en\">Corporate Identity</span> unterscheidet. Das Projekt wurde für eine Studie gemacht, die ",
+    "den Einfluss von Gestaltung auf Vertrauenswürdigkeit untersuchte. <br>",
+    "<br>",
+    "Bei dem Projekt standen mehrere Unternehmen zur Auswahl, ich habe mich für Google und Mercedes entschieden, ",
+    "um zwei möglichst unterschiedliche Ansätze zur Gestaltung kennenzulernen. <br>",
+    "<br>",
+    "Das Projekt umfasste nach der Konzeption zwei Aufgaben: Icondesign und Screendesign. "
+  ],
+  "text_infotainment-system_screen-design_grid": [
+    "Mithilfe des Prototypen habe ich dann ein Raster entwickelt und das Screendesign entworfen. "
+  ],
+  "text_infotainment-system_screen-design_style": [
+    "Danach habe ich mir, nach einer Corporate Identity-Recherche, einen visuellen Stil für beide Unternehmen ",
+    "überlegt: Google sollte hell und freundlich sein. Mercedes sollte dunkel und luxuriös sein. <br>",
+    "<br>",
+    "Beide Stile sollten sich eher am Flat Design orientieren, daher habe ich mich gegen Materialität, wie ",
+    "gebürstetes Metall bei Mercedes, entschieden. "
+  ],
+  "text_power-ui_concept_mobile-first": [
+    "Das Design folgte dem Ansatz von <i>Mobile-first</i>. ",
+    "Es war wichtiger, das Spiele-UI auf einem kleinem Bildschirm zum Laufen zu bringen, damit es später dann einfach für ein größeres Display angepasst werden kann. "
+  ],
+  "text_power-ui_concept_theme-1": [
+    "Als Nächstes musste ich mich für ein Thema entscheiden. ",
+    "Dafür habe ich nach einem Thema gesucht, dass nur einen Aspekt eines Städte-Aufbau-Simulations-Spiels behandelt: <b>Stromversorgung</b>. ",
+    "Es ist eine der wichtigsten Infrastruktursystemen in unserem Leben. ",
+    "Über die Energiewende wird in der deutschen Politik schon seit Jahren geredet. ",
+    "Da natürliche Ressourcen, wie Kohle und Öl, langsam zur Neige gehen, investieren mehr Menschen in erneuerbare Energien. "
+  ],
+  "text_power-ui_concept_theme-2": [
+    "Das Spiel selbst sollte die drei verschiedenen Aspekte von Energiepolitik behandeln: ",
+    "Umweltschutz, Wirtschaftlichkeit und Versorgungssicherheit. ",
+    "Beim Spielen sollte der Spieler einen Ausgleich zwischen diesen verschiedenen Systemen (wie Finanzierung, Ressourcen, Verschmutzung, etc) finden. ",
+    "Und um diese Entscheidungen zu unterstützen, braucht es ein komplexes UI. "
+  ],
+  "text_power-ui_concept_tutorial_intro": [
+    "Im Folgenden wird die <i>Core Gameplay Loop</i> mit einem kurzem Tutorial erklärt: "
+  ],
+  "text_power-ui_concept_tutorial_step-1": [
+    "Die Leute wollen Strom! ",
+    "Zum Kochen, Lesen oder Netflix-Schauen. "
+  ],
+  "text_power-ui_concept_tutorial_step-2": [
+    "Bauen wir ein Kraftwerk, damit wir ihnen Strom verkaufen können! "
+  ],
+  "text_power-ui_concept_tutorial_step-3": [
+    "Oh, wir brauchen auch eine Stromleitung vom Kraftwerk zum Haus. "
+  ],
+  "text_power-ui_concept_tutorial_step-4": [
+    "Sieht so aus, als bräuchte unser Kraftwerk noch etwas Kohle für Strom. "
+  ],
+  "text_power-ui_concept_tutorial_step-5": [
+    "Und wir brauchen auch noch eine Straße, damit die Kohle transportiert werden kann. "
+  ],
+  "text_power-ui_concept_tutorial_step-6": [
+    "Jetzt läuft das Kraftwerk und die Menschen haben Strom!"
+  ],
+  "text_power-ui_concept_tutorial_step-7": [
+    "Oh, anscheinend sind sie nicht so begeistert von Kohlestrom. ",
+    "Vielleicht gibt es eine bessere Alternative... "
+  ],
+  "text_power-ui_concept_video-game-genre": [
+    "Da ich das UI für ein fiktionales Videospiel machen wollte, musste ich mir ein passendes Videospiel-Genre überlegen. ",
+    "Das Genre selbst hat einen großen Einfluss darauf, wie das Interface gestaltet wird. ",
+    "Grob gesagt, Casual Spiele (wie <i>Match 3</i> oder <i>Idling</i>) brauchen weniger komplexes UI. ",
+    "Also habe ich mich für <q>Aufbau-Simulation</q> als Herausforderung entschieden. ",
+    "Typische Aufbau-Simulationsspiele sind zum Beispiel die <i>Anno</i>- oder <i>SimCity</i>-Reihe. "
+  ],
+  "text_power-ui_concept_wireframes": [
+    "Der nächste Schritt war es dann, das Interface zu designen. ",
+    "Eine Anforderung für das Spiele-UI war, dass es platzsparend gestaltet ist (vor allem für Mobile). ",
+    "Screen Real Estate ist begrenzt und der Spieler sollte nur mit so viel Info versorgt werden, wie er gerade braucht. ",
+    "Also ist das Standard-UI sehr platzsparend angelegt, während Infofenster wie Finanzen großzügiger sind. "
+  ],
+  "text_power-ui_conlusion_read-more": [
+    "Bei weiterem Interesse an meiner Arbeit kann diese hier gerne gelesen werden: "
+  ],
+  "text_power-ui_conlusion_summary": [
+    "Zusammenfassend waren viele verschiedene Disziplinen beteiligt bei der Erstellung dieses Projektes. ",
+    "Videospiele sind ein sehr interessantes Medium, da sie Programmierung und Kunst vereinen, um etwas Spaßiges und Sinngebendes zu schaffen. ",
+    "Ihre Aufgabe ist eine gute Game-UX zu bieten und ich hoffe, ich konnte etwas über die Entwicklung von Spiele-UIs mit dieser Arbeit lernen. "
+  ],
+  "text_power-ui_design_assets_3d-models": [
+    "Die Zeichnungen waren auch die Grundlage für die 3D-Modelle. ",
+    "Aufbau-Simulations-Spiele haben oft eine isometrische Ansicht. ",
+    "Zum Protoyping wurde nur ein Teil aller Gebäude als gerenderter Sprite umgesetzt. "
+  ],
+  "text_power-ui_design_assets_categories": [
+    "Sie können in fünf Kategorien eingeteilt werden: "
+  ],
+  "text_power-ui_design_assets_intro": [
+    "Die Assets für ein Bau-Spiel sind sehr wichtig, da der Spieler seinen Fortschritt in Form von großen Städten oder komplizierten Vorrichtungen sehen können soll. ",
+    "Um dem Spieler reichlich Optionen zu bieten, wurden viele Gebäude-Assets erstellt."
+  ],
+  "text_power-ui_design_assets_sketches": [
+    "In den Skizzen wurde versucht, eine einfache Formsprache zu verwenden, damit die Gebäude leicht zu unterscheiden sind. ",
+    "Beispielsweise haben die meisten (konventionellen) Kraftwerke ein Generatorgehäuse, eine Energiequelle und Schornsteine. ",
+    "Gebäude vom Typ <i>Andere Gebäude</i> haben Würfel als Grundform."
+  ],
+  "text_power-ui_design_icon-design_intro": [
+    "Viele Informationen mussten platzsparend vermittelt werden. ",
+    "Aus diesem Grund war ein umfangreiches Icon-Set erforderlich. ",
+    "Der erste Schritt bestand darin, schnell viele Variationen der benötigten Icons zu erstellen."
+  ],
+  "text_power-ui_design_icon-design_version-1": [
+    "Im Folgenden ist die erste Version der Symbole zu sehen. ",
+    "Sie wurden auch für den <a href=\"#prototype-axure\">ersten Prototyp</a> verwendet. ",
+    "Die Symbole selbst reichen von Gebäudetypen über Ressourcen bis hin zu allgemeinen Menübezeichnungen und Symbolen."
+  ],
+  "text_power-ui_design_icon-design_version-2": [
+    "Die zweite Iteration der Symbole war eine Weiterentwicklung der ersten. ",
+    "Die Symbole sollten rund, freundlich und gut zu unterscheiden sein. ",
+    "Insgesamt wurden die wichtigsten Symbole neu gestaltet &ndash; das sind die für das Bau-Menü oder UI-Statusindikatoren wie Zufriedenheit der Bevölkerung."
+  ],
+  "text_power-ui_design_intro": [
+    "Nach der Gameplay-Loop ist das visuelle Erscheinungsbild der wichtigste Aspekt. ",
+    "Ich habe versucht, auf Websites wie <a href=\"https://opengameart.org/\" rel=\"external\">OpenGameArt</a> oder ",
+    "    <a href=\"https://www.humblebundle.com/\" rel=\"external\">Humble Bundle</a> verwendbare Assets zu finden. ",
+    "Aber es war offensichtlich, dass ich meine eigenen Assets erstellen musste. ",
+    "Screen-Design, Icons und Game Objects mussten alle von Grund auf neu erstellt werden, während ein (modifiziertes) Terrain ",
+    "    aus einem <i>Humble Bundle</i> verwendet wurde."
+  ],
+  "text_power-ui_design_screen-design_contrasts": [
+    "Bevor ich tatsächlich Farben im Screen-Design verwendet habe, musste ich sicherstellen, dass das Gesamtbild gute Kontraste hat. ",
+    "Die UI-Elemente sollten genügend Kontrast zur Spielwelt haben, damit die Infos nicht verdeckt werden."
+  ],
+  "text_power-ui_design_screen-design_intro": [
+    "Bei der Gestaltung des Screen-Designs kamen die beiden Ebenen der Spielwelt und der Benutzeroberfläche des Spiels zusammen. ",
+    "Basierend auf den vorherigen Wireframes wurde das Bildschirmdesign erstellt. ",
+    "Die UI-Elemente selbst verwenden nur wenig Farbe zur Gestaltung, da die Farbverwendung für Infos reserviert ist."
+  ],
+  "text_power-ui_design_screen-design_smart-tv": [
+    "Im Folgenden sieht man, wie die Smart-TV-Ansicht aussieht. ",
+    "Diese ist zur mobilen Ansicht sehr ähnlich, aber die Navigation im UI muss auf die beiden Input-Achsen (links-rechts, oben-unten)",
+    "  der Smart TV-Fernbedienung ausgerichtet sein."
+  ],
+  "text_power-ui_design_terrain_intro": [
+    "Ein Spiel braucht auch eine Welt, in der es stattfindet. ",
+    "Das Gelände sollte einen einfachen, freundlichen und farbenfrohen Stil haben, damit es mit den gerenderten Assets harmoniert. ",
+    "Ich habe ein <a href=\"https://www.gamedevmarket.net/asset/2d-isometric-tile-pack-6970/\" rel=\"external\">modifiziertes Tileset</a> als Basis verwendet. ",
+    "Die Welt selbst besteht aus einzelnen Tiles (oder Kacheln). ",
+    "Darauf stehen Doodads wie Bäume, Büsche oder Felsen. ",
+    "Auch Spielobjekte wie die Kraftwerke selbst werden in die Welt gesetzt."
+  ],
+  "text_power-ui_design_terrain_tools": [
+    "Ich habe den <a href=\"https://www.mapeditor.org/\" rel=\"external\">Tiled Map Editor</a> verwendet, um die Karte zu erstellen. ",
+    "Terrain und Doodads waren in einem Tileset angeordnet. ",
+    "Die Karte konnte dann als json exportiert und innerhalb des Spiels rekonstruiert werden."
+  ],
+  "text_power-ui_implementation_intro": [
+    "Um die Funktionalität des UIs zu testen, wurden insgesamt drei Prototypen erstellt. "
+  ],
+  "text_power-ui_implementation_prototype-axure_intro": [
+    "<a href=\"https://www.axure.com/\" rel=\"external\">Axure</a> ist ein Tool zum Erstellen interaktiver Prototypen und Spezifikationen. ",
+    "Die Software wurde für den ersten Prototyp ausgewählt, da der Schwerpunkt ausschließlich auf dem UI-Design lag. ",
+    "Es erwieß sich als sehr nützlich, den Prototyp (visuelle Darstellung) parallel mit der Entwicklung des Konzepts zu erstellen. "
+  ],
+  "text_power-ui_implementation_prototype-axure_pros-and-cons": [
+    "Die Verwendung von Axure hatte jedoch auch Nachteile. ",
+    "Mit dem Prototyp wurden sieben Use-Cases implementiert, beispielsweise das Platzieren eines Gebäudes. ",
+    "Dazu ist eine Kollisions-Erkennung nötig: ",
+    "Der Spieler sollte nicht in der Lage sein, ein Gebäude auf einem anderem zu platzieren. ",
+    "Die Logik dafür musste also simuliert werden."
+  ],
+  "text_power-ui_implementation_prototype-phaser_architecture": [
+    "Für das Spiel selbst habe ich <a href=\"http://phaser.io/\" rel=\"external\">Phaser</a> verwendet, ein HTML5-basiertes Spiel-Framework. ",
+    "Die UI-Optionen in Phaser sind jedoch sehr begrenzt. ",
+    "Also habe ich das UI mit <a href=\"https://vuejs.org/\" rel=\"external\">VueJS</a> über dem Spiel aufgebaut. ",
+    "Da beide Frameworks auf JavaScript basieren, war es sehr einfach beide Systeme miteinander zu verbinden."
+  ],
+  "text_power-ui_implementation_prototype-phaser_features": [
+    "Mit diesem neuen System habe ich die grundlegende Spiellogik wie Kamerabewegung, Rendern der Karte und Kollisions-Erkennung implementiert. ",
+    "Die Benutzeroberfläche selbst kommuniziert mit dem Phaser-Spiel über Events. ",
+    "Z.B. Wenn der Spieler ein Gebäude aus dem Baumenü in die Spielwelt zieht, übernimmt die Phaser-Instanz die Kontrolle. "
+  ],
+  "text_power-ui_implementation_prototype-phaser_goal": [
+    "Der Zweck des zweiten Prototyps bestand darin, Schwächen des ersten zu verbessern und schöner zu gestalten. ",
+    "Webbasiertes Styling zu verwenden hat sich als großartig erwiesen! ",
+    "Die Implementierung der Spielelogik in Phaser war jedoch eine Herausforderung. ",
+    "Beispielsweise gibt es keine native Unterstützung für isometrische Maps."
+  ],
+  "text_power-ui_implementation_prototype-phaser_intro": [
+    "Die Arbeit mit <i>Unity</i> machte deutlich: ",
+    "Das wichtigste Merkmal des Prototyps ist das UI-System. ",
+    "Also habe die Technologie wieder gewechselt, diesmal zu HTML & CSS."
+  ],
+  "text_power-ui_implementation_prototype-unity_features": [
+    "Ich habe auch versucht, eine grundlegende Spiellogik einzufügen. ",
+    "Ein Graph wurde für das Stromnetz implementiert und dieses mal gab es eine korrete Kollisionserkennung. ",
+    "Am Ende erwies sich ein Prototyp mit vollständiger Core-Funktionalität aber als zu ehrgeizig. ",
+    "Auch das UI-System war, selbst mit dem Plugin, immer noch ein Problem."
+  ],
+  "text_power-ui_implementation_prototype-unity_intro": [
+    "Nach dem Testen des Konzepts mit dem Klick-Prototyp waren viele Mängel offensichtlich: ",
+    "Ein Großteil der zugrunde liegenden Logik musste simuliert werden und die Prototyping-Software selbst stieß an ihre Grenzen. ",
+    "Als zweiten Durchlauf wollte ich den Prototyp mit der Game-Engine <a href=\"https://unity.com/\" rel=\"external\">Unity</a> erstellen."
+  ],
+  "text_power-ui_implementation_prototype-unity_unity": [
+    "Unity ist sehr mächtig, hat Multi-Plattform-Support und verfügt über ein reichhaltiges Ökosystem im Asset Stores. ",
+    "Der einzige Nachteil ist, dass das UI-System (<a href=\"https://docs.unity3d.com/Manual/com.unity.ugui.html\" rel=\"external\">UnityUI</a>) nicht einfach zu bedienen ist. ",
+    "Es basiert auf GameObjects und einzelnen Komponenten und nicht auf Markup wie HTML und CSS. ",
+    "Also suchte ich nach einem Plugin, das mir helfen könnte und entschied mich für <a href=\"http://www.digital-legacy.co.za/XmlLayout/Documentation\" rel=\"external\">XmlLayout</a>. "
+  ],
+  "text_power-ui_intro-1": [
+    "Für meine Bachelorarbeit wollte ich mein Wissen aus dem Studium an etwas anwenden, das mich begeistert. ",
+    "Also habe ich mich dazu entschlossen, das UI für ein fiktives Videospiel zu erstellen! ",
+    "Um etwas Schaffbares zu machen, habe ich ein Mock-Up für ein fiktives Aufbau-Simulations-Spiel für Mobile erstellt. ",
+    "Da die Benutzeroberfläche eines Videospiels stark mit dem Gameplay verknüpft ist, habe ich auch versucht, eine einfache Gameplay-Schleife zu entwickeln. "
+  ],
+  "text_power-ui_intro-2": [
+    "Im Folgenden wurde der <i>User-Centered Design Process</i> zum Erstellen des Produkts angewandt. ",
+    "Die Schritte waren wie folgt: ",
+    "Analyse, Konzept, Design, Implementierung, Evaluation. "
+  ],
+  "text_power-ui_intro-quote": "Für meine Bachelorarbeit habe ich ein Aufbau-Simulations-Spiel für Mobile mit einem responsive UI erstellt. ",
+  "text_power-ui_user-testing_global-game-jam": [
+    "Der zweite Benutzertest wurde während des ",
+    "    <a href=\"https://globalgamejam.org/2020/jam-sites/tradebyte-software-gmbh\" rel=\"external\">Global Game Jam 2020 in Ansbach</a> durchgeführt. ",
+    "Es hat viel Spaß gemacht, besonders wenn man seinen Spielprototypen mit hochmotivierten Gamern testen kann. "
+  ],
+  "text_power-ui_user-testing_intro": [
+    "Der Spielprototyp musste getestet werden, damit er tatsächlich für Gamer spielbar war. ",
+    "Während des Projekts wurden zwei Benutzertests durchgeführt: ",
+    "Der erste mit dem Axure-Prototyp, um das Konzept zu testen. ",
+    "Und ein zweiter, um dieses Konzept zu verfeinern und das Spiel besser zu gestalten. "
+  ],
+  "text_power-ui_user-testing_results": [
+    "Alles in allem hat der zweite Prototyp gute Bewertungen (SUS-Score von 72; UEQ zwischen 1 und 2 in den meisten Kategorien) bekommen. ",
+    "Die Leute mochten die Grafik und die gute Usability, aber einigen fehlte mehr Inhalt für das Spiel."
+  ],
+  "text_power-ui_user-testing_test-structure": [
+    "Insgesamt wurden 19 Teilnehmer getestet. ",
+    "Bei jedem Test musste der Teilnehmer Fragen beantworten, z.B. wie vertraut er mit Videospielen ist. ",
+    "Danach wurden 7 Use-Cases im Prototypen gespielt. ",
+    "Um diese Tests vergleichen zu können, kam anschließend ein UEQ- und ein SUS-Fragebogen zum Einsatz."
+  ],
+  "text_privacy-policy_data-protection": [
+    "<p>",
+    "  Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre ",
+    "  personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.",
+    "</p> ",
+    "<p>",
+    "  Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren ",
+    "  Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt ",
+    "  dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht ",
+    "  an Dritte weitergegeben.",
+    "</p> ",
+    "<p>",
+    "  Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) ",
+    "  Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.",
+    "</p>"
+  ],
+  "text_privacy-policy_log-files": [
+    "<p>",
+    "  Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log Files, die ",
+    "  Ihr Browser automatisch an uns übermittelt. Dies sind:",
+    "</p> ",
+    "<ul> ",
+    "  <li>Browsertyp und Browserversion</li> ",
+    "  <li>verwendetes Betriebssystem</li> ",
+    "  <li>Referrer URL</li> ",
+    "  <li>Hostname des zugreifenden Rechners</li> ",
+    "  <li>Uhrzeit der Serveranfrage</li> ",
+    "</ul> ",
+    "<p>",
+    "  Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen ",
+    "  wird nicht vorgenommen. Wir behalten uns vor, diese Daten nachträglich zu prüfen, wenn uns konkrete Anhaltspunkte ",
+    "  für eine rechtswidrige Nutzung bekannt werden.",
+    "</p>"
+  ],
+  "text_privacy-policy_source": [
+    "Quelle: <a href=\"https://www.e-recht24.de\">eRecht24</a>"
+  ],
+  "text_steering-wheel_credits": [
+    "Das Projekt ist in Zusammenarbeit mit <a href=\"https://maximiliangoetz.de/\">Maximilian Götz</a> und ",
+    "<a href=\"http://alexanderbeidoun.de/\">Alexander Beidoun</a> entstanden. Es hat sogar den ",
+    "<a href=\"http://uxd.thi.de/blog/2018/04/07/autodesk-fusion360-designnow-workshop-das-auto-als-arbeitsplatz-der-zukunft/\">",
+    "1. Platz eines Modellierungs&shy;wettbewerbs</a> gewonnen. "
+  ],
+  "text_steering-wheel_intro": [
+    "Das Lenkrad für autonome Fahren ist das Arbeitsgerät der Zukunft. Die Tastatur auf der Rückseite ermöglicht ",
+    "es, während der Autofahrt zu arbeiten und in Ernstfällen dennoch rechtzeitig einzugreifen. "
+  ],
+  "text_thi-move_intro": [
+    "THI move ist eine Onlineplattform für Studenten, die im Ausland studieren oder ihr Praxissemester ablegen ",
+    "wollen. Für das Konzept habe ich mit meinem Teamkollegen ein Konzept entworfen, die Plattform gestaltet, ",
+    "die Webseite animiert und in einem Film präsentiert. <br>",
+    "<br>",
+    "Zusammen mit Arne Tiedemann bin ich die Schritte Paperprototyping, Wireframing, Erstellen eines Persona und ",
+    "Moodboards, Screendesign und Filmschneiden durchgegangen. "
+  ],
+  "text_thi-move_movie": [
+    "Um die THI move gut präsentieren zu können, haben wir einen Film gedreht. Darin wird ein typischer ",
+    "Anwendungsfall der Onlineplattform gezeigt. <br>",
+    "<br>",
+    "Zuerst wird das Problem definiert: Der Student kommt ohne THI&nbsp;move nicht weiter. Darauf hat unsere ",
+    "Plattform die Lösung: THI&nbsp;move hilft ihm, ins Ausland gehen zu können. "
+  ],
+  "text_thi-move_paper-prototypes": [
+    "Zuerst haben wir uns ein Konzept überlegt, damit wir wissen, welche Ziele die Onlineplattform erfüllen muss. ",
+    "Davon ausgehend haben wir dann mit dem Paperprototyping begonnen und die wichtigsten Seiten umgesetzt. "
+  ],
+  "text_thi-move_persona-and-moodboard": [
+    "Als Hilfestellung für den Gestaltungsprozess haben wir eine Persona und ein Moodboard entwickelt. <br>",
+    "<br>",
+    "Die Persona war wichtig, um die Bedürfnisse und Problempunkte eines typischen Anwenders herauszufinden. Um ",
+    "das visuelle Erscheinungsbild zu entwickeln haben wir ein Moodboard verwendet. "
+  ],
+  "text_thi-move_screen-design": [
+    "Nachdem wir einen Prototypen erstellt haben, haben wir die Screens dann gestaltet. Bei der Gestaltung war es ",
+    "wichtig, dass es stimmig zur Technischen Hochschule Ingolstadt ist. "
+  ]
 }
