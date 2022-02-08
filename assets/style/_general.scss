@@ -1,0 +1,136 @@
+html {
+  font-family: "Fira Sans", "Segoe UI", "Helvetica", "Source Sans Pro", "Roboto", sans-serif;
+  color: $gray-80;
+}
+
+body {
+  margin: 0;
+  background-color: $white;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  font-size: 12pt;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    font-size: 16pt;
+  }
+}
+
+// Add basic style to HTML5 semantic elements for browsers who don't know them
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+time,
+mark {
+  display: inline;
+}
+
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4 {
+  font-size: 1.1em;
+}
+h5 {
+  font-size: 1.05em;
+}
+h6 {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: $sp;
+}
+
+section > h2,
+section > h3 {
+  margin-top: 0;
+}
+
+div > h3 {
+  margin-bottom: $sp;
+}
+
+p {
+  line-height: 1.6em;
+  max-width: 33em;
+}
+
+em {
+  @extend %font-weight-bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+li > a,
+li > span > a,
+p > a {
+  color: $gray-60;
+  text-decoration: none;
+  border-bottom: ($sp * 0.1) solid $gray-60;
+
+  &:hover,
+  &.active:hover {
+    color: $orange;
+    border-bottom-color: $orange;
+  }
+
+  &:active {
+    color: $black;
+  }
+
+  &.active {
+    @extend %font-weight-bold;
+  }
+}
+
+.bright-font {
+  color: $white;
+}
+
+a.invisible-link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &.active:hover {
+    color: $orange;
+    border-bottom: ($sp * 0.1) solid $orange;
+  }
+
+  &:active {
+    color: $black;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
