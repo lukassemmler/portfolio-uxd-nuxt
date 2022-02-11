@@ -58,7 +58,8 @@ export default {
   styleResources: {
     scss: [
       '~/assets/style/main.scss',
-    ]
+    ],
+    hoistUseStatements: true,
   },
 
   // see https://www.npmjs.com/package/@nuxtjs/fontawesome
