@@ -1,0 +1,155 @@
+@use "sass:math";
+
+$pillar-gap: 2em;
+$numberOfCols: 12;
+
+%pillar-col-base {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@function numbered-col-flex($colNumber, $numberOfCols) {
+  @return percentage(math.div($colNumber, $numberOfCols));
+}
+
+@mixin pillar-col-breakpoint($infix, $breakpoint) {
+  .pillar-col-#{$infix} {
+    @extend %pillar-col-base;
+    width: 100%;
+    @media screen and (min-width: $breakpoint) {
+      & {
+        flex: 1 0 0%;
+      }
+    }
+  }
+}
+
+@mixin pillar-col-numbered-breakpoint($infix, $breakpoint, $number) {
+  .pillar-col-#{$infix}-#{$number} {
+    @extend %pillar-col-base;
+    width: 100%;
+    @media screen and (min-width: $breakpoint) {
+      & {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: numbered-col-flex($number, $numberOfCols);
+      }
+    }
+  }
+}
+
+.pillar-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @mixin make-gapped-h($gap-width) {
+    .pillar-row {
+      margin-left: -1 * math.div($gap-width, 2);
+      margin-right: -1 * math.div($gap-width, 2);
+    }
+
+    *[class^="pillar-col"],
+    *[class*=" pillar-col"] {
+      padding-left: math.div($gap-width, 2);
+      padding-right: math.div($gap-width, 2);
+    }
+  }
+
+  &.gapped-h {
+    @include make-gapped-h($pillar-gap);
+  }
+
+  &.gapped-h-small {
+    @include make-gapped-h(math.div($pillar-gap, 2));
+  }
+
+  @mixin make-gapped-v($gap-width) {
+    *[class^="pillar-col"],
+    *[class*=" pillar-col"] {
+      margin-bottom: $gap-width;
+    }
+  }
+
+  &.gapped-v {
+    @include make-gapped-v($pillar-gap);
+  }
+
+  &.gapped-v-small {
+    @include make-gapped-v(math.div($pillar-gap, 2));
+  }
+
+  &.gapped-v-big {
+    *[class^="pillar-col"],
+    *[class*=" pillar-col"] {
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+  }
+
+  &.images-only {
+    img {
+      display: block;
+    }
+  }
+}
+
+.pillar-row {
+  display: flex;
+  flex-flow: row wrap;
+  //align-items: stretch;
+}
+
+.pillar-col {
+  @extend %pillar-col-base;
+  flex: 1 0 0%;
+}
+
+@include pillar-col-breakpoint("md", $breakpoint-medium);
+@include pillar-col-breakpoint("sbg", $breakpoint-semi-big);
+@include pillar-col-breakpoint("bg", $breakpoint-big);
+@include pillar-col-breakpoint("xl", $breakpoint-xl);
+@include pillar-col-breakpoint("2xl", $breakpoint-2xl);
+@include pillar-col-breakpoint("3xl", $breakpoint-3xl);
+
+// For loop has to be iterated in reverse, because the last occur takes precedence in the cascade.
+// This is because generally with breakpoints, the columns get smaller (.col-md-6, .col-bg-4, .col-xl-3...).
+// But when iterating in a positive direction, the bigger numbers will always take precedence.
+@for $i from $numberOfCols to 1 {
+  .pillar-col-#{$i} {
+    @extend %pillar-col-base;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: numbered-col-flex($i, $numberOfCols);
+  }
+  @include pillar-col-numbered-breakpoint("md", $breakpoint-medium, $i);
+  @include pillar-col-numbered-breakpoint("sbg", $breakpoint-semi-big, $i);
+  @include pillar-col-numbered-breakpoint("bg", $breakpoint-big, $i);
+  @include pillar-col-numbered-breakpoint("xl", $breakpoint-xl, $i);
+  @include pillar-col-numbered-breakpoint("2xl", $breakpoint-2xl, $i);
+  @include pillar-col-numbered-breakpoint("3xl", $breakpoint-3xl, $i);
+}
+
+.pillar-break {
+  flex-basis: 100%;
+  width: 0;
+}
+
+@mixin pillar-break-breakpoint($infix, $breakpoint) {
+  .pillar-break-#{$infix} {
+    flex-basis: auto;
+    width: 0;
+    @media screen and (min-width: $breakpoint) {
+      & {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+@include pillar-break-breakpoint("md", $breakpoint-medium);
+@include pillar-break-breakpoint("sbg", $breakpoint-semi-big);
+@include pillar-break-breakpoint("bg", $breakpoint-big);
+@include pillar-break-breakpoint("xl", $breakpoint-xl);
+@include pillar-break-breakpoint("2xl", $breakpoint-2xl);
+@include pillar-break-breakpoint("3xl", $breakpoint-3xl);
