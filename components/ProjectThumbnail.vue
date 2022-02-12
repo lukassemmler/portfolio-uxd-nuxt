@@ -8,8 +8,17 @@
         {{ title }}
       </nuxt-link>
     </h3>
+    <p class="project-thumbnail-subtitle" v-if="subtitle">
+      {{ subtitle }}
+    </p>
+    <p v-if="description" class="project-thumbnail-description">
+      <template v-html="description"></template>
+      <nuxt-link :to="link" :title="linkTitle">{{
+        $t("label_continue-reading")
+      }}</nuxt-link>
+    </p>
     <p class="project-thumbnail-tags" v-if="tags">
-      {{ tags }}
+      {{ tags.join(", ") }}
     </p>
   </div>
 </template>
@@ -34,11 +43,23 @@ export default {
       required: false,
       default: "Any title",
     },
-    tags: {
+    description: {
       type: String,
       required: false,
-      default: "Any tags",
+      default: "",
     },
+    subtitle: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    tags: {
+      type: Array,
+      required: false,
+      validator: function (tags) {
+        return tags.every((tag) => typeof tag === "string");
+      },
+    }
   },
 };
 </script>
@@ -70,7 +91,11 @@ export default {
   }
 }
 
-.project-thumbnail-tags {
+.project-thumbnail-description {
+  margin-top: 0;
+}
+
+.project-thumbnail-subtitle {
   font-style: italic;
 }
 </style>

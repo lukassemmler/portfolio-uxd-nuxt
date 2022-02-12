@@ -12,7 +12,7 @@
             ratio="4-by-3"
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_power-ui')"
-            :tags="$t('project-subtitle_power-ui')"
+            :subtitle="$t('project-subtitle_power-ui')"
           ></project-thumbnail>
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
@@ -24,7 +24,7 @@
             ratio="4-by-3"
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_data-visualization')"
-            :tags="$t('project-subtitle_data-visualization')"
+            :subtitle="$t('project-subtitle_data-visualization')"
           ></project-thumbnail>
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
@@ -36,7 +36,7 @@
             ratio="4-by-3"
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_design-booklet')"
-            :tags="$t('project-subtitle_design-booklet')"
+            :subtitle="$t('project-subtitle_design-booklet')"
           ></project-thumbnail>
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
@@ -48,7 +48,7 @@
             ratio="4-by-3"
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_3d-modelling')"
-            :tags="$t('project-subtitle_3d-modelling')"
+            :subtitle="$t('project-subtitle_3d-modelling')"
           ></project-thumbnail>
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
@@ -60,7 +60,7 @@
             ratio="4-by-3"
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_steering-wheel')"
-            :tags="$t('project-subtitle_steering-wheel')"
+            :subtitle="$t('project-subtitle_steering-wheel')"
           ></project-thumbnail>
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
@@ -72,7 +72,7 @@
             ratio="4-by-3"
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_infotainment-system')"
-            :tags="$t('project-subtitle_infotainment-system')"
+            :subtitle="$t('project-subtitle_infotainment-system')"
           ></project-thumbnail>
         </div>
       </div>
