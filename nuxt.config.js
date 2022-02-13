@@ -84,9 +84,10 @@ export default {
       { code: 'en', iso: 'en-US', file: 'en.json' },
       { code: 'de', iso: 'de-DE', file: 'de.json' }
     ],
-    defaultLocale: 'en',
+    defaultLocale: 'de',
     vueI18n: {
-      fallbackLocale: 'en',
-    }
+      fallbackLocale: 'de',
+    },
+    strategy: 'prefix_and_default', //doesnt seem to work; default locale is supposed to show up in path
   }
 }
