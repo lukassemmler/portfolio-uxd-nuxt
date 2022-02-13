@@ -28,15 +28,6 @@ export default {
       siteNavigation: navigation.main,
     };
   },
-  computed: {
-    reversedMessage: function () {
-      //const currentRoute =
-      //return this.message.split('').reverse().join('')
-    },
-  },
-  mounted: function () {
-    //console.log(this.nav);
-  },
 };
 </script>
 
