@@ -72,7 +72,8 @@ div > h3 {
 
 p {
   line-height: 1.6em;
-  max-width: 33em;
+  //TODO should have max-width inside texts that are meant for reading.
+  //max-width: 33em;
 }
 
 em {
