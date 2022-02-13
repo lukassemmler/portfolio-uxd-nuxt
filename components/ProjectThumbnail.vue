@@ -4,29 +4,38 @@
       <simple-image v-bind="$attrs" />
     </nuxt-link>
     <h3 class="project-thumbnail-title">
-      <nuxt-link class="invisible-link" :to="link" :title="linkTitle">
-        {{ title }}
+      <nuxt-link
+        class="invisible-link"
+        :to="link"
+        :title="linkTitle"
+        v-html="title"
+      >
       </nuxt-link>
     </h3>
     <p class="project-thumbnail-subtitle" v-if="subtitle">
       {{ subtitle }}
     </p>
     <p v-if="description" class="project-thumbnail-description">
-      <template v-html="description"></template>
+      <span v-html="description"></span>
       <nuxt-link :to="link" :title="linkTitle">{{
         $t("label_continue-reading")
       }}</nuxt-link>
     </p>
-    <p class="project-thumbnail-tags" v-if="tags">
-      {{ tags.join(", ") }}
-    </p>
+    <div class="project-thumbnail-tags" v-if="tags">
+      <ul class="project-thumbnail-tags-list">
+        <li v-for="tag in tags" :key="tag">
+          <simple-tag :text="tag"></simple-tag>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 import SimpleImage from "./SimpleImage.vue";
+import SimpleTag from "./SimpleTag.vue";
 export default {
-  components: { SimpleImage },
+  components: { SimpleImage, SimpleTag },
   props: {
     link: {
       type: String,
@@ -59,7 +68,7 @@ export default {
       validator: function (tags) {
         return tags.every((tag) => typeof tag === "string");
       },
-    }
+    },
   },
 };
 </script>
@@ -97,5 +106,17 @@ export default {
 
 .project-thumbnail-subtitle {
   font-style: italic;
+  text-align: center;
+}
+
+.project-thumbnail-tags-list {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  & > *:not(:last-child) {
+    margin-right: 0.5rem;
+  }
 }
 </style>
