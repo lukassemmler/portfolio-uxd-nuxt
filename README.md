@@ -79,3 +79,13 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+
+## Future migration of Nuxt
+
+## vue-i18n
+
+* The package `@nuxtjs/i18n` v7.2.0 uses `vue-i18n` v8 under the hood.
+* There are some breaking changes from `vue-i18n` v8 to `vue-i18n` v9+.
+* One of them is that we can no longer use `$t('messageKey')[0]` to return items of a message array. 
+* See https://vue-i18n.intlify.dev/guide/migration/breaking.html#translation-api-return-value.
