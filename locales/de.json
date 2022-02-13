@@ -704,7 +704,7 @@
     "<a href=\"%s\">Impressum</a> <br>",
     "<a href=\"%s\">Datenschutz&shy;erklärung</a><br> ",
     "<br>",
-    "&copy; %s"
+    "&copy; {year}"
   ],
   "text_data-visualization_concepts": [
     "Nach der Datenauswertung hatte ich verschiedene Ideen und hab mir dann verschiedene Konzepte überlegt, wie ich die Daten attraktiv präsentieren kann. "

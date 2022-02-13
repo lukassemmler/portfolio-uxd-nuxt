@@ -704,7 +704,7 @@
     "<a href=\"%s\">Imprint</a> <br>",
     "<a href=\"%s\">Privacy Policy</a><br> ",
     "<br>",
-    "&copy; %s"
+    "&copy; {year}"
   ],
   "text_data-visualization_concepts": [
     "After analyzing the data, I came up with different concepts to present the data in an easy-to-understand and pleasing way. "
