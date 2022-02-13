@@ -4,7 +4,7 @@
     <div class="pillar-container gapped-h gapped-v">
       <div class="pillar-row">
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
-          <project-thumbnail
+          <post-teaser
             link="/projects/power-ui"
             :linkTitle="$t('project-link-title_power-ui')"
             src="thumbnail/Thumbnail Power-UI.jpg"
@@ -13,10 +13,10 @@
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_power-ui')"
             :subtitle="$t('project-subtitle_power-ui')"
-          ></project-thumbnail>
+          ></post-teaser>
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
-          <project-thumbnail
+          <post-teaser
             link="/projects/data-visualization"
             :linkTitle="$t('project-link-title_data-visualization')"
             src="thumbnail/Thumbnail Data Visualization.jpg"
@@ -25,10 +25,10 @@
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_data-visualization')"
             :subtitle="$t('project-subtitle_data-visualization')"
-          ></project-thumbnail>
+          ></post-teaser>
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
-          <project-thumbnail
+          <post-teaser
             link="/projects/design-booklet"
             :linkTitle="$t('project-link-title_design-booklet')"
             src="thumbnail/Thumbnail Design Booklet.jpg"
@@ -37,10 +37,10 @@
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_design-booklet')"
             :subtitle="$t('project-subtitle_design-booklet')"
-          ></project-thumbnail>
+          ></post-teaser>
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
-          <project-thumbnail
+          <post-teaser
             link="/projects/3d-modelling"
             :linkTitle="$t('project-link-title_3d-modelling')"
             src="thumbnail/Thumbnail 3D Modelling.jpg"
@@ -49,10 +49,10 @@
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_3d-modelling')"
             :subtitle="$t('project-subtitle_3d-modelling')"
-          ></project-thumbnail>
+          ></post-teaser>
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
-          <project-thumbnail
+          <post-teaser
             link="/projects/steering-wheel"
             :linkTitle="$t('project-link-title_steering-wheel')"
             src="thumbnail/Thumbnail Steering Wheel.jpg"
@@ -61,10 +61,10 @@
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_steering-wheel')"
             :subtitle="$t('project-subtitle_steering-wheel')"
-          ></project-thumbnail>
+          ></post-teaser>
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
-          <project-thumbnail
+          <post-teaser
             link="/projects/infotainment-system"
             :linkTitle="$t('project-link-title_infotainment-system')"
             src="thumbnail/Thumbnail Infotainment System.jpg"
@@ -73,7 +73,7 @@
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t('project-title-raw_infotainment-system')"
             :subtitle="$t('project-subtitle_infotainment-system')"
-          ></project-thumbnail>
+          ></post-teaser>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@
 <script>
 import PageFooter from "~/components/PageFooter.vue";
 import PageHeader from "~/components/PageHeader.vue";
-import ProjectThumbnail from "~/components/ProjectThumbnail.vue";
+import PostTeaser from "~/components/PostTeaser.vue";
 export default {};
 </script>
 

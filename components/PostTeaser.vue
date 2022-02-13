@@ -1,9 +1,9 @@
 <template>
-  <div class="project-thumbnail">
-    <nuxt-link :to="link" :title="linkTitle" class="project-thumbnail-link">
+  <div class="post-teaser">
+    <nuxt-link :to="link" :title="linkTitle" class="post-teaser-link">
       <simple-image v-bind="$attrs" />
     </nuxt-link>
-    <h3 class="project-thumbnail-title">
+    <h3 class="post-teaser-title">
       <nuxt-link
         class="invisible-link"
         :to="link"
@@ -12,17 +12,17 @@
       >
       </nuxt-link>
     </h3>
-    <p class="project-thumbnail-subtitle" v-if="subtitle">
+    <p class="post-teaser-subtitle" v-if="subtitle">
       {{ subtitle }}
     </p>
-    <p v-if="description" class="project-thumbnail-description">
+    <p v-if="description" class="post-teaser-description">
       <span v-html="description"></span>
       <nuxt-link :to="link" :title="linkTitle">{{
         $t("label_continue-reading")
       }}</nuxt-link>
     </p>
-    <div class="project-thumbnail-tags" v-if="tags">
-      <ul class="project-thumbnail-tags-list">
+    <div class="post-teaser-tags" v-if="tags">
+      <ul class="post-teaser-tags-list">
         <li v-for="tag in tags" :key="tag">
           <simple-tag :text="tag"></simple-tag>
         </li>
@@ -74,16 +74,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.project-thumbnail {
+.post-teaser {
   text-align: center;
   margin-bottom: $sp;
 }
 
-.project-thumbnail-title {
+.post-teaser-title {
   margin-bottom: 0.5em;
 }
 
-.project-thumbnail-link {
+.post-teaser-link {
   display: block;
   margin-bottom: 1.5rem;
   transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
@@ -100,16 +100,16 @@ export default {
   }
 }
 
-.project-thumbnail-description {
+.post-teaser-description {
   margin-top: 0;
 }
 
-.project-thumbnail-subtitle {
+.post-teaser-subtitle {
   font-style: italic;
   text-align: center;
 }
 
-.project-thumbnail-tags-list {
+.post-teaser-tags-list {
   list-style-type: none;
   display: flex;
   flex-flow: row wrap;

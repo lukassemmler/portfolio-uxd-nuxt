@@ -1,7 +1,7 @@
 <template>
   <div>
     <page-header></page-header>
-    <project-thumbnail
+    <post-teaser
       link="/projects/power-ui"
       :linkTitle="$t('project-link-title_power-ui')"
       src="thumbnail/Thumbnail Power-UI.jpg"
@@ -19,7 +19,7 @@
         $t('label_tag_asset-creation'),
         $t('label_tag_coding-games'),
       ]"
-    ></project-thumbnail>
+    ></post-teaser>
     <page-footer></page-footer>
   </div>
 </template>
@@ -27,9 +27,9 @@
 <script>
 import PageFooter from "~/components/PageFooter.vue";
 import PageHeader from "~/components/PageHeader.vue";
-import ProjectThumbnail from "~/components/ProjectThumbnail.vue";
+import PostTeaser from "~/components/PostTeaser.vue";
 export default {
-  components: { PageHeader, PageFooter, ProjectThumbnail },
+  components: { PageHeader, PageFooter, PostTeaser },
 };
 </script>
 
