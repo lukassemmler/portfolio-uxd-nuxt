@@ -5,6 +5,7 @@
       <div class="pillar-row">
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
           <post-teaser
+            class="centered"
             link="/projects/power-ui"
             :linkTitle="$t('project-link-title_power-ui')"
             src="thumbnail/Thumbnail Power-UI.jpg"
@@ -17,6 +18,7 @@
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
           <post-teaser
+            class="centered"
             link="/projects/data-visualization"
             :linkTitle="$t('project-link-title_data-visualization')"
             src="thumbnail/Thumbnail Data Visualization.jpg"
@@ -29,6 +31,7 @@
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
           <post-teaser
+            class="centered"
             link="/projects/design-booklet"
             :linkTitle="$t('project-link-title_design-booklet')"
             src="thumbnail/Thumbnail Design Booklet.jpg"
@@ -41,6 +44,7 @@
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
           <post-teaser
+            class="centered"
             link="/projects/3d-modelling"
             :linkTitle="$t('project-link-title_3d-modelling')"
             src="thumbnail/Thumbnail 3D Modelling.jpg"
@@ -53,6 +57,7 @@
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
           <post-teaser
+            class="centered"
             link="/projects/steering-wheel"
             :linkTitle="$t('project-link-title_steering-wheel')"
             src="thumbnail/Thumbnail Steering Wheel.jpg"
@@ -65,6 +70,7 @@
         </div>
         <div class="pillar-col-12 pillar-col-sbg-6 pillar-col-bg-4">
           <post-teaser
+            class="centered"
             link="/projects/infotainment-system"
             :linkTitle="$t('project-link-title_infotainment-system')"
             src="thumbnail/Thumbnail Infotainment System.jpg"

@@ -1,20 +1,22 @@
 <template>
-  <div class="post-teaser">
+  <article class="post-teaser">
     <nuxt-link :to="link" :title="linkTitle" class="post-teaser-link">
       <simple-image v-bind="$attrs" />
     </nuxt-link>
-    <h3 class="post-teaser-title">
-      <nuxt-link
-        class="invisible-link"
-        :to="link"
-        :title="linkTitle"
-        v-html="title"
-      >
-      </nuxt-link>
-    </h3>
-    <p class="post-teaser-subtitle" v-if="subtitle">
-      {{ subtitle }}
-    </p>
+    <header class="post-teaser-header">
+      <h3 class="post-teaser-title">
+        <nuxt-link
+          class="invisible-link"
+          :to="link"
+          :title="linkTitle"
+          v-html="title"
+        >
+        </nuxt-link>
+      </h3>
+      <p class="post-teaser-subtitle" v-if="subtitle">
+        {{ subtitle }}
+      </p>
+    </header>
     <p v-if="description" class="post-teaser-description">
       <span v-html="description"></span>
       <nuxt-link :to="link" :title="linkTitle">{{
@@ -28,7 +30,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>
@@ -75,12 +77,42 @@ export default {
 
 <style lang="scss" scoped>
 .post-teaser {
-  text-align: center;
   margin-bottom: $sp;
+
+  &.centered {
+    text-align: center;
+
+    .post-teaser-tags-list {
+      justify-content: center;
+    }
+  }
 }
 
 .post-teaser-title {
-  margin-bottom: 0.5em;
+  font-size: 2.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.post-teaser-subtitle {
+  font-style: italic;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.post-teaser-header {
+  margin-bottom: 1.5rem;
+
+  & >:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.post-teaser-description {
+  font-style: italic;
+  margin-top: 0;
 }
 
 .post-teaser-link {
@@ -100,20 +132,11 @@ export default {
   }
 }
 
-.post-teaser-description {
-  margin-top: 0;
-}
-
-.post-teaser-subtitle {
-  font-style: italic;
-  text-align: center;
-}
-
 .post-teaser-tags-list {
   list-style-type: none;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  padding: 0;
 
   & > *:not(:last-child) {
     margin-right: 0.5rem;
