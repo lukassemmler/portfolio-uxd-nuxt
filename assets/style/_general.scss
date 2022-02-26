@@ -104,6 +104,28 @@ p > a {
   &.active {
     @extend %font-weight-bold;
   }
+  
+}
+
+p > a {
+  &:visited {
+    color: $purple;
+    border-bottom-color: $purple;
+  }
+  &:visited:hover {
+    color: $orange;
+    border-bottom-color: $orange;
+  }
+}
+
+a {
+  // Adds an orange outline around every link that is focused via keyboard
+  border-radius: 0.1rem;
+
+  &:focus-visible {
+    outline: 0.2rem solid $orange;
+    outline-offset: 0.2rem;
+  }
 }
 
 .bright-font {
