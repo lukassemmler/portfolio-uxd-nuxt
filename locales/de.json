@@ -595,64 +595,30 @@
     "Studium der benutzerzentrierter Gestaltung und UI-Design (UXD). ",
     "Lernen von Design, Nutzertests, Programmieren und Psychologie. Abschluss mit 1,3. "
   ],
-  "text_about_education-1_location": [
-    "Ingolstadt"
-  ],
-  "text_about_education-1_organization": [
-    "Technische Hochschule Ingolstadt"
-  ],
-  "text_about_education-1_time-span": [
-    "Okt 2016 &ndash; Mrz 2020"
-  ],
-  "text_about_education-1_title": [
-    "UX Design B.Sc."
-  ],
+  "text_about_education-1_location": "Ingolstadt",
+  "text_about_education-1_organization": "Technische Hochschule Ingolstadt",
+  "text_about_education-1_time-span": "Okt 2016 &ndash; Mrz 2020",
+  "text_about_education-1_title": "UX Design B.Sc.",
   "text_about_education-2_description": [
     "UI-Konzept für ein Simulationsspiel nach dem User-Centered-Design-Prozess. ",
     "Recherche, Wireframes, Skizzen, UI-Design, Prototyping, Programmierung, User Testing, Unity, Phaser. (1,3)"
   ],
-  "text_about_education-2_location": [
-    "Ingolstadt"
-  ],
-  "text_about_education-2_organization": [
-    "Bachelorarbeit"
-  ],
-  "text_about_education-2_time-span": [
-    "Okt 2019 &ndash; Mrz 2020"
-  ],
-  "text_about_education-2_title": [
-    "Videospiel-UI"
-  ],
+  "text_about_education-2_location": "Ingolstadt",
+  "text_about_education-2_organization": "Bachelorarbeit",
+  "text_about_education-2_time-span": "Okt 2019 &ndash; Mrz 2020",
+  "text_about_education-2_title": "Videospiel-UI",
   "text_about_education-3_description": [
     "Förderung durch Seminare wie Rhetorikkurse, Infoakademien zu gesellschaftspolitischen Themen, Kontakt zu Mitstipendiaten."
   ],
-  "text_about_education-3_location": [
-    "München"
-  ],
-  "text_about_education-3_organization": [
-    "Hanns-Seidel-Stiftung"
-  ],
-  "text_about_education-3_time-span": [
-    "Apr 2018 &ndash; Mrz 2020"
-  ],
-  "text_about_education-3_title": [
-    "Altstpidendiat"
-  ],
-  "text_about_education-4_description": [
-    "<<EMPTY>>"
-  ],
-  "text_about_education-4_location": [
-    "Ingolstadt"
-  ],
-  "text_about_education-4_organization": [
-    "DesignNow Autodesk Fusion 360"
-  ],
-  "text_about_education-4_time-span": [
-    "Apr 2018"
-  ],
-  "text_about_education-4_title": [
-    "1. Platz, Design-Wettbewerb"
-  ],
+  "text_about_education-3_location": "München",
+  "text_about_education-3_organization": "Hanns-Seidel-Stiftung",
+  "text_about_education-3_time-span": "Apr 2018 &ndash; Mrz 2020",
+  "text_about_education-3_title": "Altstpidendiat",
+  "text_about_education-4_description": [],
+  "text_about_education-4_location": "Ingolstadt",
+  "text_about_education-4_organization": "DesignNow Autodesk Fusion 360",
+  "text_about_education-4_time-span": "Apr 2018",
+  "text_about_education-4_title": "1. Platz, Design-Wettbewerb",
   "text_about_hello": [
     "Hallo! "
   ],
@@ -664,36 +630,20 @@
     "Prototyping in HTML & CSS. Design von Werbebannern. ",
     "Java Bootcamp mit Spring Framework. Wireframes für Webseite. "
   ],
-  "text_about_work-experience-1_location": [
-    "München"
-  ],
-  "text_about_work-experience-1_organization": [
-    "eForce21 GmbH"
-  ],
-  "text_about_work-experience-1_time-span": [
-    "Aug 2018 &ndash; Dez 2018"
-  ],
-  "text_about_work-experience-1_title": [
-    "Praktikumssemester"
-  ],
+  "text_about_work-experience-1_location": "München",
+  "text_about_work-experience-1_organization": "eForce21 GmbH",
+  "text_about_work-experience-1_time-span": "Aug 2018 &ndash; Dez 2018",
+  "text_about_work-experience-1_title": "Praktikumssemester",
   "text_about_work-experience-2_description": [
     "Arbeiten an digitalen Schulbüchern. ",
     "Konzeption von Hausaufgaben-Korrekturen. ",
     "Schneiden eines Hörbuches. ",
     "Recherche-Arbeit für Schreibprozess. "
   ],
-  "text_about_work-experience-2_location": [
-    "Eichstätt"
-  ],
-  "text_about_work-experience-2_organization": [
-    "Cornelsen mBook Verlag"
-  ],
-  "text_about_work-experience-2_time-span": [
-    "Jul 2017 &ndash; Sept 2017"
-  ],
-  "text_about_work-experience-2_title": [
-    "Praktikum"
-  ],
+  "text_about_work-experience-2_location": "Eichstätt",
+  "text_about_work-experience-2_organization": "Cornelsen mBook Verlag",
+  "text_about_work-experience-2_time-span": "Jul 2017 &ndash; Sept 2017",
+  "text_about_work-experience-2_title": "Praktikum",
   "text_contact": [
     "<em>Lukas Semmler</em><br>",
     "User Experience Designer<br>",
