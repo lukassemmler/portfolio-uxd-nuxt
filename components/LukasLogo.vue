@@ -36,5 +36,10 @@ export default {
     background: none;
     outline: 0.1em solid $white;
   }
+
+  &:hover, &:focus {
+    background-color: $orange;
+    color: $black;
+  }
 }
 </style>
