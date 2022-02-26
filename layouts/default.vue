@@ -10,6 +10,7 @@ export default {
 
 <style lang="scss">
 @import "~/assets/style/_general.scss";
+@import "~/assets/style/_layout-container.scss";
 @import "~/assets/style/_layout-flex.scss";
 @import "~/assets/style/_layout-grid.scss";
 @import "~/assets/style/_layout-column.scss";

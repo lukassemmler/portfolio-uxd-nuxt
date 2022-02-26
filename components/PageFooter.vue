@@ -1,6 +1,6 @@
 <template>
   <footer id="page-footer">
-    <div class="container-medium">
+    <div class="container huge">
       <div class="footer-body">
         <p>
           <em>{{ $t("label_owner") }} </em><br />
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="footer-bedrock">
-      <div class="container-medium">
+      <div class="container huge">
         <div class="footer-bedrock-inner">
           <nav class="footer-nav">
             <ul class="footer-nav-list">

@@ -1,6 +1,6 @@
 <template>
   <header id="page-header" :class="classes">
-    <div class="container-medium">
+    <div class="container huge">
       <div class="page-header-inner">
         <lukas-logo></lukas-logo>
         <header-nav :sites="siteNavigation"></header-nav>
