@@ -1,9 +1,14 @@
 <template>
   <nav class="header-nav">
-    <ul>
+    <ul class="header-nav-list">
       <template v-for="site in sites">
         <li v-if="site.visible" :key="site.path">
-          <nuxt-link :to="'/' + site.path">{{ $t(site.label) }}</nuxt-link>
+          <nuxt-link :to="'/' + site.path" class="header-nav-link"
+            ><span class="header-nav-label">{{ $t(site.label) }}</span
+            ><span class="header-nav-label-dummy" aria-hidden="true">{{
+              $t(site.label)
+            }}</span></nuxt-link
+          >
         </li>
       </template>
     </ul>
@@ -39,42 +44,62 @@ export default {
 <style lang="scss" scoped>
 .header-nav {
   display: inline-block;
+}
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin: 0;
-    padding: 0;
-
-    li {
-      list-style-type: none;
-      display: inline-block;
-
-      &:not(:last-child) {
-        margin-right: $sp;
-      }
-    }
+.header-nav-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $sp 0;
+  border-bottom-width: 0;
+  &:hover {
+    background-image: linear-gradient(
+      to top,
+      $orange 0%,
+      $orange 3%,
+      transparent 3%
+    );
   }
+}
 
-  a {
+// 'link-active' gets added to NuxtLink when active
+.link-active {
+  color: $black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-nav-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
     display: inline-block;
-    padding: $sp 0;
-    border-bottom-width: 0;
-    &:hover {
-      background-image: linear-gradient(
-        to top,
-        $orange 0%,
-        $orange 3%,
-        transparent 3%
-      );
+
+    &:not(:last-child) {
+      margin-right: $sp;
     }
   }
+}
 
-  .link-active {
-    color: $black;
-    font-weight: bold;
-    text-decoration: none;
-  }
+.header-nav-label {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+// With 'font-weight: bold', the size of the link increases slightly.
+// To prevent the labels from shiftin weirdly, a non-visible, non-readable dummy label is inserted to guarantee the max width.
+.header-nav-label-dummy {
+  display: inline-block;
+  font-weight: bold;
+  height: 0;
+  visibility: hidden;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 </style>
