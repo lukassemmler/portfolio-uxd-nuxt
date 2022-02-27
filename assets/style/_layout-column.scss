@@ -1,3 +1,33 @@
+// Layout columns (cols), inspired by the layout system of Bootstrap 5.
+//
+// Usage example A:
+// * Displays two columns next to each other.
+// 
+// div.pillar-container
+//   div.pillar-row
+//     div.pillar-col
+//     div.pillar-col
+//
+//
+// Usage example B:
+// * Displays two columns, one taking up 66.67%, the other taking up 33.33%. 
+// 
+// div.pillar-container
+//   div.pillar-row
+//     div.pillar-col-8
+//     div.pillar-col-4
+//
+// 
+// Usage example C:
+// * Displays two columns next to each other, while over breakpoint big.
+// * Displays one column, while under breakpoint big.
+// * Adds spacing ('gapped-h') to columns, but only while breakpoint is met.
+// 
+// div.pillar-container.gapped-h
+//   div.pillar-row
+//     div.pillar-col-bg-6
+//     div.pillar-col-bg-6
+
 @use "sass:math";
 
 $pillar-gap: 2em;
