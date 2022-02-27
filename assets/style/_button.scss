@@ -14,6 +14,17 @@
     color: $white;
     background-color: $red;
   }
+
+  &:visited {
+    color: $white;
+    background-color: $purple;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $orange;
+    }
+  }
 }
 
 .button-flat {
