@@ -1,0 +1,46 @@
+.link-button {
+  display: inline;
+  padding: 0.2em 0.5em;
+  margin: 0 0.2em 0.1em 0.2em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: $white;
+  background-color: $orange;
+  border-radius: 0.4em;
+  border-bottom: none;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $red;
+  }
+}
+
+.button-flat {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: $orange;
+  text-decoration: none;
+  color: $white;
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.1s ease-out;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2em rgba(255, 74, 38, 0.3);
+  }
+  &:hover {
+    background-color: $orange-red;
+  }
+  &:active {
+    background-color: $red;
+  }
+
+  &.square {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    box-sizing: border-box;
+  }
+}

@@ -14,5 +14,5 @@ export default {
 @import "~/assets/style/_layout-flex.scss";
 @import "~/assets/style/_layout-grid.scss";
 @import "~/assets/style/_layout-column.scss";
-
+@import "~/assets/style/_button.scss";
 </style>

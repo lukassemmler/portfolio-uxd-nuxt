@@ -40,9 +40,9 @@
         :timespan="$t('text_about_education-2_time-span')"
         :location="$t('text_about_education-2_location')"
         :description="$t('text_about_education-2_description').join('')"
-        ><template v-slot:extra
-          ><!-- TODO add button --><button>PDF</button></template
-        ></cv-record
+        ><template v-slot:extra>
+          <a href="download/BA Lukas Semmler.pdf" class="link-button">PDF</a>
+        </template></cv-record
       >
 
       <cv-record
