@@ -4,7 +4,7 @@
       <span class="icon icon-business cv-record-icon" v-if="iconId">
         <component v-bind:is="iconId + '-icon'"></component>
       </span>
-      <h3>{{ title }}</h3>
+      <h3 v-html="title"></h3>
       <span class="cv-record-subtitle">{{ subtitle }}</span>
     </div>
     <div class="cv-record-body">
