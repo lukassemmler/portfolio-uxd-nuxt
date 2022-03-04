@@ -17,32 +17,32 @@
           <nav class="footer-nav">
             <ul class="footer-nav-list">
               <li>
-                <nuxt-link to="/" class="footer-nav-link">{{
+                <nuxt-link :to="localePath('/')" class="footer-nav-link">{{
                   $t("meta-title_index")
                 }}</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/projects" class="footer-nav-link">{{
+                <nuxt-link :to="localePath('/projects')" class="footer-nav-link">{{
                   $t("meta-title_projects")
                 }}</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/about" class="footer-nav-link">{{
+                <nuxt-link :to="localePath('/about')" class="footer-nav-link">{{
                   $t("meta-title_about")
                 }}</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/contact" class="footer-nav-link">{{
+                <nuxt-link :to="localePath('/contact')" class="footer-nav-link">{{
                   $t("meta-title_contact")
                 }}</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/imprint" class="footer-nav-link">{{
+                <nuxt-link :to="localePath('/imprint')" class="footer-nav-link">{{
                   $t("meta-title_imprint")
                 }}</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/privacy-policy" class="footer-nav-link">{{
+                <nuxt-link :to="localePath('/privacy-policy')" class="footer-nav-link">{{
                   $t("meta-title_privacy-policy")
                 }}</nuxt-link>
               </li>

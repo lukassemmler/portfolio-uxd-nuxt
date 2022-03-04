@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/"
+  <nuxt-link :to="localePath('/')"
     ><span class="lukas-logo" :class="inversed" v-html="$t('label_logo')"></span
   ></nuxt-link>
 </template>

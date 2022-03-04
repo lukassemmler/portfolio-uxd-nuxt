@@ -3,7 +3,7 @@
     <ul class="header-nav-list">
       <template v-for="site in sites">
         <li v-if="site.visible" :key="site.path">
-          <nuxt-link :to="'/' + site.path" class="header-nav-link"
+          <nuxt-link :to="localePath('/' + site.path)" class="header-nav-link"
             ><span class="header-nav-label">{{ $t(site.label) }}</span
             ><span class="header-nav-label-dummy" aria-hidden="true">{{
               $t(site.label)
