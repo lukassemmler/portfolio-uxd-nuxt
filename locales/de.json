@@ -626,24 +626,34 @@
     "München, Deutschland"
   ],
   "text_about_work-experience-1_description": [
-    "Entwickeln der neuen Unternehmens-Webseite mit Magnolia und FreeMarker. ",
-    "Prototyping in HTML & CSS. Design von Werbebannern. ",
-    "Java Bootcamp mit Spring Framework. Wireframes für Webseite. "
-  ],
-  "text_about_work-experience-1_location": "München",
-  "text_about_work-experience-1_organization": "eForce21 GmbH",
-  "text_about_work-experience-1_time-span": "Aug 2018 &ndash; Dez 2018",
-  "text_about_work-experience-1_title": "Praktikumssemester",
-  "text_about_work-experience-2_description": [
     "Arbeiten an digitalen Schulbüchern. ",
     "Konzeption von Hausaufgaben-Korrekturen. ",
     "Schneiden eines Hörbuches. ",
     "Recherche-Arbeit für Schreibprozess. "
   ],
-  "text_about_work-experience-2_location": "Eichstätt",
-  "text_about_work-experience-2_organization": "Cornelsen mBook Verlag",
-  "text_about_work-experience-2_time-span": "Jul 2017 &ndash; Sept 2017",
-  "text_about_work-experience-2_title": "Praktikum",
+  "text_about_work-experience-1_location": "Eichstätt",
+  "text_about_work-experience-1_organization": "Cornelsen mBook Verlag",
+  "text_about_work-experience-1_time-span": "Jul 2017 &ndash; Sept 2017",
+  "text_about_work-experience-1_title": "Praktikum",
+  "text_about_work-experience-2_description": [
+    "Entwickeln der neuen Unternehmens-Webseite mit Magnolia und FreeMarker. ",
+    "Prototyping in HTML & CSS. Design von Werbebannern. ",
+    "Java Bootcamp mit Spring Framework. Wireframes für Webseite. "
+  ],
+  "text_about_work-experience-2_location": "München",
+  "text_about_work-experience-2_organization": "eForce21 GmbH",
+  "text_about_work-experience-2_time-span": "Aug 2018 &ndash; Dez 2018",
+  "text_about_work-experience-2_title": "Praktikumssemester",
+  "text_about_work-experience-3_description": [
+    "UI-Design für Textprogramm der Justiz. ",
+    "Design und Bedienungs-Spezifikationen von Steuerelementen. ",
+    "Intensive Arbeit mit Sketch und Automatisierung mit eigenen Skripten. ",
+    "Zusammenarbeit mit Barrierefreiheits-Spezialisten. "
+  ],
+  "text_about_work-experience-3_location": "Oberhaching",
+  "text_about_work-experience-3_organization": "dvhaus Software &amp; Solutions GmbH",
+  "text_about_work-experience-3_time-span": "Jan 2021 &ndash; heute",
+  "text_about_work-experience-3_title": "UX-Designer",
   "text_contact": [
     "<em>Lukas Semmler</em><br>",
     "User Experience Designer<br>",

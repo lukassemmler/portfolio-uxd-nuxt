@@ -11,12 +11,12 @@
             <cv-record
               iconId="business"
               :level="0"
-              :title="$t('text_about_work-experience-1_organization')"
-              :subtitle="$t('text_about_work-experience-1_title')"
-              :timespan="$t('text_about_work-experience-1_time-span')"
-              :location="$t('text_about_work-experience-1_location')"
+              :title="$t('text_about_work-experience-3_organization')"
+              :subtitle="$t('text_about_work-experience-3_title')"
+              :timespan="$t('text_about_work-experience-3_time-span')"
+              :location="$t('text_about_work-experience-3_location')"
               :description="
-                $t('text_about_work-experience-1_description').join('')
+                $t('text_about_work-experience-3_description').join('')
               "
             ></cv-record>
             <cv-record
@@ -28,6 +28,17 @@
               :location="$t('text_about_work-experience-2_location')"
               :description="
                 $t('text_about_work-experience-2_description').join('')
+              "
+            ></cv-record>
+            <cv-record
+              iconId="business"
+              :level="0"
+              :title="$t('text_about_work-experience-1_organization')"
+              :subtitle="$t('text_about_work-experience-1_title')"
+              :timespan="$t('text_about_work-experience-1_time-span')"
+              :location="$t('text_about_work-experience-1_location')"
+              :description="
+                $t('text_about_work-experience-1_description').join('')
               "
             ></cv-record>
           </section>
