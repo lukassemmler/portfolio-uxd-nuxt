@@ -2,8 +2,8 @@
   <nav class="header-nav">
     <ul class="header-nav-list">
       <template v-for="site in sites">
-        <li v-if="site.visible" :key="site.path">
-          <nuxt-link :to="localePath('/' + site.path)" class="header-nav-link"
+        <li :key="site.path">
+          <nuxt-link :to="localePath(site.path)" class="header-nav-link"
             ><span class="header-nav-label">{{ $t(site.labelId) }}</span
             ><span class="header-nav-label-dummy" aria-hidden="true">{{
               $t(site.labelId)
@@ -26,9 +26,9 @@ export default {
           const { path, labelId } = site;
           const hasPath =
             site.hasOwnProperty("path") && typeof path === "string";
-          const hasLabel =
+          const hasLabelId =
             site.hasOwnProperty("labelId") && typeof labelId === "string";
-          return hasPath && hasLabel;
+          return hasPath && hasLabelId;
         });
       },
       default: function () {
