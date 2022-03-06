@@ -1,7 +1,7 @@
 <template>
   <article class="post-teaser">
     <aside class="post-teaser-figure">
-      <nuxt-link :to="link" :title="linkTitle" class="post-teaser-link">
+      <nuxt-link :to="localePath(link)" :title="linkTitle" class="post-teaser-link">
         <simple-image v-bind="$attrs" />
       </nuxt-link>
     </aside>
