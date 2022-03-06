@@ -3,7 +3,7 @@
     <div class="container huge">
       <div class="page-header-inner">
         <lukas-logo></lukas-logo>
-        <header-nav :sites="siteNavigation"></header-nav>
+        <header-nav :sites="navigation"></header-nav>
         <lang-menu></lang-menu>
       </div>
     </div>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import navigation from "assets/data/nav.json";
+import SiteTree from "assets/lib/site-tree.js";
 import LukasLogo from "./LukasLogo.vue";
 import HeaderNav from "./HeaderNav.vue";
 import LangMenu from './LangMenu.vue';
@@ -25,9 +25,15 @@ export default {
   },
   data: function () {
     return {
-      siteNavigation: navigation.main,
+      navigation: new SiteTree("header").preload().getData(),
     };
   },
+  mounted() {
+    const navData = new SiteTree("header").preload().getData();
+    console.log(navData);
+    this.navigation = JSON.parse(JSON.stringify(navData));
+    console.log(this.navigation);
+  }
 };
 </script>
 
