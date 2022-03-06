@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import SiteTree from "assets/lib/site-tree.js";
+import navigation from "assets/data/nav.json";
 import LukasLogo from "./LukasLogo.vue";
 import HeaderNav from "./HeaderNav.vue";
 import LangMenu from './LangMenu.vue';
@@ -25,15 +25,9 @@ export default {
   },
   data: function () {
     return {
-      navigation: new SiteTree("header").preload().getData(),
+      navigation: navigation.trees.header,
     };
   },
-  mounted() {
-    const navData = new SiteTree("header").preload().getData();
-    console.log(navData);
-    this.navigation = JSON.parse(JSON.stringify(navData));
-    console.log(this.navigation);
-  }
 };
 </script>
 
