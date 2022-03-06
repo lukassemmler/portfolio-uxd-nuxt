@@ -39,6 +39,7 @@ SiteTree.prototype.preload = function preload() {
   }
   // Create tree
   this.tree = new Tree(usedSitesById, formattedNodes);
+  return this; // return itself for chaining
 }
 
 /**
