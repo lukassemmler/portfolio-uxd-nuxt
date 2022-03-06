@@ -14,40 +14,7 @@
     <div class="footer-bedrock">
       <div class="container huge">
         <div class="footer-bedrock-inner">
-          <nav class="footer-nav">
-            <ul class="footer-nav-list">
-              <li>
-                <nuxt-link :to="localePath('/')" class="footer-nav-link">{{
-                  $t("meta-title_index")
-                }}</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="localePath('/projects')" class="footer-nav-link">{{
-                  $t("meta-title_projects")
-                }}</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="localePath('/about')" class="footer-nav-link">{{
-                  $t("meta-title_about")
-                }}</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="localePath('/contact')" class="footer-nav-link">{{
-                  $t("meta-title_contact")
-                }}</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="localePath('/imprint')" class="footer-nav-link">{{
-                  $t("meta-title_imprint")
-                }}</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="localePath('/privacy-policy')" class="footer-nav-link">{{
-                  $t("meta-title_privacy-policy")
-                }}</nuxt-link>
-              </li>
-            </ul>
-          </nav>
+          <footer-nav :sites="navigation"></footer-nav>
           <!-- TODO automatically replace year or add Vue directive to format text strings -->
           <p class="footer-copyright">&copy; {{currentYear}}</p>
         </div>
@@ -58,9 +25,16 @@
 
 <script>
 import SocialMediaList from "./SocialMediaList.vue";
+import FooterNav from "./FooterNav.vue";
+import navigation from "assets/data/nav.json";
+
 export default {
   components: { SocialMediaList },
-  
+  data: function () {
+    return {
+      navigation: navigation.trees.footer,
+    };
+  },
   computed: {
     currentYear: function () {
       return new Date().getFullYear();
@@ -94,58 +68,19 @@ export default {
   align-items: center;
   padding: 1em 0;
   font-size: 0.8em;
-}
 
-.footer-nav-link,
-.footer-copyright {
-  display: inline-block;
-  padding: 0.5em 0.8em;
-  margin: 0 0 0.5em;
-}
-
-.footer-nav {
-}
-
-.footer-nav-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5em;
-
-  li {
-    display: inline-block;
-    border-bottom: 0;
-    padding: 0;
-
-    &:not(:last-child) {
-      margin-right: 0.8em;
-    }
-  }
-}
-
-.footer-nav-link {
-  border-bottom-style: solid;
-
-  &:hover {
-    background-color: $gray-95;
-  }
-}
-
-@media screen and (min-width: $breakpoint-big) {
-  .footer-bedrock-inner {
+  @include breakpoint-upwards($breakpoint-big) {
     flex-flow: row;
 
     & > *:not(:last-child) {
       margin-right: 1em;
     }
   }
+}
 
-  .footer-nav-list {
-    justify-content: flex-start;
-    overflow-x: auto;
-  }
+.footer-copyright {
+  display: inline-block;
+  padding: 0.5em 0.8em;
+  margin: 0 0 0.5em;
 }
 </style>
