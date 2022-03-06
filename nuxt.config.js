@@ -89,5 +89,10 @@ export default {
       fallbackLocale: 'de',
     },
     strategy: 'prefix_and_default', //doesnt seem to work; default locale is supposed to show up in path
-  }
+  },
+
+  // Based on https://stackoverflow.com/a/64214970/nuxt-js-static-site-and-404-page by Baker Web Solutions, 2020-10-05
+  generate: { 
+    fallback: '404.html' 
+  },
 }
