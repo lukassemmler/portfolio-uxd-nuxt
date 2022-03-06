@@ -1,5 +1,109 @@
 {
-  "activeLink": "",
+  "$schema": "./nav.schema.json",
+  "sites": [
+    {
+      "id": "index",
+      "path": "/",
+      "labelId": "meta-title_index"
+    },
+    {
+      "id": "projects",
+      "path": "/projects",
+      "labelId": "meta-title_projects"
+    },
+    {
+      "id": "projects.3dModelling",
+      "path": "/3d-modelling",
+      "labelId": "meta-title_3d-modelling"
+    },
+    {
+      "id": "projects.dataVisualization",
+      "path": "/data-visualization",
+      "labelId": "meta-title_data-visualization"
+    },
+    {
+      "id": "projects.designBooklet",
+      "path": "/design-booklet",
+      "labelId": "meta-title_design-booklet"
+    },
+    {
+      "id": "projects.infotainmentSystem",
+      "path": "/infotainment-system",
+      "labelId": "meta-title_infotainment-system"
+    },
+    {
+      "id": "projects.steeringWheel",
+      "path": "/steering-wheel",
+      "labelId": "meta-title_steering-wheel"
+    },
+    {
+      "id": "projects.thiMove",
+      "path": "/thi-move",
+      "labelId": "meta-title_thi-move"
+    },
+    {
+      "id": "about",
+      "path": "/about",
+      "labelId": "meta-title_about"
+    },
+    {
+      "id": "contact",
+      "path": "/contact",
+      "labelId": "meta-title_contact"
+    },
+    {
+      "id": "imprint",
+      "path": "/imprint",
+      "labelId": "meta-title_imprint"
+    },
+    {
+      "id": "privacyPolicy",
+      "path": "/privacy-policy",
+      "labelId": "meta-title_privacy-policy"
+    }
+  ],
+  "trees": [
+    {
+      "id": "all",
+      "nodes": [
+        "index",
+        {
+          "site": "projects",
+          "nodes": [
+            "projects.3dModelling",
+            "projects.dataVisualization",
+            "projects.designBooklet",
+            "projects.infotainmentSystem",
+            "projects.steeringWheel",
+            "projects.thiMove"
+          ]
+        },
+        "about",
+        "contact",
+        "imprint",
+        "privacyPolicy"
+      ]
+    },
+    {
+      "id": "header",
+      "nodes": [
+        "projects",
+        "about",
+        "contact"
+      ]
+    },
+    {
+      "id": "footer",
+      "nodes": [
+        "index",
+        "projects",
+        "about",
+        "contact",
+        "imprint",
+        "privacyPolicy"
+      ]
+    }
+  ],
   "main": [
     {
       "path": "",
