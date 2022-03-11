@@ -50,9 +50,7 @@
         :title="$t('project-title-raw_design-booklet')"
         :subtitle="$t('project-subtitle_design-booklet')"
         :description="$t('project-description_design-booklet').join(' ')"
-        :tags="[
-          $t('label_tag_layout'),
-        ]"
+        :tags="[$t('label_tag_layout')]"
       ></post-teaser>
       <post-teaser
         class="horizontal"
@@ -65,9 +63,7 @@
         :title="$t('project-title-raw_3d-modelling')"
         :subtitle="$t('project-subtitle_3d-modelling')"
         :description="$t('project-description_3d-modelling').join(' ')"
-        :tags="[
-          $t('label_tag_3d-modelling'),
-        ]"
+        :tags="[$t('label_tag_3d-modelling')]"
       ></post-teaser>
       <post-teaser
         class="horizontal"
@@ -80,10 +76,7 @@
         :title="$t('project-title-raw_steering-wheel')"
         :subtitle="$t('project-subtitle_steering-wheel')"
         :description="$t('project-description_steering-wheel').join(' ')"
-        :tags="[
-          $t('label_tag_3d-modelling'),
-          $t('label_tag_contest'),
-        ]"
+        :tags="[$t('label_tag_3d-modelling'), $t('label_tag_contest')]"
       ></post-teaser>
       <post-teaser
         class="horizontal"
@@ -96,10 +89,7 @@
         :title="$t('project-title-raw_infotainment-system')"
         :subtitle="$t('project-subtitle_infotainment-system')"
         :description="$t('project-description_infotainment-system').join(' ')"
-        :tags="[
-          $t('label_tag_design-ui'),
-          $t('label_tag_design-icon'),
-        ]"
+        :tags="[$t('label_tag_design-ui'), $t('label_tag_design-icon')]"
       ></post-teaser>
     </div>
     <page-footer></page-footer>
