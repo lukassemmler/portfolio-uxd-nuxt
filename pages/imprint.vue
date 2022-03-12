@@ -4,10 +4,9 @@
 
 <script>
 export default {
-
-}
+  layout: "vanilla",
+};
 </script>
 
 <style lang="scss" scoped>
-
 </style>
