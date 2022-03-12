@@ -48,6 +48,7 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/i18n',
+    '@nuxtjs/markdownit',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -92,7 +93,7 @@ export default {
   },
 
   // Based on https://stackoverflow.com/a/64214970/nuxt-js-static-site-and-404-page by Baker Web Solutions, 2020-10-05
-  generate: { 
-    fallback: '404.html' 
+  generate: {
+    fallback: '404.html'
   },
 }
