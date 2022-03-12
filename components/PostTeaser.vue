@@ -1,8 +1,12 @@
 <template>
   <article class="post-teaser">
     <aside class="post-teaser-figure">
-      <nuxt-link :to="localePath(link)" :title="linkTitle" class="post-teaser-link">
-        <simple-image v-bind="$attrs" />
+      <nuxt-link
+        :to="localePath(link)"
+        :title="linkTitle"
+        class="post-teaser-link"
+      >
+        <simple-image class="post-teaser-image" v-bind="$attrs" />
       </nuxt-link>
     </aside>
     <main class="post-teaser-content">
@@ -158,6 +162,8 @@ export default {
 
 .post-teaser-link {
   display: block;
+  border-radius: 0.5rem;
+  overflow: hidden;
   transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 
   img {

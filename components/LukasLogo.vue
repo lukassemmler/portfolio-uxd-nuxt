@@ -24,6 +24,7 @@ export default {
   display: inline-block;
   background-color: $gray-90;
   padding: $sp ($sp * 0.5);
+  border-radius: 0.5rem;
   text-align: center;
   white-space: nowrap;
 
@@ -37,7 +38,8 @@ export default {
     outline: 0.1em solid $white;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $orange;
     color: $black;
   }
