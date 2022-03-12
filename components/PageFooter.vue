@@ -1,22 +1,15 @@
 <template>
-  <footer id="page-footer">
+  <footer class="page-footer">
     <div class="container huge">
-      <div class="footer-body">
-        <p>
-          <em>{{ $t("label_owner") }} </em><br />
-          {{ $t("label_owner-description") }} <br />
-          <a href="mailto:kontakt@lukassemmler.de">kontakt@lukassemmler.de</a>
-          <br />
-        </p>
-        <social-media-list></social-media-list>
-      </div>
-    </div>
-    <div class="footer-bedrock">
-      <div class="container huge">
-        <div class="footer-bedrock-inner">
-          <footer-nav :sites="navigation"></footer-nav>
-          <!-- TODO automatically replace year or add Vue directive to format text strings -->
-          <p class="footer-copyright">&copy; {{currentYear}}</p>
+      <div class="footer-inner">
+        <footer-nav :sites="navigation"></footer-nav>
+        <div class="footer-social-media">
+          <social-media-list></social-media-list>
+        </div>
+        <div class="footer-copyright">
+          <p class="footer-copyright-text">
+            {{ $t("label_owner") }} &copy; {{ currentYear }}
+          </p>
         </div>
       </div>
     </div>
@@ -44,33 +37,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#page-footer {
-  padding: ($sp * 2) 0 0;
+.page-footer {
   color: $white;
-  background-color: $gray-80;
-}
-
-.footer-body {
-  padding: 1em 0;
-
-  & > *:first-child {
-    margin-top: 0;
-  }
-}
-
-.footer-bedrock {
   background-color: $gray-93;
-}
 
-.footer-bedrock-inner {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  padding: 1em 0;
-  font-size: 0.8em;
+  @include breakpoint-upwards($breakpoint-2xl) {
+    .footer-inner {
+      flex-flow: row;
+    }
 
-  @include breakpoint-upwards($breakpoint-big) {
-    flex-flow: row;
+    .footer-social-media {
+      margin-left: auto;
+    }
 
     & > *:not(:last-child) {
       margin-right: 1em;
@@ -78,9 +56,21 @@ export default {
   }
 }
 
+.footer-inner {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 1em 0;
+  font-size: 0.8em;
+}
+
 .footer-copyright {
   display: inline-block;
   padding: 0.5em 0.8em;
-  margin: 0 0 0.5em;
+}
+
+.footer-copyright-text {
+  margin: 0;
+  padding: 0;
 }
 </style>
