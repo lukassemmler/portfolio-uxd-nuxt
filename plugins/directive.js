@@ -13,10 +13,12 @@ Vue.directive('markdown', function (el, binding, vnode) {
 });
 
 function replaceLinksWithLocalizedLinks(string, linkReplacer) {
-  // Turns `[Some link](/some/link)` into `[Some link](/en/some/link)` (output is based on locale settings) 
-  const regex = /\[(.+?)\]\((.+?)\)/;
+  // Turns `[Some link](~/some/link)` into `[Some link](/en/some/link)` (output is based on locale settings) 
+  const regex = /\[(.+?)\]\(\~(.+?)\)/g;
   const replacer = (match, p1, p2) => {
     return `[${p1}](${linkReplacer(p2)})`;
   }
-  return string.replace(regex, replacer);
+  const replacedString = string.replace(regex, replacer);
+  console.log(replacedString);
+  return replacedString;
 };
