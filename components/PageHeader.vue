@@ -1,5 +1,5 @@
 <template>
-  <header id="page-header" :class="classes">
+  <header id="page-header">
     <div class="container huge">
       <div class="page-header-inner">
         <lukas-logo></lukas-logo>
@@ -17,12 +17,6 @@ import HeaderNav from "./HeaderNav.vue";
 import LangMenu from './LangMenu.vue';
 export default {
   components: { LukasLogo, HeaderNav, LangMenu },
-  props: {
-    classes: {
-      type: String,
-      required: false,
-    },
-  },
   data: function () {
     return {
       navigation: navigation.trees.header,
