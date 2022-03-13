@@ -56,10 +56,16 @@ export default {
   build: {
   },
 
-  env: {
+  // It is not recommended to use `process.env` for security reasons. Instead, we are gonna use the Nuxt runtime config.
+  // See https://nuxtjs.org/tutorials/moving-from-nuxtjs-dotenv-to-runtime-config/#migrating-to-the-nuxt-runtime-config-from-the-env-property
+  publicRuntimeConfig: {
     // Make sure to update the localhost fallback if the default local server changes.
     // See https://nuxtjs.org/docs/features/configuration/#edit-host-and-port
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+  },
+  
+  privateRuntimeConfig: {
+    // Use for secrets like API keys.
   },
 
   // based on https://dev.to/wearethreebears/globally-accessible-css-and-scss-in-your-nuxt-component-files-1ann
