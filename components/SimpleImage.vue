@@ -71,6 +71,15 @@ export default {
   box-shadow: 0 2em 3em $dark-10;
 }
 
+.avatar-icon {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border-radius: 2.5em;
+  background-color: $dark-20;
+  overflow: hidden;
+}
+
 .img-wrapper {
   position: relative;
 
