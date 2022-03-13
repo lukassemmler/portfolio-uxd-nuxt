@@ -655,16 +655,16 @@
   "text_about_work-experience-3_time-span": "Jan 2021 &ndash; today",
   "text_about_work-experience-3_title": "UX Designer",
   "text_contact": [
-    "<em>Lukas Semmler</em><br>",
-    "User Experience Designer<br>",
-    "<br>",
-    "Phone: <a href=\"tel:+4917639203916\">+49 176 39203916</a><br> ",
-    "Email: <a href=\"mailto:kontakt@lukassemmler.de\">kontakt@lukassemmler.de</a><br>",
-    "<br>",
-    "<a href=\"%s\">Imprint</a> <br>",
-    "<a href=\"%s\">Privacy Policy</a><br> ",
-    "<br>",
-    "&copy; {year}"
+    "**Lukas Semmler**\n",
+    "User Experience Designer\n",
+    "\n",
+    "Phone: [+49 176 39203916](tel:+4917639203916)\n ",
+    "Email: [kontakt@lukassemmler.de](mailto:kontakt@lukassemmler.de)\n",
+    "\n",
+    "[Imprint](~/imprint)\n",
+    "[Privacy Policy](~/privacy-policy)\n",
+    "\n",
+    "(c) {year}"
   ],
   "text_data-visualization_concepts": [
     "After analyzing the data, I came up with different concepts to present the data in an easy-to-understand and pleasing way. "
