@@ -104,7 +104,6 @@ p > a {
   &.active {
     @extend %font-weight-bold;
   }
-  
 }
 
 p > a {
@@ -156,4 +155,14 @@ a.invisible-link {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .page-footer {
+    margin-top: auto;
+  }
 }
