@@ -26,6 +26,23 @@ $ npm run generate
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
 
+## Generate in Powershell
+
+```powershell
+# generate static project with base url in PowerShell
+$env:BASE_URL="https://example.org"; npm run generate 
+```
+
+* **Important!** Running this powershell script will set the `BASE_URL` environment variable for the whole process (= as long as the terminal is open)!
+  * See https://stackoverflow.com/a/43025189/pass-node-js-environment-variable-with-windows-powershell
+* We need the baseUrl to generate absolute paths, like in the `<meta property="og:image">` tag, because that one needs absolute links.
+* Normally, you would use a dependency like `cross-env` to make sure that you can set `process.env.BASE_URL` regardless of terminal and system.
+* But I try to keep the dependency count low for now.
+* Another solution would be to hard-code the `baseUrl` into `nuxt.config.js`:
+  * `baseUrl: process.env.NODE_ENV === "production" ? "https://example.org" : "http://localhost:3000"`
+  * I don't like this solution, because now you cannot set a `BASE_URL`. Instead it is dependent on the run mode.
+
+
 ## Special Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
