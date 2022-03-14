@@ -1,0 +1,71 @@
+@mixin make-bg-color($name, $color) { 
+  $className: "bg-#{$name}";
+  .#{$className}.#{$className}.#{$className} {
+    background-color: $color; 
+  }
+}
+
+@mixin make-bg-gradient($name, $gradient) { 
+  $className: "bg-gradient-#{$name}";
+  .#{$className}.#{$className}.#{$className} {
+    //@extend %background-base; 
+    background-color: nth($gradient, 2); 
+    background: linear-gradient($gradient); 
+  }
+}
+
+@mixin make-bg-hover($name, $color-default, $color-inactive) { 
+  $className: "bg-hover-#{$name}";
+  // Increase specificy by repeating class 
+  .#{$className}.#{$className}.#{$className} {
+    background-color: $color-inactive;
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-color: $color-default;
+    }
+  }
+}
+
+@mixin make-bg-pic($path-to-image) { 
+  &:before { 
+    height: calc(100% + 10em); 
+    background-image: url(#{$path-to-image}); 
+    background-position: center center; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+  }
+}
+
+@include make-bg-color("gray-pure-light", $light-gray);
+@include make-bg-color("gray-pure-dark", $dark-gray);
+@include make-bg-color("gray-light", $gray-15);
+@include make-bg-color("gray-dark", $gray-80);
+@include make-bg-color("red", $red); 
+@include make-bg-color("orange", $orange); 
+@include make-bg-color("yellow", $yellow); 
+@include make-bg-color("green", $green); 
+@include make-bg-color("blue", $blue); 
+@include make-bg-color("pink", $pink); 
+@include make-bg-color("gray", $gray-50); 
+@include make-bg-color("red-light", $red-light);
+@include make-bg-color("orange-light", $orange-light);
+@include make-bg-color("yellow-light", $yellow-light);
+@include make-bg-color("green-light", $green-light);
+@include make-bg-color("blue-light", $blue-light);
+@include make-bg-color("pink-light", $pink-light);
+
+@include make-bg-gradient("red", $red-gradient-colors); 
+@include make-bg-gradient("orange", $orange-gradient-colors); 
+@include make-bg-gradient("green", $green-gradient-colors); 
+@include make-bg-gradient("blue", $blue-gradient-colors); 
+@include make-bg-gradient("pink", $pink-gradient-colors); 
+@include make-bg-gradient("gray", $gray-gradient-colors); 
+
+@include make-bg-hover("red", $red, $red-light);
+@include make-bg-hover("orange", $orange, $orange-light);
+@include make-bg-hover("yellow", $yellow, $yellow-light);
+@include make-bg-hover("green", $green, $green-light);
+@include make-bg-hover("blue", $blue, $blue-light);
+@include make-bg-hover("pink", $pink, $pink-light);
+@include make-bg-hover("gray", $gray-70, $gray-50);
