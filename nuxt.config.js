@@ -36,7 +36,10 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    '~/components',
+    '~/templates',
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -63,7 +66,7 @@ export default {
     // See https://nuxtjs.org/docs/features/configuration/#edit-host-and-port
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
   },
-  
+
   privateRuntimeConfig: {
     // Use for secrets like API keys.
   },
