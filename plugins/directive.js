@@ -3,6 +3,8 @@ import { replacePlaceholders, replaceLinksWithLocalizedLinks } from '~/assets/li
 
 Vue.directive('markdown', function (el, binding, vnode) {
   const valueIsObject = typeof binding.value === "object";
+  if (Array.isArray(binding.value))
+    throw new Error(`Cannot handle type 'array' of string '${binding.value}'. `);
   const markup = valueIsObject ? binding.value.markup : binding.value;
   const placeholders = valueIsObject ? binding.value.format : null;
   const { context: { $md, localePath } } = vnode;
