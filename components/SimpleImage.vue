@@ -80,6 +80,10 @@ export default {
   overflow: hidden;
 }
 
+.rounded {
+  border-radius: 0.5rem;
+}
+
 .img-wrapper {
   position: relative;
 
