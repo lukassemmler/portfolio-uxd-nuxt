@@ -49,9 +49,7 @@ export default {
   align-items: stretch;
 
   @media screen and (min-width: $breakpoint-semi-big) {
-    .project-pagination-list {
-      display: flex;
-    }
+    display: flex;
   }
 }
 
