@@ -1,10 +1,10 @@
 <template>
-  <header id="page-header">
+  <header id="page-header" :class="{inverted}">
     <div class="container huge">
       <div class="page-header-inner">
-        <lukas-logo></lukas-logo>
-        <header-nav :sites="navigation"></header-nav>
-        <lang-menu></lang-menu>
+        <lukas-logo :inverted="inverted"></lukas-logo>
+        <header-nav :sites="navigation" :inverted="inverted"></header-nav>
+        <lang-menu :inverted="inverted"></lang-menu>
       </div>
     </div>
   </header>
@@ -17,6 +17,12 @@ import HeaderNav from "./HeaderNav.vue";
 import LangMenu from './LangMenu.vue';
 export default {
   components: { LukasLogo, HeaderNav, LangMenu },
+  props: {
+    inverted: {
+      type: Boolean,
+      required: false,
+    },
+  },
   data: function () {
     return {
       navigation: navigation.trees.header,
@@ -37,7 +43,7 @@ export default {
   width: 100%;
   box-sizing: border-box;
 
-  &.inversed {
+  &.inverted {
     color: $white;
 
     a {
