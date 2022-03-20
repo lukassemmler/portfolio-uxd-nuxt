@@ -50,7 +50,7 @@ export default {
   flex-flow: row nowrap;
   align-items: stretch;
 
-  @media screen and (min-width: $breakpoint-semi-big) {
+  @media screen and (min-width: $breakpoint-big) {
     display: flex;
   }
 }

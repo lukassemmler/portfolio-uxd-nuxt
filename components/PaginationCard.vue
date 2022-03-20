@@ -83,9 +83,28 @@ export default {
     }
   }
 
-  @include breakpoint-upwards($breakpoint-semi-big) {
+  @include breakpoint-upwards($breakpoint-big) {
     .pagination-card-inner {
-      max-width: $max-size-wrapper * 0.5;
+      width: 45vw;
+      max-width: 60rem;
+    }
+
+    &.previous {
+      .pagination-card-inner {
+        padding: 2em 1em;
+      }
+      .pagination-card-arrow {
+        left: -1.5em;
+      }
+    }
+
+    &.next {
+      .pagination-card-inner {
+        padding: 2em 1em;
+      }
+      .pagination-card-arrow {
+        right: -1.5em;
+      }
     }
 
     &.slanted {
@@ -98,12 +117,12 @@ export default {
 
     &.extended {
       &.previous {
-        margin-left: -3rem;
-        padding-left: 3rem;
+        margin-left: -3em;
+        padding-left: 3em;
       }
       &.next {
-        margin-right: -3rem;
-        padding-right: 3rem;
+        margin-right: -3em;
+        padding-right: 3em;
       }
     }
   }
