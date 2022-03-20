@@ -3,6 +3,7 @@
     <ul class="project-pagination-list">
       <li class="project-pagination-item" v-if="previousTitle">
         <pagination-card
+          class="slanted extended"
           :title="previousTitle"
           :color="previousColor"
           :link="localePath(previousLink)"
@@ -12,6 +13,7 @@
       </li>
       <li class="project-pagination-item" v-if="nextTitle">
         <pagination-card
+          class="slanted extended"
           :title="nextTitle"
           :color="nextColor"
           :link="localePath(nextLink)"

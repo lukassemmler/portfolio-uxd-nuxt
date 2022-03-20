@@ -16,7 +16,7 @@
 import LeftArrow from "~/assets/icons/material-west.svg?inline";
 import RightArrow from "~/assets/icons/material-east.svg?inline";
 export default {
-  components: {LeftArrow, RightArrow},
+  components: { LeftArrow, RightArrow },
   props: {
     title: String,
     label: String,
@@ -84,8 +84,27 @@ export default {
   }
 
   @include breakpoint-upwards($breakpoint-semi-big) {
-    .project-pagination-inner {
+    .pagination-card-inner {
       max-width: $max-size-wrapper * 0.5;
+    }
+
+    &.slanted {
+      transform: skew(-30deg);
+
+      .pagination-card-inner {
+        transform: skew(30deg);
+      }
+    }
+
+    &.extended {
+      &.previous {
+        margin-left: -3rem;
+        padding-left: 3rem;
+      }
+      &.next {
+        margin-right: -3rem;
+        padding-right: 3rem;
+      }
     }
   }
 }
