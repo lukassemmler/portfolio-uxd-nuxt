@@ -1,13 +1,17 @@
 <template>
   <nuxt-link :to="localePath('/')"
-    ><span class="lukas-logo" :class="inversed" v-html="$t('label_logo')"></span
+    ><span
+      class="lukas-logo"
+      :class="{ inverted }"
+      v-html="$t('label_logo')"
+    ></span
   ></nuxt-link>
 </template>
 
 <script>
 export default {
   props: {
-    inversed: {
+    inverted: {
       type: Boolean,
       required: false,
       default: false,
@@ -33,7 +37,7 @@ export default {
     padding: $sp ($sp * 1.5);
   }
 
-  &.inversed {
+  &.inverted {
     background: none;
     outline: 0.1em solid $white;
   }
