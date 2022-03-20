@@ -1,7 +1,8 @@
 <template>
   <div class="content">
-    <header class="intro">
-      <page-header></page-header>
+    <header class="project-intro" :class="background">
+      <page-header :inverted="true"></page-header>
+      <h1 class ="project-title" v-if="title" v-html="title"></h1>
       <slot name="header"></slot>
     </header>
     <slot name="content"></slot>
@@ -10,8 +11,29 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    title: {
+      type: String,
+      required: false,
+    },
+    background: {
+      type: String,
+      required: false,
+      default: "bg-gray",
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
+.project-title {
+  font-size: calc(1em + 2vw);
+  text-align: center;
+}
+
+.project-intro {
+  padding-bottom: $sp;
+  color: $white;
+}
 </style>
