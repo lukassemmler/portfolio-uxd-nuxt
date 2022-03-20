@@ -7,7 +7,7 @@
         iconId="instagram"
       ></social-media-item>
       <social-media-item
-        url="https://github.com/Krankomat/"
+        url="https://github.com/lukassemmler/"
         iconClasses="icon icon-social-github"
         iconId="github"
       ></social-media-item>
