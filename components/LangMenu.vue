@@ -1,5 +1,9 @@
 <template>
-  <div class="lang-menu" :class="{ expanded }" v-click-outside="onOutsideClick">
+  <div
+    class="lang-menu"
+    :class="{ expanded, inverted }"
+    v-click-outside="onOutsideClick"
+  >
     <div class="lang-menu-current-lang">
       <a
         id="lang-menu-open-link"
@@ -43,6 +47,13 @@ import IconArrowDown from "~/assets/icons/material-keyboard-arrow-down.svg?inlin
 
 export default {
   components: { IconFlag, IconArrowDown },
+  props: {
+    inverted: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+  },
   data: function () {
     return {
       expanded: false,
@@ -88,6 +99,15 @@ export default {
 
     .icon-dropdown {
       transform: rotate(180deg);
+    }
+  }
+  &.inverted {
+    color: $bright-60;
+    #lang-menu-open-link {
+      color: $bright-60;
+      &:hover {
+        color: $white;
+      }
     }
   }
 }
