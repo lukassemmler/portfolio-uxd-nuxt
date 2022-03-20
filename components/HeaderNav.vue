@@ -1,5 +1,5 @@
 <template>
-  <nav class="header-nav">
+  <nav class="header-nav" :class="{ inverted }">
     <ul class="header-nav-list">
       <template v-for="site in sites">
         <li :key="site.path">
@@ -18,6 +18,11 @@
 <script>
 export default {
   props: {
+    inverted: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     sites: {
       type: Array,
       required: false,
@@ -42,6 +47,22 @@ export default {
 <style lang="scss" scoped>
 .header-nav {
   display: inline-block;
+
+  &.inverted {
+    color: $bright-60;
+
+    .header-nav-link {
+      color: $bright-60;
+      
+      &:hover {
+        color: $white;
+      }
+    }
+
+    .link-active {
+      color: $white;
+    }
+  }
 }
 
 .header-nav-link {
@@ -51,6 +72,7 @@ export default {
   padding: $sp 0;
   border-bottom-width: 0;
   &:hover {
+    color: $orange;
     background-image: linear-gradient(
       to top,
       $orange 0%,
