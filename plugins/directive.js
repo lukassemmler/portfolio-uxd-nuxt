@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import { replacePlaceholders, replaceLinksWithLocalizedLinks } from '~/assets/lib/string-util';
 
+// https://stackoverflow.com/questions/55791388/how-do-i-write-server-side-only-custom-directives-with-nuxt-js
 Vue.directive('markdown', function (el, binding, vnode) {
   const valueIsObject = typeof binding.value === "object";
   if (Array.isArray(binding.value))
@@ -18,4 +19,9 @@ Vue.directive('markdown', function (el, binding, vnode) {
   formattedMarkup = replaceLinksWithLocalizedLinks(formattedMarkup, localePath);
   const html = $md.render(formattedMarkup);
   el.innerHTML = html;
+});
+
+
+Vue.directive('test', function(el, binding, vnode) {
+  el.innerHTML = "<h2>This is a test directive!</h2>";
 });

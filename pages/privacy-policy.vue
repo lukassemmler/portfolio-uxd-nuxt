@@ -27,6 +27,9 @@
           v-markdown="$t('text_privacy-policy_log-files').join('')"
         ></div>
         <p v-markdown="$t('text_privacy-policy_source')"></p>
+        <div v-html="'<h1>This is a great test!!!</h1>'"></div>
+        <div v-test="'asdf'"></div>
+        <div v-ssr-test="'some-id'">I should have an id</div>
       </div>
     </section>
   </div>

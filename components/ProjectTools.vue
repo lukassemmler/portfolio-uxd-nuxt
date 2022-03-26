@@ -1,6 +1,7 @@
 <template>
   <aside class="project-tools">
-    <h2 class="sr-only">{{ $t("label_project-meta_tools") }}</h2>
+    <!-- Rename heading locale key to 'project-meta' -->
+    <h2 class="sr-only">{{ $t("label_project-summary_tools") }}</h2>
     <ul class="project-tools-list">
       <li
         class="project-tools-item"

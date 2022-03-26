@@ -59,6 +59,31 @@ export default {
   build: {
   },
 
+  // See https://nuxtjs.org/docs/configuration-glossary/configuration-render/#bundleRenderer (Nuxt renderer keyword)
+  // See https://vuejs.org/guide/scaling-up/ssr.html#renderer-options (Vue SSR API)
+  // NOT WORKING; TODO: Add debugging to vscode -- https://medium.com/js-dojo/debugging-nuxt-js-with-vs-code-60a1a9e75cf6
+  render: {
+    bundleRenderer: {
+      directives: {
+        ssrTest: {
+          mounted(el, binding) {
+            // client-side implementation:
+            // directly update the DOM
+            el.id = binding.value
+          },
+          getSSRProps(binding) {
+            // server-side implementation:
+            // return the props to be rendered.
+            // getSSRProps only receives the directive binding.
+            return {
+              id: binding.value
+            };
+          },
+        },
+      },
+    },
+  },
+
   // It is not recommended to use `process.env` for security reasons. Instead, we are gonna use the Nuxt runtime config.
   // See https://nuxtjs.org/tutorials/moving-from-nuxtjs-dotenv-to-runtime-config/#migrating-to-the-nuxt-runtime-config-from-the-env-property
   publicRuntimeConfig: {
@@ -106,6 +131,7 @@ export default {
       fallbackLocale: 'de',
     },
     strategy: 'prefix_and_default', //doesnt seem to work; default locale is supposed to show up in path
+    seo: true,
   },
 
   // See https://github.com/nuxt-community/markdownit-module
