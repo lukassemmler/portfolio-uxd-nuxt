@@ -4,8 +4,11 @@
 
 <script>
 export default {
-
-}
+  head() {
+    // $nuxtI18nHead might be null when running the static generation and could crash: https://i18n.nuxtjs.org/seo#setup
+    return this.$nuxtI18nHead({ addSeoAttributes: true });
+  },
+};
 </script>
 
 <style lang="scss">
