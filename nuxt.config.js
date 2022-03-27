@@ -65,6 +65,10 @@ export default {
   render: {
     bundleRenderer: {
       directives: {
+        banana(el, dir) {
+          el.id = dir.value;
+        }
+        /*
         ssrTest: {
           mounted(el, binding) {
             // client-side implementation:
@@ -79,7 +83,9 @@ export default {
               id: binding.value
             };
           },
+          
         },
+        */
       },
     },
   },
