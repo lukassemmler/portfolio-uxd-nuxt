@@ -5,31 +5,28 @@
         <h1 v-html="$t('heading_privacy-policy')"></h1>
       </div>
     </header>
-    
+
     <section id="section-data-protection" class="section">
       <div class="container small">
         <h2
           id="data-protection"
           v-html="$t('heading_privacy-policy_data-protection')"
         ></h2>
-        <div
-          class="text"
-          v-markdown="$t('text_privacy-policy_data-protection').join('')"
-        ></div>
+        <markdown-block
+          :markup="$t('text_privacy-policy_data-protection').join('')"
+        ></markdown-block>
       </div>
     </section>
 
     <section id="section-log-files" class="section">
       <div class="container small">
         <h2 id="log-files" v-html="$t('heading_privacy-policy_log-files')"></h2>
-        <div
-          class="text"
-          v-markdown="$t('text_privacy-policy_log-files').join('')"
-        ></div>
-        <p v-markdown="$t('text_privacy-policy_source')"></p>
-        <div v-html="'<h1>This is a great test!!!</h1>'"></div>
-        <div v-test="'asdf'"></div>
-        <div v-banana="'some-id'">I should have an id</div>
+        <markdown-block
+          :markup="$t('text_privacy-policy_log-files').join('')"
+        ></markdown-block>
+        <markdown-block
+          :markup="$t('text_privacy-policy_source')"
+        ></markdown-block>
       </div>
     </section>
   </div>
@@ -37,7 +34,9 @@
 
 <script>
 import { getMetaData } from "~/assets/lib/meta-data";
+import MarkdownBlock from "~/components/MarkdownBlock.vue";
 export default {
+  components: { MarkdownBlock },
   layout: "vanilla",
   head() {
     return getMetaData({

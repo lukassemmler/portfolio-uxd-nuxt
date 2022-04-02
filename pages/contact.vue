@@ -14,12 +14,11 @@
           src="lukas/Lukas-Avatar.png"
           alt=""
         ></simple-image>
-        <address
-          v-markdown="{
-            markup: $t('text_contact').join(''),
-            format: { year: currentYear },
-          }"
-        ></address>
+        <markdown-block
+          :markup="$t('text_contact').join('')"
+          :format="{ year: currentYear }"
+          tag="address"
+        ></markdown-block>
         <social-media-list></social-media-list>
       </div>
     </section>
@@ -27,10 +26,11 @@
 </template>
 
 <script>
+import MarkdownBlock from "~/components/MarkdownBlock.vue";
 import PageHeader from "~/components/PageHeader.vue";
 import SocialMediaList from "~/components/SocialMediaList.vue";
 export default {
-  components: { PageHeader, SocialMediaList },
+  components: { PageHeader, SocialMediaList, MarkdownBlock },
   computed: {
     currentYear: function () {
       return new Date().getFullYear();
