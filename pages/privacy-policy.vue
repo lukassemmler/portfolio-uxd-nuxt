@@ -1,13 +1,13 @@
 <template>
   <div>
     <header>
-      <div class="container-small">
+      <div class="container small">
         <h1 v-html="$t('heading_privacy-policy')"></h1>
       </div>
     </header>
     
     <section id="section-data-protection" class="section">
-      <div class="container-small">
+      <div class="container small">
         <h2
           id="data-protection"
           v-html="$t('heading_privacy-policy_data-protection')"
@@ -20,7 +20,7 @@
     </section>
 
     <section id="section-log-files" class="section">
-      <div class="container-small">
+      <div class="container small">
         <h2 id="log-files" v-html="$t('heading_privacy-policy_log-files')"></h2>
         <div
           class="text"

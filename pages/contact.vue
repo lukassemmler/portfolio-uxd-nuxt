@@ -2,13 +2,13 @@
   <div>
     <page-header></page-header>
     <header>
-      <div class="container-small">
+      <div class="container small">
         <h1 class="sr-only">{{ $t("heading_contact") }}</h1>
       </div>
     </header>
     <section id="section-contact" class="section">
       <!-- TODO Add dark-mode -->
-      <div class="container-small center-all-children-col spaced-bottom">
+      <div class="container small center-all-children-col spaced-bottom">
         <simple-image
           class="avatar-icon"
           src="lukas/Lukas-Avatar.png"
