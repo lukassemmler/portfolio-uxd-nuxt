@@ -1,7 +1,3 @@
-<template>
-  <div class="markdown-block" v-html="markupProcessed"></div>
-</template>
-
 <script>
 import {
   replacePlaceholders as renderPlaceholders,
@@ -19,6 +15,11 @@ export default {
       default: function () {
         return {};
       },
+    },
+    tag: {
+      type: String,
+      required: false,
+      default: "div",
     },
   },
   computed: {
@@ -38,6 +39,15 @@ export default {
       formattedMarkup = renderLocalizedLinks(formattedMarkup, localePath);
       return $md.render(formattedMarkup);
     },
+  },
+  render(h) {
+    // https://v2.vuejs.org/v2/guide/render-function.html
+    return h(this.tag, {
+      class: "markdown-block",
+      domProps: {
+        innerHTML: this.markupProcessed,
+      },
+    });
   },
 };
 </script>
