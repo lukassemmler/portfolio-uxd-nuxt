@@ -8,7 +8,11 @@
 
     <section id="section-address" class="section">
       <div class="container small">
-        <h2 id="address">{{ $t("heading_imprint_address") }}</h2>
+        <anchor-heading
+          :level="2"
+          :label="$t('heading_imprint_address')"
+          id="address"
+        ></anchor-heading>
         <markdown-block
           :markup="$t('text_imprint_address').join('')"
         ></markdown-block>
@@ -17,7 +21,11 @@
 
     <section id="section-contact" class="section">
       <div class="container small">
-        <h2 id="contact">{{ $t("heading_imprint_contact") }}</h2>
+        <anchor-heading
+          :level="2"
+          :label="$t('heading_imprint_contact')"
+          id="contact"
+        ></anchor-heading>
         <markdown-block
           :markup="$t('text_imprint_contact').join('')"
         ></markdown-block>
@@ -26,9 +34,11 @@
 
     <section id="section-accountability-for-content" class="section">
       <div class="container small">
-        <h2 id="accountability-for-content">
-          {{ $t("heading_imprint_accountability-for-content") }}
-        </h2>
+        <anchor-heading
+          :level="2"
+          :label="$t('heading_imprint_accountability-for-content')"
+          id="accountability-for-content"
+        ></anchor-heading>
         <markdown-block
           :markup="$t('text_imprint_accountability-for-content').join('')"
         ></markdown-block>
@@ -37,9 +47,11 @@
 
     <section id="section-accountability-for-links" class="section">
       <div class="container small">
-        <h2 id="accountability-for-links">
-          {{ $t("heading_imprint_accountability-for-links") }}
-        </h2>
+        <anchor-heading
+          :level="2"
+          :label="$t('heading_imprint_accountability-for-links')"
+          id="accountability-for-links"
+        ></anchor-heading>
         <markdown-block
           :markup="$t('text_imprint_accountability-for-links').join('')"
         ></markdown-block>
@@ -48,7 +60,11 @@
 
     <section id="section-copyright" class="section">
       <div class="container small">
-        <h2 id="copyright">{{ $t("heading_imprint_copyright") }}</h2>
+        <anchor-heading
+          :level="2"
+          :label="$t('heading_imprint_copyright')"
+          id="copyright"
+        ></anchor-heading>
         <markdown-block
           :markup="$t('text_imprint_copyright').join('')"
         ></markdown-block>
