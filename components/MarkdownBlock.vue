@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     markupProcessed: function () {
-      const { $md, localePath, placeholders, markup } = this;
+      const { $md, localePath, format: placeholders, markup } = this;
       if ($md === undefined)
         throw new Error(
           `Cannot find instance property '$md'. Make sure you have '@nuxtjs/markdownit' installed. `
@@ -36,7 +36,6 @@ export default {
       if (placeholders !== null)
         formattedMarkup = renderPlaceholders(formattedMarkup, placeholders);
       formattedMarkup = renderLocalizedLinks(formattedMarkup, localePath);
-      console.log(formattedMarkup);
       return $md.render(formattedMarkup);
     },
   },
