@@ -1,32 +1,34 @@
 <template>
-<div>
-  <page-header></page-header>
-  <main>
-    <div class="bg-light">
-      <div class="container-medium error-message">
-        <p class="error-oopsie">
-          <span>{{ $t("error_oopsie") }}</span>
-        </p>
-        <p class="error-description" v-html="$t('error_page-not-found')"></p>
-        <p
-          class="error-recovery"
-          v-markdown="$t('error_go-back-to-start-page')"
-        ></p>
-        <nuxt-img
-          class="error-image"
-          src="drawing/Alpaca Bene.png"
-          :alt="$t('error_something-went-wrong')"
-        />
+  <div>
+    <page-header></page-header>
+    <main>
+      <div class="bg-light">
+        <div class="container small error-message">
+          <p class="error-oopsie">
+            <span>{{ $t("error_oopsie") }}</span>
+          </p>
+          <p class="error-description" v-html="$t('error_page-not-found')"></p>
+          <markdown-block
+            class="error-recovery"
+            :markup="$t('error_go-back-to-start-page')"
+          ></markdown-block>
+          <nuxt-img
+            class="error-image"
+            src="drawing/Alpaca Bene.png"
+            :alt="$t('error_something-went-wrong')"
+          />
+        </div>
       </div>
-    </div>
-  </main>
-</div>
+    </main>
+  </div>
 </template>
 
 <script>
-import PageHeader from '~/components/PageHeader.vue';
+import MarkdownBlock from "~/components/MarkdownBlock.vue";
+import PageHeader from "~/components/PageHeader.vue";
 export default {
-  components: { PageHeader },};
+  components: { PageHeader, MarkdownBlock },
+};
 </script>
 
 <style lang="scss" scoped>
