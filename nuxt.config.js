@@ -148,6 +148,8 @@ export default {
     linkify: true,
     breaks: true,
     typographer: true,
+    // Potential plugin to auto generate heading anchors: https://www.npmjs.com/package/markdown-it-anchor
+    // If I ever really add a blog, I can use Vue components in markdown instead: https://nuxtjs.org/docs/directory-structure/content/
   },
 
   // Based on https://stackoverflow.com/a/64214970/nuxt-js-static-site-and-404-page by Baker Web Solutions, 2020-10-05

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import { replacePlaceholders, replaceLinksWithLocalizedLinks } from '~/assets/lib/string-util';
 
 // https://stackoverflow.com/questions/55791388/how-do-i-write-server-side-only-custom-directives-with-nuxt-js
+// Problem: This directive does only render on the client. Use the <MarkdownBlock> component instead.
 Vue.directive('markdown', function (el, binding, vnode) {
   const valueIsObject = typeof binding.value === "object";
   if (Array.isArray(binding.value))
