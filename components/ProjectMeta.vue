@@ -68,6 +68,7 @@ export default {
 .project-meta {
   line-height: 1.4;
 }
+
 .project-meta-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -75,12 +76,15 @@ export default {
   grid-auto-flow: column;
   column-gap: 2.5em;
   row-gap: 1.5em;
+  margin: 0;
 }
+
 .project-meta-term {
   font-weight: bold;
   margin-bottom: 0.2em;
   letter-spacing: 0.02em;
 }
+
 .project-meta-description {
   margin-left: 0;
   font-size: 0.9em;
