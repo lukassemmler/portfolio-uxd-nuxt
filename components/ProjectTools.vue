@@ -8,7 +8,11 @@
         v-for="tool in tools"
         v-bind:key="tool.iconId"
       >
-        <icon-item :iconId="tool.iconId" :label="tool.label"></icon-item>
+        <icon-item
+          :iconId="tool.iconId"
+          :label="tool.label"
+          :class="size"
+        ></icon-item>
       </li>
     </ul>
   </aside>
@@ -51,6 +55,10 @@ export default {
       default: function () {
         return [{ iconId: "Godot", label: "Godot" }];
       },
+    },
+    size: {
+      type: String,
+      required: false,
     },
   },
 };
