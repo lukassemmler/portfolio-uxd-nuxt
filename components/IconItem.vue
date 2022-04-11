@@ -96,7 +96,10 @@ export default {
 .icon-item-container {
   width: 6em;
   height: 6em;
-  padding: 0.5em;
+
+  &.small {
+    font-size: 0.8em;
+  }
 }
 
 .icon-item {
@@ -108,27 +111,7 @@ export default {
   height: 100%;
   //background-color: $dark-05;
   transition: background-color 0.07s ease-out;
-
-  .icon-product,
-  .icon-item-label {
-    display: inline-block;
-  }
-
-  .icon-item-label {
-    font-size: 0.8em;
-    text-align: center;
-    height: 1em;
-  }
-
-  .icon-product {
-    width: 4em;
-    height: 4em;
-
-    svg {
-      width: 100%;
-      fill: currentColor;
-    }
-  }
+  border-radius: 0.5rem;
 
   &:hover {
     background-color: $dark-10;
@@ -136,6 +119,28 @@ export default {
     .icon-product svg {
       //fill: $gray-90;
     }
+  }
+}
+
+.icon-product,
+.icon-item-label {
+  display: inline-block;
+}
+
+.icon-item-label {
+  font-size: 0.8em;
+  text-align: center;
+  height: 1em;
+  margin-top: 0.2em;
+}
+
+.icon-product {
+  width: 3em;
+  height: 3em;
+
+  svg {
+    width: 100%;
+    fill: currentColor;
   }
 }
 
