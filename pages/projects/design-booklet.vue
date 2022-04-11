@@ -2,6 +2,22 @@
   <project-template
     background="bg-gradient-gray"
     :title="$t('meta-title_design-booklet')"
+    :meta-name="$t('project-summary-name_design-booklet')"
+    :meta-tasks="$t('project-summary-tasks_design-booklet')"
+    :meta-format="$t('project-summary-format_design-booklet')"
+    :meta-lecture="$t('project-summary-client_design-booklet')"
+    :meta-date="$t('project-summary-date_design-booklet')"
+    :project-tools="[
+      { iconId: 'AdobeIndesign', label: 'Indesign' },
+      { iconId: 'AdobeIllustrator', label: 'Illustrator' },
+      { iconId: 'AdobePhotoshop', label: 'Photoshop' },
+    ]"
+    :nav-previous-title="$t('project-nav_data-visualization')"
+    :nav-previous-link="'projects/data-visualization'"
+    :nav-previous-color="'bg-hover-blue'"
+    :nav-next-title="$t('project-nav_3d-modelling')"
+    :nav-next-link="'projects/3d-modelling'"
+    :nav-next-color="'bg-hover-pink'"
   >
     <template v-slot:header>
       <div class="container huge">
@@ -44,41 +60,9 @@
           </div>
         </media-gallery>
       </div>
-      <div class="container huge">
-        <div class="pillar-container">
-          <div class="pillar-row">
-            <div class="pillar-col-8">
-              <project-meta
-                :name="$t('project-summary-name_design-booklet')"
-                :tasks="$t('project-summary-tasks_design-booklet')"
-                :format="$t('project-summary-format_design-booklet')"
-                :lecture="$t('project-summary-client_design-booklet')"
-                :date="$t('project-summary-date_design-booklet')"
-              ></project-meta>
-            </div>
-            <div class="pillar-col-4">
-              <project-tools
-                :tools="[
-                  { iconId: 'AdobeIndesign', label: 'Indesign' },
-                  { iconId: 'AdobeIllustrator', label: 'Illustrator' },
-                  { iconId: 'AdobePhotoshop', label: 'Photoshop' },
-                ]"
-              ></project-tools>
-            </div>
-          </div>
-        </div>
-      </div>
     </template>
     <template v-slot:content>
       <!-- TODO Fix links in project pagination -->
-      <project-pagination
-        :previousTitle="$t('project-nav_data-visualization')"
-        previousLink="projects/data-visualization"
-        previousColor="bg-hover-blue"
-        :nextTitle="$t('project-nav_3d-modelling')"
-        nextLink="projects/3d-modelling"
-        nextColor="bg-hover-pink"
-      ></project-pagination>
     </template>
   </project-template>
 </template>
