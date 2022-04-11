@@ -63,6 +63,14 @@
     </template>
     <template v-slot:content>
       <!-- TODO Fix links in project pagination -->
+      <section id="section-overview" class="section">
+        <div class="container small">
+          <h2 id="overview" class="sr-only">{{ $t("heading_overview") }}</h2>
+          <p>
+            {{ $t("text_design-booklet").join("") }}
+          </p>
+        </div>
+      </section>
     </template>
   </project-template>
 </template>
