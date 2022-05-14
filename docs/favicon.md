@@ -1,8 +1,20 @@
 # Favicon usage
 Created on 12th April 2022
 
+* It is recommended to use a favicon generator, or automate the favicon generation with a build script.
+* There is also an explanation included on how to write favicons generally.
+* This is done, so you can understand the purpose of each file, which should be in the output of a favicon generator.
 
-## File structure
+
+## Automatic favicon generation
+
+* There are multiple websites and tools to streamline the creation of favicons.
+* For simplicities sake, we are going to use https://realfavicongenerator.net/, because it offers comprehensive options and is easy to use.
+
+
+## Manual favicon generation
+
+### File structure
 ```bash
 favicon.ai                  # raw icon file, Illustrator, includes default, dev and maskable
   (artboard) default        # vanilla icon on web page
@@ -25,7 +37,7 @@ manifest.webmanifest        # android, manifest for progressive web apps
 ```
 
 
-## HTML
+### HTML
 
 ```html
 <!-- 
@@ -43,7 +55,7 @@ manifest.webmanifest        # android, manifest for progressive web apps
 ```
 
 
-## Dev favicon 
+### Dev favicon 
 
 * This implementation example uses EJS and Webpack.
 
@@ -75,7 +87,7 @@ manifest.webmanifest        # android, manifest for progressive web apps
 ```
 
 
-## Custom favicon on very small sizes
+### Custom favicon on very small sizes
 
 * With `.ico` files, you can specifiy a custom bitmap for very small favicon dimensions (16×16).
 * This might be necessary when the favicon gets very blurry.
@@ -93,7 +105,7 @@ manifest.webmanifest        # android, manifest for progressive web apps
 
 
 
-## `manifest.webmanifest`
+### `manifest.webmanifest`
 
 ```json
 {
@@ -124,7 +136,7 @@ manifest.webmanifest        # android, manifest for progressive web apps
 ```
 
 
-## Tools
+### Tools
 
 * Adobe Illustrator   -- raw favicon file
 * GIMP                -- convert png files to .ico
