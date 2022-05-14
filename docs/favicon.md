@@ -142,6 +142,42 @@ manifest.webmanifest        # android, manifest for progressive web apps
 * GIMP                -- convert png files to .ico
 
 
+## Dark theme favicons
+
+* SVG favicons can change color depending on media queries.
+* See [`prefers-color-scheme` in SVG favicons for dark mode icons - blog.tomayac.com](https://blog.tomayac.com/2019/09/21/prefers-color-scheme-in-svg-favicons-for-dark-mode-icons/).
+* Instructions:
+  1) Create a file `favicon.svg`.
+  2) Modify the file by adding a media query to the css:
+     ```diff
+       <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+         <style>
+           circle {
+             fill: yellow;
+             stroke: black;
+             stroke-width: 3px;
+           }
+     +     @media (prefers-color-scheme: dark) {
+     +       circle {
+     +         fill: black;
+     +         stroke: yellow;
+     +       }
+     +     }
+         </style>
+         <circle cx="50" cy="50" r="47" />
+       </svg>
+     ```
+  3) Reference the file inside the `<head>`:
+     ```diff
+       <link rel="icon" href="/favicon.ico" sizes="any">
+     + <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+       <link rel="mask-icon" href="/safari-mask-icon.svg" color="#990000">
+       <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+       <link rel="manifest" href="/manifest.webmanifest">
+     ```
+  4) Modern browsers will load the SVG favicon in favor of a flat `favicon.ico` favicon and apply the media query.
+
+
 ## Sources
 
 * https://css-tricks.com/how-to-favicon-in-2021/
