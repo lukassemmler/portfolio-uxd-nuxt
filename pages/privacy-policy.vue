@@ -55,6 +55,7 @@ export default {
       author: this.$t("meta-author_privacy-policy"),
       thumbnail: "/thumbnail/Thumbnail Design Booklet.jpg",
       thumbnailAlt: this.$t("alt_thumbnail_general"),
+      themeColor: "#4a4a4a",
     });
   },
 };

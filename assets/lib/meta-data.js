@@ -1,4 +1,4 @@
-export function getMetaData({ url, siteName, title, titleTemplate, description, keywords, author, thumbnail, thumbnailAlt }) {
+export function getMetaData({ url, siteName, title, titleTemplate, description, keywords, author, thumbnail, thumbnailAlt, themeColor }) {
   // For all config options, see https://vue-meta.nuxtjs.org/api/
   // titleTemplate can also be a function, e.g. `(chunk) => `${chunk} \u2013 Lukas Semmler`
   // Recommended meta tags are from https://css-tricks.com/essential-meta-tags-social-media/ by Adam Coti, 2021-11-12
@@ -17,6 +17,7 @@ export function getMetaData({ url, siteName, title, titleTemplate, description, 
       { property: "og:site_name", content: siteName },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image:alt", content: thumbnailAlt },
+      { name: "theme-color", content: themeColor }, // used by Chrome tab bar on Android and Discord page preview
     ],
   };
 }
