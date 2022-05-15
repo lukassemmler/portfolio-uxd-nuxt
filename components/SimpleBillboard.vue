@@ -1,5 +1,5 @@
 <template>
-  <aside class="simple-billboard">
+  <article class="simple-billboard">
     <div class="simple-billboard-background"></div>
     <div class="simple-billboard-content" :class="imagePosition">
       <div class="simple-billboard-image-container">
@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-  </aside>
+  </article>
 </template>
 
 <script>
