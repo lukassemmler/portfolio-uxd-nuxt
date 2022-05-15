@@ -178,6 +178,45 @@ manifest.webmanifest        # android, manifest for progressive web apps
   4) Modern browsers will load the SVG favicon in favor of a flat `favicon.ico` favicon and apply the media query.
 
 
+## Different favicon depending on development mode
+
+* Depending on the technology you build your website with, you can use different favicons when you are in development.
+* For example, if you work with Nuxt 2, you can load a different favicon in `nuxt.config.js`:
+  ```js
+  const isDev = process.env.NODE_ENV !== 'production';
+  export default {
+    // ...
+    head: {
+      title: 'My wonderful application',
+      htmlAttrs: { lang: 'en' },
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        ...isDev ? [
+          { name: 'msapplication-TileColor', content: '#ffcc00' },
+          { name: 'theme-color', content: '#ffcc00' },
+        ] : [
+          { name: 'msapplication-TileColor', content: '#212529' },
+          { name: 'theme-color', content: '#212529' },
+        ], 
+      ],
+      link: [
+        ...isDev ? [
+          { rel: 'icon', type: 'image/svg+xml', href: '/favicon/dev/favicon.svg' },
+          { rel: 'shortcut icon', href: '/favicon/dev/favicon.ico' },
+        ] : [
+          { rel: 'icon', type: 'image/svg+xml', href: '/favicon/production/favicon.svg' },
+          { rel: 'shortcut icon', href: '/favicon/production/favicon.ico' },
+        ], 
+      ]
+    },
+    // ...
+  }
+  ```
+* `...object` is the Spread Operator in JavaScript, useful to unpack objects or arrays.
+* `condition ? expressionTrue : expressionFalse` is the Conditional (Ternary) Operator in JavaScript.
+
+
 ## Sources
 
 * https://css-tricks.com/how-to-favicon-in-2021/
