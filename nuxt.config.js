@@ -28,7 +28,7 @@ function getFaviconLinkProperties(mode = "production") {
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/production/favicon-32x32.png?v=2' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/production/favicon-16x16.png?v=2' },
       { rel: 'manifest', href: '/favicon/production/site.webmanifest?v=2' },
-      { rel: 'mask-icon', href: '/favicon/production/safari-pinned-tab.svg?v=2', color: '#5bbad5' },
+      { rel: 'mask-icon', href: '/favicon/production/safari-pinned-tab.svg?v=2', color: '#212529' },
       { rel: 'shortcut icon', href: '/favicon/production/favicon.ico?v=2' },
     ];
   if (mode === "dev")
@@ -63,6 +63,7 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
       ...getFaviconMetaProperties(devMode),
+      ...isDev ? [] : [], 
     ],
     link: [
       ...getFaviconLinkProperties(devMode),
