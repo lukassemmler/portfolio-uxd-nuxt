@@ -32,7 +32,7 @@ export default {
       validator: function (value) {
         return ["primary", "secondary", "invisible"].includes(value);
       },
-      default: "primary",
+      default: "secondary",
     },
     prefixedIcon: {
       type: String,
