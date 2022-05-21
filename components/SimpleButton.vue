@@ -12,10 +12,11 @@
 
 <script>
 import eastIcon from "~/assets/icons/material-east.svg?inline";
-const iconKeys = ["east"];
+import caretDownIcon from "~/assets/icons/material-keyboard-arrow-down.svg?inline";
+const iconKeys = ["east", "caret-down"];
 
 export default {
-  components: { eastIcon },
+  components: { eastIcon, caretDownIcon },
   props: {
     target: {
       type: String,
