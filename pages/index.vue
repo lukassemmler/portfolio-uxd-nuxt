@@ -1,5 +1,13 @@
 <template>
   <div class="container huge">
+    <dropdown-button
+      menu-id="lang-menu"
+      :menu="[
+        { label: $t('label_lang_const_german'), link: switchLocalePath('de') },
+        { label: $t('label_lang_const_english'), link: switchLocalePath('en') },
+      ]"
+    ></dropdown-button>
+
     <section>
       <h2 class="sr-only">{{ $t("meta-title_about") }}</h2>
       <simple-billboard
