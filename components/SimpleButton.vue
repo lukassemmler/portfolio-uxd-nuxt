@@ -1,5 +1,12 @@
 <template>
-  <a class="simple-button" :class="type" :href="target" :title="alt">
+  <a
+    class="simple-button"
+    :class="type"
+    :href="target"
+    :title="alt"
+    @click="$emit('click', $event)"
+    ref="link"
+  >
     <!-- TODO: use render(), so the <a> tag can also optionally be a <nuxt-link> component. -->
     <span class="simple-button-icon prefixed-icon" v-if="prefixedIcon">
       <component v-bind:is="prefixedIcon + '-icon'"></component>
@@ -17,6 +24,7 @@ const iconKeys = ["east", "caret-down"];
 
 export default {
   components: { eastIcon, caretDownIcon },
+  expose: ["focus"],
   props: {
     target: {
       type: String,
@@ -47,6 +55,11 @@ export default {
       },
     },
   },
+  methods: {
+    focus: function () {
+      this.$refs.link.focus();
+    },
+  },
 };
 </script>
 
@@ -73,8 +86,7 @@ export default {
     color: $white;
     background-color: $orange;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: $white;
       background-color: $red;
     }
@@ -84,8 +96,7 @@ export default {
     color: $white;
     background-color: $black;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: $white;
       background-color: $orange;
     }
