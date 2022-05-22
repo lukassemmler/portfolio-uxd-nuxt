@@ -1,5 +1,10 @@
 <template>
-  <div class="dropdown-button" :aria-expanded="expanded + ''">
+  <div
+    class="dropdown-button"
+    :aria-expanded="expanded + ''"
+    v-click-outside="onOutsideClick"
+    @keydown.esc="onEscape"
+  >
     <simple-button
       suffixed-icon="caret-down"
       :target="'#' + menuId"
@@ -7,6 +12,8 @@
       aria-haspopup="true"
       :aria-owns="menuListId"
       role="button"
+      @click.prevent="onClick"
+      ref="button"
       >Testing</simple-button
     >
     <div class="dropdown-button-menu" :id="menuId">
@@ -15,6 +22,7 @@
         role="menu"
         class="dropdown-button-menu-list"
         :aria-labelledby="menuButtonId"
+        ref="menu"
       >
         <li
           v-for="menuItem in menu"
@@ -36,6 +44,7 @@
 </template>
 
 <script>
+// TODO To build a complete menu element, we would have to add full keyboard support. Because of time restraints, we will not do that for now.
 // See https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role for accessible roles
 export default {
   props: {
@@ -87,8 +96,29 @@ export default {
   },
   data: function () {
     return {
-      expanded: true,
+      expanded: false,
     };
+  },
+  methods: {
+    onClick: function () {
+      this.expanded = !this.expanded;
+      if (!this.expanded) return;
+      this.$nextTick(() => {
+        const firstItem = this.$refs.menu.querySelector("a");
+        if (firstItem) firstItem.focus();
+      });
+    },
+    onOutsideClick: function () {
+      if (!this.expanded) return;
+      this.expanded = false;
+    },
+    onEscape: function () {
+      console.log("Escape!");
+      if (!this.expanded) return;
+      this.expanded = false;
+      const button = this.$refs.button;
+      button.focus();
+    },
   },
 };
 </script>
