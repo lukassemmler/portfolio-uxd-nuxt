@@ -20,13 +20,17 @@
       ref="button"
       >Testing</simple-button
     >
-    <div class="dropdown-button-menu" :id="menuId">
+    <div
+      class="dropdown-button-menu"
+      :id="menuId"
+      :class="orientation"
+      ref="menu"
+    >
       <menu
         :id="menuListId"
         role="menu"
         class="dropdown-button-menu-list"
         :aria-labelledby="menuButtonId"
-        ref="menu"
         @keydown.tab="onTab"
         @keydown.esc="onEscape"
         @keydown.up="onArrowUp"
@@ -55,6 +59,10 @@
 
 <script>
 import { positiveModulo } from "~/assets/lib/math-util";
+import {
+  getScrollParent,
+  getBoundingClientRectRelativeToParent,
+} from "~/assets/lib/dom-util";
 
 // Control is inspired by the Dropdown Button in "WinUI 2 Gallery" (https://github.com/microsoft/WinUI-Gallery)
 
@@ -106,6 +114,24 @@ export default {
     prefixedIcon: {
       type: String,
       required: false,
+    },
+    orientation: {
+      type: String,
+      required: false,
+      validator: function (value) {
+        return [
+          "top-left",
+          "top-right",
+          "bottom-left",
+          "bottom-right",
+        ].includes(value);
+      },
+      default: "bottom-right", // This default value is necessary, or refitting might not work.
+    },
+    refitMenuIfBlocked: {
+      type: Boolean,
+      required: false,
+      default: true,
     },
   },
   computed: {
@@ -160,6 +186,9 @@ export default {
     open: function () {
       this.expanded = true;
       this.focusItemAtIndex(0);
+      this.$nextTick(() => {
+        if (this.refitMenuIfBlocked) this.refitMenu();
+      });
     },
     close: function () {
       this.expanded = false;
@@ -188,6 +217,30 @@ export default {
         numberOfItems
       );
       this.focusItemAtIndex(newFocus);
+    },
+    refitMenu: function () {
+      // TODO If we later want to add the option to display the dropdown left or right to the button (instead of top or bottom)
+      // we would have to extend this method a little.
+      const menu = this.$refs.menu;
+      const scrollParent = getScrollParent(menu);
+      //const button = this.$refs.button;
+      //const buttonBounds = button.getBoundingClientRect();
+      const menuBounds = menu.getBoundingClientRect();
+      const parentBounds = scrollParent.getBoundingClientRect();
+      console.log(menuBounds);
+      console.log(parentBounds);
+      const overflowFactorsRaw = Object.freeze({
+        top: menuBounds.top - parentBounds.top,
+        right: scrollParent.clientWidth - menuBounds.x - menuBounds.width,
+        bottom: scrollParent.clientHeight - menuBounds.y - menuBounds.height,
+        left: menuBounds.left - parentBounds.left,
+      });
+      console.log("overflow factors: ", overflowFactorsRaw);
+      
+      const initialOrientation = this.orientation;
+      const overflowFactorsWithButtonRaw = {... overflowFactorsRaw};
+      //if (initialOrientation.startsWith("top-"))
+      //  overflowFactorsWithButtonRaw.bottom = overflowFactorsRaw - 
     },
   },
 };
@@ -220,6 +273,26 @@ export default {
   &:target,
   &:focus-within {
     display: block;
+  }
+
+  &.top-left {
+    bottom: 100%;
+    right: 0;
+  }
+
+  &.top-right {
+    bottom: 100%;
+    left: 0;
+  }
+
+  &.bottom-left {
+    top: 100%;
+    right: 0;
+  }
+
+  &.bottom-right {
+    top: 100%;
+    left: 0;
   }
 }
 
