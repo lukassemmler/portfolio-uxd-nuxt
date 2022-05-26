@@ -6,6 +6,7 @@
     @keydown.esc="onEscape"
   >
     <simple-button
+      :prefixed-icon="prefixedIcon"
       suffixed-icon="caret-down"
       :target="'#' + menuId"
       :id="menuButtonId"
@@ -84,6 +85,10 @@ export default {
       default: function () {
         return [{ label: "Any link", link: "#" }];
       },
+    },
+    prefixedIcon: {
+      type: String,
+      required: false,
     },
   },
   computed: {
