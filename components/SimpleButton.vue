@@ -4,7 +4,7 @@
     :class="type"
     :href="target"
     :title="alt"
-    @click="$emit('click', $event)"
+    v-on="$listeners"
     ref="link"
   >
     <!-- TODO: use render(), so the <a> tag can also optionally be a <nuxt-link> component. -->
