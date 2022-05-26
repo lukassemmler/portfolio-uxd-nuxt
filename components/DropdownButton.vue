@@ -3,7 +3,6 @@
     class="dropdown-button"
     :aria-expanded="expanded + ''"
     v-click-outside="onOutsideClick"
-    @keydown.esc="onEscape"
   >
     <simple-button
       :prefixed-icon="prefixedIcon"
@@ -13,7 +12,11 @@
       aria-haspopup="true"
       :aria-owns="menuListId"
       role="button"
-      @click.prevent="onClick"
+      @click.prevent="onButtonClick"
+      @keydown.space.prevent=""
+      @keydown.enter.prevent=""
+      @keyup.space.prevent="onSpace"
+      @keyup.enter.prevent="onEnter"
       ref="button"
       >Testing</simple-button
     >
@@ -24,18 +27,24 @@
         class="dropdown-button-menu-list"
         :aria-labelledby="menuButtonId"
         ref="menu"
+        @keydown.tab="onTab"
+        @keydown.esc="onEscape"
+        @keydown.up="onArrowUp"
+        @keydown.down="onKeyArrowDown"
       >
         <li
-          v-for="menuItem in menu"
+          v-for="(menuItem, index) in menu"
           v-bind:key="menuItem.link"
           class="dropdown-button-menu-item"
           role="presentation"
+          ref="menuItems"
         >
           <a
             :href="menuItem.link"
             :title="menuItem.label"
             class="dropdown-button-menu-link"
             role="menuitem"
+            :tabindex="index === focusIndex ? '' : -1"
             >{{ menuItem.label }}</a
           >
         </li>
@@ -45,8 +54,16 @@
 </template>
 
 <script>
+import { positiveModulo } from "~/assets/lib/math-util";
+
+// Control is inspired by the Dropdown Button in "WinUI 2 Gallery" (https://github.com/microsoft/WinUI-Gallery)
+
 // TODO To build a complete menu element, we would have to add full keyboard support. Because of time restraints, we will not do that for now.
 // See https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role for accessible roles
+
+// TODO: `ref` inside `v-for` migration from Vue 2 to Vue 3: https://v3.vuejs.org/guide/migration/array-refs.html#migration-strategy
+// I tried using a function ref in Vue 2, but for some reason it didn't work. So just remember to migrate later on with Vue 3.
+
 export default {
   props: {
     menuId: {
@@ -102,27 +119,75 @@ export default {
   data: function () {
     return {
       expanded: false,
+      focusIndex: 0,
     };
   },
   methods: {
-    onClick: function () {
-      this.expanded = !this.expanded;
+    onTab: function (event) {
       if (!this.expanded) return;
-      this.$nextTick(() => {
-        const firstItem = this.$refs.menu.querySelector("a");
-        if (firstItem) firstItem.focus();
-      });
+      this.close();
+      if (event.shift) this.$refs.button.focus();
+    },
+    onSpace: function () {
+      this.toggle();
+    },
+    onEnter: function () {
+      this.toggle();
+    },
+    onButtonClick: function () {
+      this.toggle();
+    },
+    onArrowUp: function (event) {
+      if (!this.expanded) return;
+      this.moveItemFocus(-1);
+      event.preventDefault();
+    },
+    onKeyArrowDown: function (event) {
+      if (!this.expanded) return;
+      this.moveItemFocus(1);
+      event.preventDefault();
     },
     onOutsideClick: function () {
       if (!this.expanded) return;
-      this.expanded = false;
+      this.close();
+      this.$refs.button.focus();
     },
     onEscape: function () {
       console.log("Escape!");
       if (!this.expanded) return;
+      this.close();
+    },
+    open: function () {
+      this.expanded = true;
+      this.focusItemAtIndex(0);
+    },
+    close: function () {
       this.expanded = false;
-      const button = this.$refs.button;
-      button.focus();
+      this.focusIndex = 0;
+    },
+    toggle: function () {
+      if (this.expanded) {
+        this.close();
+        return;
+      }
+      this.open();
+    },
+    focusItemAtIndex: function (index) {
+      this.focusIndex = index;
+      this.$nextTick(() => {
+        this.$refs.menuItems[index]
+          .querySelector(".dropdown-button-menu-link")
+          .focus();
+      });
+    },
+    moveItemFocus: function (distance) {
+      // Positive means going up in index (0, 1, 2), negative means going down in index (2, 1, 0)
+      const numberOfItems = this.$refs.menuItems.length;
+      const newFocus = positiveModulo(
+        this.focusIndex + distance,
+        numberOfItems
+      );
+      this.focusItemAtIndex(newFocus);
     },
   },
 };
