@@ -122,6 +122,8 @@ export default {
       this.open();
     },
     refitMenu: function () {
+      // TODO this kind of interactive responsiveness is a little too advanced for now (too much time to implement for too little gain).
+      /*
       // TODO If we later want to add the option to display the dropdown left or right to the button (instead of top or bottom)
       // we would have to extend this method a little.
       const menu = this.$refs.menu.$el;
@@ -144,6 +146,7 @@ export default {
       const overflowFactorsWithButtonRaw = { ...overflowFactorsRaw };
       //if (initialOrientation.startsWith("top-"))
       //  overflowFactorsWithButtonRaw.bottom = overflowFactorsRaw -
+      */
     },
   },
 };
