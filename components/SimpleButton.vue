@@ -20,10 +20,11 @@
 <script>
 import eastIcon from "~/assets/icons/material-east.svg?inline";
 import caretDownIcon from "~/assets/icons/material-keyboard-arrow-down.svg?inline";
-const iconKeys = ["east", "caret-down"];
+import flagIcon from "~/assets/icons/material-flag.svg?inline";
+const iconKeys = ["east", "caret-down", "flag"];
 
 export default {
-  components: { eastIcon, caretDownIcon },
+  components: { eastIcon, caretDownIcon, flagIcon },
   expose: ["focus"],
   props: {
     target: {
