@@ -1,10 +1,10 @@
 <template>
-  <header id="page-header" :class="{inverted}">
+  <header id="page-header" :class="{ inverted }">
     <div class="container huge">
       <div class="page-header-inner">
         <lukas-logo :inverted="inverted"></lukas-logo>
         <header-nav :sites="navigation" :inverted="inverted"></header-nav>
-        <lang-menu :inverted="inverted"></lang-menu>
+        <lang-menu class="flex-edge-right" :inverted="inverted"></lang-menu>
       </div>
     </div>
   </header>
@@ -14,7 +14,7 @@
 import navigation from "assets/data/nav.json";
 import LukasLogo from "./LukasLogo.vue";
 import HeaderNav from "./HeaderNav.vue";
-import LangMenu from './LangMenu.vue';
+import LangMenu from "./LangMenu.vue";
 export default {
   components: { LukasLogo, HeaderNav, LangMenu },
   props: {
