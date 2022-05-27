@@ -112,11 +112,9 @@ export default {
       const menuItems = menu.querySelectorAll(".dropdown-menu-link");
       for (const menuItem of menuItems) {
         const role = menuItem.getAttribute("role");
-        console.log(role);
         if (role !== "menuitem") continue;
         navigatableItems.push(menuItem);
       }
-      console.log(navigatableItems);
       return navigatableItems;
     },
   },
