@@ -49,8 +49,8 @@
             class="dropdown-button-menu-link"
             role="menuitem"
             :tabindex="index === focusIndex ? '' : -1"
-            >{{ menuItem.label }}</a
-          >
+            v-html="menuItem.label"
+          ></a>
         </li>
       </menu>
     </div>
@@ -236,11 +236,11 @@ export default {
         left: menuBounds.left - parentBounds.left,
       });
       console.log("overflow factors: ", overflowFactorsRaw);
-      
+
       const initialOrientation = this.orientation;
-      const overflowFactorsWithButtonRaw = {... overflowFactorsRaw};
+      const overflowFactorsWithButtonRaw = { ...overflowFactorsRaw };
       //if (initialOrientation.startsWith("top-"))
-      //  overflowFactorsWithButtonRaw.bottom = overflowFactorsRaw - 
+      //  overflowFactorsWithButtonRaw.bottom = overflowFactorsRaw -
     },
   },
 };
