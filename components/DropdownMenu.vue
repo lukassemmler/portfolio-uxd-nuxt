@@ -14,34 +14,29 @@
       @keydown.up="onArrowUp"
       @keydown.down="onKeyArrowDown"
       @keydown.esc="onEscape"
+      ref="menu"
     >
-      <li
+      <dropdown-menu-item
         v-for="(menuItem, index) in menu"
-        v-bind:key="menuItem.link"
-        class="dropdown-menu-item"
-        role="presentation"
-        ref="menuItems"
-      >
-        <a
-          :href="menuItem.link"
-          :title="menuItem.label"
-          class="dropdown-menu-link"
-          role="menuitem"
-          :tabindex="index === focusIndex ? '' : -1"
-          v-html="menuItem.label"
-        ></a>
-      </li>
+        v-bind:key="menuItem.link ? menuItem.link : index"
+        tag="li"
+        :label="menuItem.label"
+        :link="menuItem.link"
+        :focusable="index === focusIndex"
+      ></dropdown-menu-item>
     </menu>
   </div>
 </template>
 
 <script>
 import { positiveModulo } from "~/assets/lib/math-util";
+import DropdownMenuItem from "./DropdownMenuItem.vue";
 
 // TODO: `ref` inside `v-for` migration from Vue 2 to Vue 3: https://v3.vuejs.org/guide/migration/array-refs.html#migration-strategy
 // I tried using a function ref in Vue 2, but for some reason it didn't work. So just remember to migrate later on with Vue 3.
 
 export default {
+  components: { DropdownMenuItem },
   expose: ["resetFocus", "focus"],
   props: {
     menuId: {
@@ -76,11 +71,13 @@ export default {
             errors.push(
               `Label should be type 'string', but is type '${typeof label}'. `
             );
-          if (!link) errors.push(`Menu item does not have property 'link'. `);
-          if (typeof link !== "string")
-            errors.push(
-              `Link should be type 'string', but is type '${typeof link}'. `
-            );
+          if (label !== "---") {
+            if (!link) errors.push(`Menu item does not have property 'link'. `);
+            if (typeof link !== "string")
+              errors.push(
+                `Link should be type 'string', but is type '${typeof link}'. `
+              );
+          }
         }
         for (const error of errors) console.error("Dropdown button: " + error);
         return errors.length === 0;
@@ -108,6 +105,21 @@ export default {
       focusIndex: 0,
     };
   },
+  computed: {
+    navigatableMenuItems: function () {
+      const navigatableItems = [];
+      const menu = this.$refs.menu;
+      const menuItems = menu.querySelectorAll(".dropdown-menu-link");
+      for (const menuItem of menuItems) {
+        const role = menuItem.getAttribute("role");
+        console.log(role);
+        if (role !== "menuitem") continue;
+        navigatableItems.push(menuItem);
+      }
+      console.log(navigatableItems);
+      return navigatableItems;
+    },
+  },
   methods: {
     onTab: function (event) {
       this.$emit("tabbed", event);
@@ -126,14 +138,12 @@ export default {
     focusItemAtIndex: function (index) {
       this.focusIndex = index;
       this.$nextTick(() => {
-        this.$refs.menuItems[index]
-          .querySelector(".dropdown-menu-link")
-          .focus();
+        this.navigatableMenuItems[index].focus();
       });
     },
     moveItemFocus: function (distance) {
       // Positive means going up in index (0, 1, 2), negative means going down in index (2, 1, 0)
-      const numberOfItems = this.$refs.menuItems.length;
+      const numberOfItems = this.navigatableMenuItems.length;
       const newFocus = positiveModulo(
         this.focusIndex + distance,
         numberOfItems
@@ -143,7 +153,7 @@ export default {
     resetFocus: function () {
       this.focusIndex = 0;
     },
-    focus: function() {
+    focus: function () {
       this.focusItemAtIndex(this.focusIndex);
     },
   },
@@ -193,24 +203,5 @@ export default {
   padding: 0;
   margin: 0;
   list-style-type: none;
-}
-
-.dropdown-menu-link {
-  display: block;
-  padding: 0.5em 1em;
-  border-bottom: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  color: $black;
-
-  &:hover {
-    background-color: $dark-10;
-    color: $black;
-  }
-
-  &:focus-visible {
-    outline-offset: -0.2rem;
-  }
 }
 </style>
