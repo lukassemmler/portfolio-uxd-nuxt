@@ -39,7 +39,14 @@ export default {
       type: String,
       required: false,
       validator: function (value) {
-        return ["primary", "secondary", "invisible"].includes(value);
+        return [
+          "primary",
+          "secondary",
+          "inherit",
+          "invisible",
+          "invisible-bright",
+          "invisible-dark",
+        ].includes(value);
       },
       default: "secondary",
     },
@@ -105,6 +112,45 @@ export default {
     &:active {
       color: $white;
       background-color: $red;
+    }
+  }
+
+  &.inherit {
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  &.invisible {
+    // This ruleset is intentionally left blank.
+    // The invisible style is applied when no variant class is added to `.simple-button`.
+  }
+
+  &.invisible-bright {
+    color: $white;
+
+    &:hover {
+      color: $white;
+      background-color: $bright-20;
+    }
+
+    &:active {
+      background-color: $bright-30;
+    }
+  }
+
+  &.invisible-dark {
+    color: $black;
+
+    &:hover {
+      color: $black;
+      background-color: $dark-10;
+    }
+
+    &:active {
+      background-color: $dark-20;
     }
   }
 }
