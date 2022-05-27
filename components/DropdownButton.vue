@@ -154,12 +154,12 @@ export default {
   position: relative;
   display: inline-block;
 
-  .dropdown-button-menu.dropdown-button-menu {
+  .dropdown-menu.dropdown-menu {
     display: none;
   }
 
   &[aria-expanded="true"] {
-    .dropdown-button-menu {
+    .dropdown-menu {
       display: block;
     }
   }

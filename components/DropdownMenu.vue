@@ -1,6 +1,6 @@
 <template>
   <div
-    class="dropdown-button-menu"
+    class="dropdown-menu"
     :id="menuId"
     :class="orientation"
     v-on="$listeners"
@@ -8,7 +8,7 @@
     <menu
       :id="menuListId"
       role="menu"
-      class="dropdown-button-menu-list"
+      class="dropdown-menu-list"
       :aria-labelledby="labelledBy"
       @keydown.tab="onTab"
       @keydown.up="onArrowUp"
@@ -18,14 +18,14 @@
       <li
         v-for="(menuItem, index) in menu"
         v-bind:key="menuItem.link"
-        class="dropdown-button-menu-item"
+        class="dropdown-menu-item"
         role="presentation"
         ref="menuItems"
       >
         <a
           :href="menuItem.link"
           :title="menuItem.label"
-          class="dropdown-button-menu-link"
+          class="dropdown-menu-link"
           role="menuitem"
           :tabindex="index === focusIndex ? '' : -1"
           v-html="menuItem.label"
@@ -127,7 +127,7 @@ export default {
       this.focusIndex = index;
       this.$nextTick(() => {
         this.$refs.menuItems[index]
-          .querySelector(".dropdown-button-menu-link")
+          .querySelector(".dropdown-menu-link")
           .focus();
       });
     },
@@ -151,7 +151,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dropdown-button-menu {
+.dropdown-menu {
   position: absolute;
   display: block;
   z-index: $z-index-dropdown;
@@ -189,13 +189,13 @@ export default {
   }
 }
 
-.dropdown-button-menu-list {
+.dropdown-menu-list {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.dropdown-button-menu-link {
+.dropdown-menu-link {
   display: block;
   padding: 0.5em 1em;
   border-bottom: none;
