@@ -25,6 +25,7 @@
       :menuId="menuId"
       :menuListId="menuListId"
       :labelledBy="menuButtonId"
+      :orientation="menuOrientation"
       ref="menu"
       @escaped="onMenuEscaped"
       @tabbed="onMenuTabbed"
@@ -56,7 +57,7 @@ export default {
       type: Array,
       required: true,
     },
-    orientation: {
+    menuOrientation: {
       type: String,
       required: false,
     },
