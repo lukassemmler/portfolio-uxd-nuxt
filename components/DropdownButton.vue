@@ -7,6 +7,7 @@
     <simple-button
       :prefixed-icon="prefixedIcon"
       suffixed-icon="caret-down"
+      :type="buttonType"
       :target="'#' + menuId"
       :id="menuButtonId"
       aria-haspopup="true"
@@ -58,6 +59,10 @@ export default {
       required: true,
     },
     menuOrientation: {
+      type: String,
+      required: false,
+    },
+    buttonType: {
       type: String,
       required: false,
     },
