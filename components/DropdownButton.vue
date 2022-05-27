@@ -18,8 +18,8 @@
       @keyup.space.prevent="onSpace"
       @keyup.enter.prevent="onEnter"
       ref="button"
-      >Testing</simple-button
-    >
+      ><slot></slot
+    ></simple-button>
     <dropdown-menu
       :menu="menu"
       :menuId="menuId"
