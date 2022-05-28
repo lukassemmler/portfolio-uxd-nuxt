@@ -25,7 +25,7 @@
         v-if="dismissable"
         class="alert-banner-close"
         target="#"
-        type="invisible-dark round big-icon square"
+        type="inherit round big-icon square"
         prefixedIcon="close"
         :aria-label="$t('component_banner_close')"
         role="button"
@@ -132,7 +132,7 @@ export default {
 .alert-banner {
   position: relative;
   //background-color: $dark-05;
-  border: 0.25rem solid $black;
+  border: 0.25rem solid currentColor;
   box-shadow: 0 1em 2em $dark-15;
   padding: 1em 1.5em;
   border-radius: 2em;
