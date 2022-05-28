@@ -1,10 +1,17 @@
 <template>
   <header id="page-header" :class="{ inverted }">
-    <div class="container huge">
-      <div class="page-header-inner">
-        <lukas-logo :inverted="inverted"></lukas-logo>
-        <header-nav :sites="navigation" :inverted="inverted"></header-nav>
-        <lang-menu class="flex-edge-right" :inverted="inverted"></lang-menu>
+    <div v-if="hasAnnouncement" class="page-header-announcement">
+      <div class="container huge">
+        <slot name="announcement"></slot>
+      </div>
+    </div>
+    <div class="page-header-desktop">
+      <div class="container huge">
+        <div class="page-header-inner">
+          <lukas-logo :inverted="inverted"></lukas-logo>
+          <header-nav :sites="navigation" :inverted="inverted"></header-nav>
+          <lang-menu class="flex-edge-right" :inverted="inverted"></lang-menu>
+        </div>
       </div>
     </div>
   </header>
@@ -27,6 +34,13 @@ export default {
     return {
       navigation: navigation.trees.header,
     };
+  },
+  computed: {
+    hasAnnouncement: function () {
+      // TODO migration Vue2 --> Vue3: Has to be a function call in Vue3, e.g. `this.$slots.announcement()`.
+      // See https://stackoverflow.com/questions/44077277/only-show-slot-if-it-has-content#comment119538305_44077358
+      return !!this.$slots.announcement;
+    },
   },
 };
 </script>
@@ -79,5 +93,9 @@ export default {
   @media screen and (min-width: $breakpoint-semi-big) {
     display: inline;
   }
+}
+
+.page-header-announcement {
+  margin-bottom: 1em;
 }
 </style>
