@@ -1,5 +1,5 @@
 <template>
-  <transition name="bounce">
+  <transition name="fade-top">
     <div
       v-if="visible"
       class="alert-banner"
