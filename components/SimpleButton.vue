@@ -11,7 +11,9 @@
     <span class="simple-button-icon prefixed-icon" v-if="prefixedIcon">
       <component v-bind:is="prefixedIcon + '-icon'"></component>
     </span>
-    <slot></slot>
+    <span v-if="slotHasContent">
+      <slot></slot>
+    </span>
     <span class="simple-button-icon suffixed-icon" v-if="suffixedIcon">
       <component v-bind:is="suffixedIcon + '-icon'"></component> </span
   ></a>
@@ -21,10 +23,11 @@
 import eastIcon from "~/assets/icons/material-east.svg?inline";
 import caretDownIcon from "~/assets/icons/material-keyboard-arrow-down.svg?inline";
 import flagIcon from "~/assets/icons/material-flag.svg?inline";
-const iconKeys = ["east", "caret-down", "flag"];
+import closeIcon from "~/assets/icons/material-close.svg?inline";
+const iconKeys = ["east", "caret-down", "flag", "close"];
 
 export default {
-  components: { eastIcon, caretDownIcon, flagIcon },
+  components: { eastIcon, caretDownIcon, flagIcon, closeIcon },
   expose: ["focus"],
   props: {
     target: {
@@ -39,14 +42,24 @@ export default {
       type: String,
       required: false,
       validator: function (value) {
-        return [
+        const validTypes = [
           "primary",
           "secondary",
           "inherit",
           "invisible",
           "invisible-bright",
           "invisible-dark",
-        ].includes(value);
+          "round",
+          "square",
+          "big-icon",
+        ];
+        const types = value.split(" ");
+        for (const type of types)
+          if (!validTypes.includes(type)) {
+            console.error(`Unknown button type '${type}'. `);
+            return false;
+          }
+        return true;
       },
       default: "secondary",
     },
@@ -61,6 +74,11 @@ export default {
       validator: function (value) {
         return iconKeys.includes(value);
       },
+    },
+  },
+  computed: {
+    slotHasContent: function () {
+      return !!this.$slots.default && !!this.$slots.default[0];
     },
   },
   methods: {
@@ -153,6 +171,23 @@ export default {
       background-color: $dark-20;
     }
   }
+
+  &.round {
+    border-radius: 1.25em;
+  }
+
+  &.big-icon {
+    .simple-button-icon {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  &.square {
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0.5em;
+  }
 }
 
 .simple-button-icon {
@@ -165,11 +200,11 @@ export default {
     fill: currentColor;
   }
 
-  &.prefixed-icon {
-    margin-right: 0.5em;
+  & ~ * {
+    margin-left: 0.5em;
   }
 
-  &.suffixed-icon {
+  * ~ & {
     margin-left: 0.5em;
   }
 }
