@@ -99,7 +99,6 @@ export default {
   }
 }
 
-.page-header-announcement-global,
 .page-header-announcement-local {
   margin-bottom: 1em;
 }
