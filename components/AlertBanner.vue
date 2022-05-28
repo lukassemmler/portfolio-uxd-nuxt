@@ -1,31 +1,38 @@
 <template>
-  <div
-    class="alert-banner"
-    :class="{ hidden: !visible }"
-    :data-banner-id="bannerId"
-  >
-    <div class="alert-banner-content" role="alert">
-      <p v-if="intro || message">
-        <strong v-if="intro" class="alert-banner-intro" v-html="intro"></strong>
-        <span
-          v-if="message"
-          class="alert-banner-message"
-          v-html="message"
-        ></span>
-      </p>
-      <slot></slot>
+  <transition name="bounce">
+    <div
+      v-if="visible"
+      class="alert-banner"
+      :class="{ hidden: !visible }"
+      :data-banner-id="bannerId"
+    >
+      <div class="alert-banner-content" role="alert">
+        <p v-if="intro || message">
+          <strong
+            v-if="intro"
+            class="alert-banner-intro"
+            v-html="intro"
+          ></strong>
+          <span
+            v-if="message"
+            class="alert-banner-message"
+            v-html="message"
+          ></span>
+        </p>
+        <slot></slot>
+      </div>
+      <simple-button
+        v-if="dismissable"
+        class="alert-banner-close"
+        target="#"
+        type="invisible-dark round big-icon square"
+        prefixedIcon="close"
+        :aria-label="$t('component_banner_close')"
+        role="button"
+        @click="hide"
+      ></simple-button>
     </div>
-    <simple-button
-      v-if="dismissable"
-      class="alert-banner-close"
-      target="#"
-      type="invisible-dark round big-icon square"
-      prefixedIcon="close"
-      :aria-label="$t('component_banner_close')"
-      role="button"
-      @click="hide"
-    ></simple-button>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -56,8 +63,8 @@ export default {
   },
   data: function () {
     return {
-      // The default behaviour is that dismissable messages are hidden. 
-      // This also means if JavaScript is deactivated, that dismissable banner will not get shown. 
+      // The default behaviour is that dismissable messages are hidden.
+      // This also means if JavaScript is deactivated, that dismissable banner will not get shown.
       // So make sure to always display super important information in non-dismissable banners.
       visible: !this.dismissable,
     };
