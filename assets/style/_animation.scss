@@ -63,3 +63,76 @@
     animation: none;
   }
 }
+
+@keyframes fade-in-down {
+  // Based on https://github.com/animate-css/animate.css/blob/9319952c1017ba84bc056a8545916d68168c1d53/source/fading_entrances/fadeInDown.css
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-out-down {
+  // Based on https://github.com/animate-css/animate.css/blob/9319952c1017ba84bc056a8545916d68168c1d53/source/fading_exits/fadeOutDown.css
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 30%, 0);
+  }
+}
+
+@keyframes fade-out-up {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, -30%, 0);
+  }
+}
+
+.fade-down-enter-active {
+  animation-duration: 250ms;
+  animation-name: fade-in-down;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+}
+
+.fade-down-leave-active {
+  animation-duration: 250ms;
+  animation-name: fade-out-down;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+}
+
+.fade-top-enter-active {
+  animation-duration: 250ms;
+  animation-name: fade-in-down;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+}
+
+.fade-top-leave-active {
+  animation-duration: 250ms;
+  animation-name: fade-out-up;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+}
+
