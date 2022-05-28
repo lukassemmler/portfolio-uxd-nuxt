@@ -1,5 +1,8 @@
 <template>
   <header id="page-header" :class="{ inverted }">
+    <announcement-area
+      class="page-header-announcement-global"
+    ></announcement-area>
     <div v-if="slotHasContent" class="page-header-announcement-local">
       <div class="container huge">
         <slot></slot>
