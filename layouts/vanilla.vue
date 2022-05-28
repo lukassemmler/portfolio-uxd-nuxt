@@ -1,6 +1,12 @@
 <template>
   <div class="content">
-    <page-header></page-header>
+    <page-header
+      ><template v-slot:announcement>
+        <alert-banner
+          intro="Holy Smokes!"
+          message="I dropped my sandwich."
+        ></alert-banner></template
+    ></page-header>
     <Nuxt />
     <page-footer></page-footer>
   </div>
