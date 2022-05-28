@@ -104,8 +104,12 @@ export default {
     },
   },
   mounted: function () {
-    if (!this.bannerId) return;
+    if (!this.bannerId) {
+      this.show();
+      return;
+    }
     const dismissableAndShouldBeShown = this.dismissable && !this.visible;
+    console.log("should be shown?", dismissableAndShouldBeShown);
     const settingsRaw = localStorage.getItem(SETTINGS_ID);
     if (settingsRaw === null) {
       if (dismissableAndShouldBeShown) this.show();
