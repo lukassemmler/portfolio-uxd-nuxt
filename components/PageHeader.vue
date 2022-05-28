@@ -1,8 +1,8 @@
 <template>
   <header id="page-header" :class="{ inverted }">
-    <div v-if="hasAnnouncement" class="page-header-announcement">
+    <div v-if="slotHasContent" class="page-header-announcement-local">
       <div class="container huge">
-        <slot name="announcement"></slot>
+        <slot></slot>
       </div>
     </div>
     <div class="page-header-desktop">
@@ -22,8 +22,9 @@ import navigation from "assets/data/nav.json";
 import LukasLogo from "./LukasLogo.vue";
 import HeaderNav from "./HeaderNav.vue";
 import LangMenu from "./LangMenu.vue";
+import AnnouncementArea from "./AnnouncementArea.vue";
 export default {
-  components: { LukasLogo, HeaderNav, LangMenu },
+  components: { LukasLogo, HeaderNav, LangMenu, AnnouncementArea },
   props: {
     inverted: {
       type: Boolean,
@@ -36,10 +37,10 @@ export default {
     };
   },
   computed: {
-    hasAnnouncement: function () {
+    slotHasContent: function () {
       // TODO migration Vue2 --> Vue3: Has to be a function call in Vue3, e.g. `this.$slots.announcement()`.
       // See https://stackoverflow.com/questions/44077277/only-show-slot-if-it-has-content#comment119538305_44077358
-      return !!this.$slots.announcement;
+      return !!this.$slots.default && !!this.$slots.default[0];
     },
   },
 };
@@ -95,7 +96,8 @@ export default {
   }
 }
 
-.page-header-announcement {
+.page-header-announcement-global,
+.page-header-announcement-local {
   margin-bottom: 1em;
 }
 </style>

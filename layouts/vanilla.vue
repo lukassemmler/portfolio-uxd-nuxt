@@ -1,11 +1,10 @@
 <template>
   <div class="content">
     <page-header
-      ><template v-slot:announcement>
-        <alert-banner
-          intro="Holy Smokes!"
-          message="I dropped my sandwich."
-        ></alert-banner></template
+      ><alert-banner
+        intro="Holy Smokes!"
+        message="I dropped my sandwich."
+      ></alert-banner
     ></page-header>
     <Nuxt />
     <page-footer></page-footer>
