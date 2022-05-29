@@ -8,12 +8,29 @@
         <slot></slot>
       </div>
     </div>
+    <div class="page-header-mobile">
+      <div class="container huge">
+        <lukas-logo :inverted="inverted"></lukas-logo>
+        <simple-button
+          type="secondary"
+          prefixed-icon="east"
+          target="#mobile-menu"
+          :alt="$t('meta-title_about')"
+          >Menü</simple-button
+        >
+      </div>
+    </div>
+    <mobile-menu :inverted="inverted" :navigation="navigation"></mobile-menu>
     <div class="page-header-desktop">
       <div class="container huge">
         <div class="page-header-inner">
           <lukas-logo :inverted="inverted"></lukas-logo>
           <header-nav :sites="navigation" :inverted="inverted"></header-nav>
-          <lang-menu class="flex-edge-right" :inverted="inverted"></lang-menu>
+          <lang-menu
+            class="flex-edge-right"
+            menu-id="lang-menu"
+            :inverted="inverted"
+          ></lang-menu>
         </div>
       </div>
     </div>
@@ -26,8 +43,9 @@ import LukasLogo from "./LukasLogo.vue";
 import HeaderNav from "./HeaderNav.vue";
 import LangMenu from "./LangMenu.vue";
 import AnnouncementArea from "./AnnouncementArea.vue";
+import MobileMenu from "./MobileMenu.vue";
 export default {
-  components: { LukasLogo, HeaderNav, LangMenu, AnnouncementArea },
+  components: { LukasLogo, HeaderNav, LangMenu, AnnouncementArea, MobileMenu },
   props: {
     inverted: {
       type: Boolean,
@@ -75,6 +93,14 @@ export default {
   }
 }
 
+.page-header-desktop {
+  display: none;
+
+  @include breakpoint-upwards($breakpoint-semi-big) {
+    display: block;
+  }
+}
+
 .page-header-inner {
   display: flex;
   flex-direction: row;
@@ -88,14 +114,6 @@ export default {
     @media screen and (min-width: $breakpoint-semi-big) {
       margin-right: $sp * 1.5;
     }
-  }
-}
-
-.full-name {
-  display: none;
-
-  @media screen and (min-width: $breakpoint-semi-big) {
-    display: inline;
   }
 }
 
