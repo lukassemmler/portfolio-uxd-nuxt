@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="localePath('/')" class="logo-link"
+  <nuxt-link :to="localePath('/')" class="logo-link" ref="link"
     ><span
       class="lukas-logo"
       :class="{ inverted }"
@@ -10,11 +10,17 @@
 
 <script>
 export default {
+  expose: ["focus"],
   props: {
     inverted: {
       type: Boolean,
       required: false,
       default: false,
+    },
+  },
+  methods: {
+    focus: function () {
+      this.$refs.link.$el.focus();
     },
   },
 };
@@ -27,7 +33,7 @@ export default {
   box-sizing: border-box;
   display: inline-block;
   background-color: $gray-90;
-    padding: $sp ($sp * 1.5);
+  padding: $sp ($sp * 1.5);
   border-radius: 0.5rem;
   text-align: center;
   white-space: nowrap;
