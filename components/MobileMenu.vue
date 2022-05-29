@@ -1,41 +1,43 @@
 <template>
-  <transition name="fade-top">
     <div
       id="mobile-menu"
       class="mobile-menu"
-      :class="{ inverted, visible }"
+      :class="{ inverted, hidden: (!visible && closed) }"
       ref="mobileMenu"
     >
-      <div class="mobile-menu-content">
-        <div class="mobile-menu-header container huge">
-          <lukas-logo :inverted="inverted" ref="logo"></lukas-logo>
-          <div class="mobile-menu-close flex-edge-right">
-            <simple-button
-              target="#"
-              type="inherit round big-icon square"
-              prefixedIcon="close"
-              :aria-label="$t('component_banner_close')"
-              role="button"
-              @click.prevent="hide"
-            ></simple-button>
+      <transition name="fade-top" v-on:after-leave="onFadedOut">
+        <div class="mobile-menu-content" v-show="visible">
+          <div class="mobile-menu-header container huge">
+            <lukas-logo :inverted="inverted" ref="logo"></lukas-logo>
+            <div class="mobile-menu-close flex-edge-right">
+              <simple-button
+                target="#"
+                type="inherit round big-icon square"
+                prefixedIcon="close"
+                :aria-label="$t('component_banner_close')"
+                role="button"
+                @click.prevent="hide"
+              ></simple-button>
+            </div>
+          </div>
+          <div class="mobile-menu-main container huge">
+            <header-nav
+              class="vertical"
+              :sites="navigation"
+              :inverted="inverted"
+            ></header-nav>
+            <lang-menu
+              class="flex-edge-right"
+              menu-id="lang-menu-mobile"
+              :inverted="inverted"
+              @buttonBlurred="onBlur"
+            ></lang-menu>
           </div>
         </div>
-        <div class="mobile-menu-main container huge">
-          <header-nav
-            class="vertical"
-            :sites="navigation"
-            :inverted="inverted"
-          ></header-nav>
-          <lang-menu
-            class="flex-edge-right"
-            menu-id="lang-menu-mobile"
-            :inverted="inverted"
-            @buttonBlurred="onBlur"
-          ></lang-menu>
-        </div>
-      </div>
+      </transition>
       <transition name="fade"
         ><a
+          v-show="visible"
           class="mobile-menu-backdrop"
           href="#"
           tabindex="-1"
@@ -43,11 +45,9 @@
         ></a
       ></transition>
     </div>
-  </transition>
 </template>
 
 <script>
-// TODO Fix animation not being shown when mobile menu gets displayed.
 export default {
   export: ["show", "hide"],
   props: {
@@ -62,7 +62,15 @@ export default {
   },
   data: function () {
     return {
+      // "Visible" is active from the start of the entering animation to the START of the leaving animation.
+      // "Closed" is active from the start of the entering animation to the END of the leaving animation.
+      // This is a weird workaround for using a multipart transition in this component, because otherwise the leaving
+      // transition gets cut off.
+      // For some reason, this does not occur when using a single animation in `<transition>`, but as written before,
+      // we have a combined, multipart animation in this case.
+      // Maybe there is a better way to this, but this workaround is enough for now.
       visible: false,
+      closed: true, 
     };
   },
   methods: {
@@ -71,13 +79,17 @@ export default {
       // Trap the focus inside the mobile menu when it is opened, otherwise it can get very confusing.
       this.$refs.logo.focus();
     },
+    onFadedOut: function () {
+      console.log("Faded out!");
+      this.closed = true;
+    },
     show: function () {
       this.visible = true;
+      this.closed = false;
       this.$emit("shown");
     },
     hide: function () {
       this.visible = false;
-      console.log("hide menu");
       this.$emit("hidden");
     },
   },
@@ -87,7 +99,6 @@ export default {
 <style lang="scss" scoped>
 .mobile-menu,
 #mobile-menu {
-  display: none;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -96,10 +107,22 @@ export default {
   bottom: 0;
   font-size: 1.25em;
 
-  &:target,
-  &:focus-within,
-  &.visible {
-    display: block;
+  &.hidden {
+    display: none;
+  }
+
+  &:target {
+    // For some reason, the selector `&:focus-within` is not working to keep the mobile menu open when the lang menu is clicked.
+    // This is intended as fallback if JavaScript could not be loaded. But there is no need to fix this now, as the user
+    // can use the JavaScript-less lang menu when the desktop breakpoint is activated.
+    &,
+    .mobile-menu-content,
+    .mobile-menu-backdrop {
+      // It hurts my heart a little, but we have to use `!important` here.
+      // When using `v-show="someExpression"`, if `someExpression` is falsy, an inline style with `display: none;` is inserted.
+      // There is no cool specificity trick to work around that, so we will resort to using `!important` in this rare case.
+      display: block !important;
+    }
   }
 
   &.inverted {
@@ -134,7 +157,7 @@ export default {
 }
 
 .mobile-menu-backdrop {
-  background-color: $dark-50;
+  background-color: $dark-80;
   display: block;
   position: fixed;
   z-index: -1;
