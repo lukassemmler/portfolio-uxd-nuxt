@@ -53,7 +53,7 @@ export default {
 
     .header-nav-link {
       color: $bright-60;
-      
+
       &:hover {
         color: $white;
       }
@@ -61,6 +61,24 @@ export default {
 
     .link-active {
       color: $white;
+    }
+  }
+
+  &.vertical {
+    display: block;
+
+    .header-nav-list {
+      flex-direction: column;
+
+      li:not(:last-child) {
+        margin-right: 0;
+        border-bottom: 0.1em solid $gray-20;
+      }
+    }
+
+    .header-nav-link {
+      width: 100%;
+      align-items: flex-start;
     }
   }
 }
@@ -71,6 +89,7 @@ export default {
   align-items: center;
   padding: $sp 0;
   border-bottom-width: 0;
+
   &:hover {
     color: $orange;
     background-image: linear-gradient(
