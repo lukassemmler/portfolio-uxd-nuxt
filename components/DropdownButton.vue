@@ -18,6 +18,7 @@
       @keydown.enter.prevent=""
       @keyup.space.prevent="onSpace"
       @keyup.enter.prevent="onEnter"
+      @blur="onButtonBlurred"
       ref="button"
       ><slot></slot
     ></simple-button>
@@ -108,6 +109,9 @@ export default {
       if (!this.expanded) return;
       this.close();
       this.$refs.button.focus();
+    },
+    onButtonBlurred: function() {
+      this.$emit("buttonBlurred");
     },
     open: function () {
       this.expanded = true;
