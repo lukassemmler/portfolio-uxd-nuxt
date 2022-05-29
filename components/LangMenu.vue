@@ -1,6 +1,6 @@
 <template>
   <dropdown-button
-    menu-id="lang-menu"
+    :menu-id="menuId"
     :menu="[
       {
         label: $t('label_lang_const_german'),
@@ -30,6 +30,10 @@ export default {
       type: Boolean,
       required: false,
       default: false,
+    },
+    menuId: {
+      type: String,
+      required: true,
     },
   },
   computed: {
