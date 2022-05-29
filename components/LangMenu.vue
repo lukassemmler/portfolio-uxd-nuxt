@@ -1,5 +1,6 @@
 <template>
   <dropdown-button
+    v-on="$listeners"
     :menu-id="menuId"
     :menu="[
       {
