@@ -100,6 +100,26 @@
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 .fade-down-enter-active {
   animation-duration: 250ms;
   animation-name: fade-in-down;
@@ -136,3 +156,20 @@
   }
 }
 
+.fade-enter-active {
+  animation-duration: 250ms;
+  animation-name: fade-in;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+}
+
+.fade-leave-active {
+  animation-duration: 250ms;
+  animation-name: fade-out;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+}
