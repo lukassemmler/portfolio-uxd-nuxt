@@ -16,11 +16,18 @@
           prefixed-icon="east"
           target="#mobile-menu"
           :alt="$t('meta-title_about')"
+          @click.prevent="onMenuButtonClick"
+          ref="menuButton"
           >Menü</simple-button
         >
       </div>
     </div>
-    <mobile-menu :inverted="inverted" :navigation="navigation"></mobile-menu>
+    <mobile-menu
+      :inverted="inverted"
+      :navigation="navigation"
+      ref="mobileMenu"
+      @hidden="onMobileMenuHidden"
+    ></mobile-menu>
     <div class="page-header-desktop">
       <div class="container huge">
         <div class="page-header-inner">
@@ -62,6 +69,17 @@ export default {
       // TODO migration Vue2 --> Vue3: Has to be a function call in Vue3, e.g. `this.$slots.announcement()`.
       // See https://stackoverflow.com/questions/44077277/only-show-slot-if-it-has-content#comment119538305_44077358
       return !!this.$slots.default && !!this.$slots.default[0];
+    },
+  },
+  methods: {
+    onMenuButtonClick: function () {
+      this.$refs.mobileMenu.show();
+    },
+    onMobileMenuHidden: function() {
+      // We have to focus the menu button when the close button in the mobile menu is clicked.
+      // For compatibility reasons, the mobile menu will stay open whenever any element inside it is focused.
+      // The `:focus-within` CSS selector is used, so the mobile menu is still usable when all JavaScript is disabled.
+      this.$refs.menuButton.focus();
     },
   },
 };
