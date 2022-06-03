@@ -1,17 +1,17 @@
-<template>
-  <div class="img-wrapper" :class="ratioClasses">
-    <!-- TODO Add placeholder param and lazy loading -->
-    <nuxt-img v-bind="$attrs" />
-  </div>
-</template>
-
 <script>
+import NuxtImg from "@nuxt/image/dist/runtime/components/nuxt-img.vue";
+
 export default {
+  components: { NuxtImg },
   props: {
     ratio: {
       type: String,
       required: false,
       default: "",
+    },
+    caption: {
+      type: String,
+      required: false,
     },
   },
   computed: {
@@ -19,6 +19,36 @@ export default {
       if (this.ratio.length === 0) return "";
       return "fixed-ratio ratio-" + this.ratio;
     },
+  },
+  render(h) {
+    const image = h(
+      "div",
+      { class: ["img-wrapper", this.ratioClasses], },
+      [
+        h(NuxtImg, {
+          class: "dropdown-menu-link",
+          attrs: {
+            ...this.$attrs,
+          },
+        }),
+      ]
+    );
+
+    if (this.caption) return h(
+      "figure",
+      { class: ["single"], },
+      [
+        image,
+        h("figcaption", {
+          class: "",
+          domProps: {
+            innerHTML: this.caption,
+          },
+        }),
+      ]
+    );
+
+    return image;
   },
 };
 </script>
@@ -44,13 +74,13 @@ export default {
     font-style: italic;
   }
 
-  & > img {
+  &>img {
     width: 100%;
     height: auto;
     display: block;
   }
 
-  & > figcaption {
+  &>figcaption {
     margin-top: $sp * 0.75;
   }
 }
@@ -93,9 +123,11 @@ export default {
 
     @mixin make-ratio($width, $height, $customName: null) {
       $name: "#{$width}-by-#{$height}";
+
       @if $customName {
         $name: $customName;
       }
+
       &.ratio-#{$name} {
         padding-top: percentage(math.div(1, math.div($width, $height)));
       }
@@ -150,16 +182,14 @@ export default {
       $dots: (); // Used to initialise empty list
       $originX: 0; // Possible to offset dots, in this case not needed
       $originY: 0;
+
       @for $i from 1 through $numberOfDots {
-        $dotX: $originX +
-          $radius *
-          math.cos((360deg * $i) * math.div(1, $numberOfDots));
-        $dotY: $originY -
-          $radius *
-          math.sin((360deg * $i) * math.div(1, $numberOfDots));
+        $dotX: $originX +$radius * math.cos((360deg * $i) * math.div(1, $numberOfDots));
+        $dotY: $originY - $radius * math.sin((360deg * $i) * math.div(1, $numberOfDots));
         $dotString: "#{$dotX}em #{$dotY}em 0 #{$color}";
         $dots: append($dots, $dotString, "comma");
       }
+
       box-shadow: #{$dots};
       animation: rotateLoader 3s linear infinite;
       content: "";
@@ -171,6 +201,7 @@ export default {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
