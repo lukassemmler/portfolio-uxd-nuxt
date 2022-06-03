@@ -52,6 +52,8 @@ export default {
           "round",
           "square",
           "big-icon",
+          "big",
+          "outline-bright",
         ];
         const types = value.split(" ");
         for (const type of types)
@@ -187,6 +189,28 @@ export default {
     width: 2.5em;
     height: 2.5em;
     padding: 0.5em;
+  }
+
+  &.big {
+    height: 3em;
+    padding: 0.75em 1.5em;
+
+    &.square {
+      width: 3em;
+      padding: 0.75em;
+    }
+  }
+
+  &.outline-bright {
+    border: 0.1em solid $white;
+    background-color: none;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $orange;
+      color: $black;
+    }
   }
 }
 
