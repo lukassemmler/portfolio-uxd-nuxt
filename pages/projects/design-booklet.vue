@@ -1,6 +1,7 @@
 <template>
   <project-template
     background="bg-gradient-gray"
+    headerBackground="bg-asphalt"
     :title="$t('meta-title_design-booklet')"
     :meta-name="$t('project-summary-name_design-booklet')"
     :meta-tasks="$t('project-summary-tasks_design-booklet')"

@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <header class="project-intro" :class="background">
-      <page-header :inverted="true"></page-header>
+      <page-header :inverted="true" :background="headerBackground"></page-header>
       <h1 class="project-title" v-if="title" v-html="title"></h1>
       <slot name="header"></slot>
       <div class="container huge spaced-y">
@@ -50,6 +50,11 @@ export default {
       required: false,
     },
     background: {
+      type: String,
+      required: false,
+      default: "bg-gray",
+    },
+    headerBackground: {
       type: String,
       required: false,
       default: "bg-gray",
