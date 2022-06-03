@@ -3,20 +3,30 @@
   flex-direction: column;
 }
 
+// We use `&#{&}#{&}` to stack the same css class on top to increase specitifity.
+
 .flex-edge-bottom {
-  margin-top: auto;
+  &#{&}#{&} {
+    margin-top: auto;
+  }
 }
 
 .flex-edge-top {
-  margin-bottom: auto;
+  &#{&}#{&} {
+    margin-bottom: auto;
+  }
 }
 
 .flex-edge-left {
-  margin-right: auto;
+  &#{&}#{&} {
+    margin-right: auto;
+  }
 }
 
 .flex-edge-right {
-  margin-left: auto;
+  &#{&}#{&} {
+    margin-left: auto;
+  }
 }
 
 .center-children-col {
