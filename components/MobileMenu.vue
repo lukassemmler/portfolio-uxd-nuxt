@@ -1,50 +1,57 @@
 <template>
-    <div
-      id="mobile-menu"
-      class="mobile-menu"
-      :class="{ inverted, hidden: (!visible && closed) }"
-      ref="mobileMenu"
-    >
-      <transition name="fade-top" v-on:after-leave="onFadedOut">
-        <div class="mobile-menu-content" v-show="visible">
-          <div class="mobile-menu-header container huge">
-            <lukas-logo :inverted="inverted" ref="logo"></lukas-logo>
-            <div class="mobile-menu-close flex-edge-right">
-              <simple-button
-                target="#"
-                type="inherit round big-icon square"
-                prefixedIcon="close"
-                :aria-label="$t('component_banner_close')"
-                role="button"
-                @click.prevent="hide"
-              ></simple-button>
-            </div>
-          </div>
-          <div class="mobile-menu-main container huge">
-            <header-nav
-              class="vertical"
-              :sites="navigation"
-              :inverted="inverted"
-            ></header-nav>
-            <lang-menu
-              class="flex-edge-right"
-              menu-id="lang-menu-mobile"
-              :inverted="inverted"
-              @buttonBlurred="onBlur"
-            ></lang-menu>
+  <div
+    id="mobile-menu"
+    class="mobile-menu"
+    :class="{ inverted, hidden: !visible && closed }"
+    ref="mobileMenu"
+  >
+    <transition name="fade-top" v-on:after-leave="onFadedOut">
+      <div class="mobile-menu-content" v-show="visible">
+        <div class="mobile-menu-header container huge">
+          <simple-button
+            :type="(inverted ? 'outline-bright' : 'secondary') + ' big'"
+            old-type="secondary big"
+            :target="localePath('/')"
+            :alt="$t('meta-title_about')"
+            ref="logo"
+            >Lukas Semmler</simple-button
+          >
+          <div class="mobile-menu-close flex-edge-right">
+            <simple-button
+              target="#"
+              type="inherit round big-icon square"
+              prefixedIcon="close"
+              :aria-label="$t('component_banner_close')"
+              role="button"
+              @click.prevent="hide"
+            ></simple-button>
           </div>
         </div>
-      </transition>
-      <transition name="fade"
-        ><a
-          v-show="visible"
-          class="mobile-menu-backdrop"
-          href="#"
-          tabindex="-1"
-          @click.prevent="hide"
-        ></a
-      ></transition>
-    </div>
+        <div class="mobile-menu-main container huge">
+          <header-nav
+            class="vertical"
+            :sites="navigation"
+            :inverted="inverted"
+          ></header-nav>
+          <lang-menu
+            class="flex-edge-right"
+            menu-id="lang-menu-mobile"
+            :inverted="inverted"
+            @buttonBlurred="onBlur"
+          ></lang-menu>
+        </div>
+      </div>
+    </transition>
+    <transition name="fade"
+      ><a
+        v-show="visible"
+        class="mobile-menu-backdrop"
+        href="#"
+        tabindex="-1"
+        @click.prevent="hide"
+      ></a
+    ></transition>
+  </div>
 </template>
 
 <script>
@@ -70,7 +77,7 @@ export default {
       // we have a combined, multipart animation in this case.
       // Maybe there is a better way to this, but this workaround is enough for now.
       visible: false,
-      closed: true, 
+      closed: true,
     };
   },
   methods: {
