@@ -24,10 +24,11 @@ import eastIcon from "~/assets/icons/material-east.svg?inline";
 import caretDownIcon from "~/assets/icons/material-keyboard-arrow-down.svg?inline";
 import flagIcon from "~/assets/icons/material-flag.svg?inline";
 import closeIcon from "~/assets/icons/material-close.svg?inline";
-const iconKeys = ["east", "caret-down", "flag", "close"];
+import menuIcon from "~/assets/icons/material-menu.svg?inline";
+const iconKeys = ["east", "caret-down", "flag", "close", "menu"];
 
 export default {
-  components: { eastIcon, caretDownIcon, flagIcon, closeIcon },
+  components: { eastIcon, caretDownIcon, flagIcon, closeIcon, menuIcon },
   expose: ["focus"],
   props: {
     target: {
