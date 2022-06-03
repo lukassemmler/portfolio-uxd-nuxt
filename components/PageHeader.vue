@@ -8,19 +8,25 @@
         <slot></slot>
       </div>
     </div>
-    <div class="page-header-mobile">
-      <div class="container huge">
-        <lukas-logo :inverted="inverted"></lukas-logo>
-        <simple-button
-          type="secondary"
-          prefixed-icon="east"
-          target="#mobile-menu"
-          :alt="$t('meta-title_about')"
-          @click.prevent="onMenuButtonClick"
-          ref="menuButton"
-          >Menü</simple-button
-        >
-      </div>
+    <div class="page-header-mobile container huge">
+      <simple-button
+        :type="(inverted ? 'outline-bright' : 'secondary') + ' big'"
+        old-type="secondary big"
+        :target="localePath('/')"
+        :alt="$t('meta-title_about')"
+        ref="menuButton"
+        >Lukas Semmler</simple-button
+      >
+      <simple-button
+        class="flex-edge-right"
+        :type="(inverted ? 'invisible-bright' : 'invisible-dark') + ' big'"
+        prefixed-icon="menu"
+        target="#mobile-menu"
+        :alt="$t('meta-title_about')"
+        @click.prevent="onMenuButtonClick"
+        ref="menuButton"
+        >Menü</simple-button
+      >
     </div>
     <mobile-menu
       :inverted="inverted"
@@ -31,7 +37,14 @@
     <div class="page-header-desktop">
       <div class="container huge">
         <div class="page-header-inner">
-          <lukas-logo :inverted="inverted"></lukas-logo>
+          <simple-button
+            :type="(inverted ? 'outline-bright' : 'secondary') + ' big'"
+            old-type="secondary big"
+            :target="localePath('/')"
+            :alt="$t('meta-title_about')"
+            ref="menuButton"
+            >Lukas Semmler</simple-button
+          >
           <header-nav :sites="navigation" :inverted="inverted"></header-nav>
           <lang-menu
             class="flex-edge-right"
@@ -75,7 +88,7 @@ export default {
     onMenuButtonClick: function () {
       this.$refs.mobileMenu.show();
     },
-    onMobileMenuHidden: function() {
+    onMobileMenuHidden: function () {
       // We have to focus the menu button when the close button in the mobile menu is clicked.
       // For compatibility reasons, the mobile menu will stay open whenever any element inside it is focused.
       // The `:focus-within` CSS selector is used, so the mobile menu is still usable when all JavaScript is disabled.
@@ -109,14 +122,29 @@ export default {
     position: absolute;
     top: 0;
   }
+
+  @include breakpoint-upwards($breakpoint-semi-big) {
+    .page-header-mobile {
+      display: none;
+    }
+
+    .page-header-desktop {
+      display: block;
+    }
+  }
+}
+
+.page-header-mobile {
+  display: flex;
+  flex-direction: row;
+
+  & > *:not(:last-child) {
+    margin-right: $sp;
+  }
 }
 
 .page-header-desktop {
   display: none;
-
-  @include breakpoint-upwards($breakpoint-semi-big) {
-    display: block;
-  }
 }
 
 .page-header-inner {

@@ -30,10 +30,13 @@ export default {
 .lukas-logo {
   @extend %white-font-on-dark-background;
   width: auto;
+  height: 2.5em;
   box-sizing: border-box;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background-color: $gray-90;
-  padding: $sp ($sp * 1.5);
+  padding: (0.5 * $sp) $sp;
   border-radius: 0.5rem;
   text-align: center;
   white-space: nowrap;
