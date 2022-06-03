@@ -63,6 +63,7 @@ $gray-97: #0C0D0E;
 $black:   #000000;
 
 $black: #222; 
+$asphalt: #14111f;
 $dark-gray: #333; 
 $gray: #999; 
 $lighter-gray: #b7b7b7; 
@@ -92,7 +93,7 @@ $orange-gradient-colors: #cf442e, #cf9f00;
 $green-gradient-colors: #273710, #53892e, #85891d; 
 $blue-gradient-colors: #0d4164, #1c838c, #2cb399; 
 $pink-gradient-colors: #a43459, #e13464, #ff8578; 
-$gray-gradient-colors: #14111f, #444444; 
+$gray-gradient-colors: $asphalt, #444444; 
 
 $black-text-shadow: 0.1em 0.1em 1em black; 
 

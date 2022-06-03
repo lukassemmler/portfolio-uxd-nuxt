@@ -41,6 +41,8 @@
 @include make-bg-color("gray-pure-dark", $dark-gray);
 @include make-bg-color("gray-light", $gray-15);
 @include make-bg-color("gray-dark", $gray-80);
+@include make-bg-color("white", $white); 
+@include make-bg-color("asphalt", $asphalt); 
 @include make-bg-color("red", $red); 
 @include make-bg-color("orange", $orange); 
 @include make-bg-color("yellow", $yellow); 
