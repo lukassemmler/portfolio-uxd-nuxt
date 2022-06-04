@@ -13,6 +13,10 @@ export default {
       type: String,
       required: false,
     },
+    // For the `<nuxt-img>` tag, see https://image.nuxtjs.org/components/nuxt-img for all props.
+    src: String,
+    alt: String,
+    sizes: String,
   },
   computed: {
     ratioClasses: function () {
@@ -23,32 +27,34 @@ export default {
   render(h) {
     const image = h(
       "div",
-      { class: ["img-wrapper", this.ratioClasses], },
+      { class: ["simple-image-wrapper", this.ratioClasses] },
       [
         h(NuxtImg, {
-          class: "dropdown-menu-link",
+          class: "simple-image-media",
           attrs: {
+            src: this.src,
+            alt: this.alt,
+            sizes: this.sizes,
+            // It is preferred to specify the attributes under props, otherwise in the resulting html, the root node
+            // gets spammed with all the attributes and then the `<img>` tag itself again.
             ...this.$attrs,
           },
         }),
       ]
     );
 
-    if (this.caption) return h(
-      "figure",
-      { class: ["single"], },
-      [
+    if (this.caption)
+      return h("figure", { class: ["simple-image"] }, [
         image,
         h("figcaption", {
-          class: "",
+          class: "simple-image-caption",
           domProps: {
             innerHTML: this.caption,
           },
         }),
-      ]
-    );
+      ]);
 
-    return image;
+    return h("div", { class: ["simple-image"] }, [image]);
   },
 };
 </script>
@@ -57,65 +63,73 @@ export default {
 @use "sass:math";
 @import "~/assets/style/_loading-spinner.scss";
 
-.single {
-  width: 100%;
-  max-width: 66em;
-  height: auto;
-  box-sizing: border-box;
-  display: block;
-  margin: $sp 0 ($sp * 2);
-  line-height: 1.5;
+figure {
+  margin: 0;
+}
 
+.simple-image {
   &.has-background {
     background-color: $gray-15;
     padding: $sp;
   }
 
-  &.captioned {
-    font-style: italic;
+  &.shadow-medium {
+    .simple-image-wrapper {
+      box-shadow: 0 1em 2em $dark-20;
+    }
   }
 
-  &>img {
-    width: 100%;
-    height: auto;
-    display: block;
+  &.shadow-medium-faint {
+    .simple-image-wrapper {
+      box-shadow: 0 1em 2em $dark-10;
+    }
   }
 
-  &>figcaption {
-    margin-top: $sp * 0.75;
+  &.shadow-big {
+    .simple-image-wrapper {
+      box-shadow: 0 2em 3em $dark-20;
+    }
+  }
+
+  &.shadow-big-faint {
+    .simple-image-wrapper {
+      box-shadow: 0 2em 3em $dark-10;
+    }
+  }
+
+  &.rounded {
+    border-radius: 0.5rem;
+
+    .simple-image-wrapper {
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+  }
+
+  &.standalone {
+    margin-top: $sp;
+    margin-bottom: 2 * $sp;
+  }
+
+  &.fit-image {
+    .simple-image-media {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &.avatar {
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    border-radius: 2.5em;
+    background-color: $dark-20;
+    overflow: hidden;
   }
 }
 
-.shadow-medium {
-  box-shadow: 0 1em 2em $dark-20;
-}
-
-.shadow-medium-faint {
-  box-shadow: 0 1em 2em $dark-10;
-}
-
-.shadow-big {
-  box-shadow: 0 2em 3em $dark-20;
-}
-
-.shadow-big-faint {
-  box-shadow: 0 2em 3em $dark-10;
-}
-
-.avatar-icon {
-  display: inline-block;
-  width: 5em;
-  height: 5em;
-  border-radius: 2.5em;
-  background-color: $dark-20;
-  overflow: hidden;
-}
-
-.rounded {
-  border-radius: 0.5rem;
-}
-
-.img-wrapper {
+.simple-image-wrapper {
   position: relative;
 
   &.fixed-ratio {
@@ -172,5 +186,9 @@ export default {
   }
 }
 
+.simple-image-caption {
+  margin-top: 1em;
+  font-style: italic;
+  line-height: 1.5;
 }
 </style>
