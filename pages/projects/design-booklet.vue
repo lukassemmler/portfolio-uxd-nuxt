@@ -81,7 +81,7 @@ import IconItem from "~/components/IconItem.vue";
 import MediaGallery from "~/components/MediaGallery.vue";
 import ProjectMeta from "~/components/ProjectMeta.vue";
 import ProjectTools from "~/components/ProjectTools.vue";
-import ProjectTemplate from "~/templates/project.vue";
+import ProjectTemplate from "~/components/ProjectTemplate.vue";
 export default {
   components: {
     ProjectTemplate,
