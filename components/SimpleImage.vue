@@ -55,6 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "sass:math";
+@import "~/assets/style/_loading-spinner.scss";
 
 .single {
   width: 100%;
@@ -165,45 +166,11 @@ export default {
 
     // Loading sign
     &::before {
-      $dot-width: 0.8em;
-      $radius: 1.5;
-      $numberOfDots: 6;
-      $color: $dark-10;
-
-      position: absolute;
-      top: calc(50% - #{math.div($dot-width, 2)});
-      left: calc(50% - #{math.div($dot-width, 2)});
-      display: inline-block;
-      width: $dot-width;
-      height: $dot-width;
-      border-radius: $dot-width;
-      background-color: transparent;
-
-      $dots: (); // Used to initialise empty list
-      $originX: 0; // Possible to offset dots, in this case not needed
-      $originY: 0;
-
-      @for $i from 1 through $numberOfDots {
-        $dotX: $originX +$radius * math.cos((360deg * $i) * math.div(1, $numberOfDots));
-        $dotY: $originY - $radius * math.sin((360deg * $i) * math.div(1, $numberOfDots));
-        $dotString: "#{$dotX}em #{$dotY}em 0 #{$color}";
-        $dots: append($dots, $dotString, "comma");
-      }
-
-      box-shadow: #{$dots};
-      animation: rotateLoader 3s linear infinite;
+      @include spinner;
       content: "";
     }
   }
 }
 
-@keyframes rotateLoader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 </style>
