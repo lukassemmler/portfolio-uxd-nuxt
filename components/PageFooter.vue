@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 .page-footer {
   color: $white;
-  background-color: $gray-93;
+  background-color: $dusk-93;
 
   @include breakpoint-upwards($breakpoint-2xl) {
     .footer-inner {

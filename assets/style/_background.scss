@@ -37,26 +37,26 @@
   }
 }
 
-@include make-bg-color("gray-pure-light", $light-gray);
-@include make-bg-color("gray-pure-dark", $dark-gray);
-@include make-bg-color("gray-light", $gray-15);
-@include make-bg-color("gray-dark", $gray-80);
+@include make-bg-color("gray-pure-light", $gray-93);
+@include make-bg-color("gray-pure-dark", $gray-20);
+@include make-bg-color("gray-light", $dusk-15);
+@include make-bg-color("gray-dark", $dusk-80);
 @include make-bg-color("white", $white); 
-@include make-bg-color("asphalt", $asphalt); 
-@include make-bg-color("red", $red); 
+@include make-bg-color("blue-black", $black-blue); 
+@include make-bg-color("red", $strawberry-red); 
 @include make-bg-color("orange", $orange); 
-@include make-bg-color("yellow", $yellow); 
-@include make-bg-color("green", $green); 
-@include make-bg-color("ocean", $ocean); 
-@include make-bg-color("blue", $blue); 
-@include make-bg-color("pink", $pink); 
-@include make-bg-color("gray", $gray-50); 
-@include make-bg-color("red-light", $red-light);
-@include make-bg-color("orange-light", $orange-light);
-@include make-bg-color("yellow-light", $yellow-light);
-@include make-bg-color("green-light", $green-light);
-@include make-bg-color("blue-light", $blue-light);
-@include make-bg-color("pink-light", $pink-light);
+@include make-bg-color("yellow", $broom-yellow); 
+@include make-bg-color("green", $may-green); 
+@include make-bg-color("ocean", $sapphire-blue); 
+@include make-bg-color("blue", $turquoise-blue); 
+@include make-bg-color("pink", $rose-red); 
+@include make-bg-color("gray", $dusk-50); 
+@include make-bg-color("red-light", $antique-pink);
+@include make-bg-color("orange-light", $pastel-yellow);
+@include make-bg-color("yellow-light", $zinc-yellow);
+@include make-bg-color("green-light", $pastel-green);
+@include make-bg-color("blue-light", $pastel-turquoise);
+@include make-bg-color("pink-light", $light-pink);
 
 @include make-bg-gradient("red", $red-gradient-colors); 
 @include make-bg-gradient("orange", $orange-gradient-colors); 
@@ -65,10 +65,10 @@
 @include make-bg-gradient("pink", $pink-gradient-colors); 
 @include make-bg-gradient("gray", $gray-gradient-colors); 
 
-@include make-bg-hover("red", $red, $red-light);
-@include make-bg-hover("orange", $orange, $orange-light);
-@include make-bg-hover("yellow", $yellow, $yellow-light);
-@include make-bg-hover("green", $green, $green-light);
-@include make-bg-hover("blue", $blue, $blue-light);
-@include make-bg-hover("pink", $pink, $pink-light);
-@include make-bg-hover("gray", $gray-70, $gray-50);
+@include make-bg-hover("red", $strawberry-red, $antique-pink);
+@include make-bg-hover("orange", $orange, $pastel-yellow);
+@include make-bg-hover("yellow", $broom-yellow, $zinc-yellow);
+@include make-bg-hover("green", $may-green, $pastel-green);
+@include make-bg-hover("blue", $turquoise-blue, $pastel-turquoise);
+@include make-bg-hover("pink", $rose-red, $light-pink);
+@include make-bg-hover("gray", $dusk-70, $dusk-50);

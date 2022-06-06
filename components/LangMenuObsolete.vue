@@ -123,7 +123,7 @@ export default {
   align-items: center;
   padding: $sp 0.5rem;
   text-decoration: none;
-  color: $gray-50;
+  color: $dusk-50;
 
   &:hover {
     color: $orange;
@@ -156,7 +156,7 @@ export default {
     box-sizing: border-box;
     padding: $sp 0.5rem;
     text-align: center;
-    color: $gray-60;
+    color: $dusk-60;
 
     &:hover,
     &:focus {

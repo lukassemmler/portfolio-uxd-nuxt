@@ -21,7 +21,7 @@ export default {
 @use "sass:math";
 
 $tag-border-width: 0.2em;
-$tag-border: $tag-border-width solid $gray-30;
+$tag-border: $tag-border-width solid $dusk-30;
 $tag-border-radius: 0.5em;
 $tag-height: 2em;
 $tag-hole-diameter: 0.8em;
@@ -35,12 +35,12 @@ $tag-hole-diameter: 0.8em;
   &:hover {
     .simple-tag-head::before,
     .simple-tag-body {
-      background-color: $gray-20;
-      border-color: $gray-20;
+      background-color: $dusk-20;
+      border-color: $dusk-20;
     }
     .simple-tag-body::before {
       background-color: $white;
-      border-color: $gray-20;
+      border-color: $dusk-20;
     }
   }
 }

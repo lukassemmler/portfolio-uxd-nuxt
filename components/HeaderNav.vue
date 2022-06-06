@@ -72,7 +72,7 @@ export default {
 
       li:not(:last-child) {
         margin-right: 0;
-        border-bottom: 0.1em solid $gray-20;
+        border-bottom: 0.1em solid $dusk-20;
       }
     }
 
@@ -103,7 +103,7 @@ export default {
 
 // 'link-active' gets added to NuxtLink when active
 .link-active {
-  color: $black;
+  color: $gray-13;
   font-weight: bold;
   text-decoration: none;
 }

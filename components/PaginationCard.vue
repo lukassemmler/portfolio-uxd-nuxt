@@ -47,13 +47,13 @@ export default {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: $white;
-  background-color: $gray-40;
+  background-color: $dusk-40;
   transition: background-color 0.1s ease-in;
 
   &:hover,
   &:focus,
   &:focus-within {
-    background-color: $gray-50;
+    background-color: $dusk-50;
 
     .pagination-card-arrow {
       &:not(.right) {

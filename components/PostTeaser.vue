@@ -136,7 +136,7 @@ export default {
   line-height: 1.25;
   margin-top: 0;
   margin-bottom: 1rem;
-  color: $gray-60;
+  color: $dusk-60;
 }
 
 .post-teaser-header {

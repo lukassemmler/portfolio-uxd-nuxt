@@ -1,6 +1,6 @@
 html {
   font-family: "Fira Sans", "Segoe UI", "Helvetica", "Source Sans Pro", "Roboto", sans-serif;
-  color: $gray-80;
+  color: $dusk-80;
 }
 
 body {
@@ -87,9 +87,9 @@ img {
 li > a,
 li > span > a,
 p > a {
-  color: $gray-60;
+  color: $dusk-60;
   text-decoration: none;
-  border-bottom: ($sp * 0.1) solid $gray-60;
+  border-bottom: ($sp * 0.1) solid $dusk-60;
 
   &:hover,
   &.active:hover {
@@ -98,7 +98,7 @@ p > a {
   }
 
   &:active {
-    color: $black;
+    color: $gray-13;
   }
 
   &.active {
@@ -142,7 +142,7 @@ a.invisible-link {
   }
 
   &:active {
-    color: $black;
+    color: $gray-13;
   }
 }
 

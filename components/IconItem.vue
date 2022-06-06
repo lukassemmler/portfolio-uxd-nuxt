@@ -117,7 +117,7 @@ export default {
     background-color: $dark-10;
 
     .icon-product svg {
-      //fill: $gray-90;
+      //fill: $dusk-90;
     }
   }
 }

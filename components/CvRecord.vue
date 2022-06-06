@@ -117,7 +117,7 @@ export default {
   display: inline-block;
   font-size: 1.2em;
   font-weight: bold;
-  color: $gray-50;
+  color: $dusk-50;
 }
 
 .cv-record-body {
@@ -133,12 +133,12 @@ export default {
   display: inline-block;
   font-size: 0.9em;
   font-weight: 500;
-  color: $gray-50;
+  color: $dusk-50;
 }
 
 .cv-record-description {
   font-weight: 500;
-  color: $gray-60;
+  color: $dusk-60;
 }
 
 @include breakpoint-upwards($breakpoint-semi-big) {

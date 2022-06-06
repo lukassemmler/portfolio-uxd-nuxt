@@ -1,115 +1,146 @@
 $logo-height: 5rem;
 
-$breakpoint-medium: 500px; 
-$breakpoint-semi-big: 750px; 
-$breakpoint-big: 1000px; 
-$breakpoint-xl: 1280px; 
-$breakpoint-2xl: 1600px; 
+$breakpoint-medium: 500px;
+$breakpoint-semi-big: 750px;
+$breakpoint-big: 1000px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1600px;
 $breakpoint-3xl: 1920px;
 
 $max-size-text: 33em;
-$max-size-wrapper: 60em; 
+$max-size-wrapper: 60em;
 $max-size-bulge: 72em;
-$standard-spacing: 1em; 
+$standard-spacing: 1em;
 $sp: $standard-spacing; // shorter alias
 
-$dark-00: rgba(0, 0, 0, 0.0);
-$dark-01: rgba(0, 0, 0, 0.01); 
-$dark-02: rgba(0, 0, 0, 0.02); 
-$dark-03: rgba(0, 0, 0, 0.03); 
-$dark-04: rgba(0, 0, 0, 0.04); 
-$dark-05: rgba(0, 0, 0, 0.05); 
-$dark-10: rgba(0, 0, 0, 0.1); 
-$dark-15: rgba(0, 0, 0, 0.15); 
-$dark-20: rgba(0, 0, 0, 0.2); 
-$dark-30: rgba(0, 0, 0, 0.3); 
-$dark-40: rgba(0, 0, 0, 0.4); 
-$dark-50: rgba(0, 0, 0, 0.5); 
-$dark-60: rgba(0, 0, 0, 0.6); 
-$dark-70: rgba(0, 0, 0, 0.7); 
-$dark-80: rgba(0, 0, 0, 0.8); 
-$dark-80: rgba(0, 0, 0, 0.8); 
-$dark-90: rgba(0, 0, 0, 0.9); 
-$dark-100: rgba(0, 0, 0, 1); 
+// Colors
 
-$bright-00:  rgba(255, 255, 255, 0.0);
-$bright-05:  rgba(255, 255, 255, 0.05); 
-$bright-10:  rgba(255, 255, 255, 0.1); 
-$bright-20:  rgba(255, 255, 255, 0.2); 
-$bright-30:  rgba(255, 255, 255, 0.3); 
-$bright-40:  rgba(255, 255, 255, 0.4); 
-$bright-50:  rgba(255, 255, 255, 0.5); 
-$bright-60:  rgba(255, 255, 255, 0.6); 
-$bright-70:  rgba(255, 255, 255, 0.7); 
-$bright-80:  rgba(255, 255, 255, 0.8); 
-$bright-80:  rgba(255, 255, 255, 0.8); 
-$bright-90:  rgba(255, 255, 255, 0.9); 
-$bright-100: rgba(255, 255, 255, 1); 
+// Color Palette
+$absolute-white: #ffffff;
+$absolute-black: #000000;
+$black-blue: #14111f;
+$strawberry-red: #cc2844;
+$luminous-red: #e73232;
+$luminous-orange: #ff4a26; // merge with $luminous-red
+$broom-yellow: #cf9f00;
+$zinc-yellow: #f2c714;
+$may-green: #53892e;
+$sapphire-blue: #0d4164;
+$turquoise-blue: #1c838c;
+$rose-red: #e13464;
+$traffic-purple: #a4349b;
 
-$white:   #ffffff;
-$gray-10: #f8f9fa;
-$gray-15: #f0f2f4;
-$gray-20: #e9ecef;
-$gray-30: #dee2e6;
-$gray-40: #ced4da;
-$gray-50: #adb5bd;
-$gray-60: #6c757d;
-$gray-70: #495057;
-$gray-80: #343a40;
-$gray-90: #212529;
-$gray-93: #1A1D20;
-$gray-95: #141618;
-$gray-97: #0C0D0E;
-$black:   #000000;
+$antique-pink: #ff7f7f;
+$pastel-yellow: #ffa87c;
+$light-green: #2cb399;
+$pastel-green: #7cc17c;
+$pastel-turquoise: #79bfc4;
+$light-pink: #f099b1;
 
-$black: #222; 
-$asphalt: #14111f;
-$dark-gray: #333; 
-$gray: #999; 
-$lighter-gray: #b7b7b7; 
-$light-gray: #eee; 
-$white: white; 
+$black-red: #370014;
+$carmine-red: #8c1411;
+$signal-orange: #cf2534;
 
-$red: #CC2844; 
-$orange-red: #e73232;
-$orange: #FF4A26; 
-$yellow: #cf9f00;
-$golden: #f2c714;
-$green: #53892e;
-$ocean: #0d4164;
-$blue: #1c838c;
-$pink: #e13464;
-$purple: #a4349b;
+$chrome-green: #273710;
+$yellow-green: #85891d;
 
-$red-light: #FF7F7F;
-$orange-light: #FFA87C;
-$yellow-light: #E6C236;
-$green-light: #7CC17C;
-$blue-light: #79BFC4;
-$pink-light: #F099B1;
+$red-violet: #a43459;
+$antique-pink: #ff8578;
 
+// Shorter color aliases
+$white: $absolute-white;
+$black: $absolute-black;
+$red: $strawberry-red;
+$orange: $luminous-orange;
+$purple: $traffic-purple;
 
-$red-gradient-colors: #370014, #8c1411, #cf2534; 
-$orange-gradient-colors: #cf442e, #cf9f00; 
-$green-gradient-colors: #273710, #53892e, #85891d; 
-$blue-gradient-colors: $ocean, #1c838c, #2cb399; 
-$pink-gradient-colors: #a43459, #e13464, #ff8578; 
-$gray-gradient-colors: $asphalt, #444444; 
+// Dusk = Gray with a little color
+$dusk-00: $white;
+$dusk-10: #f8f9fa;
+$dusk-15: #f0f2f4;
+$dusk-20: #e9ecef;
+$dusk-30: #dee2e6;
+$dusk-40: #ced4da;
+$dusk-50: #adb5bd;
+$dusk-60: #6c757d;
+$dusk-70: #495057;
+$dusk-80: #343a40;
+$dusk-90: #212529;
+$dusk-93: #1a1d20;
+$dusk-95: #141618;
+$dusk-97: #0c0d0e;
+$dusk-100: $black;
 
-$black-text-shadow: 0.1em 0.1em 1em black; 
+// Gray
+$gray-00: $white;
+$gray-13: #222;
+$gray-20: #333;
+$gray-26: #444;
+$gray-60: #999;
+$gray-93: #eee;
+$gray-100: $black;
 
+// Dark tint
+$dark-00: rgba(0, 0, 0, 0);
+$dark-01: rgba(0, 0, 0, 0.01);
+$dark-02: rgba(0, 0, 0, 0.02);
+$dark-03: rgba(0, 0, 0, 0.03);
+$dark-04: rgba(0, 0, 0, 0.04);
+$dark-05: rgba(0, 0, 0, 0.05);
+$dark-10: rgba(0, 0, 0, 0.1);
+$dark-15: rgba(0, 0, 0, 0.15);
+$dark-20: rgba(0, 0, 0, 0.2);
+$dark-30: rgba(0, 0, 0, 0.3);
+$dark-40: rgba(0, 0, 0, 0.4);
+$dark-50: rgba(0, 0, 0, 0.5);
+$dark-60: rgba(0, 0, 0, 0.6);
+$dark-70: rgba(0, 0, 0, 0.7);
+$dark-80: rgba(0, 0, 0, 0.8);
+$dark-80: rgba(0, 0, 0, 0.8);
+$dark-90: rgba(0, 0, 0, 0.9);
+$dark-100: rgba(0, 0, 0, 1);
+
+// Bright tint
+$bright-00: rgba(255, 255, 255, 0);
+$bright-05: rgba(255, 255, 255, 0.05);
+$bright-10: rgba(255, 255, 255, 0.1);
+$bright-20: rgba(255, 255, 255, 0.2);
+$bright-30: rgba(255, 255, 255, 0.3);
+$bright-40: rgba(255, 255, 255, 0.4);
+$bright-50: rgba(255, 255, 255, 0.5);
+$bright-60: rgba(255, 255, 255, 0.6);
+$bright-70: rgba(255, 255, 255, 0.7);
+$bright-80: rgba(255, 255, 255, 0.8);
+$bright-80: rgba(255, 255, 255, 0.8);
+$bright-90: rgba(255, 255, 255, 0.9);
+$bright-100: rgba(255, 255, 255, 1);
+
+// Colorful gradients
+$red-gradient-colors: $black-red, $carmine-red, $signal-orange;
+$orange-gradient-colors: $signal-orange, $broom-yellow;
+$green-gradient-colors: $chrome-green, $may-green, $yellow-green;
+$blue-gradient-colors: $sapphire-blue, $turquoise-blue, $light-green;
+$pink-gradient-colors: $red-violet, $rose-red, $antique-pink;
+$gray-gradient-colors: $black-blue, $gray-26;
+
+// Text shadows
+$gray-13-text-shadow: 0.1em 0.1em 1em black;
+
+// Z indices
 $z-index-header: 900;
 $z-index-dropdown: 1000;
 
+// Math constants
 $math-phi: 1.618;
 $math-sqrt-2: 1.414;
 
-%white-font-on-dark-background { 
-  color: $white; 
-  letter-spacing: 0.05em; 
+// General mixins (TODO: remove)
+%white-font-on-dark-background {
+  color: $white;
+  letter-spacing: 0.05em;
 }
 
-%font-weight-bold { 
-  font-weight: 600; 
-  font-style: normal; 
+%font-weight-bold {
+  font-weight: 600;
+  font-style: normal;
 }

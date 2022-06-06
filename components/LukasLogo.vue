@@ -35,7 +35,7 @@ export default {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: $gray-90;
+  background-color: $dusk-90;
   padding: (0.5 * $sp) $sp;
   border-radius: 0.5rem;
   text-align: center;
@@ -49,7 +49,7 @@ export default {
   &:hover,
   &:focus {
     background-color: $orange;
-    color: $black;
+    color: $gray-13;
   }
 }
 

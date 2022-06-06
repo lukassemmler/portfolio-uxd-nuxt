@@ -134,7 +134,7 @@ export default {
 
   &.inverted {
     .mobile-menu-content {
-      background-color: $black;
+      background-color: $gray-13;
     }
   }
 }

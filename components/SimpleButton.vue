@@ -123,7 +123,7 @@ export default {
 
   &.secondary {
     color: $white;
-    background-color: $black;
+    background-color: $gray-13;
 
     &:hover {
       color: $white;
@@ -163,10 +163,10 @@ export default {
   }
 
   &.invisible-dark {
-    color: $black;
+    color: $gray-13;
 
     &:hover {
-      color: $black;
+      color: $gray-13;
       background-color: $dark-10;
     }
 
@@ -210,7 +210,7 @@ export default {
     &:hover,
     &:focus {
       background-color: $orange;
-      color: $black;
+      color: $gray-13;
     }
   }
 }

@@ -64,11 +64,11 @@ export default {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  color: $black;
+  color: $gray-13;
 
   &:hover {
     background-color: $dark-10;
-    color: $black;
+    color: $gray-13;
   }
 
   &:focus-visible {
@@ -79,6 +79,6 @@ export default {
 .dropdown-menu-separator {
   height: 0.1em;
   margin: 0.45em 0;
-  background-color: $gray-30;
+  background-color: $dusk-30;
 }
 </style>

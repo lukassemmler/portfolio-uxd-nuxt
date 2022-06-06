@@ -69,7 +69,7 @@ export default {
   border-bottom-style: solid;
 
   &:hover {
-    background-color: $gray-95;
+    background-color: $dusk-95;
   }
 }
 </style>

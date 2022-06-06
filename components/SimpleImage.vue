@@ -69,7 +69,7 @@ figure {
 
 .simple-image {
   &.has-background {
-    background-color: $gray-15;
+    background-color: $dusk-15;
     padding: $sp;
   }
 
