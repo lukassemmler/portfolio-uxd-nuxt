@@ -62,7 +62,7 @@ export default {
     }
 
     if (this.caption)
-      return h("figure", { class: ["simple-image"] }, [
+      return h("figure", { class: ["simple-image simple-caption"] }, [
         image,
         h("figcaption", {
           class: "simple-image-caption",
@@ -145,6 +145,13 @@ figure {
     background-color: $dark-20;
     overflow: hidden;
   }
+
+  &.simple-caption {
+    .simple-image-caption {
+      font-style: italic;
+      line-height: 1.5;
+    }
+  }
 }
 
 .simple-image-wrapper {
@@ -206,7 +213,5 @@ figure {
 
 .simple-image-caption {
   margin-top: 1em;
-  font-style: italic;
-  line-height: 1.5;
 }
 </style>
