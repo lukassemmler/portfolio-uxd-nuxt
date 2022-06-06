@@ -10,7 +10,7 @@
       <!-- TODO Add dark-mode -->
       <div class="container small center-all-children-col spaced-bottom">
         <simple-image
-          class="avatar-icon"
+          class="avatar"
           src="lukas/Lukas-Avatar.png"
           alt=""
         ></simple-image>
