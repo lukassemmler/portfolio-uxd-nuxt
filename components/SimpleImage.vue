@@ -43,6 +43,24 @@ export default {
       ]
     );
 
+    if (this.$slots.default) {
+      if (this.caption)
+        console.warn(
+          `Image caption prop '${this.caption}' omitted, because content ` +
+            `for the default slot is provided as figcaption. `
+        );
+      return h("figure", { class: ["simple-image"] }, [
+        image,
+        h(
+          "figcaption",
+          {
+            class: "simple-image-caption",
+          },
+          this.$slots.default
+        ),
+      ]);
+    }
+
     if (this.caption)
       return h("figure", { class: ["simple-image"] }, [
         image,
