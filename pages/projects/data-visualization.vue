@@ -152,86 +152,55 @@
         ></icon-item>
         -->
 
-        <!--
-
-    <div class="container-medium">
-      <ul class="icon-item-list centered spaced-y">
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--cost" 
-              label=(str "label_data_visualization_icon_cost") }}
-        </li>
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--commute" 
-              label=(str "label_data_visualization_icon_commute") }}
-        </li>
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--living-with-parents" 
-              label=(str "label_data_visualization_icon_living-with-parents") }}
-        </li>
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--living-in-dorm" 
-              label=(str "label_data_visualization_icon_living-in-dorm") }}
-        </li>
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--living-single" 
-              label=(str "label_data_visualization_icon_living-single") }}
-        </li>
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--living-with-partner" 
-              label=(str "label_data_visualization_icon_living-with-partner") }}
-        </li>
-        <li class="pillar-break-bg"></li>
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--living-in-shared-community" 
-              label=(str "label_data_visualization_icon_living-in-shared-community") }}
-        </li>
-        {{!-- 
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--driving-alone" 
-              label=(str "label_data_visualization_icon_driving-alone") }}
-        </li>
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--driving-car-pool" 
-              label=(str "label_data_visualization_icon_driving-car-pool") }}
-        </li>
-        --}}
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--going-by-foot" 
-              label=(str "label_data_visualization_icon_going-by-foot") }}
-        </li>
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--going-by-bike" 
-              label=(str "label_data_visualization_icon_going-by-bike") }}
-        </li>
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--going-by-car" 
-              label=(str "label_data_visualization_icon_going-by-car") }}
-        </li>
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--going-by-bus" 
-              label=(str "label_data_visualization_icon_going-by-bus") }}
-        </li>
-        <li>
-          {{> icon-item
-              iconId="project/data-visualization/icon--going-by-train" 
-              label=(str "label_data_visualization_icon_going-by-train") }}
-        </li>
-      </ul>
-    </div>
-  -->
+        <div class="icon-item-list">
+          <icon-item :label="$t('label_data_visualization_icon_cost')"
+            ><icon-cost></icon-cost
+          ></icon-item>
+          <icon-item :label="$t('label_data_visualization_icon_commute')"
+            ><icon-commute></icon-commute
+          ></icon-item>
+          <icon-item
+            :label="$t('label_data_visualization_icon_living-with-parents')"
+            ><icon-living-with-parents></icon-living-with-parents
+          ></icon-item>
+          <icon-item :label="$t('label_data_visualization_icon_living-in-dorm')"
+            ><icon-living-in-dorm></icon-living-in-dorm
+          ></icon-item>
+          <icon-item :label="$t('label_data_visualization_icon_living-single')"
+            ><icon-living-single></icon-living-single
+          ></icon-item>
+          <icon-item
+            :label="$t('label_data_visualization_icon_living-with-partner')"
+            ><icon-living-with-partner></icon-living-with-partner
+          ></icon-item>
+          <icon-item
+            :label="
+              $t('label_data_visualization_icon_living-in-shared-community')
+            "
+            ><icon-living-in-shared-community></icon-living-in-shared-community
+          ></icon-item>
+          <icon-item :label="$t('label_data_visualization_icon_driving-alone')"
+            ><icon-driving-alone></icon-driving-alone
+          ></icon-item>
+          <icon-item :label="$t('label_data_visualization_icon_driving-car-pool')"
+            ><icon-driving-car-pool></icon-driving-car-pool
+          ></icon-item>
+          <icon-item :label="$t('label_data_visualization_icon_going-by-foot')"
+            ><icon-going-by-foot></icon-going-by-foot
+          ></icon-item>
+          <icon-item :label="$t('label_data_visualization_icon_going-by-bike')"
+            ><icon-going-by-bike></icon-going-by-bike
+          ></icon-item>
+          <icon-item :label="$t('label_data_visualization_icon_going-by-car')"
+            ><icon-going-by-car></icon-going-by-car
+          ></icon-item>
+          <icon-item :label="$t('label_data_visualization_icon_going-by-bus')"
+            ><icon-going-by-bus></icon-going-by-bus
+          ></icon-item>
+          <icon-item :label="$t('label_data_visualization_icon_going-by-train')"
+            ><icon-going-by-train></icon-going-by-train
+          ></icon-item>
+        </div>
       </section>
 
       <section id="section-design-process" class="section">
@@ -297,9 +266,38 @@
 
 <script>
 import ProjectTemplate from "~/components/ProjectTemplate.vue";
+
+import IconCost from "~/static/data-visualization/icon--cost.svg?inline";
+import IconCommute from "~/static/data-visualization/icon--commute.svg?inline";
+import IconLivingWithParents from "~/static/data-visualization/icon--living-with-parents.svg?inline";
+import IconLivingInDorm from "~/static/data-visualization/icon--living-in-dorm.svg?inline";
+import IconLivingSingle from "~/static/data-visualization/icon--living-single.svg?inline";
+import IconLivingWithPartner from "~/static/data-visualization/icon--living-with-partner.svg?inline";
+import IconLivingInSharedCommunity from "~/static/data-visualization/icon--living-in-shared-community.svg?inline";
+import IconDrivingAlone from "~/static/data-visualization/icon--driving-alone.svg?inline";
+import IconDrivingCarPool from "~/static/data-visualization/icon--driving-car-pool.svg?inline";
+import IconGoingByFoot from "~/static/data-visualization/icon--going-by-foot.svg?inline";
+import IconGoingByBike from "~/static/data-visualization/icon--going-by-bike.svg?inline";
+import IconGoingByCar from "~/static/data-visualization/icon--going-by-car.svg?inline";
+import IconGoingByBus from "~/static/data-visualization/icon--going-by-bus.svg?inline";
+import IconGoingByTrain from "~/static/data-visualization/icon--going-by-train.svg?inline";
 export default {
   components: {
     ProjectTemplate,
+    IconCost,
+    IconCommute,
+    IconLivingWithParents,
+    IconLivingInDorm,
+    IconLivingSingle,
+    IconLivingWithPartner,
+    IconLivingInSharedCommunity,
+    IconDrivingAlone,
+    IconDrivingCarPool,
+    IconGoingByFoot,
+    IconGoingByBike,
+    IconGoingByCar,
+    IconGoingByBus,
+    IconGoingByTrain,
   },
 };
 </script>
