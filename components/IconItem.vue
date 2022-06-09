@@ -2,7 +2,7 @@
   <div class="icon-item-container">
     <div class="icon-item">
       <span class="icon icon-product"><slot></slot></span>
-      <span class="icon-item-label">{{ label }}</span>
+      <span class="icon-item-label" v-html="label"></span>
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .icon-item-container {
   width: 6em;
   height: 6em;
@@ -36,6 +36,8 @@ export default {
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 0.25em;
+  box-sizing: border-box;
   //background-color: $dark-05;
   transition: background-color 0.07s ease-out;
   border-radius: 0.5rem;
@@ -57,7 +59,7 @@ export default {
 .icon-item-label {
   font-size: 0.8em;
   text-align: center;
-  height: 1em;
+  height: 2.5em;
   margin-top: 0.2em;
 }
 
