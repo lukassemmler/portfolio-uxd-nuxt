@@ -144,14 +144,6 @@
           <p>{{ $t("text_data-visualization_icon-design").join("") }}</p>
         </div>
 
-        <!--
-        <icon-item
-          :iconId="tool.iconId"
-          :label="tool.label"
-          :class="size"
-        ></icon-item>
-        -->
-
         <div class="icon-item-list">
           <icon-item :label="$t('label_data_visualization_icon_cost')"
             ><icon-cost></icon-cost
@@ -182,7 +174,8 @@
           <icon-item :label="$t('label_data_visualization_icon_driving-alone')"
             ><icon-driving-alone></icon-driving-alone
           ></icon-item>
-          <icon-item :label="$t('label_data_visualization_icon_driving-car-pool')"
+          <icon-item
+            :label="$t('label_data_visualization_icon_driving-car-pool')"
             ><icon-driving-car-pool></icon-driving-car-pool
           ></icon-item>
           <icon-item :label="$t('label_data_visualization_icon_going-by-foot')"
@@ -204,13 +197,13 @@
       </section>
 
       <section id="section-design-process" class="section">
-        <div class="container-small last">
+        <div class="container small last">
           <h2 id="design-process">
             {{ $t("heading_data-visualization_design-process") }}
           </h2>
         </div>
 
-        <div class="pillar-container gapped-h">
+        <div class="container huge pillar-container gapped-h">
           <div class="pillar-row">
             <div class="pillar-col">
               <simple-image
