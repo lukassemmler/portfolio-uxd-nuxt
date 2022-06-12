@@ -1,0 +1,23 @@
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+
+  &.medium {
+    width: 3em;
+    height: 3em;
+  }
+
+  &.large {
+    width: 5em;
+    height: 5em;
+  }
+
+  &.huge {
+    width: 7em;
+    height: 7em;
+  }
+}

@@ -19,5 +19,6 @@ export default {
 @import "~/assets/style/_layout-column.scss";
 @import "~/assets/style/_button.scss";
 @import "~/assets/style/_background.scss";
+@import "~/assets/style/_icon.scss";
 @import "~/assets/style/_page.scss";
 </style>
