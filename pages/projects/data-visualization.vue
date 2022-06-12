@@ -22,53 +22,66 @@
     <template v-slot:header>
       <div class="container huge">
         <simple-image
-          class="rounded"
+          class="rounded height-80"
+          width="1920"
+          height="2715"
           src="data-visualization/Poster Data Visualization.jpg"
           :alt="$t('alt_data-visualization_poster-final')"
-          ratio="din-a4-portrait"
           sizes="xs:400px sm:640px md:960px lg:1200px"
         ></simple-image>
       </div>
     </template>
     <template v-slot:content>
       <section id="section-overview" class="section">
-        <div class="container small">
-          <h2 id="overview" class="sr-only">{{ $t("heading_overview") }}</h2>
-          <p>{{ $t("text_data-visualization_intro").join("") }}</p>
+        <div class="container huge">
+          <div class="container small left no-padding">
+            <h2 id="overview" class="sr-only">{{ $t("heading_overview") }}</h2>
+            <p>{{ $t("text_data-visualization_intro").join("") }}</p>
+          </div>
         </div>
       </section>
 
       <section id="section-data-collection-and-evaluation" class="section">
-        <div class="container small">
-          <h2 id="data-collection-and-evaluation">
-            {{
-              $t("heading_data-visualization_data-collection-and-evaluation")
-            }}
-          </h2>
-          <p>{{ $t("text_data-visualization_data-collection").join("") }}</p>
-          <p>{{ $t("text_data-visualization_data-evaluation").join("") }}</p>
+        <div class="container huge">
+          <div class="container small left no-padding">
+            <h2 id="data-collection-and-evaluation">
+              {{
+                $t("heading_data-visualization_data-collection-and-evaluation")
+              }}
+            </h2>
+            <p>{{ $t("text_data-visualization_data-collection").join("") }}</p>
+            <p>{{ $t("text_data-visualization_data-evaluation").join("") }}</p>
+          </div>
         </div>
 
-        <div class="pillar-container">
+        <div class="container huge pillar-container gapped-h">
           <div class="pillar-row">
-            <div class="pillar-col-bg-5">
+            <div class="pillar-col-bg">
               <simple-image
-                class="standalone rounded fit-image"
+                class="
+                  standalone
+                  rounded
+                  fit-image
+                  shadow-medium-faint
+                  height-40
+                "
                 src="data-visualization/Questionnaire.jpg"
                 :alt="$t('alt_data-visualization_questionnaire')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
                 :caption="$t('caption_data-visualization_questionnaire')"
               ></simple-image>
             </div>
-            <div class="pillar-col-bg-7">
+            <div class="pillar-col-bg">
               <simple-image
-                class="standalone rounded fit-image"
+                class="standalone rounded fit-image shadow-medium-faint"
                 src="data-visualization/Data Analysis - Dataset.png"
                 :alt="$t('alt_data-visualization_data-analysis')"
                 :caption="$t('caption_data-visualization_data-analysis')"
               ></simple-image>
+            </div>
+            <div class="pillar-col-bg">
               <simple-image
-                class="standalone rounded fit-image"
+                class="standalone rounded fit-image shadow-medium-faint"
                 src="data-visualization/Data Analysis - Pivot Table.png"
                 :alt="$t('alt_data-visualization_data-pivot')"
                 :caption="$t('caption_data-visualization_data-pivot')"
@@ -79,15 +92,15 @@
       </section>
 
       <section id="section-concept" class="section">
-        <div class="container-small">
+        <div class="container huge">
           <h2 id="concept">{{ $t("heading_data-visualization_concept") }}</h2>
           <p>{{ $t("text_data-visualization_concepts").join("") }}</p>
         </div>
-        <div class="pillar-container gapped-h">
+        <div class="container huge pillar-container gapped-h">
           <div class="pillar-row">
             <div class="pillar-col">
               <simple-image
-                class="standalone rounded fit-image"
+                class="standalone rounded fit-image shadow-medium-faint"
                 src="data-visualization/Sketch - Traffic Map.jpg"
                 :alt="$t('alt_data-visualization_sketch_traffic')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
@@ -102,7 +115,7 @@
             </div>
             <div class="pillar-col">
               <simple-image
-                class="standalone rounded fit-image"
+                class="standalone rounded fit-image shadow-medium-faint"
                 src="data-visualization/Sketch - Sunburst.jpg"
                 :alt="$t('alt_data-visualization_sketch_sunburst')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
@@ -117,7 +130,7 @@
             </div>
             <div class="pillar-col">
               <simple-image
-                class="standalone rounded fit-image"
+                class="standalone rounded fit-image shadow-medium-faint"
                 src="data-visualization/Sketch - Means of Transport.jpg"
                 :alt="$t('alt_data-visualization_sketch_transport-means')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
@@ -135,69 +148,94 @@
       </section>
 
       <section id="section-implementation" class="section">
-        <div class="container-small">
+        <div class="container huge">
           <h2 id="implementation">
             {{ $t("heading_data-visualization_implementation") }}
           </h2>
-          <p>{{ $t("text_data-visualization_implementation").join("") }}</p>
-          <h3>{{ $t("heading_data-visualization_icon-design") }}</h3>
-          <p>{{ $t("text_data-visualization_icon-design").join("") }}</p>
-        </div>
-
-        <div class="icon-item-list">
-          <icon-item :label="$t('label_data_visualization_icon_cost')"
-            ><icon-cost></icon-cost
-          ></icon-item>
-          <icon-item :label="$t('label_data_visualization_icon_commute')"
-            ><icon-commute></icon-commute
-          ></icon-item>
-          <icon-item
-            :label="$t('label_data_visualization_icon_living-with-parents')"
-            ><icon-living-with-parents></icon-living-with-parents
-          ></icon-item>
-          <icon-item :label="$t('label_data_visualization_icon_living-in-dorm')"
-            ><icon-living-in-dorm></icon-living-in-dorm
-          ></icon-item>
-          <icon-item :label="$t('label_data_visualization_icon_living-single')"
-            ><icon-living-single></icon-living-single
-          ></icon-item>
-          <icon-item
-            :label="$t('label_data_visualization_icon_living-with-partner')"
-            ><icon-living-with-partner></icon-living-with-partner
-          ></icon-item>
-          <icon-item
-            :label="
-              $t('label_data_visualization_icon_living-in-shared-community')
-            "
-            ><icon-living-in-shared-community></icon-living-in-shared-community
-          ></icon-item>
-          <icon-item :label="$t('label_data_visualization_icon_driving-alone')"
-            ><icon-driving-alone></icon-driving-alone
-          ></icon-item>
-          <icon-item
-            :label="$t('label_data_visualization_icon_driving-car-pool')"
-            ><icon-driving-car-pool></icon-driving-car-pool
-          ></icon-item>
-          <icon-item :label="$t('label_data_visualization_icon_going-by-foot')"
-            ><icon-going-by-foot></icon-going-by-foot
-          ></icon-item>
-          <icon-item :label="$t('label_data_visualization_icon_going-by-bike')"
-            ><icon-going-by-bike></icon-going-by-bike
-          ></icon-item>
-          <icon-item :label="$t('label_data_visualization_icon_going-by-car')"
-            ><icon-going-by-car></icon-going-by-car
-          ></icon-item>
-          <icon-item :label="$t('label_data_visualization_icon_going-by-bus')"
-            ><icon-going-by-bus></icon-going-by-bus
-          ></icon-item>
-          <icon-item :label="$t('label_data_visualization_icon_going-by-train')"
-            ><icon-going-by-train></icon-going-by-train
-          ></icon-item>
+          <div class="pillar-container gapped-h">
+            <div class="pillar-row">
+              <div class="pillar-col-bg-6">
+                <div class="container small left no-padding">
+                  <p>
+                    {{ $t("text_data-visualization_implementation").join("") }}
+                  </p>
+                  <h3>{{ $t("heading_data-visualization_icon-design") }}</h3>
+                  <p>
+                    {{ $t("text_data-visualization_icon-design").join("") }}
+                  </p>
+                </div>
+              </div>
+              <div class="pillar-col-bg-6 icon-item-list">
+                <icon-item :label="$t('label_data_visualization_icon_cost')"
+                  ><icon-cost></icon-cost
+                ></icon-item>
+                <icon-item :label="$t('label_data_visualization_icon_commute')"
+                  ><icon-commute></icon-commute
+                ></icon-item>
+                <icon-item
+                  :label="
+                    $t('label_data_visualization_icon_living-with-parents')
+                  "
+                  ><icon-living-with-parents></icon-living-with-parents
+                ></icon-item>
+                <icon-item
+                  :label="$t('label_data_visualization_icon_living-in-dorm')"
+                  ><icon-living-in-dorm></icon-living-in-dorm
+                ></icon-item>
+                <icon-item
+                  :label="$t('label_data_visualization_icon_living-single')"
+                  ><icon-living-single></icon-living-single
+                ></icon-item>
+                <icon-item
+                  :label="
+                    $t('label_data_visualization_icon_living-with-partner')
+                  "
+                  ><icon-living-with-partner></icon-living-with-partner
+                ></icon-item>
+                <icon-item
+                  :label="
+                    $t(
+                      'label_data_visualization_icon_living-in-shared-community'
+                    )
+                  "
+                  ><icon-living-in-shared-community></icon-living-in-shared-community
+                ></icon-item>
+                <icon-item
+                  :label="$t('label_data_visualization_icon_driving-alone')"
+                  ><icon-driving-alone></icon-driving-alone
+                ></icon-item>
+                <icon-item
+                  :label="$t('label_data_visualization_icon_driving-car-pool')"
+                  ><icon-driving-car-pool></icon-driving-car-pool
+                ></icon-item>
+                <icon-item
+                  :label="$t('label_data_visualization_icon_going-by-foot')"
+                  ><icon-going-by-foot></icon-going-by-foot
+                ></icon-item>
+                <icon-item
+                  :label="$t('label_data_visualization_icon_going-by-bike')"
+                  ><icon-going-by-bike></icon-going-by-bike
+                ></icon-item>
+                <icon-item
+                  :label="$t('label_data_visualization_icon_going-by-car')"
+                  ><icon-going-by-car></icon-going-by-car
+                ></icon-item>
+                <icon-item
+                  :label="$t('label_data_visualization_icon_going-by-bus')"
+                  ><icon-going-by-bus></icon-going-by-bus
+                ></icon-item>
+                <icon-item
+                  :label="$t('label_data_visualization_icon_going-by-train')"
+                  ><icon-going-by-train></icon-going-by-train
+                ></icon-item>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="section-design-process" class="section">
-        <div class="container small last">
+        <div class="container huge last">
           <h2 id="design-process">
             {{ $t("heading_data-visualization_design-process") }}
           </h2>
