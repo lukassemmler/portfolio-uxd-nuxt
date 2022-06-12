@@ -81,8 +81,10 @@ export default {
 
 .project-meta-term {
   font-weight: bold;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.3em;
   letter-spacing: 0.02em;
+  padding-bottom: 0.1em;
+  border-bottom: 0.05em solid;
 }
 
 .project-meta-description {

@@ -1,18 +1,20 @@
 <template>
   <aside class="project-tools">
     <!-- Rename heading locale key to 'project-meta' -->
-    <h2 class="sr-only">{{ $t("label_project-summary_tools") }}</h2>
-    <ul class="project-tools-list">
-      <li
-        class="project-tools-item"
-        v-for="tool in tools"
-        v-bind:key="tool.iconId"
-      >
-        <icon-item :label="tool.label" :class="size"
-          ><component v-bind:is="'Product' + tool.iconId"></component
-        ></icon-item>
-      </li>
-    </ul>
+    <h2 class="project-tools-title">{{ $t("label_project-summary_tools") }}</h2>
+    <div class="project-tools-content">
+      <ul class="project-tools-list">
+        <li
+          class="project-tools-item"
+          v-for="tool in tools"
+          v-bind:key="tool.iconId"
+        >
+          <icon-item :label="tool.label" :class="size"
+            ><component v-bind:is="'Product' + tool.iconId"></component
+          ></icon-item>
+        </li>
+      </ul>
+    </div>
   </aside>
 </template>
 
@@ -113,5 +115,17 @@ export default {
   list-style-type: none;
   display: flex;
   flex-flow: row wrap;
+}
+
+.project-tools-title {
+  padding-bottom: 0.1em;
+  margin-bottom: 0.2em;
+  font-size: 1em;
+}
+
+.project-tools-content {
+  padding: 1em;
+  border: 0.05em solid;
+  border-radius: 0.5em;
 }
 </style>

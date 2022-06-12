@@ -5,7 +5,7 @@
       <h1 class="project-title" v-if="title" v-html="title"></h1>
       <slot name="header"></slot>
       <div class="container huge spaced-y">
-        <div class="pillar-container">
+        <div class="pillar-container gapped-h">
           <div class="pillar-row">
             <div class="pillar-col-xl-8">
               <project-meta
@@ -17,7 +17,7 @@
                 :colleagues="metaColleagues"
               ></project-meta>
             </div>
-            <div class="pillar-col-xl-4 center-all-children-col">
+            <div class="pillar-col-xl-4">
               <project-tools
                 v-if="projectTools"
                 :tools="projectTools"
