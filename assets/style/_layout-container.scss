@@ -28,4 +28,17 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  &.left {
+    margin-left: unset;
+  }
+
+  &.right {
+    margin-right: unset;
+  }
+
+  &.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
