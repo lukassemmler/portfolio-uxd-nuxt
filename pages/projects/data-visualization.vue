@@ -28,6 +28,9 @@
           :alt="$t('alt_data-visualization_poster-final')"
           sizes="xs:400px sm:640px md:960px lg:1200px"
         ></simple-image>
+        <parallax-box class="zero-height" :speed-factor="0.15"
+          ><icon-going-by-car class="icon huge"></icon-going-by-car
+        ></parallax-box>
       </div>
     </template>
     <template v-slot:content>
