@@ -9,6 +9,14 @@ export default {
       required: false,
       default: "",
     },
+    width: {
+      type: Number,
+      required: false,
+    },
+    height: {
+      type: Number,
+      required: false,
+    },
     caption: {
       type: String,
       required: false,
@@ -34,6 +42,8 @@ export default {
           attrs: {
             src: this.src,
             alt: this.alt,
+            width: this.width,
+            height: this.height,
             sizes: this.sizes,
             // It is preferred to specify the attributes under props, otherwise in the resulting html, the root node
             // gets spammed with all the attributes and then the `<img>` tag itself again.
