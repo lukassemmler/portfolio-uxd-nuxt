@@ -11,6 +11,7 @@
 /*
  * Ideas to expand this component:
  *  - change logic to use intersection observer to detect if element is viewable in viewport
+ *  - add support for media query "prefers-reduced-motion" to disable parallax (maybe add prop "essential" to optionally prevent this)
  *  - add optional prop to make parallax relatve to parent scroll container instead of viewport
  *  - add optional speed factor for horizontal scrolling (useful to parallax scroll star maps)
  *  - add optional speed factor easing functions (make parallax scrolling non-linear or take elements arbitrary paths with sinus)
@@ -151,6 +152,10 @@ export default {
 .parallax-box {
   &.debug {
     background-color: yellow;
+  }
+
+  &.zero-height {
+    height: 0;
   }
 }
 .parallax-box-content {
