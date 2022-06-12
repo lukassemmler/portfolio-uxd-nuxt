@@ -57,7 +57,7 @@ export default {
     headerBackground: {
       type: String,
       required: false,
-      default: "bg-gray",
+      default: "",
     },
     metaName: String,
     metaTasks: String,

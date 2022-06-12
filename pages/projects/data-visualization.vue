@@ -1,7 +1,6 @@
 <template>
   <project-template
     background="bg-gradient-blue"
-    headerBackground="bg-ocean"
     :title="$t('meta-title_data-visualization')"
     :meta-name="$t('project-summary-name_data-visualization')"
     :meta-tasks="$t('project-summary-tasks_data-visualization')"
