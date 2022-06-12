@@ -126,11 +126,12 @@ figure {
   }
 
   &.rounded {
-    border-radius: 0.5rem;
-
-    .simple-image-wrapper {
+    &,
+    .simple-image-wrapper,
+    .simple-image-media {
+      // Because we use a trick to display an image in a certain ratio (to prevent loading on jumping),
+      // we have to apply the border radius to all three elements.
       border-radius: 0.5rem;
-      overflow: hidden;
     }
   }
 
@@ -160,6 +161,20 @@ figure {
     .simple-image-caption {
       font-style: italic;
       line-height: 1.5;
+    }
+  }
+
+  &.height-80 {
+    .simple-image-media {
+      max-height: 80vh;
+      width: auto;
+    }
+  }
+
+  &.height-40 {
+    .simple-image-media {
+      max-height: 40vh;
+      width: auto;
     }
   }
 }
@@ -219,6 +234,12 @@ figure {
       content: "";
     }
   }
+}
+
+.simple-image-media {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .simple-image-caption {
