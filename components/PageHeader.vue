@@ -1,6 +1,6 @@
 <template>
   <div class="page-header-container">
-    <header id="page-header" :class="[{ inverted }, background]">
+    <header id="page-header" :class="[{ inverted, fixed }, background]">
       <announcement-area
         class="page-header-announcement-global"
       ></announcement-area>
@@ -78,6 +78,10 @@ export default {
       default: "bg-white",
       required: false,
     },
+    fixed: {
+      type: Boolean,
+      default: false,
+    },
   },
   data: function () {
     return {
@@ -112,7 +116,6 @@ export default {
 }
 
 #page-header {
-  position: fixed;
   height: 5em;
   z-index: $z-index-header;
   // margin-top causes the <body> to be offset (because the header is on top of page)
@@ -137,6 +140,10 @@ export default {
 
   & + * {
     margin-top: 5em;
+  }
+
+  &.fixed {
+    position: fixed;
   }
 
   @include breakpoint-upwards($breakpoint-big) {
