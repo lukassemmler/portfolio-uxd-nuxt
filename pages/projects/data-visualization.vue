@@ -22,8 +22,8 @@
       <div class="container huge">
         <simple-image
           class="rounded height-80"
-          width="1920"
-          height="2715"
+          :width="1920"
+          :height="2715"
           src="data-visualization/Poster Data Visualization.jpg"
           :alt="$t('alt_data-visualization_poster-final')"
           sizes="xs:400px sm:640px md:960px lg:1200px"
