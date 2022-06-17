@@ -89,5 +89,6 @@ export default {
 .project-intro {
   padding-bottom: $sp;
   color: $white;
+  z-index: 0; // needs to have a z-index, so background parallax boxes can be used in the header
 }
 </style>
