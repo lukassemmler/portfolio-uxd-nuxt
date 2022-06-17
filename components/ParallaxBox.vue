@@ -157,6 +157,12 @@ export default {
   &.zero-height {
     height: 0;
   }
+
+  &.background {
+    .parallax-box-content {
+      z-index: -1;
+    }
+  }
 }
 .parallax-box-content {
   position: relative;
