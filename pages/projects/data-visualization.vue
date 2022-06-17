@@ -243,7 +243,7 @@
           </h2>
         </div>
 
-        <div class="container huge pillar-container gapped-h">
+        <div class="container huge pillar-container gapped-h spaced-bottom">
           <div class="pillar-row">
             <div class="pillar-col">
               <simple-image
