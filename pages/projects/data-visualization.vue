@@ -28,8 +28,32 @@
           :alt="$t('alt_data-visualization_poster-final')"
           sizes="xs:400px sm:640px md:960px lg:1200px"
         ></simple-image>
-        <parallax-box class="zero-height" :speed-factor="0.15"
-          ><icon-going-by-car class="icon huge"></icon-going-by-car
+        <parallax-box class="zero-height background" :speed-factor="0.12"
+          ><icon-living-with-parents class="icon font-white size-6 bottom-27 left-15 opacity-20 rotate-neg-5"></icon-living-with-parents
+        ></parallax-box>
+        <parallax-box class="zero-height background" :speed-factor="0.20"
+          ><icon-going-by-car class="icon font-white size-10 bottom-4 rotate-5 right-0 opacity-40"></icon-going-by-car
+        ></parallax-box>
+        <parallax-box class="zero-height background" :speed-factor="0.18"
+          ><icon-living-with-partner class="icon font-white size-9 bottom-2 left-5 opacity-40"></icon-living-with-partner
+        ></parallax-box>
+        <parallax-box class="zero-height background" :speed-factor="0.20"
+          ><icon-going-by-bike class="icon font-white size-10 rotate-neg-10 bottom-12 opacity-50"></icon-going-by-bike
+        ></parallax-box>
+        <parallax-box class="zero-height background" :speed-factor="0.12"
+          ><icon-going-by-bus class="icon font-white size-6 bottom-30 right-30 opacity-20 rotate-5"></icon-going-by-bus
+        ></parallax-box>
+        <parallax-box class="zero-height background" :speed-factor="0.08"
+          ><icon-going-by-train class="icon font-white size-4 bottom-12 right-40 opacity-30"></icon-going-by-train
+        ></parallax-box>
+        <parallax-box class="zero-height background" :speed-factor="0.14"
+          ><icon-commute class="icon font-white size-7 bottom-16 right-20 opacity-30"></icon-commute
+        ></parallax-box>
+        <parallax-box class="zero-height background" :speed-factor="0.14"
+          ><icon-living-in-shared-community class="icon font-white size-7 bottom-12 left-20 opacity-20 rotate-10"></icon-living-in-shared-community
+        ></parallax-box>
+        <parallax-box class="zero-height background" :speed-factor="0.14"
+          ><icon-driving-car-pool class="icon font-white size-7 top-0 right-30 opacity-20 rotate-10"></icon-driving-car-pool
         ></parallax-box>
       </div>
     </template>
