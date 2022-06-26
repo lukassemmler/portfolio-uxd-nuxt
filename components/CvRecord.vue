@@ -79,7 +79,7 @@ export default {
 <style lang="scss">
 .cv-record-item {
   position: relative;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   padding-left: 2em;
 
   &.level-1 {
