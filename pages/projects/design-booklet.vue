@@ -14,10 +14,10 @@
       { iconId: 'AdobePhotoshop', label: 'Photoshop' },
     ]"
     :nav-previous-title="$t('project-nav_data-visualization')"
-    :nav-previous-link="'projects/data-visualization'"
+    :nav-previous-link="'/projects/data-visualization'"
     :nav-previous-color="'bg-hover-blue'"
     :nav-next-title="$t('project-nav_3d-modelling')"
-    :nav-next-link="'projects/3d-modelling'"
+    :nav-next-link="'/projects/3d-modelling'"
     :nav-next-color="'bg-hover-pink'"
   >
     <template v-slot:header>
