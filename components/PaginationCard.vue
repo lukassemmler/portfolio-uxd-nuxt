@@ -65,12 +65,6 @@ export default {
     }
   }
 
-  &.previous {
-    .pagination-card-inner {
-      margin-left: auto;
-    }
-  }
-
   &.next {
     .pagination-card-inner {
       align-items: flex-end;
@@ -85,8 +79,9 @@ export default {
 
   @include breakpoint-upwards($breakpoint-big) {
     .pagination-card-inner {
-      width: 45vw;
-      max-width: 60rem;
+      width: 90vw;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &.previous {
@@ -107,11 +102,26 @@ export default {
       }
     }
 
+    &.twin {
+      .pagination-card-inner {
+        width: 45vw;
+        max-width: 60rem;
+        margin-left: unset;
+        margin-right: unset;
+      }
+    }
+
     &.slanted {
       transform: skew(-30deg);
 
       .pagination-card-inner {
         transform: skew(30deg);
+      }
+
+      &.previous {
+        .pagination-card-inner {
+          margin-left: auto;
+        }
       }
     }
 

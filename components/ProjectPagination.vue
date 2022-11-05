@@ -3,7 +3,7 @@
     <ul class="project-pagination-list">
       <li class="project-pagination-item" v-if="previousTitle">
         <pagination-card
-          class="slanted extended"
+          :class="itemCount > 1 ? 'slanted extended twin' : ''"
           :title="previousTitle"
           :color="previousColor"
           :link="localePath(previousLink)"
@@ -13,7 +13,7 @@
       </li>
       <li class="project-pagination-item" v-if="nextTitle">
         <pagination-card
-          class="slanted extended"
+          :class="itemCount > 1 ? 'slanted extended twin' : ''"
           :title="nextTitle"
           :color="nextColor"
           :link="localePath(nextLink)"
@@ -37,6 +37,14 @@ export default {
     nextTitle: String,
     nextColor: String,
     nextLink: String,
+  },
+  computed: {
+    itemCount: function () {
+      let count = 0;
+      if (this.previousTitle) count++;
+      if (this.nextTitle) count++;
+      return count;
+    },
   },
 };
 </script>
