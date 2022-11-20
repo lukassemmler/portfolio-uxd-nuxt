@@ -1,23 +1,77 @@
 <template>
-  <div>
-    <h1>Power-UI</h1>
-    <div class="pillar-col-bg-6 icon-item-list">
-      <icon-item
-        v-for="(crudeIcon, index) in crudeIcons"
-        :key="index"
-        :label="crudeIcon.label"
-        ><component v-bind:is="crudeIcon.icon"></component
-      ></icon-item>
-    </div>
-    <div class="pillar-col-bg-6 icon-item-list">
-      <icon-item
-        v-for="(cleanIcon, index) in cleanIcons"
-        :key="index"
-        :label="cleanIcon.label"
-        ><component v-bind:is="cleanIcon.icon"></component
-      ></icon-item>
-    </div>
-  </div>
+  <project-template
+    background="bg-gradient-orange"
+    :title="$t('meta-title_power-ui')"
+    :meta-name="$t('project-summary-name_power-ui')"
+    :meta-tasks="$t('project-summary-tasks_power-ui')"
+    :meta-format="$t('project-summary-format_power-ui')"
+    :meta-lecture="$t('project-summary-client_power-ui')"
+    :meta-date="$t('project-summary-date_power-ui')"
+    :project-tools="[
+      { iconId: 'Axure', label: 'Axure' },
+      { iconId: 'AdobePhotoshop', label: 'Photoshop' },
+      { iconId: 'Blender', label: 'Blender' },
+      { iconId: 'Unity', label: 'Unity' },
+      { iconId: 'VisualStudioCode', label: 'VS Code' },
+      //{ iconId: 'Javascript', label: 'JavaScript' },
+      //{ iconId: 'NodeJs', label: 'NodeJS' },
+      { iconId: 'VueJs', label: 'VueJS' },
+      { iconId: 'Phaser', label: 'Phaser' },
+      { iconId: 'Sass', label: 'SASS' },
+    ]"
+    :nav-previous-title="$t('project-nav_steering-wheel')"
+    :nav-previous-link="'/projects/steering-wheel'"
+    :nav-previous-color="'bg-hover-green'"
+  >
+    <template v-slot:header>
+      <div class="container huge">
+        <simple-image
+          class="standalone rounded fit-image"
+          src="power-ui/Power-UI Color Board.png"
+          :alt="$t('alt_power-ui_color-board')"
+          sizes="xs:400px sm:640px md:960px lg:1200px"
+          ratio="5-by-3"
+        ></simple-image>
+      </div>
+    </template>
+
+    <template v-slot:content>
+      <section id="section-overview" class="section">
+        <div class="container huge">
+          <div class="container small left no-padding">
+            <h2 id="overview" class="sr-only">{{ $t("heading_overview") }}</h2>
+            <p>{{ $t("text_power-ui_intro-1").join("") }}</p>
+            <aside class="quotation">
+              <q>{{ $t("text_power-ui_intro-quote") }}</q>
+            </aside>
+            <markdown-block
+              :markup="$t('text_power-ui_intro-2').join('')"
+            ></markdown-block>
+          </div>
+        </div>
+      </section>
+
+      <div>
+        <h1>Power-UI</h1>
+        <div class="pillar-col-bg-6 icon-item-list">
+          <icon-item
+            v-for="(crudeIcon, index) in crudeIcons"
+            :key="index"
+            :label="crudeIcon.label"
+            ><component v-bind:is="crudeIcon.icon"></component
+          ></icon-item>
+        </div>
+        <div class="pillar-col-bg-6 icon-item-list">
+          <icon-item
+            v-for="(cleanIcon, index) in cleanIcons"
+            :key="index"
+            :label="cleanIcon.label"
+            ><component v-bind:is="cleanIcon.icon"></component
+          ></icon-item>
+        </div>
+      </div>
+    </template>
+  </project-template>
 </template>
 
 <script>
