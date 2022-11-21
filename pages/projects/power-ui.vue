@@ -51,6 +51,126 @@
         </div>
       </section>
 
+      <section id="section-concept" class="section">
+        <div class="container huge">
+          <div class="container small left no-padding">
+            <h2 id="concept">{{ $t("heading_power-ui_concept") }}</h2>
+            <p
+              v-html="$t('text_power-ui_concept_video-game-genre').join('')"
+            ></p>
+            <p v-html="$t('text_power-ui_concept_mobile-first').join('')"></p>
+            <p v-html="$t('text_power-ui_concept_theme-1').join('')"></p>
+            <p v-html="$t('text_power-ui_concept_theme-2').join('')"></p>
+            <p v-html="$t('text_power-ui_concept_tutorial_intro').join('')"></p>
+          </div>
+          <div class="container-medium">
+            TODO Tabmenu
+            <!--
+      {{#extend "tab-menu-stepped"
+          id="tutorial-box"
+          numberOfPages=7 }}
+        {{#content "cards"}}
+          {{> side-card 
+              id="tutorial-step-1" 
+              number="1" 
+              isFlipped=false 
+              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%201.jpg" 
+              imgAlt="" 
+              imgRatio="3-by-2" 
+              imgHasPlaceholder=true 
+              imgLoadLazy=true 
+              description=(str "text_power-ui_concept_tutorial_step-1") }}
+          {{> side-card 
+              id="tutorial-step-2" 
+              number="2" 
+              isFlipped=true 
+              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%202.jpg" 
+              imgAlt="" 
+              imgRatio="3-by-2" 
+              imgHasPlaceholder=true 
+              imgLoadLazy=true 
+              description=(str "text_power-ui_concept_tutorial_step-2") }}
+          {{> side-card 
+              id="tutorial-step-3" 
+              number="3" 
+              isFlipped=false 
+              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%203.jpg" 
+              imgAlt="" 
+              imgRatio="3-by-2" 
+              imgHasPlaceholder=true 
+              imgLoadLazy=true 
+              description=(str "text_power-ui_concept_tutorial_step-3") }}
+          {{> side-card 
+              id="tutorial-step-4" 
+              number="4" 
+              isFlipped=true 
+              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%204.jpg" 
+              imgAlt="" 
+              imgRatio="3-by-2" 
+              imgHasPlaceholder=true 
+              imgLoadLazy=true 
+              description=(str "text_power-ui_concept_tutorial_step-4") }}
+          {{> side-card 
+              id="tutorial-step-5" 
+              number="5" 
+              isFlipped=false 
+              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%205.jpg" 
+              imgAlt="" 
+              imgRatio="3-by-2" 
+              imgHasPlaceholder=true 
+              imgLoadLazy=true 
+              description=(str "text_power-ui_concept_tutorial_step-5") }}
+          {{> side-card 
+              id="tutorial-step-6" 
+              number="6" 
+              isFlipped=true 
+              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%206.jpg" 
+              imgAlt="" 
+              imgRatio="3-by-2" 
+              imgHasPlaceholder=true 
+              imgLoadLazy=true 
+              description=(str "text_power-ui_concept_tutorial_step-6") }}
+          {{> side-card 
+              id="tutorial-step-7" 
+              number="7" 
+              isFlipped=false 
+              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%207.jpg" 
+              imgAlt="" 
+              imgRatio="3-by-2" 
+              imgHasPlaceholder=true 
+              imgLoadLazy=true 
+              description=(str "text_power-ui_concept_tutorial_step-7") }}
+        {{/content}}
+      {{/extend}}
+      -->
+          </div>
+          <div class="container-small">
+            <p>{{ $t("text_power-ui_concept_wireframes") }}</p>
+          </div>
+          <div class="container medium">
+            <div class="pillar-container gapped-v gapped-h">
+              <div class="pillar-row">
+                <div
+                  class="pillar-col-bg-6"
+                  v-for="index in 2"
+                  :key="'column-' + index"
+                >
+                  <simple-image
+                    v-for="wireframe in columnizeArray(wireframes, 2, index - 1)"
+                    :key="'2-' + wireframe.id"
+                    class="standalone rounded fit-image shadow-medium-faint"
+                    :src="wireframe.src"
+                    :alt="wireframe.alt"
+                    sizes="xs:400px sm:640px md:960px lg:1200px"
+                    ratio="8-by-5"
+                  ></simple-image>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div>
         <h1>Power-UI</h1>
         <div class="pillar-col-bg-6 icon-item-list">
@@ -147,6 +267,7 @@ import IconMenuPowerPole from "~/static/power-ui/Icon_Menu_PowerPole.svg?inline"
 import IconMenuResearch from "~/static/power-ui/Icon_Menu_Research.svg?inline";
 import IconMenuResources from "~/static/power-ui/Icon_Menu_Resources.svg?inline";
 import IconMenuZoom from "~/static/power-ui/Icon_Menu_Zoom.svg?inline";
+import { columnizeArray } from "~/assets/lib/array-util";
 
 export default {
   data: function () {
@@ -443,7 +564,60 @@ export default {
           label: this.$t("label_power-ui_icon_menu_zoom"),
         },
       ],
+      wireframes: [
+        {
+          id: "overview",
+          src: "power-ui/sketch--concept-mobile--overview.jpg",
+          alt: this.$t("alt_power-ui_sketch_concept-mobile_overview"),
+        },
+        {
+          id: "research-tree",
+          src: "power-ui/sketch--concept-mobile--research--tree.jpg",
+          alt: this.$t("alt_power-ui_sketch_concept-mobile_research_tree"),
+        },
+        {
+          id: "power-production",
+          src: "power-ui/sketch--concept-mobile--power--current-production.jpg",
+          alt: this.$t(
+            "alt_power-ui_sketch_concept-mobile_power_current-production"
+          ),
+        },
+        {
+          id: "power-facilities",
+          src: "power-ui/sketch--concept-mobile--power--facility-list.jpg",
+          alt: this.$t(
+            "alt_power-ui_sketch_concept-mobile_power_facility-list"
+          ),
+        },
+        {
+          id: "finances-history",
+          src: "power-ui/sketch--concept-mobile--finances--history.jpg",
+          alt: this.$t("alt_power-ui_sketch_concept-mobile_finances_history"),
+        },
+        {
+          id: "finances-assets",
+          src: "power-ui/sketch--concept-mobile--finances--asset-list.jpg",
+          alt: this.$t(
+            "alt_power-ui_sketch_concept-mobile_finances_asset-list"
+          ),
+        },
+        {
+          id: "detail-view",
+          src: "power-ui/sketch--concept-mobile--detail-view--variant-b.jpg",
+          alt: this.$t(
+            "alt_power-ui_sketch_concept-mobile_detail-view_variant-b"
+          ),
+        },
+        {
+          id: "resources-trading",
+          src: "power-ui/sketch--concept-mobile--resources--trading.jpg",
+          alt: this.$t("alt_power-ui_sketch_concept-mobile_resources_trading"),
+        },
+      ],
     };
+  },
+  methods: {
+    columnizeArray: columnizeArray,
   },
 };
 </script>
