@@ -25,53 +25,11 @@
                   {{ $t("heading_infotainment-system_google") }}
                 </h2>
                 <simple-image
+                  v-for="screen in screensGoogle"
+                  :key="screen.key"
                   class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Google - Screen - Listening to Playlist.jpg"
-                  :alt="$t('alt_screendesign-google_playlist')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                <!--
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Google - Screen - Start.jpg"
-                  :alt="$t('alt_screendesign-google_landing-screen')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                -->
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Google - Screen - Listening to Radio.jpg"
-                  :alt="$t('alt_screendesign-google_radio')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Google - Screen - Climate Control.jpg"
-                  :alt="$t('alt_screendesign-google_climate')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Google - Screen - Contact List.jpg"
-                  :alt="$t('alt_screendesign-google_contacts')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Google - Screen - Dialing Number.jpg"
-                  :alt="$t('alt_screendesign-google_dial')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Google - Screen - Calling.jpg"
-                  :alt="$t('alt_screendesign-google_call')"
+                  :src="screen.src"
+                  :alt="screen.alt"
                   sizes="xs:400px sm:640px md:960px lg:1200px"
                   ratio="64-by-45"
                 ></simple-image>
@@ -81,53 +39,11 @@
                   {{ $t("heading_infotainment-system_mercedes") }}
                 </h2>
                 <simple-image
+                  v-for="screen in screensMercedes"
+                  :key="screen.key"
                   class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Mercedes - Screen - Listening to Playlist.jpg"
-                  :alt="$t('alt_screendesign-mercedes_playlist')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                <!--
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Mercedes - Screen - Start.jpg"
-                  :alt="$t('alt_screendesign-mercedes_landing-screen')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                -->
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Mercedes - Screen - Listening to Radio.jpg"
-                  :alt="$t('alt_screendesign-mercedes_radio')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Mercedes - Screen - Climate Control.jpg"
-                  :alt="$t('alt_screendesign-mercedes_climate')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Mercedes - Screen - Contact List.jpg"
-                  :alt="$t('alt_screendesign-mercedes_contacts')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Mercedes - Screen - Dialing Number.jpg"
-                  :alt="$t('alt_screendesign-mercedes_dial')"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="64-by-45"
-                ></simple-image>
-                <simple-image
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  src="infotainment-system/screen/Mercedes - Screen - Calling.jpg"
-                  :alt="$t('alt_screendesign-mercedes_call')"
+                  :src="screen.src"
+                  :alt="screen.alt"
                   sizes="xs:400px sm:640px md:960px lg:1200px"
                   ratio="64-by-45"
                 ></simple-image>
@@ -138,7 +54,6 @@
       </div>
     </template>
     <template v-slot:content>
-
       <section id="section-overview" class="section">
         <div class="container huge">
           <div class="container small left no-padding">
@@ -283,6 +198,84 @@ import ProjectTemplate from "~/components/ProjectTemplate.vue";
 export default {
   components: {
     ProjectTemplate,
+  },
+  data: function () {
+    return {
+      screensGoogle: [
+        {
+          id: "playlist",
+          src: "infotainment-system/screen/Google - Screen - Listening to Playlist.jpg",
+          alt: this.$t("alt_screendesign-google_playlist"),
+        },
+        //{
+        //  id: "start",
+        //  src: "infotainment-system/screen/Google - Screen - Start.jpg",
+        //  alt: this.$t("alt_screendesign-google_landing-screen"),
+        //},
+        {
+          id: "radio",
+          src: "infotainment-system/screen/Google - Screen - Listening to Radio.jpg",
+          alt: this.$t("alt_screendesign-google_radio"),
+        },
+        {
+          id: "climate-control",
+          src: "infotainment-system/screen/Google - Screen - Climate Control.jpg",
+          alt: this.$t("alt_screendesign-google_climate"),
+        },
+        {
+          id: "contact-list",
+          src: "infotainment-system/screen/Google - Screen - Contact List.jpg",
+          alt: this.$t("alt_screendesign-google_contacts"),
+        },
+        {
+          id: "dialing-number",
+          src: "infotainment-system/screen/Google - Screen - Dialing Number.jpg",
+          alt: this.$t("alt_screendesign-google_dial"),
+        },
+        {
+          id: "calling",
+          src: "infotainment-system/screen/Google - Screen - Calling.jpg",
+          alt: this.$t("alt_screendesign-google_call"),
+        },
+      ],
+      screensMercedes: [
+        {
+          id: "playlist",
+          src: "infotainment-system/screen/Mercedes - Screen - Listening to Playlist.jpg",
+          alt: this.$t("alt_screendesign-mercedes_playlist"),
+        },
+        //{
+        //  id: "start",
+        //  src: "infotainment-system/screen/Mercedes - Screen - Start.jpg",
+        //  alt: this.$t("alt_screendesign-mercedes_landing-screen"),
+        //},
+        {
+          id: "radio",
+          src: "infotainment-system/screen/Mercedes - Screen - Listening to Radio.jpg",
+          alt: this.$t("alt_screendesign-mercedes_radio"),
+        },
+        {
+          id: "climate-control",
+          src: "infotainment-system/screen/Mercedes - Screen - Climate Control.jpg",
+          alt: this.$t("alt_screendesign-mercedes_climate"),
+        },
+        {
+          id: "contact-list",
+          src: "infotainment-system/screen/Mercedes - Screen - Contact List.jpg",
+          alt: this.$t("alt_screendesign-mercedes_contacts"),
+        },
+        {
+          id: "dialing-number",
+          src: "infotainment-system/screen/Mercedes - Screen - Dialing Number.jpg",
+          alt: this.$t("alt_screendesign-mercedes_dial"),
+        },
+        {
+          id: "calling",
+          src: "infotainment-system/screen/Mercedes - Screen - Calling.jpg",
+          alt: this.$t("alt_screendesign-mercedes_call"),
+        },
+      ],
+    };
   },
 };
 </script>
