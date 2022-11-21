@@ -63,7 +63,7 @@
             <p v-html="$t('text_power-ui_concept_theme-2').join('')"></p>
             <p v-html="$t('text_power-ui_concept_tutorial_intro').join('')"></p>
           </div>
-          <div class="container-medium">
+          <div class="container medium">
             TODO Tabmenu
             <!--
       {{#extend "tab-menu-stepped"
@@ -144,7 +144,7 @@
       {{/extend}}
       -->
           </div>
-          <div class="container-small">
+          <div class="container small">
             <p>{{ $t("text_power-ui_concept_wireframes") }}</p>
           </div>
           <div class="container medium">
@@ -156,7 +156,11 @@
                   :key="'column-' + index"
                 >
                   <simple-image
-                    v-for="wireframe in columnizeArray(wireframes, 2, index - 1)"
+                    v-for="wireframe in columnizeArray(
+                      wireframes,
+                      2,
+                      index - 1
+                    )"
                     :key="'2-' + wireframe.id"
                     class="standalone rounded fit-image shadow-medium-faint"
                     :src="wireframe.src"
@@ -171,25 +175,129 @@
         </div>
       </section>
 
-      <div>
-        <h1>Power-UI</h1>
-        <div class="pillar-col-bg-6 icon-item-list">
-          <icon-item
-            v-for="(crudeIcon, index) in crudeIcons"
-            :key="index"
-            :label="crudeIcon.label"
-            ><component v-bind:is="crudeIcon.icon"></component
-          ></icon-item>
+      <section id="section-design" class="section">
+        <div class="container small">
+          <h2 id="design">{{ $t("heading_power-ui_design") }}</h2>
+          <p>{{ $t("text_power-ui_design_intro").join("") }}</p>
         </div>
-        <div class="pillar-col-bg-6 icon-item-list">
-          <icon-item
-            v-for="(cleanIcon, index) in cleanIcons"
-            :key="index"
-            :label="cleanIcon.label"
-            ><component v-bind:is="cleanIcon.icon"></component
-          ></icon-item>
+        <div class="container small">
+          <h3 id="icon-design">{{ $t("heading_power-ui_icon-design") }}</h3>
+          <p>{{ $t("text_power-ui_design_icon-design_intro").join("") }}</p>
+          <p>{{ $t("text_power-ui_design_icon-design_version-1").join("") }}</p>
         </div>
-      </div>
+        <div class="container medium">
+          <div class="icon-item-list">
+            <icon-item
+              v-for="(crudeIcon, index) in crudeIcons"
+              :key="index"
+              :label="crudeIcon.label"
+              ><component v-bind:is="crudeIcon.icon"></component
+            ></icon-item>
+          </div>
+        </div>
+        <div class="container small">
+          <p>{{ $t("text_power-ui_design_icon-design_version-2").join("") }}</p>
+        </div>
+        <div class="container medium">
+          <div class="pillar-col-bg-6 icon-item-list">
+            <icon-item
+              v-for="(cleanIcon, index) in cleanIcons"
+              :key="index"
+              :label="cleanIcon.label"
+              ><component v-bind:is="cleanIcon.icon"></component
+            ></icon-item>
+          </div>
+        </div>
+        <div class="container small">
+          <h3 id="screen-design">{{ $t("heading_power-ui_screen-design") }}</h3>
+          <p>{{ $t("text_power-ui_design_screen-design_intro").join("") }}</p>
+          <p>
+            {{ $t("text_power-ui_design_screen-design_contrasts").join("") }}
+          </p>
+          <simple-image
+            class="standalone rounded fit-image shadow-medium-faint"
+            src="power-ui/screendesign--smart-tv-contrasts.jpg"
+            :alt="$t('alt_power-ui_screendesign_smart-tv_contrasts')"
+            sizes="xs:400px sm:640px md:960px lg:1200px"
+            ratio="16-by-9"
+          ></simple-image>
+          <p>
+            {{ $t("text_power-ui_design_screen-design_smart-tv").join("") }}
+          </p>
+        </div>
+        <div class="container medium">
+          <simple-image
+            class="standalone rounded fit-image shadow-medium-faint"
+            src="power-ui/screendesign--smart-tv-v-1.jpg"
+            :alt="$t('alt_power-ui_screendesign_smart-tv_overview')"
+            sizes="xs:400px sm:640px md:960px lg:1200px"
+            ratio="16-by-9"
+          ></simple-image>
+        </div>
+        <div class="container small">
+          <h3 id="terrain">{{ $t("heading_power-ui_terrain") }}</h3>
+          <p>{{ $t("text_power-ui_design_terrain_intro").join("") }}</p>
+          <p>{{ $t("text_power-ui_design_terrain_tools").join("") }}</p>
+        </div>
+        <div class="container medium">
+          <!-- {{> iso-tiles-demo }} -->
+        </div>
+        <div class="container small">
+          <h3 id="assets">{{ $t("heading_power-ui_assets") }}</h3>
+          <p>{{ $t("text_power-ui_design_assets_intro").join("") }}</p>
+          <p>{{ $t("text_power-ui_design_assets_categories").join("") }}</p>
+          <ul class="big-markers">
+            <li class="color-red-light">
+              {{ $t("label_power-ui_design_assets_category_resources") }}
+            </li>
+            <li class="color-orange-light">
+              {{ $t("label_power-ui_design_assets_category_logistics") }}
+            </li>
+            <li class="color-yellow-light">
+              {{ $t("label_power-ui_design_assets_category_power-plants") }}
+            </li>
+            <li class="color-green-light">
+              {{ $t("label_power-ui_design_assets_category_infrastructure") }}
+            </li>
+            <li class="color-blue-light">
+              {{ $t("label_power-ui_design_assets_category_other-buildings") }}
+            </li>
+          </ul>
+        </div>
+        <div class="container medium">
+          <div class="pillar-container gapped-h gapped-v images-only">
+            <div class="pillar-row">
+              <div
+                class="pillar-col-6 pillar-col-bg-3"
+                v-for="building in buildings"
+                :key="building.id"
+              >
+                <dot-item
+                  :src="building.src"
+                  :alt="building.alt"
+                  :label="building.label"
+                  :background="building.background"
+                ></dot-item>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container small">
+          <p class="spaced-y">
+            {{ $t("text_power-ui_design_assets_sketches").join("") }}
+          </p>
+        </div>
+        <div class="container full-bleed">
+          <!-- {{> iso-world }} -->
+        </div>
+        <div class="container small">
+          <p class="spaced-y">
+            {{ $t("text_power-ui_design_assets_3d-models").join("") }}
+          </p>
+        </div>
+      </section>
+
+      <div></div>
     </template>
   </project-template>
 </template>
@@ -612,6 +720,274 @@ export default {
           id: "resources-trading",
           src: "power-ui/sketch--concept-mobile--resources--trading.jpg",
           alt: this.$t("alt_power-ui_sketch_concept-mobile_resources_trading"),
+        },
+      ],
+      buildings: [
+        {
+          id: "civilian-building-1",
+          src: "power-ui/asset--sketch-civilian-building-1.png",
+          alt: this.$t("alt_power-ui_asset-sketch_civilian-building-1"),
+          label: this.$t("label_power-ui_asset-sketch_civilian-building-1"),
+          background: "bg-blue-light",
+          category: "other",
+        },
+        {
+          id: "wind-turbine",
+          src: "power-ui/asset--sketch-wind-turbine.png",
+          alt: this.$t("alt_power-ui_asset-sketch_wind-turbine"),
+          label: this.$t("label_power-ui_asset-sketch_wind-turbine"),
+          background: "bg-yellow-light",
+          category: "power",
+        },
+        {
+          id: "civilian-building-2",
+          src: "power-ui/asset--sketch-civilian-building-2.png",
+          alt: this.$t("alt_power-ui_asset-sketch_civilian-building-2"),
+          label: this.$t("label_power-ui_asset-sketch_civilian-building-2"),
+          background: "bg-blue-light",
+          category: "other",
+        },
+        //{
+        //  id: "civilian-building-3",
+        //  src: "power-ui/asset--sketch-civilian-building-3.png",
+        //  alt: this.$t("alt_power-ui_asset-sketch_civilian-building-3"),
+        //  label: this.$t("label_power-ui_asset-sketch_civilian-building-3"),
+        //  background: "bg-blue-light",
+        //  category: "other",
+        //},
+        {
+          id: "corn-field",
+          src: "power-ui/asset--sketch-corn-field.png",
+          alt: this.$t("alt_power-ui_asset-sketch_corn-field"),
+          label: this.$t("label_power-ui_asset-sketch_corn-field"),
+          background: "bg-red-light",
+          category: "resources",
+        },
+        {
+          id: "bucket-excavator",
+          src: "power-ui/asset--sketch-bucket-excavator.png",
+          alt: this.$t("alt_power-ui_asset-sketch_bucket-excavator"),
+          label: this.$t("label_power-ui_asset-sketch_bucket-excavator"),
+          background: "bg-red-light",
+          category: "resources",
+        },
+        {
+          id: "canal",
+          src: "power-ui/asset--sketch-canal.png",
+          alt: this.$t("alt_power-ui_asset-sketch_canal"),
+          label: this.$t("label_power-ui_asset-sketch_canal"),
+          background: "bg-green-light",
+          category: "infrastructure",
+        },
+        {
+          id: "tracks",
+          src: "power-ui/asset--sketch-tracks.png",
+          alt: this.$t("alt_power-ui_asset-sketch_tracks"),
+          label: this.$t("label_power-ui_asset-sketch_tracks"),
+          background: "bg-green-light",
+          category: "infrastructure",
+        },
+        {
+          id: "road",
+          src: "power-ui/asset--sketch-road.png",
+          alt: this.$t("alt_power-ui_asset-sketch_road"),
+          label: this.$t("label_power-ui_asset-sketch_road"),
+          background: "bg-green-light",
+          category: "infrastructure",
+        },
+        {
+          id: "freight-port",
+          src: "power-ui/asset--sketch-freight-port.png",
+          alt: this.$t("alt_power-ui_asset-sketch_freight-port"),
+          label: this.$t("label_power-ui_asset-sketch_freight-port"),
+          background: "bg-orange-light",
+          category: "logistics",
+        },
+        {
+          id: "hydro-electric-dam",
+          src: "power-ui/asset--sketch-hydro-electric-dam.png",
+          alt: this.$t("alt_power-ui_asset-sketch_hydro-electric-dam"),
+          label: this.$t("label_power-ui_asset-sketch_hydro-electric-dam"),
+          background: "bg-yellow-light",
+          category: "power",
+        },
+        {
+          id: "natural-gas-rig",
+          src: "power-ui/asset--sketch-natural-gas-rig.png",
+          alt: this.$t("alt_power-ui_asset-sketch_natural-gas-rig"),
+          label: this.$t("label_power-ui_asset-sketch_natural-gas-rig"),
+          background: "bg-red-light",
+          category: "resources",
+        },
+        {
+          id: "nuclear-fuel-factory",
+          src: "power-ui/asset--sketch-nuclear-fuel-factory.png",
+          alt: this.$t("alt_power-ui_asset-sketch_nuclear-fuel-factory"),
+          label: this.$t("label_power-ui_asset-sketch_nuclear-fuel-factory"),
+          background: "bg-red-light",
+          category: "resources",
+        },
+        {
+          id: "nuclear-waste-disposal",
+          src: "power-ui/asset--sketch-nuclear-waste-disposal.png",
+          alt: this.$t("alt_power-ui_asset-sketch_nuclear-waste-disposal"),
+          label: this.$t("label_power-ui_asset-sketch_nuclear-waste-disposal"),
+          background: "bg-red-light",
+          category: "resources",
+        },
+        {
+          id: "plant-biogas",
+          src: "power-ui/asset--sketch-plant-biogas.png",
+          alt: this.$t("alt_power-ui_asset-sketch_plant-biogas"),
+          label: this.$t("label_power-ui_asset-sketch_plant-biogas"),
+          background: "bg-yellow-light",
+          category: "power",
+        },
+        {
+          id: "plant-coal",
+          src: "power-ui/asset--sketch-plant-coal.png",
+          alt: this.$t("alt_power-ui_asset-sketch_plant-coal"),
+          label: this.$t("label_power-ui_asset-sketch_plant-coal"),
+          background: "bg-yellow-light",
+          category: "power",
+        },
+        {
+          id: "plant-garbage-incineration",
+          src: "power-ui/asset--sketch-plant-garbage-incineration.png",
+          alt: this.$t("alt_power-ui_asset-sketch_plant-garbage-incineration"),
+          label: this.$t(
+            "label_power-ui_asset-sketch_plant-garbage-incineration"
+          ),
+          background: "bg-yellow-light",
+          category: "power",
+        },
+        {
+          id: "plant-gas-turbine",
+          src: "power-ui/asset--sketch-plant-gas-turbine.png",
+          alt: this.$t("alt_power-ui_asset-sketch_plant-gas-turbine"),
+          label: this.$t("label_power-ui_asset-sketch_plant-gas-turbine"),
+          background: "bg-yellow-light",
+          category: "power",
+        },
+        {
+          id: "plant-nuclear-power",
+          src: "power-ui/asset--sketch-plant-nuclear-power.png",
+          alt: this.$t("alt_power-ui_asset-sketch_plant-nuclear-power"),
+          label: this.$t("label_power-ui_asset-sketch_plant-nuclear-power"),
+          background: "bg-yellow-light",
+          category: "power",
+        },
+        {
+          id: "plant-oil",
+          src: "power-ui/asset--sketch-plant-oil.png",
+          alt: this.$t("alt_power-ui_asset-sketch_plant-oil"),
+          label: this.$t("label_power-ui_asset-sketch_plant-oil"),
+          background: "bg-yellow-light",
+          category: "power",
+        },
+        {
+          id: "plant-photovoltaic",
+          src: "power-ui/asset--sketch-plant-photovoltaic.png",
+          alt: this.$t("alt_power-ui_asset-sketch_plant-photovoltaic"),
+          label: this.$t("label_power-ui_asset-sketch_plant-photovoltaic"),
+          background: "bg-yellow-light",
+          category: "power",
+        },
+        {
+          id: "plant-pumped-storage",
+          src: "power-ui/asset--sketch-plant-pumped-storage.png",
+          alt: this.$t("alt_power-ui_asset-sketch_plant-pumped-storage"),
+          label: this.$t("label_power-ui_asset-sketch_plant-pumped-storage"),
+          background: "bg-yellow-light",
+          category: "power",
+        },
+        {
+          id: "powerpole",
+          src: "power-ui/asset--sketch-powerpole.png",
+          alt: this.$t("alt_power-ui_asset-sketch_powerpole"),
+          label: this.$t("label_power-ui_asset-sketch_powerpole"),
+          background: "bg-green-light",
+          category: "infrastructure",
+        },
+        {
+          id: "pumpjack",
+          src: "power-ui/asset--sketch-pumpjack.png",
+          alt: this.$t("alt_power-ui_asset-sketch_pumpjack"),
+          label: this.$t("label_power-ui_asset-sketch_pumpjack"),
+          background: "bg-red-light",
+          category: "resources",
+        },
+        {
+          id: "recycling-depot",
+          src: "power-ui/asset--sketch-recycling-depot.png",
+          alt: this.$t("alt_power-ui_asset-sketch_recycling-depot"),
+          label: this.$t("label_power-ui_asset-sketch_recycling-depot"),
+          background: "bg-red-light",
+          category: "resources",
+        },
+        {
+          id: "research-center",
+          src: "power-ui/asset--sketch-research-center.png",
+          alt: this.$t("alt_power-ui_asset-sketch_research-center"),
+          label: this.$t("label_power-ui_asset-sketch_research-center"),
+          background: "bg-blue-light",
+          category: "other",
+        },
+        {
+          id: "refinery",
+          src: "power-ui/asset--sketch-refinery.png",
+          alt: this.$t("alt_power-ui_asset-sketch_refinery"),
+          label: this.$t("label_power-ui_asset-sketch_refinery"),
+          background: "bg-red-light",
+          category: "resources",
+        },
+        {
+          id: "trading-center",
+          src: "power-ui/asset--sketch-trading-center.png",
+          alt: this.$t("alt_power-ui_asset-sketch_trading-center"),
+          label: this.$t("label_power-ui_asset-sketch_trading-center"),
+          background: "bg-blue-light",
+          category: "other",
+        },
+        {
+          id: "train-station",
+          src: "power-ui/asset--sketch-train-station.png",
+          alt: this.$t("alt_power-ui_asset-sketch_train-station"),
+          label: this.$t("label_power-ui_asset-sketch_train-station"),
+          background: "bg-orange-light",
+          category: "logistics",
+        },
+        {
+          id: "truck-station",
+          src: "power-ui/asset--sketch-truck-station.png",
+          alt: this.$t("alt_power-ui_asset-sketch_truck-station"),
+          label: this.$t("label_power-ui_asset-sketch_truck-station"),
+          background: "bg-orange-light",
+          category: "logistics",
+        },
+        {
+          id: "uranium-mine",
+          src: "power-ui/asset--sketch-uranium-mine.png",
+          alt: this.$t("alt_power-ui_asset-sketch_uranium-mine"),
+          label: this.$t("label_power-ui_asset-sketch_uranium-mine"),
+          background: "bg-red-light",
+          category: "resources",
+        },
+        {
+          id: "pipeline",
+          src: "power-ui/asset--sketch-pipeline.png",
+          alt: this.$t("alt_power-ui_asset-sketch_pipeline"),
+          label: this.$t("label_power-ui_asset-sketch_pipeline"),
+          background: "bg-green-light",
+          category: "infrastructure",
+        },
+        {
+          id: "warehouse",
+          src: "power-ui/asset--sketch-warehouse.png",
+          alt: this.$t("alt_power-ui_asset-sketch_warehouse"),
+          label: this.$t("label_power-ui_asset-sketch_warehouse"),
+          background: "bg-orange-light",
+          category: "logistics",
         },
       ],
     };
