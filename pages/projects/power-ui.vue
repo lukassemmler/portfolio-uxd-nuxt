@@ -297,6 +297,327 @@
         </div>
       </section>
 
+      <section id="section-implementation" class="section">
+        <div class="container-small">
+          <h2 id="implementation">
+            {{ $t("heading_power-ui_implementation") }}
+          </h2>
+          <p>
+            {{ $t("text_power-ui_implementation_intro") }}
+          </p>
+        </div>
+        <div class="container-medium">
+          <div class="pillar-container gapped-h spaced-y">
+            <div class="pillar-row">
+              <div class="pillar-col">
+                <column-card
+                  class="bg-pink font-white"
+                  href="#prototype-axure"
+                  number="1"
+                  src="power-ui/prototype--axure-v0-6-overview.jpg"
+                  alt=""
+                  ratio="16-by-9"
+                  :description="$t('heading_power-ui_axure')"
+                  :icons="implementationIcons.axure"
+                ></column-card>
+              </div>
+              <div class="pillar-col">
+                <column-card
+                  class="bg-green font-white"
+                  href="#prototype-unity"
+                  number="2"
+                  src="power-ui/prototype--unity-wire-placement.jpg"
+                  alt=""
+                  ratio="16-by-9"
+                  :description="$t('heading_power-ui_unity')"
+                  :icons="implementationIcons.unity"
+                ></column-card>
+              </div>
+              <div class="pillar-col">
+                <column-card
+                  class="bg-blue font-white"
+                  href="#prototype-phaser-and-vue-js"
+                  number="3"
+                  src="power-ui/prototype--phaser-v2-1-building-placement.jpg"
+                  alt=""
+                  ratio="16-by-9"
+                  :description="$t('heading_power-ui_phaser-and-vue-js')"
+                  :icons="implementationIcons.phaser"
+                ></column-card>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
+    <div class="container-small">
+      <h3 id="prototype-axure">{{{str "heading_power-ui_prototype-axure"}}}</h3>
+      <p>
+        {{{str "text_power-ui_implementation_prototype-axure_intro"}}}
+      </p>
+      {{> image-figure 
+          src="project/power-ui/program--axure.png" 
+          alt="Axure Prototype with Logic Programming" 
+          caption="Axure Prototype with Logic Programming for Building menu." 
+          ratio="16-by-9" 
+          hasPlaceholder=true 
+          loadLazy=true 
+          isResized=false }} 
+      <p class="spaced-y">
+        {{{str "text_power-ui_implementation_prototype-axure_pros-and-cons"}}}
+      </p>
+    </div>
+
+    <div class="container bg-blue">
+      {{> phone-preview
+          src="static/power-prototype-1/_showcase/preview.html" 
+          id="power-ui-prototype-1" 
+          background="bg-blue" }}
+          
+      <div class="container-medium">
+        {{#embed "gallery"}}
+          {{#content "images"}}
+            <div class="pillar-container gapped-h gapped-v-big images-only">
+              <div class="pillar-row">
+                <div class="pillar-col">
+                  {{> image
+                      src="project/power-ui/prototype--axure-v0-6-placing-building.jpg" 
+                      alt=(str "alt_power-ui_prototype_axure_placing-building") 
+                      ratio="16-by-9" 
+                      hasPlaceholder=true 
+                      loadLazy=true 
+                      isResized=true 
+                      wrapperClass="shadow-big" }}
+                </div>
+              </div>
+              <div class="pillar-row">
+                <div class="pillar-col">
+                  {{> image
+                      src="project/power-ui/prototype--axure-v0-5-finance-management.jpg" 
+                      alt=(str "alt_power-ui_prototype_axure_finance-management") 
+                      ratio="16-by-9" 
+                      hasPlaceholder=true 
+                      loadLazy=true 
+                      isResized=true 
+                      wrapperClass="shadow-big" }}
+                </div>
+              </div>
+              <div class="pillar-row">
+                <div class="pillar-col">
+                  {{> image
+                      src="project/power-ui/prototype--axure-v0-6-overview.jpg" 
+                      alt=(str "alt_power-ui_prototype_axure_overview") 
+                      ratio="16-by-9" 
+                      hasPlaceholder=true 
+                      loadLazy=true 
+                      isResized=true 
+                      wrapperClass="shadow-big" }}
+                </div>
+              </div>
+              <div class="pillar-row">
+                <div class="pillar-col">
+                  {{> image
+                      src="project/power-ui/prototype--axure-v0-6-info-window-power-plant.jpg" 
+                      alt=(str "alt_power-ui_prototype_axure_info-window-power-plant") 
+                      ratio="16-by-9" 
+                      hasPlaceholder=true 
+                      loadLazy=true 
+                      isResized=true 
+                      wrapperClass="shadow-big" }}
+                </div>
+              </div>
+              <div class="pillar-row">
+                <div class="pillar-col">
+                  {{> image
+                      src="project/power-ui/prototype--axure-v0-6-demolishing-building-modal.jpg" 
+                      alt=(str "alt_power-ui_prototype_axure_demolishing-building-modal") 
+                      ratio="16-by-9" 
+                      hasPlaceholder=true 
+                      loadLazy=true 
+                      isResized=true 
+                      wrapperClass="shadow-big" }}
+                </div>
+              </div>
+              <div class="pillar-row">
+                <div class="pillar-col">
+                  {{> image
+                      src="project/power-ui/prototype--axure-v0-5-power-overview.jpg" 
+                      alt=(str "alt_power-ui_prototype_axure_power-overview") 
+                      ratio="16-by-9" 
+                      hasPlaceholder=true 
+                      loadLazy=true 
+                      isResized=true 
+                      wrapperClass="shadow-big" }}
+                </div>
+              </div>
+            </div>
+          {{/content}}
+        {{/embed}}
+      </div>
+    </div>
+    
+    <div class="container-small">
+      <h3 id="prototype-unity">{{{str "heading_power-ui_prototype-unity"}}}</h3>
+      <p>
+        {{{str "text_power-ui_implementation_prototype-unity_intro"}}}
+      </p>
+      <p>
+        {{{str "text_power-ui_implementation_prototype-unity_unity"}}}
+      </p>
+      <p>
+        {{{str "text_power-ui_implementation_prototype-unity_features"}}}
+      </p>
+    </div>
+    <div class="container-medium">
+      {{#embed "gallery"}}
+        {{#content "images"}}
+          <div class="pillar-container gapped-h gapped-v-big images-only">
+            <div class="pillar-row">
+              <div class="pillar-col-bg-4">
+                {{> image-portal
+                    target=(linkDirectly "assets/project/power-ui/unity--network-breakdown.gif") 
+                    label="GIF" 
+                    src="project/power-ui/unity--network-breakdown--preview.jpg" 
+                    alt=(str "alt_power-ui_prototype_unity_network-breakdown") 
+                    ratio="16-by-9" 
+                    hasPlaceholder=true 
+                    loadLazy=true 
+                    isResized=true 
+                    wrapperClass="shadow-big" }}
+              </div>
+              <div class="pillar-col-bg-4">
+                {{> image-portal
+                    target=(linkDirectly "assets/project/power-ui/unity--network-formation.gif") 
+                    label="GIF" 
+                    src="project/power-ui/unity--network-formation--preview.jpg" 
+                    alt=(str "alt_power-ui_prototype_unity_network-formation") 
+                    ratio="16-by-9" 
+                    hasPlaceholder=true 
+                    loadLazy=true 
+                    isResized=true 
+                    wrapperClass="shadow-big" }}
+              </div>
+              <div class="pillar-col-bg-4">
+                {{> image-portal
+                    target=(linkDirectly "assets/project/power-ui/unity--powerplant-dragging.gif") 
+                    label="GIF" 
+                    src="project/power-ui/unity--powerplant-dragging--preview.jpg" 
+                    alt=(str "alt_power-ui_prototype_unity_powerplant-dragging") 
+                    ratio="16-by-9" 
+                    hasPlaceholder=true 
+                    loadLazy=true 
+                    isResized=true 
+                    wrapperClass="shadow-big" }}
+              </div>
+            </div>
+          </div>
+        {{/content}}
+      {{/embed}}
+    </div>
+    <div class="container-small">
+      <h3 id="prototype-phaser-and-vue-js">{{{str "heading_power-ui_prototype-phaser-and-vue-js"}}}</h3>
+      <p>
+        {{{str "text_power-ui_implementation_prototype-phaser_intro"}}}
+      </p>
+      <p>
+        {{{str "text_power-ui_implementation_prototype-phaser_architecture"}}}
+      </p>
+      <p>
+        {{{str "text_power-ui_implementation_prototype-phaser_features"}}}
+      </p>
+      <p class="spaced-y">
+        {{{str "text_power-ui_implementation_prototype-phaser_goal"}}}
+      </p>
+    </div>
+    <div class="container bg-yellow">
+      {{> phone-preview
+          src="static/power-prototype-2/_showcase/preview.html" 
+          id="power-ui-prototype-2" 
+          background="bg-yellow" }}
+        <div class="container-medium">
+          {{#embed "gallery"}}
+            {{#content "images"}}
+              <div class="pillar-container gapped-h gapped-v-big images-only">
+                <div class="pillar-row">
+                  <div class="pillar-col">
+                    {{> image
+                        src="project/power-ui/prototype--phaser-v2-1-overview.jpg" 
+                        alt=(str "alt_power-ui_prototype_phaser_overview") 
+                        ratio="16-by-9" 
+                        hasPlaceholder=true 
+                        loadLazy=true 
+                        isResized=true 
+                        wrapperClass="shadow-big" }}
+                  </div>
+                </div>
+                <div class="pillar-row">
+                  <div class="pillar-col">
+                    {{> image
+                        src="project/power-ui/prototype--phaser-v2-1-power-plant-info.jpg" 
+                        alt=(str "alt_power-ui_prototype_phaser_power-plant-info") 
+                        ratio="16-by-9" 
+                        hasPlaceholder=true 
+                        loadLazy=true 
+                        isResized=true 
+                        wrapperClass="shadow-big" }}
+                  </div>
+                </div>
+                <div class="pillar-row">
+                  <div class="pillar-col">
+                    {{> image
+                        src="project/power-ui/prototype--phaser-v2-1-build-menu-modal.jpg" 
+                        alt=(str "alt_power-ui_prototype_phaser_build-menu-modal") 
+                        ratio="16-by-9" 
+                        hasPlaceholder=true 
+                        loadLazy=true 
+                        isResized=true 
+                        wrapperClass="shadow-big" }}
+                  </div>
+                </div>
+                <div class="pillar-row">
+                  <div class="pillar-col">
+                    {{> image
+                        src="project/power-ui/prototype--phaser-v2-1-build-menu.jpg" 
+                        alt=(str "alt_power-ui_prototype_phaser_build-menu") 
+                        ratio="16-by-9" 
+                        hasPlaceholder=true 
+                        loadLazy=true 
+                        isResized=true 
+                        wrapperClass="shadow-big" }}
+                  </div>
+                </div>
+                <div class="pillar-row">
+                  <div class="pillar-col">
+                    {{> image
+                        src="project/power-ui/prototype--phaser-v2-1-building-placement.jpg" 
+                        alt=(str "alt_power-ui_prototype_phaser_building-placement") 
+                        ratio="16-by-9" 
+                        hasPlaceholder=true 
+                        loadLazy=true 
+                        isResized=true 
+                        wrapperClass="shadow-big" }}
+                  </div>
+                </div>
+                <div class="pillar-row">
+                  <div class="pillar-col">
+                    {{> image
+                        src="project/power-ui/prototype--phaser-v2-1-finances-window.jpg" 
+                        alt=(str "alt_power-ui_prototype_phaser_finances-window") 
+                        ratio="16-by-9" 
+                        hasPlaceholder=true 
+                        loadLazy=true 
+                        isResized=true 
+                        wrapperClass="shadow-big" }}
+                  </div>
+                </div>
+              </div>
+            {{/content}}
+          {{/embed}}
+        </div>
+      </div>
+    </div>
+    -->
+      </section>
+
       <div></div>
     </template>
   </project-template>
@@ -375,6 +696,12 @@ import IconMenuPowerPole from "~/static/power-ui/Icon_Menu_PowerPole.svg?inline"
 import IconMenuResearch from "~/static/power-ui/Icon_Menu_Research.svg?inline";
 import IconMenuResources from "~/static/power-ui/Icon_Menu_Resources.svg?inline";
 import IconMenuZoom from "~/static/power-ui/Icon_Menu_Zoom.svg?inline";
+
+import ProductAxure from "~/assets/icons/product-axure.svg?inline";
+import ProductPhaser from "~/assets/icons/product-phaser.svg?inline";
+import ProductUnity from "~/assets/icons/product-unity.svg?inline";
+import ProductVueJs from "~/assets/icons/product-vue-js.svg?inline";
+
 import { columnizeArray } from "~/assets/lib/array-util";
 
 export default {
@@ -990,6 +1317,11 @@ export default {
           category: "logistics",
         },
       ],
+      implementationIcons: {
+        axure: [ProductAxure],
+        unity: [ProductUnity],
+        phaser: [ProductPhaser, ProductVueJs],
+      },
     };
   },
   methods: {
