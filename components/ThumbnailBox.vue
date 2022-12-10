@@ -1,14 +1,22 @@
 <template>
   <div class="thumbnail-box">
-    <nuxt-link :to="target" class="thumbnail-link">
-      <!-- Fix error when target is empty -->
-      <simple-image
-        :src="src"
-        :alt="alt"
-        :ratio="ratio"
-        :sizes="sizes"
-      ></simple-image>
-      <div class="thumbnail-box-content"><slot></slot></div>
+    <nuxt-link
+      class="thumbnail-link"
+      :to="target"
+      @click.native.prevent="onClick"
+    >
+      <div :class="['ratio-box', ratioClasses]">
+        <!-- Fix error when target is empty -->
+        <simple-image
+          v-show="!expanded"
+          class="thumbnail-image"
+          :src="src"
+          :alt="alt"
+          :ratio="ratio"
+          :sizes="sizes"
+        ></simple-image>
+        <div v-show="expanded" class="thumbnail-box-content"><slot></slot></div>
+      </div>
     </nuxt-link>
     <span v-if="label" class="thumbnail-box-label">{{ label }}</span>
   </div>
@@ -26,6 +34,23 @@ export default {
     ratio: String,
     sizes: String,
     label: String,
+  },
+  data: function () {
+    return {
+      expanded: false,
+    };
+  },
+  computed: {
+    ratioClasses: function () {
+      if (!this.ratio || this.ratio.length === 0) return "";
+      return "fixed-ratio ratio-" + this.ratio;
+    },
+  },
+  methods: {
+    onClick: function () {
+      console.log("Click!");
+      this.expanded = !this.expanded;
+    },
   },
 };
 </script>
@@ -47,5 +72,13 @@ export default {
   font-weight: 500;
   letter-spacing: 0.04em;
   pointer-events: none;
+}
+
+.thumbnail-image {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
 }
 </style>
