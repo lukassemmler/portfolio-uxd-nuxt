@@ -542,6 +542,23 @@
           </div>
         </div>
       </section>
+
+      <section id="section-conclusion" class="section-flush">
+        <div class="container-small">
+          <h2 id="conclusion">{{ $t("heading_power-ui_conclusion") }}</h2>
+          <p>{{ $t("text_power-ui_conlusion_summary") }}</p>
+          <p>{{ $t("text_power-ui_conlusion_read-more") }}</p>
+        </div>
+        <tadaa-box>
+          <hover-image
+            src="power-ui/bachelor-thesis-front-cover.png"
+            alt=""
+            target="/../BA Lukas Semmler.pdf"
+            :routedTarget="false"
+          ></hover-image>
+        </tadaa-box>
+      </section>
+
     </template>
   </project-template>
 </template>
