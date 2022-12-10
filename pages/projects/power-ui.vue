@@ -377,7 +377,6 @@
           id="power-ui-prototype-1" 
           background="bg-blue" }}
       -->
-          </simple-image>
           <div class="container-medium">
             <div class="pillar-container gapped-h gapped-v-big images-only">
               <div
@@ -415,12 +414,12 @@
         </div>
         <div class="container-medium">
           <div class="pillar-container gapped-h gapped-v-big images-only">
-            <div
-              class="pillar-row"
-              v-for="screenshot in prototypeScreenshots.unity"
-              v-bind:key="screenshot.id"
-            >
-              <div class="pillar-col-bg-4">
+            <div class="pillar-row">
+              <div
+                class="pillar-col-bg-4"
+                v-for="screenshot in prototypeScreenshots.unity"
+                v-bind:key="screenshot.id"
+              >
                 <thumbnail-box
                   class="standalone rounded fit-image shadow-big"
                   :src="screenshot.src"
@@ -433,10 +432,7 @@
                     It will prolly be fixed in later versions (presumably 
                     Nuxt 3), see https://github.com/unjs/ipx/issues/35
                   -->
-                  <img
-                    :src="screenshot.gif"
-                    :alt="screenshot.alt"
-                  />
+                  <img :src="screenshot.gif" :alt="screenshot.alt" />
                 </thumbnail-box>
               </div>
             </div>
