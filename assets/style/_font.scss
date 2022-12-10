@@ -16,6 +16,12 @@
   line-height: 1;
 }
 
+.big-number {
+  font-size: 3em;
+  font-weight: 800;
+  line-height: 1;
+}
+
 .font-white {
   color: $white;
 }
@@ -36,4 +42,25 @@ q {
   font-style: italic;
   letter-spacing: 0.01em;
   color: $gray-20;
+}
+
+%label-base {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.label-bg {
+  @extend %label-base;
+  font-size: 1.5em;
+}
+
+.label-xl {
+  @extend %label-base;
+  font-size: 2.25em;
+}
+
+.label-2xl {
+  @extend %label-base;
+  font-size: 3em;
 }
