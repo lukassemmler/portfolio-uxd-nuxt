@@ -413,6 +413,7 @@
           </p>
         </div>
         <div class="container-medium">
+          <a href="../power-ui/unity--network-breakdown.gif">test</a>
           <div class="pillar-container gapped-h gapped-v-big images-only">
             <div class="pillar-row">
               <div
@@ -422,6 +423,8 @@
               >
                 <thumbnail-box
                   class="standalone rounded fit-image shadow-big"
+                  :target="'/..' + screenshot.gif"
+                  targetType="file"
                   :src="screenshot.src"
                   :alt="screenshot.alt"
                   sizes="xs:400px sm:640px md:960px lg:1200px"
@@ -439,113 +442,55 @@
             </div>
           </div>
         </div>
-        <!--
-    <div class="container-small">
-      <h3 id="prototype-phaser-and-vue-js">{{{str "heading_power-ui_prototype-phaser-and-vue-js"}}}</h3>
-      <p>
-        {{{str "text_power-ui_implementation_prototype-phaser_intro"}}}
-      </p>
-      <p>
-        {{{str "text_power-ui_implementation_prototype-phaser_architecture"}}}
-      </p>
-      <p>
-        {{{str "text_power-ui_implementation_prototype-phaser_features"}}}
-      </p>
-      <p class="spaced-y">
-        {{{str "text_power-ui_implementation_prototype-phaser_goal"}}}
-      </p>
-    </div>
-    <div class="container bg-yellow">
+
+        <div class="container-small">
+          <h3 id="prototype-phaser-and-vue-js">
+            {{ $t("heading_power-ui_prototype-phaser-and-vue-js") }}
+          </h3>
+          <p>
+            {{ $t("text_power-ui_implementation_prototype-phaser_intro") }}
+          </p>
+          <p>
+            {{
+              $t("text_power-ui_implementation_prototype-phaser_architecture")
+            }}
+          </p>
+          <p>
+            {{ $t("text_power-ui_implementation_prototype-phaser_features") }}
+          </p>
+          <p class="spaced-y">
+            {{ $t("text_power-ui_implementation_prototype-phaser_goal") }}
+          </p>
+        </div>
+
+        <div class="container bg-yellow">
+          <!--
       {{> phone-preview
           src="static/power-prototype-2/_showcase/preview.html" 
           id="power-ui-prototype-2" 
           background="bg-yellow" }}
-        <div class="container-medium">
-          {{#embed "gallery"}}
-            {{#content "images"}}
-              <div class="pillar-container gapped-h gapped-v-big images-only">
-                <div class="pillar-row">
-                  <div class="pillar-col">
-                    {{> image
-                        src="project/power-ui/prototype--phaser-v2-1-overview.jpg" 
-                        alt=(str "alt_power-ui_prototype_phaser_overview") 
-                        ratio="16-by-9" 
-                        hasPlaceholder=true 
-                        loadLazy=true 
-                        isResized=true 
-                        wrapperClass="shadow-big" }}
-                  </div>
-                </div>
-                <div class="pillar-row">
-                  <div class="pillar-col">
-                    {{> image
-                        src="project/power-ui/prototype--phaser-v2-1-power-plant-info.jpg" 
-                        alt=(str "alt_power-ui_prototype_phaser_power-plant-info") 
-                        ratio="16-by-9" 
-                        hasPlaceholder=true 
-                        loadLazy=true 
-                        isResized=true 
-                        wrapperClass="shadow-big" }}
-                  </div>
-                </div>
-                <div class="pillar-row">
-                  <div class="pillar-col">
-                    {{> image
-                        src="project/power-ui/prototype--phaser-v2-1-build-menu-modal.jpg" 
-                        alt=(str "alt_power-ui_prototype_phaser_build-menu-modal") 
-                        ratio="16-by-9" 
-                        hasPlaceholder=true 
-                        loadLazy=true 
-                        isResized=true 
-                        wrapperClass="shadow-big" }}
-                  </div>
-                </div>
-                <div class="pillar-row">
-                  <div class="pillar-col">
-                    {{> image
-                        src="project/power-ui/prototype--phaser-v2-1-build-menu.jpg" 
-                        alt=(str "alt_power-ui_prototype_phaser_build-menu") 
-                        ratio="16-by-9" 
-                        hasPlaceholder=true 
-                        loadLazy=true 
-                        isResized=true 
-                        wrapperClass="shadow-big" }}
-                  </div>
-                </div>
-                <div class="pillar-row">
-                  <div class="pillar-col">
-                    {{> image
-                        src="project/power-ui/prototype--phaser-v2-1-building-placement.jpg" 
-                        alt=(str "alt_power-ui_prototype_phaser_building-placement") 
-                        ratio="16-by-9" 
-                        hasPlaceholder=true 
-                        loadLazy=true 
-                        isResized=true 
-                        wrapperClass="shadow-big" }}
-                  </div>
-                </div>
-                <div class="pillar-row">
-                  <div class="pillar-col">
-                    {{> image
-                        src="project/power-ui/prototype--phaser-v2-1-finances-window.jpg" 
-                        alt=(str "alt_power-ui_prototype_phaser_finances-window") 
-                        ratio="16-by-9" 
-                        hasPlaceholder=true 
-                        loadLazy=true 
-                        isResized=true 
-                        wrapperClass="shadow-big" }}
-                  </div>
+      -->
+          <div class="container-medium">
+            <div class="pillar-container gapped-h gapped-v-big images-only">
+              <div
+                class="pillar-row"
+                v-for="screenshot in prototypeScreenshots.phaser"
+                v-bind:key="screenshot.id"
+              >
+                <div class="pillar-col">
+                  <simple-image
+                    class="standalone rounded fit-image shadow-big"
+                    :src="screenshot.src"
+                    :alt="screenshot.alt"
+                    ratio="16-by-9"
+                  >
+                  </simple-image>
                 </div>
               </div>
-            {{/content}}
-          {{/embed}}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    -->
       </section>
-
-      <div></div>
     </template>
   </project-template>
 </template>
@@ -1304,6 +1249,38 @@ export default {
             src: "power-ui/unity--powerplant-dragging--preview.jpg",
             alt: this.$t("alt_power-ui_prototype_unity_powerplant-dragging"),
             gif: "/power-ui/unity--powerplant-dragging.gif", // The leading slash '/' is required
+          },
+        ],
+        phaser: [
+          {
+            id: "overview",
+            src: "power-ui/prototype--phaser-v2-1-overview.jpg",
+            alt: this.$t("alt_power-ui_prototype_phaser_overview"),
+          },
+          {
+            id: "power-plant-info",
+            src: "power-ui/prototype--phaser-v2-1-power-plant-info.jpg",
+            alt: this.$t("alt_power-ui_prototype_phaser_power-plant-info"),
+          },
+          {
+            id: "build-menu-modal",
+            src: "power-ui/prototype--phaser-v2-1-build-menu-modal.jpg",
+            alt: this.$t("alt_power-ui_prototype_phaser_build-menu-modal"),
+          },
+          {
+            id: "build-menu",
+            src: "power-ui/prototype--phaser-v2-1-build-menu.jpg",
+            alt: this.$t("alt_power-ui_prototype_phaser_build-menu"),
+          },
+          {
+            id: "building-placement",
+            src: "power-ui/prototype--phaser-v2-1-building-placement.jpg",
+            alt: this.$t("alt_power-ui_prototype_phaser_building-placement"),
+          },
+          {
+            id: "finances-window",
+            src: "power-ui/prototype--phaser-v2-1-finances-window.jpg",
+            alt: this.$t("alt_power-ui_prototype_phaser_finances-window"),
           },
         ],
       },
