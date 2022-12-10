@@ -102,27 +102,19 @@ figure {
   }
 
   &.shadow-medium {
-    .simple-image-wrapper {
-      box-shadow: 0 1em 2em $dark-20;
-    }
+    box-shadow: 0 1em 2em $dark-20;
   }
 
   &.shadow-medium-faint {
-    .simple-image-wrapper {
-      box-shadow: 0 1em 2em $dark-10;
-    }
+    box-shadow: 0 1em 2em $dark-10;
   }
 
   &.shadow-big {
-    .simple-image-wrapper {
-      box-shadow: 0 2em 3em $dark-20;
-    }
+    box-shadow: 0 2em 3em $dark-20;
   }
 
   &.shadow-big-faint {
-    .simple-image-wrapper {
-      box-shadow: 0 2em 3em $dark-10;
-    }
+    box-shadow: 0 2em 3em $dark-10;
   }
 
   &.rounded {
