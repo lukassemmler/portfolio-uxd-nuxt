@@ -348,171 +348,101 @@
             </div>
           </div>
         </div>
-        <!--
-    <div class="container-small">
-      <h3 id="prototype-axure">{{{str "heading_power-ui_prototype-axure"}}}</h3>
-      <p>
-        {{{str "text_power-ui_implementation_prototype-axure_intro"}}}
-      </p>
-      {{> image-figure 
-          src="project/power-ui/program--axure.png" 
-          alt="Axure Prototype with Logic Programming" 
-          caption="Axure Prototype with Logic Programming for Building menu." 
-          ratio="16-by-9" 
-          hasPlaceholder=true 
-          loadLazy=true 
-          isResized=false }} 
-      <p class="spaced-y">
-        {{{str "text_power-ui_implementation_prototype-axure_pros-and-cons"}}}
-      </p>
-    </div>
 
-    <div class="container bg-blue">
+        <div class="container-small">
+          <h3 id="prototype-axure">
+            {{ $t("heading_power-ui_prototype-axure") }}
+          </h3>
+          <p>
+            {{ $t("text_power-ui_implementation_prototype-axure_intro") }}
+          </p>
+          <simple-image
+            class="standalone"
+            src="power-ui/program--axure.png"
+            alt="Axure Prototype with Logic Programming"
+            caption="Axure Prototype with Logic Programming for Building menu."
+            ratio="16-by-9"
+          ></simple-image>
+          <p class="spaced-y">
+            {{
+              $t("text_power-ui_implementation_prototype-axure_pros-and-cons")
+            }}
+          </p>
+        </div>
+
+        <div class="container bg-blue">
+          <!--
       {{> phone-preview
           src="static/power-prototype-1/_showcase/preview.html" 
           id="power-ui-prototype-1" 
           background="bg-blue" }}
-          
-      <div class="container-medium">
-        {{#embed "gallery"}}
-          {{#content "images"}}
+      -->
+          </simple-image>
+          <div class="container-medium">
             <div class="pillar-container gapped-h gapped-v-big images-only">
-              <div class="pillar-row">
+              <div
+                class="pillar-row"
+                v-for="screenshot in prototypeScreenshots.axure"
+                v-bind:key="screenshot.id"
+              >
                 <div class="pillar-col">
-                  {{> image
-                      src="project/power-ui/prototype--axure-v0-6-placing-building.jpg" 
-                      alt=(str "alt_power-ui_prototype_axure_placing-building") 
-                      ratio="16-by-9" 
-                      hasPlaceholder=true 
-                      loadLazy=true 
-                      isResized=true 
-                      wrapperClass="shadow-big" }}
+                  <simple-image
+                    class="standalone rounded fit-image shadow-big"
+                    :src="screenshot.src"
+                    :alt="screenshot.alt"
+                    ratio="16-by-9"
+                  >
+                  </simple-image>
                 </div>
-              </div>
-              <div class="pillar-row">
-                <div class="pillar-col">
-                  {{> image
-                      src="project/power-ui/prototype--axure-v0-5-finance-management.jpg" 
-                      alt=(str "alt_power-ui_prototype_axure_finance-management") 
-                      ratio="16-by-9" 
-                      hasPlaceholder=true 
-                      loadLazy=true 
-                      isResized=true 
-                      wrapperClass="shadow-big" }}
-                </div>
-              </div>
-              <div class="pillar-row">
-                <div class="pillar-col">
-                  {{> image
-                      src="project/power-ui/prototype--axure-v0-6-overview.jpg" 
-                      alt=(str "alt_power-ui_prototype_axure_overview") 
-                      ratio="16-by-9" 
-                      hasPlaceholder=true 
-                      loadLazy=true 
-                      isResized=true 
-                      wrapperClass="shadow-big" }}
-                </div>
-              </div>
-              <div class="pillar-row">
-                <div class="pillar-col">
-                  {{> image
-                      src="project/power-ui/prototype--axure-v0-6-info-window-power-plant.jpg" 
-                      alt=(str "alt_power-ui_prototype_axure_info-window-power-plant") 
-                      ratio="16-by-9" 
-                      hasPlaceholder=true 
-                      loadLazy=true 
-                      isResized=true 
-                      wrapperClass="shadow-big" }}
-                </div>
-              </div>
-              <div class="pillar-row">
-                <div class="pillar-col">
-                  {{> image
-                      src="project/power-ui/prototype--axure-v0-6-demolishing-building-modal.jpg" 
-                      alt=(str "alt_power-ui_prototype_axure_demolishing-building-modal") 
-                      ratio="16-by-9" 
-                      hasPlaceholder=true 
-                      loadLazy=true 
-                      isResized=true 
-                      wrapperClass="shadow-big" }}
-                </div>
-              </div>
-              <div class="pillar-row">
-                <div class="pillar-col">
-                  {{> image
-                      src="project/power-ui/prototype--axure-v0-5-power-overview.jpg" 
-                      alt=(str "alt_power-ui_prototype_axure_power-overview") 
-                      ratio="16-by-9" 
-                      hasPlaceholder=true 
-                      loadLazy=true 
-                      isResized=true 
-                      wrapperClass="shadow-big" }}
-                </div>
-              </div>
-            </div>
-          {{/content}}
-        {{/embed}}
-      </div>
-    </div>
-    
-    <div class="container-small">
-      <h3 id="prototype-unity">{{{str "heading_power-ui_prototype-unity"}}}</h3>
-      <p>
-        {{{str "text_power-ui_implementation_prototype-unity_intro"}}}
-      </p>
-      <p>
-        {{{str "text_power-ui_implementation_prototype-unity_unity"}}}
-      </p>
-      <p>
-        {{{str "text_power-ui_implementation_prototype-unity_features"}}}
-      </p>
-    </div>
-    <div class="container-medium">
-      {{#embed "gallery"}}
-        {{#content "images"}}
-          <div class="pillar-container gapped-h gapped-v-big images-only">
-            <div class="pillar-row">
-              <div class="pillar-col-bg-4">
-                {{> image-portal
-                    target=(linkDirectly "assets/project/power-ui/unity--network-breakdown.gif") 
-                    label="GIF" 
-                    src="project/power-ui/unity--network-breakdown--preview.jpg" 
-                    alt=(str "alt_power-ui_prototype_unity_network-breakdown") 
-                    ratio="16-by-9" 
-                    hasPlaceholder=true 
-                    loadLazy=true 
-                    isResized=true 
-                    wrapperClass="shadow-big" }}
-              </div>
-              <div class="pillar-col-bg-4">
-                {{> image-portal
-                    target=(linkDirectly "assets/project/power-ui/unity--network-formation.gif") 
-                    label="GIF" 
-                    src="project/power-ui/unity--network-formation--preview.jpg" 
-                    alt=(str "alt_power-ui_prototype_unity_network-formation") 
-                    ratio="16-by-9" 
-                    hasPlaceholder=true 
-                    loadLazy=true 
-                    isResized=true 
-                    wrapperClass="shadow-big" }}
-              </div>
-              <div class="pillar-col-bg-4">
-                {{> image-portal
-                    target=(linkDirectly "assets/project/power-ui/unity--powerplant-dragging.gif") 
-                    label="GIF" 
-                    src="project/power-ui/unity--powerplant-dragging--preview.jpg" 
-                    alt=(str "alt_power-ui_prototype_unity_powerplant-dragging") 
-                    ratio="16-by-9" 
-                    hasPlaceholder=true 
-                    loadLazy=true 
-                    isResized=true 
-                    wrapperClass="shadow-big" }}
               </div>
             </div>
           </div>
-        {{/content}}
-      {{/embed}}
-    </div>
+        </div>
+
+        <div class="container-small">
+          <h3 id="prototype-unity">
+            {{ $t("heading_power-ui_prototype-unity") }}
+          </h3>
+          <p>
+            {{ $t("text_power-ui_implementation_prototype-unity_intro") }}
+          </p>
+          <p>
+            {{ $t("text_power-ui_implementation_prototype-unity_unity") }}
+          </p>
+          <p>
+            {{ $t("text_power-ui_implementation_prototype-unity_features") }}
+          </p>
+        </div>
+        <div class="container-medium">
+          <div class="pillar-container gapped-h gapped-v-big images-only">
+            <div
+              class="pillar-row"
+              v-for="screenshot in prototypeScreenshots.unity"
+              v-bind:key="screenshot.id"
+            >
+              <div class="pillar-col-bg-4">
+                <thumbnail-box
+                  class="standalone rounded fit-image shadow-big"
+                  :src="screenshot.src"
+                  :alt="screenshot.alt"
+                  sizes="xs:400px sm:640px md:960px lg:1200px"
+                  ratio="16-by-9"
+                >
+                  <!-- 
+                    <nuxt-img> does not support animated GIFs for Nuxt 2.
+                    It will prolly be fixed in later versions (presumably 
+                    Nuxt 3), see https://github.com/unjs/ipx/issues/35
+                  -->
+                  <img
+                    :src="screenshot.gif"
+                    :alt="screenshot.alt"
+                  />
+                </thumbnail-box>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
     <div class="container-small">
       <h3 id="prototype-phaser-and-vue-js">{{{str "heading_power-ui_prototype-phaser-and-vue-js"}}}</h3>
       <p>
@@ -1321,6 +1251,64 @@ export default {
         axure: [ProductAxure],
         unity: [ProductUnity],
         phaser: [ProductPhaser, ProductVueJs],
+      },
+      prototypeScreenshots: {
+        axure: [
+          {
+            id: "placing-building",
+            src: "power-ui/prototype--axure-v0-6-placing-building.jpg",
+            alt: this.$t("alt_power-ui_prototype_axure_placing-building"),
+          },
+          {
+            id: "finance-management",
+            src: "power-ui/prototype--axure-v0-5-finance-management.jpg",
+            alt: this.$t("alt_power-ui_prototype_axure_finance-management"),
+          },
+          {
+            id: "overview",
+            src: "power-ui/prototype--axure-v0-6-overview.jpg",
+            alt: this.$t("alt_power-ui_prototype_axure_overview"),
+          },
+          {
+            id: "info-window-power-plant",
+            src: "power-ui/prototype--axure-v0-6-info-window-power-plant.jpg",
+            alt: this.$t(
+              "alt_power-ui_prototype_axure_info-window-power-plant"
+            ),
+          },
+          {
+            id: "demolishing-building-modal",
+            src: "power-ui/prototype--axure-v0-6-demolishing-building-modal.jpg",
+            alt: this.$t(
+              "alt_power-ui_prototype_axure_demolishing-building-modal"
+            ),
+          },
+          {
+            id: "power-overview",
+            src: "power-ui/prototype--axure-v0-5-power-overview.jpg",
+            alt: this.$t("alt_power-ui_prototype_axure_power-overview"),
+          },
+        ],
+        unity: [
+          {
+            id: "network-breakdown",
+            src: "power-ui/unity--network-breakdown--preview.jpg",
+            alt: this.$t("alt_power-ui_prototype_unity_network-breakdown"),
+            gif: "/power-ui/unity--network-breakdown.gif", // The leading slash '/' is required
+          },
+          {
+            id: "network-formation",
+            src: "power-ui/unity--network-formation--preview.jpg",
+            alt: this.$t("alt_power-ui_prototype_unity_network-formation"),
+            gif: "/power-ui/unity--network-formation.gif", // The leading slash '/' is required
+          },
+          {
+            id: "powerplant-dragging",
+            src: "power-ui/unity--powerplant-dragging--preview.jpg",
+            alt: this.$t("alt_power-ui_prototype_unity_powerplant-dragging"),
+            gif: "/power-ui/unity--powerplant-dragging.gif", // The leading slash '/' is required
+          },
+        ],
       },
     };
   },
