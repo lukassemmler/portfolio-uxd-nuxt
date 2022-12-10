@@ -1,9 +1,10 @@
 <template>
   <div class="thumbnail-box">
-    <nuxt-link
+    <simple-link
       class="thumbnail-link"
-      :to="target"
-      @click.native.prevent="onClick"
+      :target="target"
+      :routed="false"
+      @click.prevent="onClick($event)"
     >
       <div :class="['ratio-box', ratioClasses]">
         <!-- Fix error when target is empty -->
@@ -17,7 +18,7 @@
         ></simple-image>
         <div v-show="expanded" class="thumbnail-box-content"><slot></slot></div>
       </div>
-    </nuxt-link>
+    </simple-link>
     <span v-if="label" v-show="!expanded" class="thumbnail-box-label">{{
       label
     }}</span>
@@ -28,6 +29,7 @@
 export default {
   props: {
     target: {
+      // The target is intended as fallback when JavaScript is disabled.
       type: String,
       default: "",
     },
@@ -49,7 +51,8 @@ export default {
     },
   },
   methods: {
-    onClick: function () {
+    onClick: function (event) {
+      event.preventDefault();
       console.log("Click!");
       this.expanded = !this.expanded;
     },
