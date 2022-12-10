@@ -491,6 +491,57 @@
           </div>
         </div>
       </section>
+
+      <section id="section-user-testing" class="section">
+        <div class="container small">
+          <h2 id="user-testing">{{ $t("heading_power-ui_user-testing") }}</h2>
+          <p>{{ $t("text_power-ui_user-testing_intro") }}</p>
+          <p>{{ $t("text_power-ui_user-testing_test-structure") }}</p>
+          <p>{{ $t("text_power-ui_user-testing_results") }}</p>
+          <simple-image
+            class="standalone rounded fit-image shadow-medium"
+            src="power-ui/global-game-jam-group-shot.jpg"
+            :alt="$t('alt_power-ui_global-game-jam_group-shot')"
+            caption="The team 'Quick and Dirty' of the Global Game Jam 2020 in Ansbach. "
+            ratio="4-by-3"
+          >
+          </simple-image>
+          <p>{{ $t("text_power-ui_user-testing_global-game-jam") }}</p>
+        </div>
+        <div class="container-medium">
+          <div class="pillar-container gapped-h gapped-v images-only spaced-y">
+            <div class="pillar-row">
+              <div
+                class="pillar-col-6 pillar-col-bg-3"
+                v-for="sheet in userTestSheets"
+                v-bind:key="sheet.id"
+              >
+                <simple-image
+                  class="standalone rounded fit-image shadow-medium"
+                  :src="sheet.src"
+                  :alt="sheet.alt"
+                  ratio="din-a4-portrait"
+                >
+                </simple-image>
+              </div>
+              <div class="pillar-col-6 pillar-col-bg-3 flex-dir-col">
+                <span class="label-xl">{{
+                  $t("label_power-ui_user-testing_test-1")
+                }}</span>
+                <span class="label-xl">{{
+                  $t("label_power-ui_user-testing_test-2")
+                }}</span>
+                <span class="label-2xl flex-edge-bottom">{{
+                  $t("label_power-ui_user-testing_number-of-participants")
+                }}</span>
+                <span class="label-bg">{{
+                  $t("label_power-ui_user-testing_participants")
+                }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </template>
   </project-template>
 </template>
@@ -1284,6 +1335,43 @@ export default {
           },
         ],
       },
+      userTestSheets: [
+        {
+          id: "title",
+          src: "power-ui/user-test-2--1-title.png",
+          alt: this.$t("alt_power-ui_user-test_1-title"),
+        },
+        {
+          id: "time-sheet",
+          src: "power-ui/user-test-2--2-time-sheet.png",
+          alt: this.$t("alt_power-ui_user-test_2-time-sheet"),
+        },
+        {
+          id: "datenschutzerklaerung",
+          src: "power-ui/user-test-2--3-datenschutzerklaerung.png",
+          alt: this.$t("alt_power-ui_user-test_3-data-agreement"),
+        },
+        {
+          id: "personendaten",
+          src: "power-ui/user-test-2--4-personendaten.png",
+          alt: this.$t("alt_power-ui_user-test_4-participant-data"),
+        },
+        {
+          id: "use-cases",
+          src: "power-ui/user-test-2--5-use-cases.png",
+          alt: this.$t("alt_power-ui_user-test_5-use-cases"),
+        },
+        {
+          id: "ueq",
+          src: "power-ui/user-test-2--6-ueq.png",
+          alt: this.$t("alt_power-ui_user-test_6-ueq"),
+        },
+        {
+          id: "sus",
+          src: "power-ui/user-test-2--7-sus.png",
+          alt: this.$t("alt_power-ui_user-test_7-sus"),
+        },
+      ],
     };
   },
   methods: {
