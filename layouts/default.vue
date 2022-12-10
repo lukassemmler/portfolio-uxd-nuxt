@@ -21,4 +21,5 @@ export default {
 @import "~/assets/style/_background.scss";
 @import "~/assets/style/_icon.scss";
 @import "~/assets/style/_page.scss";
+@import "~/assets/style/_ratio-box.scss";
 </style>

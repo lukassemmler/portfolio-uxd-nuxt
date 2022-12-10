@@ -35,7 +35,7 @@ export default {
   render(h) {
     const image = h(
       "div",
-      { class: ["simple-image-wrapper", this.ratioClasses] },
+      { class: ["ratio-box", this.ratioClasses] },
       [
         h(NuxtImg, {
           class: "simple-image-media",
@@ -175,63 +175,6 @@ figure {
     .simple-image-media {
       max-height: 40vh;
       width: auto;
-    }
-  }
-}
-
-.simple-image-wrapper {
-  position: relative;
-
-  &.fixed-ratio {
-    height: 0;
-    overflow: hidden;
-
-    @mixin make-ratio($width, $height, $customName: null) {
-      $name: "#{$width}-by-#{$height}";
-
-      @if $customName {
-        $name: $customName;
-      }
-
-      &.ratio-#{$name} {
-        padding-top: percentage(math.div(1, math.div($width, $height)));
-      }
-    }
-
-    @include make-ratio(1, 1);
-    @include make-ratio(1, 2);
-    @include make-ratio(2, 1);
-    @include make-ratio(3, 1);
-    @include make-ratio(2, 3);
-    @include make-ratio(3, 2);
-    @include make-ratio(3, 5);
-    @include make-ratio(4, 3);
-    @include make-ratio(5, 3);
-    @include make-ratio(7, 9);
-    @include make-ratio(8, 5);
-    @include make-ratio(9, 7);
-    @include make-ratio(16, 9);
-    @include make-ratio(64, 45);
-    @include make-ratio(210, 297, "din-a4-portrait");
-    @include make-ratio(297, 210, "din-a4-landscape");
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-      vertical-align: middle;
-    }
-  }
-
-  &.has-placeholder {
-    background-color: $dark-03;
-
-    // Loading sign
-    &::before {
-      @include spinner;
-      content: "";
     }
   }
 }
