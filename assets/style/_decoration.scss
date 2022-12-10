@@ -1,0 +1,175 @@
+#god-rays {
+  .ray {
+    animation: rotate 10s linear infinite, shimmer 1s ease-in-out alternate infinite;
+    transform-origin: 50% 50%;
+  }
+
+  @for $i from 1 through 50 {
+    .ray-container:nth-child(#{$i}) {
+      animation-duration: #{4 + random() * 4}s;
+      animation-delay: #{-5 * random()}s, #{-2 * random()}s;
+
+      .ray {
+        animation-duration: #{8 + random() * 8}s, #{1 + random() * 1}s;
+        animation-delay: #{-5 * random()}s, #{-2 * random()}s;
+        @if $i % 2 == 0 {
+          animation-direction: reverse, alternate;
+        }
+      }
+    }
+  }
+
+  .ray-container {
+    animation: pulseSize 3s ease-in-out alternate infinite;
+    transform-origin: center;
+  }
+
+  .ring {
+    animation: pulse 3s ease-out infinite;
+    transform-origin: 50% 50%;
+
+    &.small {
+      animation: pulse 2s ease-out infinite;
+      animation-delay: -0.5s;
+    }
+  }
+
+  .star {
+    animation: twinkleOff 5s linear infinite;
+    transform-origin: center;
+    display: inherit;
+  }
+
+  .star-container {
+    animation: rotate 35s steps(7, jump-start) infinite;
+    transform-origin: center;
+  }
+
+  .star-part {
+    animation: grow 1.25s ease-out alternate infinite;
+    transform-origin: center;
+  }
+
+  .star-sizer {
+  }
+
+  @for $i from 1 through 10 {
+    .star-container.delay-#{$i} {
+      $delay: -3.14 * $i; // some wonky number so the star movement looks more random
+
+      & {
+        animation-delay: #{$delay}s;
+      }
+      .star {
+        animation-delay: #{$delay}s;
+      }
+      .star-part {
+        animation-delay: #{$delay}s;
+      }
+    }
+
+    .star-sizer.size-#{$i} {
+      transform: scale(#{0.5 + random() * 0.5});
+      transform-origin: center;
+    }
+  }
+
+  .delay-1 {
+    animation-delay: -1s;
+  }
+  .delay-2 {
+    animation-delay: -2s;
+  }
+  .delay-3 {
+    animation-delay: -3s;
+  }
+  .delay-4 {
+    animation-delay: -4s;
+  }
+  .delay-5 {
+    animation-delay: -5s;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes shimmer {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 15%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulseSize {
+    0% {
+      opacity: 0;
+      transform: scale(0.75);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes twinkleOff {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 30%, 0);
+    }
+  }
+
+  .pumping {
+    animation: pump 0.4s cubic-bezier(0.42, 1.65, 0.505, 1) alternate infinite;
+  }
+
+  @keyframes pump {
+    0% {
+      transform: scale(0.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
