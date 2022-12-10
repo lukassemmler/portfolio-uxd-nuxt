@@ -18,7 +18,9 @@
         <div v-show="expanded" class="thumbnail-box-content"><slot></slot></div>
       </div>
     </nuxt-link>
-    <span v-if="label" class="thumbnail-box-label">{{ label }}</span>
+    <span v-if="label" v-show="!expanded" class="thumbnail-box-label">{{
+      label
+    }}</span>
   </div>
 </template>
 
