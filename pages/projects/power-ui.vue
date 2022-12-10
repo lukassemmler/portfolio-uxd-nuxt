@@ -426,6 +426,7 @@
                   :alt="screenshot.alt"
                   sizes="xs:400px sm:640px md:960px lg:1200px"
                   ratio="16-by-9"
+                  label="GIF"
                 >
                   <!-- 
                     <nuxt-img> does not support animated GIFs for Nuxt 2.
