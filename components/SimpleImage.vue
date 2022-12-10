@@ -33,25 +33,21 @@ export default {
     },
   },
   render(h) {
-    const image = h(
-      "div",
-      { class: ["ratio-box", this.ratioClasses] },
-      [
-        h(NuxtImg, {
-          class: "simple-image-media",
-          attrs: {
-            src: this.src,
-            alt: this.alt,
-            width: this.width,
-            height: this.height,
-            sizes: this.sizes,
-            // It is preferred to specify the attributes under props, otherwise in the resulting html, the root node
-            // gets spammed with all the attributes and then the `<img>` tag itself again.
-            ...this.$attrs,
-          },
-        }),
-      ]
-    );
+    const image = h("div", { class: ["ratio-box", this.ratioClasses] }, [
+      h(NuxtImg, {
+        class: "simple-image-media",
+        attrs: {
+          src: this.src,
+          alt: this.alt,
+          width: this.width,
+          height: this.height,
+          sizes: this.sizes,
+          // It is preferred to specify the attributes under props, otherwise in the resulting html, the root node
+          // gets spammed with all the attributes and then the `<img>` tag itself again.
+          ...this.$attrs,
+        },
+      }),
+    ]);
 
     if (this.$slots.default) {
       if (this.caption)
