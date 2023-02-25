@@ -53,12 +53,10 @@ export default {
 .simple-carousel {
   width: 100%;
   margin-bottom: 2em;
-  padding-left: 1em;
-  padding-right: 1em;
 
   .simple-carousel-body {
     position: relative;
-    max-width: $max-size-bulge;
+    max-width: $max-size-wrapper;
     margin-left: auto;
     margin-right: auto;
   }
@@ -68,7 +66,7 @@ export default {
     flex-flow: row nowrap;
 
     & > * {
-      width: $max-size-wrapper;
+      flex: 0 0 $max-size-wrapper;
     }
 
     & > *:not(:last-child) {
