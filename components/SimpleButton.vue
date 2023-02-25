@@ -50,6 +50,7 @@ export default {
           "invisible",
           "invisible-bright",
           "invisible-dark",
+          "invisible-shadow",
           "round",
           "square",
           "big-icon",
@@ -172,6 +173,26 @@ export default {
 
     &:active {
       background-color: $dark-20;
+    }
+  }
+
+  &.invisible-shadow {
+    color: $gray-13;
+    box-shadow: 0 0.2em 1em $dark-10;
+    border: none;
+
+    &:hover {
+      color: $gray-13;
+      background-color: $dark-10;
+    }
+
+    &:active {
+      background-color: $dark-20;
+    }
+
+    &[aria-selected="true"] {
+      color: $white;
+      background-color: $gray-13;
     }
   }
 
