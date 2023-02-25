@@ -3,7 +3,6 @@
     <nuxt-link :to="href" class="column-card-link">
       <div class="column-card-inner">
         <div class="column-card-header">
-          <span class="column-card-number" v-if="number">{{ number }}</span>
           <div class="column-card-image-container">
             <simple-image
               class="column-card-image"
@@ -13,17 +12,22 @@
             ></simple-image>
           </div>
         </div>
-        <div class="column-card-content">
-          <div class="column-card-icon-list">
-            <div
-              class="column-card-icon"
-              v-for="(icon, index) in icons"
-              :key="index"
-            >
-              <component v-bind:is="icon"></component>
-            </div>
+        <div class="column-card-body">
+          <div class="column-card-sidebar">
+            <span class="column-card-number" v-if="number">{{ number }}</span>
           </div>
-          <div class="column-card-description">{{ description }}</div>
+          <div class="column-card-content">
+            <div class="column-card-icon-list">
+              <div
+                class="column-card-icon"
+                v-for="(icon, index) in icons"
+                :key="index"
+              >
+                <component v-bind:is="icon"></component>
+              </div>
+            </div>
+            <div class="column-card-description">{{ description }}</div>
+          </div>
         </div>
       </div>
     </nuxt-link>
@@ -73,8 +77,16 @@ export default {
     }
   }
 
-  .column-card-inner {
-    padding: 1em;
+  &.padded {
+    .column-card-inner {
+      padding: 1em;
+    }
+    .column-card-body {
+      padding: 0;
+    }
+    .column-card-image-container img {
+      border-radius: 0.2em;
+    }
   }
 
   .column-card-header,
@@ -106,10 +118,41 @@ export default {
     }
   }
 
+  .column-card-body {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 1em 1em 1em;
+  }
+
+  .column-card-sidebar {
+    flex: 0 0 4em;
+    padding-top: 0.5em;
+  }
+
+  .column-card-content {
+    flex: 1 1 0%;
+    padding-top: 0.5em;
+  }
+
   .column-card-number {
+    position: relative;
     display: inline-block;
-    font-size: 2.5em;
+    font-size: 3.5em;
     font-weight: 700;
+    line-height: 1;
+    min-width: 0.7em;
+    text-align: right;
+
+    &::after {
+      position: absolute;
+      bottom: -0.1em;
+      left: 0;
+      width: 0.7em;
+      height: 0.05em;
+      background-color: currentColor;
+      content: "";
+      opacity: 0.5;
+    }
   }
 
   .column-card-image-container {
@@ -119,6 +162,7 @@ export default {
       display: block;
       width: 100%;
       height: auto;
+      border-radius: 0.5em 0.5em 0 0;
     }
   }
 
