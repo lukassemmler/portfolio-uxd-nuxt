@@ -13,11 +13,11 @@
           </div>
         </div>
         <div class="column-card-body">
-          <div class="column-card-sidebar">
-            <span class="column-card-number" v-if="number">{{ number }}</span>
+          <div class="column-card-sidebar" v-if="number">
+            <span class="column-card-number">{{ number }}</span>
           </div>
           <div class="column-card-content">
-            <div class="column-card-icon-list">
+            <div class="column-card-icon-list" v-if="icons">
               <div
                 class="column-card-icon"
                 v-for="(icon, index) in icons"
@@ -132,6 +132,9 @@ export default {
   .column-card-content {
     flex: 1 1 0%;
     padding-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .column-card-number {

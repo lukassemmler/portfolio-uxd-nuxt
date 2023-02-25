@@ -311,7 +311,7 @@
             <div class="pillar-row">
               <div class="pillar-col">
                 <column-card
-                  class="bg-pink font-white"
+                  class="bg-pink font-white padded"
                   href="#prototype-axure"
                   number="1"
                   src="power-ui/prototype--axure-v0-6-overview.jpg"
@@ -323,7 +323,7 @@
               </div>
               <div class="pillar-col">
                 <column-card
-                  class="bg-green font-white"
+                  class="bg-green font-white padded"
                   href="#prototype-unity"
                   number="2"
                   src="power-ui/prototype--unity-wire-placement.jpg"
@@ -335,7 +335,7 @@
               </div>
               <div class="pillar-col">
                 <column-card
-                  class="bg-blue font-white"
+                  class="bg-blue font-white padded"
                   href="#prototype-phaser-and-vue-js"
                   number="3"
                   src="power-ui/prototype--phaser-v2-1-building-placement.jpg"
