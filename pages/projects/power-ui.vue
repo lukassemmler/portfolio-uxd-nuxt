@@ -63,8 +63,15 @@
             <p v-html="$t('text_power-ui_concept_theme-2').join('')"></p>
             <p v-html="$t('text_power-ui_concept_tutorial_intro').join('')"></p>
           </div>
-          <div class="container medium">
-            TODO Tabmenu
+        </div>
+        <div class="container full-bleed">
+          <simple-carousel class="width-small" :numberOfPages="3">
+            <column-card href="#" description="Testing"></column-card>
+            <column-card href="#" description="Bobo the great bear"></column-card>
+            <column-card href="#" description="Adolphus"></column-card>
+            <column-card href="#" description="Didgeridoo"></column-card>
+          </simple-carousel>
+          TODO Tabmenu
             <!--
       {{#extend "tab-menu-stepped"
           id="tutorial-box"
@@ -143,11 +150,11 @@
         {{/content}}
       {{/extend}}
       -->
-          </div>
-          <div class="container small">
-            <p>{{ $t("text_power-ui_concept_wireframes") }}</p>
-          </div>
-          <div class="container medium">
+        </div>
+        <div class="container small">
+          <p>{{ $t("text_power-ui_concept_wireframes") }}</p>
+        </div>
+        <div class="container medium">
             <div class="pillar-container gapped-v gapped-h">
               <div class="pillar-row">
                 <div
@@ -171,7 +178,6 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -558,7 +564,6 @@
           ></hover-image>
         </tadaa-box>
       </section>
-
     </template>
   </project-template>
 </template>
