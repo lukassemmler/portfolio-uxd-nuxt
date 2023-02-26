@@ -54,6 +54,28 @@ export default {
   width: 100%;
   margin-bottom: 2em;
 
+  // Default content width is effectively ".width-medium"
+  @mixin content-width($width) {
+    .simple-carousel-body {
+      max-width: $width;
+    }
+    .simple-carousel-content > * {
+      flex-basis: $width;
+    }
+  }
+
+  &.width-small {
+    @include content-width($max-size-text);
+  }
+  
+  &.width-medium {
+    @include content-width($max-size-wrapper);
+  }
+
+  &.width-big {
+    @include content-width($max-size-bulge);
+  }
+
   .simple-carousel-body {
     position: relative;
     max-width: $max-size-wrapper;
@@ -75,11 +97,9 @@ export default {
   }
 
   .simple-carousel-footer {
-    max-width: $max-size-bulge;
   }
 
   .simple-carousel-footer-content {
-    width: calc(100% - 4em); // 
     box-sizing: border-box;
     padding: 0.3em;
     display: flex;
@@ -106,16 +126,9 @@ export default {
     padding: 0;
     display: flex;
     flex-direction: row;
-
-    & > *:not(:last-child) {
-
-    }
   }
 
   @media screen and (min-width: $breakpoint-semi-big) {
-    .simple-carousel-footer-content {
-      width: calc(100% - 12em); // ratio of side card
-    }
   }
 }
 </style>
