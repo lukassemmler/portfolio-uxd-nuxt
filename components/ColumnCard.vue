@@ -3,7 +3,7 @@
     <nuxt-link :to="href" class="column-card-link">
       <div class="column-card-inner">
         <div class="column-card-header">
-          <div class="column-card-image-container">
+          <div class="column-card-image-container" v-if="src">
             <simple-image
               class="column-card-image"
               :src="src"
