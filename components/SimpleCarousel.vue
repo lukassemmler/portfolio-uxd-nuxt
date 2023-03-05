@@ -10,17 +10,7 @@
       <div class="simple-carousel-footer">
         <div class="simple-carousel-footer-content">
           <div v-if="showPagination" class="simple-carousel-pagination">
-            <ol class="simple-carousel-pagination-list">
-              <li v-for="index in numberOfPages" :key="index">
-                <simple-button
-                  class="simple-carousel-pagination-button"
-                  type="invisible-shadow"
-                  :aria-selected="displayedIndex === index"
-                  ><span class="sr-only">{{ $t("label_step") }} </span
-                  >{{ index }}</simple-button
-                >
-              </li>
-            </ol>
+            <simple-pagination></simple-pagination>
           </div>
         </div>
       </div>
@@ -118,14 +108,6 @@ export default {
     .simple-carousel-footer {
       display: block;
     }
-  }
-
-  .simple-carousel-pagination-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
   }
 
   @media screen and (min-width: $breakpoint-semi-big) {
