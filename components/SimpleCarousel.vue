@@ -1,9 +1,8 @@
-<template>
+<!-- <template>
   <div class="simple-carousel">
     <div class="simple-carousel-body">
       <div class="simple-carousel-content">
         <slot>
-          <!-- Intended to include 'column-card' components -->
           Completely empty.
         </slot>
       </div>
@@ -16,12 +15,13 @@
       </div>
     </div>
   </div>
-</template>
+</template> -->
 
 <script>
 import SimpleButton from "./SimpleButton.vue";
+import SimplePagination from "./SimplePagination.vue";
 export default {
-  components: { SimpleButton },
+  components: { SimpleButton, SimplePagination },
   props: {
     showPagination: {
       type: Boolean,
@@ -35,6 +35,35 @@ export default {
       type: Number,
       default: 1,
     },
+  },
+  render(h) {
+    const renderedSlots = [];
+    for (const slotName in this.$slots) {
+      const children = this.$slots[slotName];
+      const label = h("span", {}, slotName);
+      const renderedSlot = h("div", { class: "simple-carousel-item" }, [
+        label,
+        ...children,
+      ]);
+      renderedSlots.push(renderedSlot);
+    }
+    const footerContent = [];
+    if (this.$props.showPagination) {
+      const pagination = h(
+        "div",
+        { class: "simple-carousel-pagination" },
+        [h(SimplePagination)]
+      );
+      footerContent.push(pagination);
+    }
+    return h("div", { class: "simple-carousel" }, [
+      h("div", { class: "simple-carousel-body" }, [
+        h("div", { class: "simple-carousel-content" }, renderedSlots),
+        h("div", { class: "simple-carousel-footer" }, [
+          h("div", { class: "simple-carousel-footer-content" }, footerContent),
+        ]),
+      ]),
+    ]);
   },
 };
 </script>
@@ -57,7 +86,7 @@ export default {
   &.width-small {
     @include content-width($max-size-text);
   }
-  
+
   &.width-medium {
     @include content-width($max-size-wrapper);
   }
