@@ -66,10 +66,21 @@
         </div>
         <div class="container full-bleed">
           <simple-carousel class="width-small" :numberOfPages="3">
-            <column-card href="#" description="Testing"></column-card>
-            <column-card href="#" description="Bobo the great bear"></column-card>
-            <column-card href="#" description="Adolphus"></column-card>
-            <column-card href="#" description="Didgeridoo"></column-card>
+            <template slot="1"
+              ><column-card href="#" description="Testing"></column-card
+            ></template>
+            <template slot="2"
+              ><column-card
+                href="#"
+                description="Bobo the great bear"
+              ></column-card
+            ></template>
+            <template slot="3"
+              ><column-card href="#" description="Adolphus"></column-card
+            ></template>
+            <template slot="4"
+              ><column-card href="#" description="Didgeridoo"></column-card
+            ></template>
           </simple-carousel>
           TODO Tabmenu
             <!--
