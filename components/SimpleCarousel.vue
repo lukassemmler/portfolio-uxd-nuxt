@@ -1,22 +1,3 @@
-<!-- <template>
-  <div class="simple-carousel">
-    <div class="simple-carousel-body">
-      <div class="simple-carousel-content">
-        <slot>
-          Completely empty.
-        </slot>
-      </div>
-      <div class="simple-carousel-footer">
-        <div class="simple-carousel-footer-content">
-          <div v-if="showPagination" class="simple-carousel-pagination">
-            <simple-pagination></simple-pagination>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template> -->
-
 <script>
 import SimpleButton from "./SimpleButton.vue";
 import SimplePagination from "./SimplePagination.vue";
@@ -37,25 +18,25 @@ export default {
     },
   },
   render(h) {
+    // Prepare slots
     const renderedSlots = [];
     for (const slotName in this.$slots) {
       const children = this.$slots[slotName];
-      const label = h("span", {}, slotName);
+      //const label = h("span", {}, slotName);
       const renderedSlot = h("div", { class: "simple-carousel-item" }, [
-        label,
         ...children,
       ]);
       renderedSlots.push(renderedSlot);
     }
+    // Prepare footer
     const footerContent = [];
     if (this.$props.showPagination) {
-      const pagination = h(
-        "div",
-        { class: "simple-carousel-pagination" },
-        [h(SimplePagination)]
-      );
+      const pagination = h("div", { class: "simple-carousel-pagination" }, [
+        h(SimplePagination),
+      ]);
       footerContent.push(pagination);
     }
+    // Return structure
     return h("div", { class: "simple-carousel" }, [
       h("div", { class: "simple-carousel-body" }, [
         h("div", { class: "simple-carousel-content" }, renderedSlots),
