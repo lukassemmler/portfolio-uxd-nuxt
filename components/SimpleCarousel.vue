@@ -8,14 +8,45 @@ export default {
       type: Boolean,
       default: true,
     },
-    numberOfPages: {
-      type: Number,
-      default: 1,
+    labels: {
+      type: Array,
+      default: function () {
+        return [
+          { id: "1", label: "1" },
+          { id: "2", label: "2" },
+          { id: "3", label: "3" },
+        ];
+      },
     },
-    displayedIndex: {
-      type: Number,
-      default: 1,
+    firstShownPage: {
+      type: String,
+      default: "1",
     },
+  },
+  data: function () {
+    return {
+      selectedPage: null,
+    };
+  },
+  mounted() {
+    const { firstShownPage, labels } = this.$props;
+    // Check slots and labels
+    const slotKeys = Object.keys(this.$slots).sort();
+    const labelIds = labels.map((label) => label.id).sort();
+    if (JSON.stringify(slotKeys) !== JSON.stringify(labelIds))
+      console.warn(
+        `There is a mismatch in carousel between slot ids and label ids ` +
+          `(Slots: '${slotKeys}' / Labels: '${labelIds}'). `
+      );
+    // Determine selected page
+    if (firstShownPage && labelIds.includes(firstShownPage)) {
+      this.selectedPage = firstShownPage;
+    } else if (firstShownPage) {
+      console.warn(`There is no first shown page id '${firstShownPage}'. `);
+      this.selectedPage = labels[0].id;
+    } else {
+      this.selectedPage = labels[0].id;
+    }
   },
   render(h) {
     // Prepare slots
@@ -23,9 +54,19 @@ export default {
     for (const slotName in this.$slots) {
       const children = this.$slots[slotName];
       //const label = h("span", {}, slotName);
-      const renderedSlot = h("div", { class: "simple-carousel-item" }, [
-        ...children,
-      ]);
+      const renderedSlot = h(
+        "div",
+        {
+          class: "simple-carousel-item",
+          on: {
+            click: function (event) {
+              //if (this.)
+              console.log(`Clicked on carousel item '${slotName}'`);
+            },
+          },
+        },
+        [...children]
+      );
       renderedSlots.push(renderedSlot);
     }
     // Prepare footer
