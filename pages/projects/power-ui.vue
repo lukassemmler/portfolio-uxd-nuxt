@@ -83,7 +83,7 @@
             ></template>
           </simple-carousel>
           TODO Tabmenu
-            <!--
+          <!--
       {{#extend "tab-menu-stepped"
           id="tutorial-box"
           numberOfPages=7 }}
@@ -166,29 +166,25 @@
           <p>{{ $t("text_power-ui_concept_wireframes") }}</p>
         </div>
         <div class="container medium">
-            <div class="pillar-container gapped-v gapped-h">
-              <div class="pillar-row">
-                <div
-                  class="pillar-col-bg-6"
-                  v-for="index in 2"
-                  :key="'column-' + index"
-                >
-                  <simple-image
-                    v-for="wireframe in columnizeArray(
-                      wireframes,
-                      2,
-                      index - 1
-                    )"
-                    :key="'2-' + wireframe.id"
-                    class="standalone rounded fit-image shadow-medium-faint"
-                    :src="wireframe.src"
-                    :alt="wireframe.alt"
-                    sizes="xs:400px sm:640px md:960px lg:1200px"
-                    ratio="8-by-5"
-                  ></simple-image>
-                </div>
+          <div class="pillar-container gapped-v gapped-h">
+            <div class="pillar-row">
+              <div
+                class="pillar-col-bg-6"
+                v-for="index in 2"
+                :key="'column-' + index"
+              >
+                <simple-image
+                  v-for="wireframe in columnizeArray(wireframes, 2, index - 1)"
+                  :key="'2-' + wireframe.id"
+                  class="standalone rounded fit-image shadow-medium-faint"
+                  :src="wireframe.src"
+                  :alt="wireframe.alt"
+                  sizes="xs:400px sm:640px md:960px lg:1200px"
+                  ratio="8-by-5"
+                ></simple-image>
               </div>
             </div>
+          </div>
         </div>
       </section>
 
@@ -659,8 +655,10 @@ import ProductUnity from "~/assets/icons/product-unity.svg?inline";
 import ProductVueJs from "~/assets/icons/product-vue-js.svg?inline";
 
 import { columnizeArray } from "~/assets/lib/array-util";
+import SimplePagination from "~/components/SimplePagination.vue";
 
 export default {
+  components: { SimplePagination },
   data: function () {
     return {
       crudeIcons: [
