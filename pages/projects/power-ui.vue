@@ -83,84 +83,87 @@
             ></template>
           </simple-carousel>
           TODO Tabmenu
-          <!--
-      {{#extend "tab-menu-stepped"
-          id="tutorial-box"
-          numberOfPages=7 }}
-        {{#content "cards"}}
-          {{> side-card 
-              id="tutorial-step-1" 
-              number="1" 
-              isFlipped=false 
-              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%201.jpg" 
-              imgAlt="" 
-              imgRatio="3-by-2" 
-              imgHasPlaceholder=true 
-              imgLoadLazy=true 
-              description=(str "text_power-ui_concept_tutorial_step-1") }}
-          {{> side-card 
-              id="tutorial-step-2" 
-              number="2" 
-              isFlipped=true 
-              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%202.jpg" 
-              imgAlt="" 
-              imgRatio="3-by-2" 
-              imgHasPlaceholder=true 
-              imgLoadLazy=true 
-              description=(str "text_power-ui_concept_tutorial_step-2") }}
-          {{> side-card 
-              id="tutorial-step-3" 
-              number="3" 
-              isFlipped=false 
-              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%203.jpg" 
-              imgAlt="" 
-              imgRatio="3-by-2" 
-              imgHasPlaceholder=true 
-              imgLoadLazy=true 
-              description=(str "text_power-ui_concept_tutorial_step-3") }}
-          {{> side-card 
-              id="tutorial-step-4" 
-              number="4" 
-              isFlipped=true 
-              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%204.jpg" 
-              imgAlt="" 
-              imgRatio="3-by-2" 
-              imgHasPlaceholder=true 
-              imgLoadLazy=true 
-              description=(str "text_power-ui_concept_tutorial_step-4") }}
-          {{> side-card 
-              id="tutorial-step-5" 
-              number="5" 
-              isFlipped=false 
-              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%205.jpg" 
-              imgAlt="" 
-              imgRatio="3-by-2" 
-              imgHasPlaceholder=true 
-              imgLoadLazy=true 
-              description=(str "text_power-ui_concept_tutorial_step-5") }}
-          {{> side-card 
-              id="tutorial-step-6" 
-              number="6" 
-              isFlipped=true 
-              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%206.jpg" 
-              imgAlt="" 
-              imgRatio="3-by-2" 
-              imgHasPlaceholder=true 
-              imgLoadLazy=true 
-              description=(str "text_power-ui_concept_tutorial_step-6") }}
-          {{> side-card 
-              id="tutorial-step-7" 
-              number="7" 
-              isFlipped=false 
-              imgSrc="project/power-ui/Power%20UI%20-%20Tutorial%207.jpg" 
-              imgAlt="" 
-              imgRatio="3-by-2" 
-              imgHasPlaceholder=true 
-              imgLoadLazy=true 
-              description=(str "text_power-ui_concept_tutorial_step-7") }}
-        {{/content}}
-      {{/extend}}
-      -->
+
+          <simple-carousel :numberOfPages="3">
+            <template slot="1">
+              <column-card
+                class="bg-pink font-white padded"
+                href="#"
+                number="1"
+                src="power-ui/Power UI - Tutorial 1.jpg"
+                alt=""
+                ratio="3-by-2"
+                :description="$t('text_power-ui_concept_tutorial_step-1').join('')"
+              ></column-card>
+            </template>
+            <template slot="2">
+              <column-card
+                class="bg-pink font-white padded"
+                href="#"
+                number="2"
+                src="power-ui/Power UI - Tutorial 2.jpg"
+                alt=""
+                ratio="3-by-2"
+                :description="$t('text_power-ui_concept_tutorial_step-2').join('')"
+              ></column-card>
+            </template>
+            <template slot="3">
+              <column-card
+                class="bg-pink font-white padded"
+                href="#"
+                number="3"
+                src="power-ui/Power UI - Tutorial 3.jpg"
+                alt=""
+                ratio="3-by-2"
+                :description="$t('text_power-ui_concept_tutorial_step-3').join('')"
+              ></column-card>
+            </template>
+            <template slot="4">
+              <column-card
+                class="bg-pink font-white padded"
+                href="#"
+                number="4"
+                src="power-ui/Power UI - Tutorial 4.jpg"
+                alt=""
+                ratio="3-by-2"
+                :description="$t('text_power-ui_concept_tutorial_step-4').join('')"
+              ></column-card>
+            </template>
+            <template slot="5">
+              <column-card
+                class="bg-pink font-white padded"
+                href="#"
+                number="5"
+                src="power-ui/Power UI - Tutorial 5.jpg"
+                alt=""
+                ratio="3-by-2"
+                :description="$t('text_power-ui_concept_tutorial_step-5').join('')"
+              ></column-card>
+            </template>
+            <template slot="6">
+              <column-card
+                class="bg-pink font-white padded"
+                href="#"
+                number="6"
+                src="power-ui/Power UI - Tutorial 6.jpg"
+                alt=""
+                ratio="3-by-2"
+                :description="$t('text_power-ui_concept_tutorial_step-6').join('')"
+              ></column-card>
+            </template>
+            <template slot="7">
+              <column-card
+                class="bg-pink font-white padded"
+                href="#"
+                number="7"
+                src="power-ui/Power UI - Tutorial 7.jpg"
+                alt=""
+                ratio="3-by-2"
+                :description="$t('text_power-ui_concept_tutorial_step-7').join('')"
+              ></column-card>
+            </template>
+          </simple-carousel>
+
         </div>
         <div class="container small">
           <p>{{ $t("text_power-ui_concept_wireframes") }}</p>
