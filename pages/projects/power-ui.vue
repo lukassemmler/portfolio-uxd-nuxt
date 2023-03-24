@@ -65,7 +65,7 @@
           </div>
         </div>
         <div class="container full-bleed">
-          <simple-carousel class="width-small" :numberOfPages="3">
+          <simple-carousel :numberOfPages="3">
             <template slot="1"
               ><column-card href="#" description="Testing"></column-card
             ></template>
