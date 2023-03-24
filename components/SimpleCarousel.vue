@@ -14,8 +14,8 @@ export default {
         {
           class: "simple-carousel-item",
           on: {
-            click: function(event) {
-               this.onItemClick(event, slotName);
+            click: function (event) {
+              this.onItemClick(event, slotName);
             }.bind(this),
           },
           ref: "item",
@@ -34,14 +34,31 @@ export default {
       footerContent.push(pagination);
     }
     // Return structure
-    return h("div", { class: ["simple-carousel", `width-${this.$props.width}`] }, [
-      h("div", { class: "simple-carousel-body" }, [
-        h("div", { class: ["simple-carousel-content", { spaced: this.$props.spaced }] }, renderedSlots),
-        h("div", { class: "simple-carousel-footer" }, [
-          h("div", { class: "simple-carousel-footer-content" }, footerContent),
+    return h(
+      "div",
+      { class: ["simple-carousel", `width-${this.$props.width}`] },
+      [
+        h("div", { class: "simple-carousel-body" }, [
+          h(
+            "div",
+            {
+              class: [
+                "simple-carousel-content",
+                { spaced: this.$props.spaced },
+              ],
+            },
+            renderedSlots
+          ),
+          h("div", { class: "simple-carousel-footer" }, [
+            h(
+              "div",
+              { class: "simple-carousel-footer-content" },
+              footerContent
+            ),
+          ]),
         ]),
-      ]),
-    ]);
+      ]
+    );
   },
   props: {
     showPagination: {
@@ -70,7 +87,7 @@ export default {
     spaced: {
       type: Boolean,
       default: true,
-    }
+    },
   },
   data: function () {
     return {
@@ -82,22 +99,25 @@ export default {
       return Object.keys(this.$slots).length;
     },
     itemWidth: function () {
-        switch(this.$props.width) {
-          case "small": return 33;
-          case "medium": return 60;
-          case "large": return 72;
-        }
-          throw new Error(`Unknown width width '${this.$props.width}'`);
+      switch (this.$props.width) {
+        case "small":
+          return 33;
+        case "medium":
+          return 60;
+        case "large":
+          return 72;
+      }
+      throw new Error(`Unknown width width '${this.$props.width}'`);
     },
-    gapWidth: function() {
+    gapWidth: function () {
       return this.$props.spaced ? 1 : 0;
     },
   },
   methods: {
     onItemClick: function (event, slotName) {
-              //if (this.)
-              console.log(`Clicked on carousel item '${slotName}'`);
-              this.showItem(slotName);
+      //if (this.)
+      console.log(`Clicked on carousel item '${slotName}'`);
+      this.showItem(slotName);
     },
     showItem: function (key) {
       const index = Object.keys(this.$slots).indexOf(key);
@@ -182,7 +202,7 @@ export default {
       margin-right: 1rem;
     }
   }
-  
+
   .simple-carousel-item {
     transition: margin-left 0.15s;
   }
