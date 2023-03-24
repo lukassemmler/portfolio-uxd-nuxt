@@ -3,6 +3,46 @@ import SimpleButton from "./SimpleButton.vue";
 import SimplePagination from "./SimplePagination.vue";
 export default {
   components: { SimpleButton, SimplePagination },
+  render(h) {
+    // Prepare slots
+    const renderedSlots = [];
+    for (const slotName in this.$slots) {
+      const children = this.$slots[slotName];
+      //const label = h("span", {}, slotName);
+      const renderedSlot = h(
+        "div",
+        {
+          class: "simple-carousel-item",
+          on: {
+            click: function(event) {
+               this.onItemClick(event, slotName);
+            }.bind(this),
+          },
+          ref: "item",
+          refInFor: true,
+        },
+        [...children]
+      );
+      renderedSlots.push(renderedSlot);
+    }
+    // Prepare footer
+    const footerContent = [];
+    if (this.$props.showPagination) {
+      const pagination = h("div", { class: "simple-carousel-pagination" }, [
+        h(SimplePagination),
+      ]);
+      footerContent.push(pagination);
+    }
+    // Return structure
+    return h("div", { class: ["simple-carousel", `width-${this.$props.width}`] }, [
+      h("div", { class: "simple-carousel-body" }, [
+        h("div", { class: ["simple-carousel-content", { spaced: this.$props.spaced }] }, renderedSlots),
+        h("div", { class: "simple-carousel-footer" }, [
+          h("div", { class: "simple-carousel-footer-content" }, footerContent),
+        ]),
+      ]),
+    ]);
+  },
   props: {
     showPagination: {
       type: Boolean,
@@ -22,11 +62,55 @@ export default {
       type: String,
       default: "1",
     },
+    width: {
+      type: String,
+      default: "small",
+      validator: (value) => ["small", "medium", "large"].includes(value),
+    },
+    spaced: {
+      type: Boolean,
+      default: true,
+    }
   },
   data: function () {
     return {
       selectedPage: null,
     };
+  },
+  computed: {
+    size: function () {
+      return Object.keys(this.$slots).length;
+    },
+    itemWidth: function () {
+        switch(this.$props.width) {
+          case "small": return 33;
+          case "medium": return 60;
+          case "large": return 72;
+        }
+          throw new Error(`Unknown width width '${this.$props.width}'`);
+    },
+    gapWidth: function() {
+      return this.$props.spaced ? 1 : 0;
+    },
+  },
+  methods: {
+    onItemClick: function (event, slotName) {
+              //if (this.)
+              console.log(`Clicked on carousel item '${slotName}'`);
+              this.showItem(slotName);
+    },
+    showItem: function (key) {
+      const index = Object.keys(this.$slots).indexOf(key);
+      const firstItem = this.$refs.item[0];
+      const spacing = this.getOffset(index);
+      firstItem.style.marginLeft = spacing;
+    },
+    getOffset: function (index) {
+      // Each carousel item has its gap spacing attached to the right side EXCEPT the last item
+      const maxGaps = Math.max(0, this.size - 1);
+      const gapCount = Math.min(index, maxGaps);
+      return -1 * (index * this.itemWidth + gapCount * this.gapWidth) + "rem";
+    },
   },
   mounted() {
     const { firstShownPage, labels } = this.$props;
@@ -48,45 +132,6 @@ export default {
       this.selectedPage = labels[0].id;
     }
   },
-  render(h) {
-    // Prepare slots
-    const renderedSlots = [];
-    for (const slotName in this.$slots) {
-      const children = this.$slots[slotName];
-      //const label = h("span", {}, slotName);
-      const renderedSlot = h(
-        "div",
-        {
-          class: "simple-carousel-item",
-          on: {
-            click: function (event) {
-              //if (this.)
-              console.log(`Clicked on carousel item '${slotName}'`);
-            },
-          },
-        },
-        [...children]
-      );
-      renderedSlots.push(renderedSlot);
-    }
-    // Prepare footer
-    const footerContent = [];
-    if (this.$props.showPagination) {
-      const pagination = h("div", { class: "simple-carousel-pagination" }, [
-        h(SimplePagination),
-      ]);
-      footerContent.push(pagination);
-    }
-    // Return structure
-    return h("div", { class: "simple-carousel" }, [
-      h("div", { class: "simple-carousel-body" }, [
-        h("div", { class: "simple-carousel-content" }, renderedSlots),
-        h("div", { class: "simple-carousel-footer" }, [
-          h("div", { class: "simple-carousel-footer-content" }, footerContent),
-        ]),
-      ]),
-    ]);
-  },
 };
 </script>
 
@@ -105,8 +150,9 @@ export default {
     }
   }
 
+  // based on $max-size-text
   &.width-small {
-    @include content-width($max-size-text);
+    @include content-width(33rem);
   }
 
   &.width-medium {
@@ -132,9 +178,13 @@ export default {
       flex: 0 0 $max-size-wrapper;
     }
 
-    & > *:not(:last-child) {
-      margin-right: 1em;
+    &.spaced > *:not(:last-child) {
+      margin-right: 1rem;
     }
+  }
+  
+  .simple-carousel-item {
+    transition: margin-left 0.15s;
   }
 
   .simple-carousel-footer {
