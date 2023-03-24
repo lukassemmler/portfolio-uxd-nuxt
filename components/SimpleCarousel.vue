@@ -29,7 +29,17 @@ export default {
     const footerContent = [];
     if (this.$props.showPagination) {
       const pagination = h("div", { class: "simple-carousel-pagination" }, [
-        h(SimplePagination),
+        h(SimplePagination, {
+          props: {
+            labels: Object.keys(this.$slots),
+            selectedLabel: this.selectedPage,
+          },
+          on: {
+            click: function (event, label) {
+              this.onItemClick(event, label);
+            }.bind(this),
+          }
+        }),
       ]);
       footerContent.push(pagination);
     }
@@ -115,12 +125,12 @@ export default {
   },
   methods: {
     onItemClick: function (event, slotName) {
-      //if (this.)
-      console.log(`Clicked on carousel item '${slotName}'`);
+      //console.log(`Clicked on carousel item '${slotName}'`);
+      this.selectedPage = slotName;
       this.showItem(slotName);
     },
     showItem: function (key) {
-      const index = Object.keys(this.$slots).indexOf(key);
+      const index = this.getSlotIndex(key);
       const firstItem = this.$refs.item[0];
       const spacing = this.getOffset(index);
       firstItem.style.marginLeft = spacing;
@@ -130,6 +140,9 @@ export default {
       const maxGaps = Math.max(0, this.size - 1);
       const gapCount = Math.min(index, maxGaps);
       return -1 * (index * this.itemWidth + gapCount * this.gapWidth) + "rem";
+    },
+    getSlotIndex: function (slotName) {
+      return Object.keys(this.$slots).indexOf(slotName);
     },
   },
   mounted() {
