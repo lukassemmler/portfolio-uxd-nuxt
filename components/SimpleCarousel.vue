@@ -1,11 +1,12 @@
 <script>
-/* Known Issue: 
+/* Known Issue:
  * - When focusing control inside .simple-carousel-item, then it can look to the side of the viewport.
  *   We could fix this by making 'overflow-x: hidden', but then 'overflow-y' also gets implicity set to 'hidden'.
  *   Then we have a problem if some controls are bigger than the carousel item container.
  *   So for now, make sure to not include clickable items in a carousel card.
+ * - Focus does not change on pagination when pressing left and right arrow.
  */
-
+import { debounce } from "~/assets/lib/time-util";
 import SimpleButton from "./SimpleButton.vue";
 import SimplePagination from "./SimplePagination.vue";
 export default {
@@ -74,10 +75,16 @@ export default {
                 { spaced: this.$props.spaced },
               ],
             },
-            [h("div", { 
-              class: "simple-carousel-scroll",
-              ref: "scroll",
-              }, renderedSlots)]
+            [
+              h(
+                "div",
+                {
+                  class: "simple-carousel-scroll",
+                  ref: "scroll",
+                },
+                renderedSlots
+              ),
+            ]
           ),
           h("div", { class: "simple-carousel-footer" }, [
             h(
@@ -168,10 +175,17 @@ export default {
       scrollContainer.style.left = spacing;
     },
     getOffset: function (index) {
+      /*
       // Each carousel item has its gap spacing attached to the right side EXCEPT the last item
       const maxGaps = Math.max(0, this.size - 1);
       const gapCount = Math.min(index, maxGaps);
       return -1 * (index * this.itemWidth + gapCount * this.gapWidth) + "rem";
+      */
+      const scroll = this.$refs.scroll;
+      const { left: scrollLeft } = scroll.getBoundingClientRect();
+      const item = this.$refs.item[index];
+      const { left: itemLeft } = item.getBoundingClientRect();
+      return scrollLeft - itemLeft + "px";
     },
     getSlotIndex: function (slotName) {
       return Object.keys(this.$slots).indexOf(slotName);
@@ -190,8 +204,20 @@ export default {
     },
   },
   mounted() {
-    const { firstShownPage, labels } = this.$props;
+    // Setup resizing updates
+    const update = debounce(
+      function (event) {
+        // Updates the scroll on resize, but only if there have been at least 300ms since the last resize event.
+        // This is process is called 'bouncing', and it's important so we don't overload the browser.
+        this.showItem(this.selectedPage);
+        //console.log("updated scroll");
+      }.bind(this),
+      300
+    );
+    window.addEventListener("resize", update);
+
     // Check slots and labels
+    const { firstShownPage, labels } = this.$props;
     const slotKeys = Object.keys(this.$slots).sort();
     const labelIds = labels.map((label) => label.id).sort();
     if (JSON.stringify(slotKeys) !== JSON.stringify(labelIds))
@@ -199,6 +225,7 @@ export default {
         `There is a mismatch in carousel between slot ids and label ids ` +
           `(Slots: '${slotKeys}' / Labels: '${labelIds}'). `
       );
+
     // Determine selected page
     if (firstShownPage && labelIds.includes(firstShownPage)) {
       this.selectedPage = firstShownPage;
@@ -208,6 +235,13 @@ export default {
     } else {
       this.selectedPage = labels[0].id;
     }
+  },
+  unmounted() {
+    // To be maximum clean, we would also need to remove the resize event listener.
+    // But this is not so easy, because our event handler 'update' has to be created via function call.
+    // So we can't use it as 'method', since methods get defined and don't keep state.
+    // And using the debounced function as 'data' is also weird, because it's not really data.
+    //window.removeEventListener("resize", this.onResize);
   },
 };
 </script>
@@ -269,6 +303,7 @@ export default {
   }
 
   .simple-carousel-item {
+    max-width: 100%;
   }
 
   .simple-carousel-footer {
