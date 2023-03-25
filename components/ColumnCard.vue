@@ -1,6 +1,10 @@
 <template>
   <div class="column-card">
-    <nuxt-link :to="href" class="column-card-link">
+    <simple-link
+      :target="href"
+      :inactive="noLink"
+      class="column-card-link"
+    >
       <div class="column-card-inner">
         <div class="column-card-header">
           <div class="column-card-image-container" v-if="src">
@@ -30,7 +34,7 @@
           </div>
         </div>
       </div>
-    </nuxt-link>
+    </simple-link>
   </div>
 </template>
 
@@ -44,6 +48,7 @@ export default {
     alt: String,
     ratio: String,
     icons: Array, // Array of icon components
+    noLink: Boolean,
   },
   computed: {
     target: function () {
