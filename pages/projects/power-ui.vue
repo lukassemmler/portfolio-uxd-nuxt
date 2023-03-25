@@ -38,34 +38,70 @@
     <template v-slot:content>
       <section id="section-overview" class="section">
         <div class="container huge">
-          <div class="container small left no-padding">
-            <h2 id="overview" class="sr-only">{{ $t("heading_overview") }}</h2>
-            <p>{{ $t("text_power-ui_intro-1").join("") }}</p>
-            <aside class="quotation">
-              <q>{{ $t("text_power-ui_intro-quote") }}</q>
-            </aside>
-            <markdown-block
-              :markup="$t('text_power-ui_intro-2').join('')"
-            ></markdown-block>
-          </div>
+          <div class="container small left no-padding"></div>
         </div>
       </section>
 
       <section id="section-concept" class="section">
         <div class="container huge">
-          <div class="container small left no-padding">
-            <h2 id="concept">{{ $t("heading_power-ui_concept") }}</h2>
-            <p
-              v-html="$t('text_power-ui_concept_video-game-genre').join('')"
-            ></p>
-            <p v-html="$t('text_power-ui_concept_mobile-first').join('')"></p>
-            <p v-html="$t('text_power-ui_concept_theme-1').join('')"></p>
-            <p v-html="$t('text_power-ui_concept_theme-2').join('')"></p>
-            <p v-html="$t('text_power-ui_concept_tutorial_intro').join('')"></p>
+          <div class="pillar-container gapped-h">
+            <div class="pillar-row">
+              <div class="pillar-col-bg-8">
+                <div class="pillar-container gapped-v gapped-h">
+                  <div class="pillar-row">
+                    <div
+                      class="pillar-col-bg-6"
+                      v-for="index in 2"
+                      :key="'column-' + index"
+                    >
+                      <simple-image
+                        v-for="wireframe in columnizeArray(
+                          wireframes,
+                          2,
+                          index - 1
+                        )"
+                        :key="'2-' + wireframe.id"
+                        class="standalone rounded fit-image shadow-medium-faint"
+                        :src="wireframe.src"
+                        :alt="wireframe.alt"
+                        sizes="xs:400px sm:640px md:960px lg:1200px"
+                        ratio="8-by-5"
+                      ></simple-image>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pillar-col-bg-4">
+                <h2 id="overview" class="sr-only">
+                  {{ $t("heading_overview") }}
+                </h2>
+                <p>{{ $t("text_power-ui_intro-1").join("") }}</p>
+                <aside class="quotation">
+                  <q>{{ $t("text_power-ui_intro-quote") }}</q>
+                </aside>
+                <markdown-block
+                  :markup="$t('text_power-ui_intro-2').join('')"
+                ></markdown-block>
+                <h2 id="concept">{{ $t("heading_power-ui_concept") }}</h2>
+                <p
+                  v-html="$t('text_power-ui_concept_video-game-genre').join('')"
+                ></p>
+                <p
+                  v-html="$t('text_power-ui_concept_mobile-first').join('')"
+                ></p>
+                <p v-html="$t('text_power-ui_concept_theme-1').join('')"></p>
+                <p v-html="$t('text_power-ui_concept_theme-2').join('')"></p>
+                <p
+                  v-html="$t('text_power-ui_concept_tutorial_intro').join('')"
+                ></p>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="container full-bleed">
-          <simple-carousel :numberOfPages="3">
+          <simple-carousel :numberOfPages="3" width="small">
             <template slot="1">
               <column-card
                 class="bg-pink font-white padded"
@@ -74,7 +110,9 @@
                 src="power-ui/Power UI - Tutorial 1.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="$t('text_power-ui_concept_tutorial_step-1').join('')"
+                :description="
+                  $t('text_power-ui_concept_tutorial_step-1').join('')
+                "
                 :noLink="true"
               ></column-card>
             </template>
@@ -86,7 +124,9 @@
                 src="power-ui/Power UI - Tutorial 2.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="$t('text_power-ui_concept_tutorial_step-2').join('')"
+                :description="
+                  $t('text_power-ui_concept_tutorial_step-2').join('')
+                "
                 :noLink="true"
               ></column-card>
             </template>
@@ -98,7 +138,9 @@
                 src="power-ui/Power UI - Tutorial 3.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="$t('text_power-ui_concept_tutorial_step-3').join('')"
+                :description="
+                  $t('text_power-ui_concept_tutorial_step-3').join('')
+                "
                 :noLink="true"
               ></column-card>
             </template>
@@ -110,7 +152,9 @@
                 src="power-ui/Power UI - Tutorial 4.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="$t('text_power-ui_concept_tutorial_step-4').join('')"
+                :description="
+                  $t('text_power-ui_concept_tutorial_step-4').join('')
+                "
                 :noLink="true"
               ></column-card>
             </template>
@@ -122,7 +166,9 @@
                 src="power-ui/Power UI - Tutorial 5.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="$t('text_power-ui_concept_tutorial_step-5').join('')"
+                :description="
+                  $t('text_power-ui_concept_tutorial_step-5').join('')
+                "
                 :noLink="true"
               ></column-card>
             </template>
@@ -134,7 +180,9 @@
                 src="power-ui/Power UI - Tutorial 6.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="$t('text_power-ui_concept_tutorial_step-6').join('')"
+                :description="
+                  $t('text_power-ui_concept_tutorial_step-6').join('')
+                "
                 :noLink="true"
               ></column-card>
             </template>
@@ -146,97 +194,105 @@
                 src="power-ui/Power UI - Tutorial 7.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="$t('text_power-ui_concept_tutorial_step-7').join('')"
+                :description="
+                  $t('text_power-ui_concept_tutorial_step-7').join('')
+                "
                 :noLink="true"
               ></column-card>
             </template>
           </simple-carousel>
-
         </div>
         <div class="container small">
           <p>{{ $t("text_power-ui_concept_wireframes") }}</p>
         </div>
-        <div class="container medium">
-          <div class="pillar-container gapped-v gapped-h">
+        <div class="container medium"></div>
+      </section>
+
+      <section id="section-design" class="section">
+        <div class="container huge">
+          <div class="pillar-container gapped-h">
             <div class="pillar-row">
-              <div
-                class="pillar-col-bg-6"
-                v-for="index in 2"
-                :key="'column-' + index"
-              >
-                <simple-image
-                  v-for="wireframe in columnizeArray(wireframes, 2, index - 1)"
-                  :key="'2-' + wireframe.id"
-                  class="standalone rounded fit-image shadow-medium-faint"
-                  :src="wireframe.src"
-                  :alt="wireframe.alt"
-                  sizes="xs:400px sm:640px md:960px lg:1200px"
-                  ratio="8-by-5"
-                ></simple-image>
+              <div class="pillar-col-bg-4">
+                <h2 id="design">{{ $t("heading_power-ui_design") }}</h2>
+                <p>{{ $t("text_power-ui_design_intro").join("") }}</p>
+                <h3 id="icon-design">
+                  {{ $t("heading_power-ui_icon-design") }}
+                </h3>
+                <p>
+                  {{ $t("text_power-ui_design_icon-design_intro").join("") }}
+                </p>
+                <p>
+                  {{
+                    $t("text_power-ui_design_icon-design_version-1").join("")
+                  }}
+                </p>
+                <p>
+                  {{
+                    $t("text_power-ui_design_icon-design_version-2").join("")
+                  }}
+                </p>
+              </div>
+              <div class="pillar-col-bg-8">
+                <div class="icon-item-list">
+                  <icon-item
+                    v-for="(crudeIcon, index) in crudeIcons"
+                    :key="index"
+                    :label="crudeIcon.label"
+                    ><component v-bind:is="crudeIcon.icon"></component
+                  ></icon-item>
+                </div>
+                <div class="pillar-col-bg-6 icon-item-list">
+                  <icon-item
+                    v-for="(cleanIcon, index) in cleanIcons"
+                    :key="index"
+                    :label="cleanIcon.label"
+                    ><component v-bind:is="cleanIcon.icon"></component
+                  ></icon-item>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+        <div class="container huge">
+          <div class="pillar-container gapped-h">
+            <div class="pillar-row">
+              <div class="pillar-col-bg-8">
+                <simple-image
+                  class="standalone rounded fit-image shadow-medium-faint"
+                  src="power-ui/screendesign--smart-tv-v-1.jpg"
+                  :alt="$t('alt_power-ui_screendesign_smart-tv_overview')"
+                  sizes="xs:400px sm:640px md:960px lg:1200px"
+                  ratio="16-by-9"
+                ></simple-image>
+              </div>
 
-      <section id="section-design" class="section">
-        <div class="container small">
-          <h2 id="design">{{ $t("heading_power-ui_design") }}</h2>
-          <p>{{ $t("text_power-ui_design_intro").join("") }}</p>
-        </div>
-        <div class="container small">
-          <h3 id="icon-design">{{ $t("heading_power-ui_icon-design") }}</h3>
-          <p>{{ $t("text_power-ui_design_icon-design_intro").join("") }}</p>
-          <p>{{ $t("text_power-ui_design_icon-design_version-1").join("") }}</p>
-        </div>
-        <div class="container medium">
-          <div class="icon-item-list">
-            <icon-item
-              v-for="(crudeIcon, index) in crudeIcons"
-              :key="index"
-              :label="crudeIcon.label"
-              ><component v-bind:is="crudeIcon.icon"></component
-            ></icon-item>
+              <div class="pillar-col-bg-4">
+                <h3 id="screen-design">
+                  {{ $t("heading_power-ui_screen-design") }}
+                </h3>
+                <p>
+                  {{ $t("text_power-ui_design_screen-design_intro").join("") }}
+                </p>
+                <p>
+                  {{
+                    $t("text_power-ui_design_screen-design_contrasts").join("")
+                  }}
+                </p>
+                <simple-image
+                  class="standalone rounded fit-image shadow-medium-faint"
+                  src="power-ui/screendesign--smart-tv-contrasts.jpg"
+                  :alt="$t('alt_power-ui_screendesign_smart-tv_contrasts')"
+                  sizes="xs:400px sm:640px md:960px lg:1200px"
+                  ratio="16-by-9"
+                ></simple-image>
+                <p>
+                  {{
+                    $t("text_power-ui_design_screen-design_smart-tv").join("")
+                  }}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="container small">
-          <p>{{ $t("text_power-ui_design_icon-design_version-2").join("") }}</p>
-        </div>
-        <div class="container medium">
-          <div class="pillar-col-bg-6 icon-item-list">
-            <icon-item
-              v-for="(cleanIcon, index) in cleanIcons"
-              :key="index"
-              :label="cleanIcon.label"
-              ><component v-bind:is="cleanIcon.icon"></component
-            ></icon-item>
-          </div>
-        </div>
-        <div class="container small">
-          <h3 id="screen-design">{{ $t("heading_power-ui_screen-design") }}</h3>
-          <p>{{ $t("text_power-ui_design_screen-design_intro").join("") }}</p>
-          <p>
-            {{ $t("text_power-ui_design_screen-design_contrasts").join("") }}
-          </p>
-          <simple-image
-            class="standalone rounded fit-image shadow-medium-faint"
-            src="power-ui/screendesign--smart-tv-contrasts.jpg"
-            :alt="$t('alt_power-ui_screendesign_smart-tv_contrasts')"
-            sizes="xs:400px sm:640px md:960px lg:1200px"
-            ratio="16-by-9"
-          ></simple-image>
-          <p>
-            {{ $t("text_power-ui_design_screen-design_smart-tv").join("") }}
-          </p>
-        </div>
-        <div class="container medium">
-          <simple-image
-            class="standalone rounded fit-image shadow-medium-faint"
-            src="power-ui/screendesign--smart-tv-v-1.jpg"
-            :alt="$t('alt_power-ui_screendesign_smart-tv_overview')"
-            sizes="xs:400px sm:640px md:960px lg:1200px"
-            ratio="16-by-9"
-          ></simple-image>
         </div>
         <div class="container small">
           <h3 id="terrain">{{ $t("heading_power-ui_terrain") }}</h3>
@@ -246,50 +302,72 @@
         <div class="container medium">
           <!-- {{> iso-tiles-demo }} -->
         </div>
-        <div class="container small">
-          <h3 id="assets">{{ $t("heading_power-ui_assets") }}</h3>
-          <p>{{ $t("text_power-ui_design_assets_intro").join("") }}</p>
-          <p>{{ $t("text_power-ui_design_assets_categories").join("") }}</p>
-          <ul class="big-markers">
-            <li class="color-red-light">
-              {{ $t("label_power-ui_design_assets_category_resources") }}
-            </li>
-            <li class="color-orange-light">
-              {{ $t("label_power-ui_design_assets_category_logistics") }}
-            </li>
-            <li class="color-yellow-light">
-              {{ $t("label_power-ui_design_assets_category_power-plants") }}
-            </li>
-            <li class="color-green-light">
-              {{ $t("label_power-ui_design_assets_category_infrastructure") }}
-            </li>
-            <li class="color-blue-light">
-              {{ $t("label_power-ui_design_assets_category_other-buildings") }}
-            </li>
-          </ul>
-        </div>
-        <div class="container medium">
-          <div class="pillar-container gapped-h gapped-v images-only">
+        <div class="container huge">
+          <div class="pillar-container gapped-h">
             <div class="pillar-row">
-              <div
-                class="pillar-col-6 pillar-col-bg-3"
-                v-for="building in buildings"
-                :key="building.id"
-              >
-                <dot-item
-                  :src="building.src"
-                  :alt="building.alt"
-                  :label="building.label"
-                  :background="building.background"
-                ></dot-item>
+              <div class="pillar-col-bg-4">
+                <h3 id="assets">{{ $t("heading_power-ui_assets") }}</h3>
+                <p>{{ $t("text_power-ui_design_assets_intro").join("") }}</p>
+                <p>
+                  {{ $t("text_power-ui_design_assets_categories").join("") }}
+                </p>
+                <div>
+                  <ul class="big-markers">
+                    <li class="color-red-light">
+                      {{
+                        $t("label_power-ui_design_assets_category_resources")
+                      }}
+                    </li>
+                    <li class="color-orange-light">
+                      {{
+                        $t("label_power-ui_design_assets_category_logistics")
+                      }}
+                    </li>
+                    <li class="color-yellow-light">
+                      {{
+                        $t("label_power-ui_design_assets_category_power-plants")
+                      }}
+                    </li>
+                    <li class="color-green-light">
+                      {{
+                        $t(
+                          "label_power-ui_design_assets_category_infrastructure"
+                        )
+                      }}
+                    </li>
+                    <li class="color-blue-light">
+                      {{
+                        $t(
+                          "label_power-ui_design_assets_category_other-buildings"
+                        )
+                      }}
+                    </li>
+                  </ul>
+                  <p class="spaced-y">
+                    {{ $t("text_power-ui_design_assets_sketches").join("") }}
+                  </p>
+                </div>
+              </div>
+              <div class="pillar-col-bg-8">
+                <div class="pillar-container gapped-h gapped-v images-only">
+                  <div class="pillar-row">
+                    <div
+                      class="pillar-col-6 pillar-col-bg-3"
+                      v-for="building in buildings"
+                      :key="building.id"
+                    >
+                      <dot-item
+                        :src="building.src"
+                        :alt="building.alt"
+                        :label="building.label"
+                        :background="building.background"
+                      ></dot-item>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="container small">
-          <p class="spaced-y">
-            {{ $t("text_power-ui_design_assets_sketches").join("") }}
-          </p>
         </div>
         <div class="container full-bleed">
           <!-- {{> iso-world }} -->
