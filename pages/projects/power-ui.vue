@@ -94,6 +94,7 @@
                 alt=""
                 ratio="3-by-2"
                 :description="$t('text_power-ui_concept_tutorial_step-1').join('')"
+                :noLink="true"
               ></column-card>
             </template>
             <template slot="2">
@@ -105,6 +106,7 @@
                 alt=""
                 ratio="3-by-2"
                 :description="$t('text_power-ui_concept_tutorial_step-2').join('')"
+                :noLink="true"
               ></column-card>
             </template>
             <template slot="3">
@@ -116,6 +118,7 @@
                 alt=""
                 ratio="3-by-2"
                 :description="$t('text_power-ui_concept_tutorial_step-3').join('')"
+                :noLink="true"
               ></column-card>
             </template>
             <template slot="4">
@@ -127,6 +130,7 @@
                 alt=""
                 ratio="3-by-2"
                 :description="$t('text_power-ui_concept_tutorial_step-4').join('')"
+                :noLink="true"
               ></column-card>
             </template>
             <template slot="5">
@@ -138,6 +142,7 @@
                 alt=""
                 ratio="3-by-2"
                 :description="$t('text_power-ui_concept_tutorial_step-5').join('')"
+                :noLink="true"
               ></column-card>
             </template>
             <template slot="6">
@@ -149,6 +154,7 @@
                 alt=""
                 ratio="3-by-2"
                 :description="$t('text_power-ui_concept_tutorial_step-6').join('')"
+                :noLink="true"
               ></column-card>
             </template>
             <template slot="7">
@@ -160,6 +166,7 @@
                 alt=""
                 ratio="3-by-2"
                 :description="$t('text_power-ui_concept_tutorial_step-7').join('')"
+                :noLink="true"
               ></column-card>
             </template>
           </simple-carousel>
