@@ -12,7 +12,10 @@ export default {
       const renderedSlot = h(
         "div",
         {
-          class: "simple-carousel-item",
+          class: [
+            "simple-carousel-item",
+            { active: slotName === this.selectedPage },
+          ],
           on: {
             click: function (event) {
               this.onItemClick(event, slotName);
@@ -38,7 +41,7 @@ export default {
             click: function (event, label) {
               this.onItemClick(event, label);
             }.bind(this),
-          }
+          },
         }),
       ]);
       footerContent.push(pagination);
@@ -46,7 +49,14 @@ export default {
     // Return structure
     return h(
       "div",
-      { class: ["simple-carousel", `width-${this.$props.width}`] },
+      { 
+        class: ["simple-carousel", `width-${this.$props.width}`] ,
+        on: {
+          keydown: function (event) {
+            this.onKeydown(event);
+          }.bind(this),
+        },
+      },
       [
         h("div", { class: "simple-carousel-body" }, [
           h(
@@ -126,8 +136,20 @@ export default {
   methods: {
     onItemClick: function (event, slotName) {
       //console.log(`Clicked on carousel item '${slotName}'`);
-      this.selectedPage = slotName;
-      this.showItem(slotName);
+      if (this.selectedPage === slotName) return;
+      this.select(slotName);
+    },
+    onKeydown: function (event) {
+      const { key } = event;
+      console.log(event);
+      if (key === "ArrowLeft") {
+        this.moveSelectionBy(-1);
+        return;
+      }
+      if (key === "ArrowRight") {
+        this.moveSelectionBy(1);
+        return;
+      }
     },
     showItem: function (key) {
       const index = this.getSlotIndex(key);
@@ -143,6 +165,18 @@ export default {
     },
     getSlotIndex: function (slotName) {
       return Object.keys(this.$slots).indexOf(slotName);
+    },
+    select: function (key) {
+      this.selectedPage = key;
+      this.showItem(key);
+    },
+    moveSelectionBy: function (distance) {
+      const slotNames = Object.keys(this.$slots);
+      const maxIndex = slotNames.length - 1;
+      const currentIndex = this.getSlotIndex(this.selectedPage);
+      const newIndex = Math.min(Math.max(currentIndex + distance, 0), maxIndex);
+      const newSelectedItem = slotNames[newIndex];
+      this.select(newSelectedItem);
     },
   },
   mounted() {
