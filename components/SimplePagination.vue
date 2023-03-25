@@ -6,7 +6,8 @@
           class="simple-carousel-pagination-button"
           type="invisible-shadow"
           :aria-selected="selectedLabel === label"
-          @click="$emit('click', $event, label)"
+          target="#"
+          @click.prevent="$emit('click', $event, label)"
           ><span class="sr-only">{{ $t("label_step") }} </span
           >{{ label }}</simple-button
         >
