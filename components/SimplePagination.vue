@@ -8,6 +8,7 @@
           :aria-selected="selectedLabel === label"
           target="#"
           @click.prevent="$emit('click', $event, label)"
+          :ref="'button-' + label"
           ><span class="sr-only">{{ $t("label_step") }} </span
           >{{ label }}</simple-button
         >
@@ -30,6 +31,7 @@ export default {
       default: "1",
     }
   },
+
 };
 </script>
 
@@ -40,5 +42,9 @@ export default {
   padding: 0;
   display: flex;
   flex-direction: row;
+
+  & > *:not(:last-child) {
+    margin-right: 0.5rem;
+  }
 }
 </style>
