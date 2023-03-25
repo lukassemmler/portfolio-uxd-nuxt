@@ -1,4 +1,11 @@
 <script>
+/* Known Issue: 
+ * - When focusing control inside .simple-carousel-item, then it can look to the side of the viewport.
+ *   We could fix this by making 'overflow-x: hidden', but then 'overflow-y' also gets implicity set to 'hidden'.
+ *   Then we have a problem if some controls are bigger than the carousel item container.
+ *   So for now, make sure to not include clickable items in a carousel card.
+ */
+
 import SimpleButton from "./SimpleButton.vue";
 import SimplePagination from "./SimplePagination.vue";
 export default {
@@ -49,8 +56,8 @@ export default {
     // Return structure
     return h(
       "div",
-      { 
-        class: ["simple-carousel", `width-${this.$props.width}`] ,
+      {
+        class: ["simple-carousel", `width-${this.$props.width}`],
         on: {
           keydown: function (event) {
             this.onKeydown(event);
@@ -67,7 +74,10 @@ export default {
                 { spaced: this.$props.spaced },
               ],
             },
-            renderedSlots
+            [h("div", { 
+              class: "simple-carousel-scroll",
+              ref: "scroll",
+              }, renderedSlots)]
           ),
           h("div", { class: "simple-carousel-footer" }, [
             h(
@@ -153,9 +163,9 @@ export default {
     },
     showItem: function (key) {
       const index = this.getSlotIndex(key);
-      const firstItem = this.$refs.item[0];
       const spacing = this.getOffset(index);
-      firstItem.style.marginLeft = spacing;
+      const scrollContainer = this.$refs.scroll;
+      scrollContainer.style.left = spacing;
     },
     getOffset: function (index) {
       // Each carousel item has its gap spacing attached to the right side EXCEPT the last item
@@ -212,7 +222,7 @@ export default {
     .simple-carousel-body {
       max-width: $width;
     }
-    .simple-carousel-content > * {
+    .simple-carousel-item {
       flex-basis: $width;
     }
   }
@@ -238,20 +248,27 @@ export default {
   }
 
   .simple-carousel-content {
-    display: flex;
-    flex-flow: row nowrap;
+    position: relative;
 
-    & > * {
-      flex: 0 0 $max-size-wrapper;
-    }
-
-    &.spaced > *:not(:last-child) {
+    &.spaced .simple-carousel-item:not(:last-child) {
       margin-right: 1rem;
     }
   }
 
+  .simple-carousel-scroll {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    transition: left 0.15s;
+
+    & > * {
+      flex: 0 0 $max-size-wrapper;
+    }
+  }
+
   .simple-carousel-item {
-    transition: margin-left 0.15s;
   }
 
   .simple-carousel-footer {
