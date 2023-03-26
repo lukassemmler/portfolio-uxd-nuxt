@@ -158,7 +158,7 @@ export default {
     },
     onKeydown: function (event) {
       const { key } = event;
-      console.log(event);
+      //console.log(event);
       if (key === "ArrowLeft") {
         this.moveSelectionBy(-1);
         return;
