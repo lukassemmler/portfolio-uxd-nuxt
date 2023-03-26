@@ -49,17 +49,9 @@
               <div class="pillar-col-bg-8">
                 <div class="pillar-container gapped-v gapped-h">
                   <div class="pillar-row">
-                    <div
-                      class="pillar-col-bg-6"
-                      v-for="index in 2"
-                      :key="'column-' + index"
-                    >
+                    <div class="pillar-col-bg-6" v-for="index in 2" :key="'column-' + index">
                       <simple-image
-                        v-for="wireframe in columnizeArray(
-                          wireframes,
-                          2,
-                          index - 1
-                        )"
+                        v-for="wireframe in columnizeArray(wireframes, 2, index - 1)"
                         :key="'2-' + wireframe.id"
                         class="standalone rounded fit-image shadow-medium-faint"
                         :src="wireframe.src"
@@ -73,28 +65,18 @@
               </div>
 
               <div class="pillar-col-bg-4">
-                <h2 id="overview" class="sr-only">
-                  {{ $t("heading_overview") }}
-                </h2>
+                <h2 id="overview" class="sr-only">{{ $t("heading_overview") }}</h2>
                 <p>{{ $t("text_power-ui_intro-1").join("") }}</p>
                 <aside class="quotation">
                   <q>{{ $t("text_power-ui_intro-quote") }}</q>
                 </aside>
-                <markdown-block
-                  :markup="$t('text_power-ui_intro-2').join('')"
-                ></markdown-block>
+                <markdown-block :markup="$t('text_power-ui_intro-2').join('')"></markdown-block>
                 <h2 id="concept">{{ $t("heading_power-ui_concept") }}</h2>
-                <p
-                  v-html="$t('text_power-ui_concept_video-game-genre').join('')"
-                ></p>
-                <p
-                  v-html="$t('text_power-ui_concept_mobile-first').join('')"
-                ></p>
+                <p v-html="$t('text_power-ui_concept_video-game-genre').join('')"></p>
+                <p v-html="$t('text_power-ui_concept_mobile-first').join('')"></p>
                 <p v-html="$t('text_power-ui_concept_theme-1').join('')"></p>
                 <p v-html="$t('text_power-ui_concept_theme-2').join('')"></p>
-                <p
-                  v-html="$t('text_power-ui_concept_tutorial_intro').join('')"
-                ></p>
+                <p v-html="$t('text_power-ui_concept_tutorial_intro').join('')"></p>
               </div>
             </div>
           </div>
@@ -110,9 +92,7 @@
                 src="power-ui/Power UI - Tutorial 1.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="
-                  $t('text_power-ui_concept_tutorial_step-1').join('')
-                "
+                :description="$t('text_power-ui_concept_tutorial_step-1').join('')"
                 :noLink="true"
               ></column-card>
             </template>
@@ -124,9 +104,7 @@
                 src="power-ui/Power UI - Tutorial 2.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="
-                  $t('text_power-ui_concept_tutorial_step-2').join('')
-                "
+                :description="$t('text_power-ui_concept_tutorial_step-2').join('')"
                 :noLink="true"
               ></column-card>
             </template>
@@ -138,9 +116,7 @@
                 src="power-ui/Power UI - Tutorial 3.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="
-                  $t('text_power-ui_concept_tutorial_step-3').join('')
-                "
+                :description="$t('text_power-ui_concept_tutorial_step-3').join('')"
                 :noLink="true"
               ></column-card>
             </template>
@@ -152,9 +128,7 @@
                 src="power-ui/Power UI - Tutorial 4.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="
-                  $t('text_power-ui_concept_tutorial_step-4').join('')
-                "
+                :description="$t('text_power-ui_concept_tutorial_step-4').join('')"
                 :noLink="true"
               ></column-card>
             </template>
@@ -166,9 +140,7 @@
                 src="power-ui/Power UI - Tutorial 5.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="
-                  $t('text_power-ui_concept_tutorial_step-5').join('')
-                "
+                :description="$t('text_power-ui_concept_tutorial_step-5').join('')"
                 :noLink="true"
               ></column-card>
             </template>
@@ -180,9 +152,7 @@
                 src="power-ui/Power UI - Tutorial 6.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="
-                  $t('text_power-ui_concept_tutorial_step-6').join('')
-                "
+                :description="$t('text_power-ui_concept_tutorial_step-6').join('')"
                 :noLink="true"
               ></column-card>
             </template>
@@ -194,9 +164,7 @@
                 src="power-ui/Power UI - Tutorial 7.jpg"
                 alt=""
                 ratio="3-by-2"
-                :description="
-                  $t('text_power-ui_concept_tutorial_step-7').join('')
-                "
+                :description="$t('text_power-ui_concept_tutorial_step-7').join('')"
                 :noLink="true"
               ></column-card>
             </template>
@@ -215,37 +183,19 @@
               <div class="pillar-col-bg-4">
                 <h2 id="design">{{ $t("heading_power-ui_design") }}</h2>
                 <p>{{ $t("text_power-ui_design_intro").join("") }}</p>
-                <h3 id="icon-design">
-                  {{ $t("heading_power-ui_icon-design") }}
-                </h3>
-                <p>
-                  {{ $t("text_power-ui_design_icon-design_intro").join("") }}
-                </p>
-                <p>
-                  {{
-                    $t("text_power-ui_design_icon-design_version-1").join("")
-                  }}
-                </p>
-                <p>
-                  {{
-                    $t("text_power-ui_design_icon-design_version-2").join("")
-                  }}
-                </p>
+                <h3 id="icon-design">{{ $t("heading_power-ui_icon-design") }}</h3>
+                <p>{{ $t("text_power-ui_design_icon-design_intro").join("") }}</p>
+                <p>{{ $t("text_power-ui_design_icon-design_version-1").join("") }}</p>
+                <p>{{ $t("text_power-ui_design_icon-design_version-2").join("") }}</p>
               </div>
               <div class="pillar-col-bg-8">
                 <div class="icon-item-list">
-                  <icon-item
-                    v-for="(crudeIcon, index) in crudeIcons"
-                    :key="index"
-                    :label="crudeIcon.label"
+                  <icon-item v-for="(crudeIcon, index) in crudeIcons" :key="index" :label="crudeIcon.label"
                     ><component v-bind:is="crudeIcon.icon"></component
                   ></icon-item>
                 </div>
                 <div class="pillar-col-bg-6 icon-item-list">
-                  <icon-item
-                    v-for="(cleanIcon, index) in cleanIcons"
-                    :key="index"
-                    :label="cleanIcon.label"
+                  <icon-item v-for="(cleanIcon, index) in cleanIcons" :key="index" :label="cleanIcon.label"
                     ><component v-bind:is="cleanIcon.icon"></component
                   ></icon-item>
                 </div>
@@ -267,17 +217,9 @@
               </div>
 
               <div class="pillar-col-bg-4">
-                <h3 id="screen-design">
-                  {{ $t("heading_power-ui_screen-design") }}
-                </h3>
-                <p>
-                  {{ $t("text_power-ui_design_screen-design_intro").join("") }}
-                </p>
-                <p>
-                  {{
-                    $t("text_power-ui_design_screen-design_contrasts").join("")
-                  }}
-                </p>
+                <h3 id="screen-design">{{ $t("heading_power-ui_screen-design") }}</h3>
+                <p>{{ $t("text_power-ui_design_screen-design_intro").join("") }}</p>
+                <p>{{ $t("text_power-ui_design_screen-design_contrasts").join("") }}</p>
                 <simple-image
                   class="standalone rounded fit-image shadow-medium-faint"
                   src="power-ui/screendesign--smart-tv-contrasts.jpg"
@@ -285,11 +227,7 @@
                   sizes="xs:400px sm:640px md:960px lg:1200px"
                   ratio="16-by-9"
                 ></simple-image>
-                <p>
-                  {{
-                    $t("text_power-ui_design_screen-design_smart-tv").join("")
-                  }}
-                </p>
+                <p>{{ $t("text_power-ui_design_screen-design_smart-tv").join("") }}</p>
               </div>
             </div>
           </div>
@@ -308,54 +246,32 @@
               <div class="pillar-col-bg-4">
                 <h3 id="assets">{{ $t("heading_power-ui_assets") }}</h3>
                 <p>{{ $t("text_power-ui_design_assets_intro").join("") }}</p>
-                <p>
-                  {{ $t("text_power-ui_design_assets_categories").join("") }}
-                </p>
+                <p>{{ $t("text_power-ui_design_assets_categories").join("") }}</p>
                 <div>
                   <ul class="big-markers">
                     <li class="color-red-light">
-                      {{
-                        $t("label_power-ui_design_assets_category_resources")
-                      }}
+                      {{ $t("label_power-ui_design_assets_category_resources") }}
                     </li>
                     <li class="color-orange-light">
-                      {{
-                        $t("label_power-ui_design_assets_category_logistics")
-                      }}
+                      {{ $t("label_power-ui_design_assets_category_logistics") }}
                     </li>
                     <li class="color-yellow-light">
-                      {{
-                        $t("label_power-ui_design_assets_category_power-plants")
-                      }}
+                      {{ $t("label_power-ui_design_assets_category_power-plants") }}
                     </li>
                     <li class="color-green-light">
-                      {{
-                        $t(
-                          "label_power-ui_design_assets_category_infrastructure"
-                        )
-                      }}
+                      {{ $t("label_power-ui_design_assets_category_infrastructure") }}
                     </li>
                     <li class="color-blue-light">
-                      {{
-                        $t(
-                          "label_power-ui_design_assets_category_other-buildings"
-                        )
-                      }}
+                      {{ $t("label_power-ui_design_assets_category_other-buildings") }}
                     </li>
                   </ul>
-                  <p class="spaced-y">
-                    {{ $t("text_power-ui_design_assets_sketches").join("") }}
-                  </p>
+                  <p class="spaced-y">{{ $t("text_power-ui_design_assets_sketches").join("") }}</p>
                 </div>
               </div>
               <div class="pillar-col-bg-8">
                 <div class="pillar-container gapped-h gapped-v images-only">
                   <div class="pillar-row">
-                    <div
-                      class="pillar-col-6 pillar-col-bg-3"
-                      v-for="building in buildings"
-                      :key="building.id"
-                    >
+                    <div class="pillar-col-6 pillar-col-bg-3" v-for="building in buildings" :key="building.id">
                       <dot-item
                         :src="building.src"
                         :alt="building.alt"
@@ -373,9 +289,7 @@
           <!-- {{> iso-world }} -->
         </div>
         <div class="container small">
-          <p class="spaced-y">
-            {{ $t("text_power-ui_design_assets_3d-models").join("") }}
-          </p>
+          <p class="spaced-y">{{ $t("text_power-ui_design_assets_3d-models").join("") }}</p>
         </div>
       </section>
 
@@ -385,12 +299,8 @@
             <div class="pillar-row">
               <div class="pillar-col">
                 <div class="container-small">
-                  <h2 id="implementation">
-                    {{ $t("heading_power-ui_implementation") }}
-                  </h2>
-                  <p>
-                    {{ $t("text_power-ui_implementation_intro") }}
-                  </p>
+                  <h2 id="implementation">{{ $t("heading_power-ui_implementation") }}</h2>
+                  <p>{{ $t("text_power-ui_implementation_intro") }}</p>
                 </div>
               </div>
             </div>
@@ -439,19 +349,9 @@
           <div class="pillar-container gapped-h spaced-y">
             <div class="pillar-row">
               <div class="pillar-col-bg-4">
-                <h3 id="prototype-axure">
-                  {{ $t("heading_power-ui_prototype-axure") }}
-                </h3>
-                <p>
-                  {{ $t("text_power-ui_implementation_prototype-axure_intro") }}
-                </p>
-                <p class="spaced-y">
-                  {{
-                    $t(
-                      "text_power-ui_implementation_prototype-axure_pros-and-cons"
-                    )
-                  }}
-                </p>
+                <h3 id="prototype-axure">{{ $t("heading_power-ui_prototype-axure") }}</h3>
+                <p>{{ $t("text_power-ui_implementation_prototype-axure_intro") }}</p>
+                <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-axure_pros-and-cons") }}</p>
               </div>
               <div class="pillar-col-bg-8">
                 <simple-image
@@ -476,17 +376,9 @@
           <div class="container huge">
             <div class="pillar-container gapped-h gapped-v-big images-only">
               <div class="pillar-row">
-                <div
-                  class="pillar-col-bg-6"
-                  v-for="index in 2"
-                  :key="'column-' + index"
-                >
+                <div class="pillar-col-bg-6" v-for="index in 2" :key="'column-' + index">
                   <simple-image
-                    v-for="screenshot in columnizeArray(
-                      prototypeScreenshots.axure,
-                      2,
-                      index - 1
-                    )"
+                    v-for="screenshot in columnizeArray(prototypeScreenshots.axure, 2, index - 1)"
                     :key="'2-' + screenshot.id"
                     class="standalone rounded fit-image shadow-big"
                     :src="screenshot.src"
@@ -500,38 +392,25 @@
           </div>
         </div>
 
-          <div class="container huge">
-            <div class="pillar-container gapped-h gapped-v-big images-only">
-              <div class="pillar-row">
-                <div class="pillar-col-bg-6">
-          <h3 id="prototype-unity">
-            {{ $t("heading_power-ui_prototype-unity") }}
-          </h3>
-          <p>
-            {{ $t("text_power-ui_implementation_prototype-unity_intro") }}
-          </p>
-          <p>
-            {{ $t("text_power-ui_implementation_prototype-unity_unity") }}
-          </p>
-          <p>
-            {{ $t("text_power-ui_implementation_prototype-unity_features") }}
-          </p>
-        </div>
-        
-                <div class="pillar-col-bg-6">
-          <a href="../power-ui/unity--network-breakdown.gif">test</a>
-
-          </div>
-          </div>
-          </div>
-          
-                  <div class="pillar-container gapped-h gapped-v-big images-only">
+        <div class="container huge">
+          <div class="pillar-container gapped-h gapped-v-big images-only">
             <div class="pillar-row">
-              <div
-                class="pillar-col-bg-4"
-                v-for="screenshot in prototypeScreenshots.unity"
-                v-bind:key="screenshot.id"
-              >
+              <div class="pillar-col-bg-6">
+                <h3 id="prototype-unity">{{ $t("heading_power-ui_prototype-unity") }}</h3>
+                <p>{{ $t("text_power-ui_implementation_prototype-unity_intro") }}</p>
+                <p>{{ $t("text_power-ui_implementation_prototype-unity_unity") }}</p>
+                <p>{{ $t("text_power-ui_implementation_prototype-unity_features") }}</p>
+              </div>
+
+              <div class="pillar-col-bg-6">
+                <a href="../power-ui/unity--network-breakdown.gif">test</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pillar-container gapped-h gapped-v-big images-only">
+            <div class="pillar-row">
+              <div class="pillar-col-bg-4" v-for="screenshot in prototypeScreenshots.unity" v-bind:key="screenshot.id">
                 <thumbnail-box
                   class="standalone rounded fit-image shadow-big"
                   :target="'/..' + screenshot.gif"
@@ -555,23 +434,11 @@
         </div>
 
         <div class="container-small">
-          <h3 id="prototype-phaser-and-vue-js">
-            {{ $t("heading_power-ui_prototype-phaser-and-vue-js") }}
-          </h3>
-          <p>
-            {{ $t("text_power-ui_implementation_prototype-phaser_intro") }}
-          </p>
-          <p>
-            {{
-              $t("text_power-ui_implementation_prototype-phaser_architecture")
-            }}
-          </p>
-          <p>
-            {{ $t("text_power-ui_implementation_prototype-phaser_features") }}
-          </p>
-          <p class="spaced-y">
-            {{ $t("text_power-ui_implementation_prototype-phaser_goal") }}
-          </p>
+          <h3 id="prototype-phaser-and-vue-js">{{ $t("heading_power-ui_prototype-phaser-and-vue-js") }}</h3>
+          <p>{{ $t("text_power-ui_implementation_prototype-phaser_intro") }}</p>
+          <p>{{ $t("text_power-ui_implementation_prototype-phaser_architecture") }}</p>
+          <p>{{ $t("text_power-ui_implementation_prototype-phaser_features") }}</p>
+          <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-phaser_goal") }}</p>
         </div>
 
         <div class="container bg-yellow">
@@ -583,11 +450,7 @@
       -->
           <div class="container-medium">
             <div class="pillar-container gapped-h gapped-v-big images-only">
-              <div
-                class="pillar-row"
-                v-for="screenshot in prototypeScreenshots.phaser"
-                v-bind:key="screenshot.id"
-              >
+              <div class="pillar-row" v-for="screenshot in prototypeScreenshots.phaser" v-bind:key="screenshot.id">
                 <div class="pillar-col">
                   <simple-image
                     class="standalone rounded fit-image shadow-big"
@@ -622,11 +485,7 @@
         <div class="container-medium">
           <div class="pillar-container gapped-h gapped-v images-only spaced-y">
             <div class="pillar-row">
-              <div
-                class="pillar-col-6 pillar-col-bg-3"
-                v-for="sheet in userTestSheets"
-                v-bind:key="sheet.id"
-              >
+              <div class="pillar-col-6 pillar-col-bg-3" v-for="sheet in userTestSheets" v-bind:key="sheet.id">
                 <simple-image
                   class="standalone rounded fit-image shadow-medium"
                   :src="sheet.src"
@@ -636,18 +495,12 @@
                 </simple-image>
               </div>
               <div class="pillar-col-6 pillar-col-bg-3 flex-dir-col">
-                <span class="label-xl">{{
-                  $t("label_power-ui_user-testing_test-1")
-                }}</span>
-                <span class="label-xl">{{
-                  $t("label_power-ui_user-testing_test-2")
-                }}</span>
+                <span class="label-xl">{{ $t("label_power-ui_user-testing_test-1") }}</span>
+                <span class="label-xl">{{ $t("label_power-ui_user-testing_test-2") }}</span>
                 <span class="label-2xl flex-edge-bottom">{{
                   $t("label_power-ui_user-testing_number-of-participants")
                 }}</span>
-                <span class="label-bg">{{
-                  $t("label_power-ui_user-testing_participants")
-                }}</span>
+                <span class="label-bg">{{ $t("label_power-ui_user-testing_participants") }}</span>
               </div>
             </div>
           </div>
@@ -1065,16 +918,12 @@ export default {
         {
           id: "power-production",
           src: "power-ui/sketch--concept-mobile--power--current-production.jpg",
-          alt: this.$t(
-            "alt_power-ui_sketch_concept-mobile_power_current-production"
-          ),
+          alt: this.$t("alt_power-ui_sketch_concept-mobile_power_current-production"),
         },
         {
           id: "power-facilities",
           src: "power-ui/sketch--concept-mobile--power--facility-list.jpg",
-          alt: this.$t(
-            "alt_power-ui_sketch_concept-mobile_power_facility-list"
-          ),
+          alt: this.$t("alt_power-ui_sketch_concept-mobile_power_facility-list"),
         },
         {
           id: "finances-history",
@@ -1084,16 +933,12 @@ export default {
         {
           id: "finances-assets",
           src: "power-ui/sketch--concept-mobile--finances--asset-list.jpg",
-          alt: this.$t(
-            "alt_power-ui_sketch_concept-mobile_finances_asset-list"
-          ),
+          alt: this.$t("alt_power-ui_sketch_concept-mobile_finances_asset-list"),
         },
         {
           id: "detail-view",
           src: "power-ui/sketch--concept-mobile--detail-view--variant-b.jpg",
-          alt: this.$t(
-            "alt_power-ui_sketch_concept-mobile_detail-view_variant-b"
-          ),
+          alt: this.$t("alt_power-ui_sketch_concept-mobile_detail-view_variant-b"),
         },
         {
           id: "resources-trading",
@@ -1234,9 +1079,7 @@ export default {
           id: "plant-garbage-incineration",
           src: "power-ui/asset--sketch-plant-garbage-incineration.png",
           alt: this.$t("alt_power-ui_asset-sketch_plant-garbage-incineration"),
-          label: this.$t(
-            "label_power-ui_asset-sketch_plant-garbage-incineration"
-          ),
+          label: this.$t("label_power-ui_asset-sketch_plant-garbage-incineration"),
           background: "bg-yellow-light",
           category: "power",
         },
@@ -1394,16 +1237,12 @@ export default {
           {
             id: "info-window-power-plant",
             src: "power-ui/prototype--axure-v0-6-info-window-power-plant.jpg",
-            alt: this.$t(
-              "alt_power-ui_prototype_axure_info-window-power-plant"
-            ),
+            alt: this.$t("alt_power-ui_prototype_axure_info-window-power-plant"),
           },
           {
             id: "demolishing-building-modal",
             src: "power-ui/prototype--axure-v0-6-demolishing-building-modal.jpg",
-            alt: this.$t(
-              "alt_power-ui_prototype_axure_demolishing-building-modal"
-            ),
+            alt: this.$t("alt_power-ui_prototype_axure_demolishing-building-modal"),
           },
           {
             id: "power-overview",
