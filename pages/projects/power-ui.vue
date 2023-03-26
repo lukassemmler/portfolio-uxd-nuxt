@@ -433,12 +433,14 @@
           </div>
         </div>
 
-        <div class="container-small">
-          <h3 id="prototype-phaser-and-vue-js">{{ $t("heading_power-ui_prototype-phaser-and-vue-js") }}</h3>
-          <p>{{ $t("text_power-ui_implementation_prototype-phaser_intro") }}</p>
-          <p>{{ $t("text_power-ui_implementation_prototype-phaser_architecture") }}</p>
-          <p>{{ $t("text_power-ui_implementation_prototype-phaser_features") }}</p>
-          <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-phaser_goal") }}</p>
+        <div class="container huge">
+          <div class="container small">
+            <h3 id="prototype-phaser-and-vue-js">{{ $t("heading_power-ui_prototype-phaser-and-vue-js") }}</h3>
+            <p>{{ $t("text_power-ui_implementation_prototype-phaser_intro") }}</p>
+            <p>{{ $t("text_power-ui_implementation_prototype-phaser_architecture") }}</p>
+            <p>{{ $t("text_power-ui_implementation_prototype-phaser_features") }}</p>
+            <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-phaser_goal") }}</p>
+          </div>
         </div>
 
         <div class="container bg-yellow">
@@ -448,11 +450,13 @@
           id="power-ui-prototype-2" 
           background="bg-yellow" }}
       -->
-          <div class="container-medium">
+          <div class="container huge">
             <div class="pillar-container gapped-h gapped-v-big images-only">
-              <div class="pillar-row" v-for="screenshot in prototypeScreenshots.phaser" v-bind:key="screenshot.id">
-                <div class="pillar-col">
+              <div class="pillar-row">
+                <div class="pillar-col-bg-6" v-for="index in 2" :key="'column-' + index">
                   <simple-image
+                    v-for="screenshot in columnizeArray(prototypeScreenshots.phaser, 2, index - 1)"
+                    :key="'2-' + screenshot.id"
                     class="standalone rounded fit-image shadow-big"
                     :src="screenshot.src"
                     :alt="screenshot.alt"
