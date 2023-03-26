@@ -380,18 +380,22 @@
       </section>
 
       <section id="section-implementation" class="section">
-        <div class="container-small">
-          <h2 id="implementation">
-            {{ $t("heading_power-ui_implementation") }}
-          </h2>
-          <p>
-            {{ $t("text_power-ui_implementation_intro") }}
-          </p>
-        </div>
-        <div class="container-medium">
+        <div class="container huge">
           <div class="pillar-container gapped-h spaced-y">
             <div class="pillar-row">
               <div class="pillar-col">
+                <div class="container-small">
+                  <h2 id="implementation">
+                    {{ $t("heading_power-ui_implementation") }}
+                  </h2>
+                  <p>
+                    {{ $t("text_power-ui_implementation_intro") }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pillar-row">
+              <div class="pillar-col-bg-4">
                 <column-card
                   class="bg-pink font-white padded"
                   href="#prototype-axure"
@@ -403,7 +407,7 @@
                   :icons="implementationIcons.axure"
                 ></column-card>
               </div>
-              <div class="pillar-col">
+              <div class="pillar-col-bg-4">
                 <column-card
                   class="bg-green font-white padded"
                   href="#prototype-unity"
@@ -415,7 +419,7 @@
                   :icons="implementationIcons.unity"
                 ></column-card>
               </div>
-              <div class="pillar-col">
+              <div class="pillar-col-bg-4">
                 <column-card
                   class="bg-blue font-white padded"
                   href="#prototype-phaser-and-vue-js"
@@ -431,25 +435,35 @@
           </div>
         </div>
 
-        <div class="container-small">
-          <h3 id="prototype-axure">
-            {{ $t("heading_power-ui_prototype-axure") }}
-          </h3>
-          <p>
-            {{ $t("text_power-ui_implementation_prototype-axure_intro") }}
-          </p>
-          <simple-image
-            class="standalone"
-            src="power-ui/program--axure.png"
-            alt="Axure Prototype with Logic Programming"
-            caption="Axure Prototype with Logic Programming for Building menu."
-            ratio="16-by-9"
-          ></simple-image>
-          <p class="spaced-y">
-            {{
-              $t("text_power-ui_implementation_prototype-axure_pros-and-cons")
-            }}
-          </p>
+        <div class="container huge">
+          <div class="pillar-container gapped-h spaced-y">
+            <div class="pillar-row">
+              <div class="pillar-col-bg-4">
+                <h3 id="prototype-axure">
+                  {{ $t("heading_power-ui_prototype-axure") }}
+                </h3>
+                <p>
+                  {{ $t("text_power-ui_implementation_prototype-axure_intro") }}
+                </p>
+                <p class="spaced-y">
+                  {{
+                    $t(
+                      "text_power-ui_implementation_prototype-axure_pros-and-cons"
+                    )
+                  }}
+                </p>
+              </div>
+              <div class="pillar-col-bg-8">
+                <simple-image
+                  class="standalone"
+                  src="power-ui/program--axure.png"
+                  alt="Axure Prototype with Logic Programming"
+                  caption="Axure Prototype with Logic Programming for Building menu."
+                  ratio="16-by-9"
+                ></simple-image>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="container bg-blue">
@@ -459,15 +473,21 @@
           id="power-ui-prototype-1" 
           background="bg-blue" }}
       -->
-          <div class="container-medium">
+          <div class="container huge">
             <div class="pillar-container gapped-h gapped-v-big images-only">
-              <div
-                class="pillar-row"
-                v-for="screenshot in prototypeScreenshots.axure"
-                v-bind:key="screenshot.id"
-              >
-                <div class="pillar-col">
+              <div class="pillar-row">
+                <div
+                  class="pillar-col-bg-6"
+                  v-for="index in 2"
+                  :key="'column-' + index"
+                >
                   <simple-image
+                    v-for="screenshot in columnizeArray(
+                      prototypeScreenshots.axure,
+                      2,
+                      index - 1
+                    )"
+                    :key="'2-' + screenshot.id"
                     class="standalone rounded fit-image shadow-big"
                     :src="screenshot.src"
                     :alt="screenshot.alt"
@@ -480,7 +500,10 @@
           </div>
         </div>
 
-        <div class="container-small">
+          <div class="container huge">
+            <div class="pillar-container gapped-h gapped-v-big images-only">
+              <div class="pillar-row">
+                <div class="pillar-col-bg-6">
           <h3 id="prototype-unity">
             {{ $t("heading_power-ui_prototype-unity") }}
           </h3>
@@ -494,9 +517,15 @@
             {{ $t("text_power-ui_implementation_prototype-unity_features") }}
           </p>
         </div>
-        <div class="container-medium">
+        
+                <div class="pillar-col-bg-6">
           <a href="../power-ui/unity--network-breakdown.gif">test</a>
-          <div class="pillar-container gapped-h gapped-v-big images-only">
+
+          </div>
+          </div>
+          </div>
+          
+                  <div class="pillar-container gapped-h gapped-v-big images-only">
             <div class="pillar-row">
               <div
                 class="pillar-col-bg-4"
