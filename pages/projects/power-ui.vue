@@ -392,7 +392,7 @@
           </div>
         </div>
 
-        <div class="container huge">
+        <div class="container medium">
           <div class="pillar-container gapped-h gapped-v-big images-only">
             <div class="pillar-row">
               <div class="pillar-col-bg-6">
@@ -401,18 +401,10 @@
                 <p>{{ $t("text_power-ui_implementation_prototype-unity_unity") }}</p>
                 <p>{{ $t("text_power-ui_implementation_prototype-unity_features") }}</p>
               </div>
-
               <div class="pillar-col-bg-6">
-                <a href="../power-ui/unity--network-breakdown.gif">test</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="pillar-container gapped-h gapped-v-big images-only">
-            <div class="pillar-row">
-              <div class="pillar-col-bg-4" v-for="screenshot in prototypeScreenshots.unity" v-bind:key="screenshot.id">
                 <thumbnail-box
-                  class="standalone rounded fit-image shadow-big"
+                 v-for="screenshot in prototypeScreenshots.unity" v-bind:key="screenshot.id"
+                  class="standalone rounded fit-image shadow-big spaced-y"
                   :target="'/..' + screenshot.gif"
                   targetType="file"
                   :src="screenshot.src"
@@ -429,8 +421,8 @@
                   <img :src="screenshot.gif" :alt="screenshot.alt" />
                 </thumbnail-box>
               </div>
-            </div>
-          </div>
+              </div>
+              </div>
         </div>
 
         <div class="container huge">
@@ -471,22 +463,32 @@
       </section>
 
       <section id="section-user-testing" class="section">
-        <div class="container small">
-          <h2 id="user-testing">{{ $t("heading_power-ui_user-testing") }}</h2>
-          <p>{{ $t("text_power-ui_user-testing_intro") }}</p>
-          <p>{{ $t("text_power-ui_user-testing_test-structure") }}</p>
-          <p>{{ $t("text_power-ui_user-testing_results") }}</p>
-          <simple-image
-            class="standalone rounded fit-image shadow-medium"
-            src="power-ui/global-game-jam-group-shot.jpg"
-            :alt="$t('alt_power-ui_global-game-jam_group-shot')"
-            caption="The team 'Quick and Dirty' of the Global Game Jam 2020 in Ansbach. "
-            ratio="4-by-3"
-          >
-          </simple-image>
-          <p>{{ $t("text_power-ui_user-testing_global-game-jam") }}</p>
+        <div class="container huge">
+          <div class="pillar-container gapped-h">
+            <div class="pillar-row">
+              <div class="pillar-col-bg-4">
+                <h2 id="user-testing">{{ $t("heading_power-ui_user-testing") }}</h2>
+                <p>{{ $t("text_power-ui_user-testing_intro") }}</p>
+                <p>{{ $t("text_power-ui_user-testing_test-structure") }}</p>
+              </div>
+              <div class="pillar-col-bg-4">
+                <p>{{ $t("text_power-ui_user-testing_results") }}</p>
+                <p>{{ $t("text_power-ui_user-testing_global-game-jam") }}</p>
+              </div>
+              <div class="pillar-col-bg-4">
+                <simple-image
+                  class="standalone rounded fit-image shadow-medium"
+                  src="power-ui/global-game-jam-group-shot.jpg"
+                  :alt="$t('alt_power-ui_global-game-jam_group-shot')"
+                  caption="The team 'Quick and Dirty' of the Global Game Jam 2020 in Ansbach. "
+                  ratio="4-by-3"
+                >
+              </simple-image>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="container-medium">
+        <div class="container medium">
           <div class="pillar-container gapped-h gapped-v images-only spaced-y">
             <div class="pillar-row">
               <div class="pillar-col-6 pillar-col-bg-3" v-for="sheet in userTestSheets" v-bind:key="sheet.id">
@@ -511,20 +513,28 @@
         </div>
       </section>
 
-      <section id="section-conclusion" class="section-flush">
-        <div class="container-small">
-          <h2 id="conclusion">{{ $t("heading_power-ui_conclusion") }}</h2>
-          <p>{{ $t("text_power-ui_conlusion_summary") }}</p>
-          <p>{{ $t("text_power-ui_conlusion_read-more") }}</p>
+      <section id="section-conclusion" class="section-flush bg-dark-shadow font-white">
+        <div class="container huge spaced-y">
+          <div class="pillar-container">
+            <div class="pillar-row">
+              <div class="pillar-col-bg-8">
+                <tadaa-box>
+                  <hover-image
+                    src="power-ui/bachelor-thesis-front-cover.png"
+                    alt=""
+                    target="/../BA Lukas Semmler.pdf"
+                    :routedTarget="false"
+                  ></hover-image>
+                </tadaa-box>
+              </div>
+              <div class="pillar-col-bg-4">
+                <h2 id="conclusion">{{ $t("heading_power-ui_conclusion") }}</h2>
+                <p>{{ $t("text_power-ui_conlusion_summary") }}</p>
+                <p>{{ $t("text_power-ui_conlusion_read-more") }}</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <tadaa-box>
-          <hover-image
-            src="power-ui/bachelor-thesis-front-cover.png"
-            alt=""
-            target="/../BA Lukas Semmler.pdf"
-            :routedTarget="false"
-          ></hover-image>
-        </tadaa-box>
       </section>
     </template>
   </project-template>
