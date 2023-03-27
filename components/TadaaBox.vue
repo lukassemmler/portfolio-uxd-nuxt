@@ -27,9 +27,7 @@ export default {
   position: relative;
   width: 100%;
   padding: 10% 10%;
-  background-color: $dusk-90;
-  box-shadow: inset 0 0 3rem $dusk-90;
-  overflow: hidden;
+  //overflow: hidden;
   box-sizing: border-box;
 }
 

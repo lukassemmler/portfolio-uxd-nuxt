@@ -37,6 +37,11 @@
   }
 }
 
+.bg-dark-shadow {
+  background-color: $dusk-90;
+  box-shadow: inset 0 0 3rem $dusk-90;
+}
+
 @include make-bg-color("gray-pure-light", $gray-93);
 @include make-bg-color("gray-pure-dark", $gray-20);
 @include make-bg-color("gray-light", $dusk-15);
