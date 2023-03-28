@@ -171,7 +171,7 @@
           </simple-carousel>
         </div>
         <div class="container small">
-          <p>{{ $t("text_power-ui_concept_wireframes") }}</p>
+          <p>{{ $t("text_power-ui_concept_wireframes").join("") }}</p>
         </div>
         <div class="container medium"></div>
       </section>
@@ -182,10 +182,10 @@
             <div class="pillar-row">
               <div class="pillar-col-bg-4">
                 <h2 id="design">{{ $t("heading_power-ui_design") }}</h2>
-                <p>{{ $t("text_power-ui_design_intro").join("") }}</p>
+                <p v-html="$t('text_power-ui_design_intro').join('')"></p>
                 <h3 id="icon-design">{{ $t("heading_power-ui_icon-design") }}</h3>
                 <p>{{ $t("text_power-ui_design_icon-design_intro").join("") }}</p>
-                <p>{{ $t("text_power-ui_design_icon-design_version-1").join("") }}</p>
+                <p v-html="$t('text_power-ui_design_icon-design_version-1').join('')"></p>
                 <p>{{ $t("text_power-ui_design_icon-design_version-2").join("") }}</p>
               </div>
               <div class="pillar-col-bg-8">
@@ -234,8 +234,8 @@
         </div>
         <div class="container small">
           <h3 id="terrain">{{ $t("heading_power-ui_terrain") }}</h3>
-          <p>{{ $t("text_power-ui_design_terrain_intro").join("") }}</p>
-          <p>{{ $t("text_power-ui_design_terrain_tools").join("") }}</p>
+          <p v-html="$t('text_power-ui_design_terrain_intro').join('')"></p>
+          <p v-html="$t('text_power-ui_design_terrain_tools').join('')"></p>
         </div>
         <div class="container medium">
           <!-- {{> iso-tiles-demo }} -->
@@ -269,7 +269,7 @@
                 </ul>
               </div>
               <div class="pillar-col-bg-4">
-                <p class="spaced-y">{{ $t("text_power-ui_design_assets_sketches").join("") }}</p>
+                <p class="spaced-y" v-html="$t('text_power-ui_design_assets_sketches').join('')"></p>
               </div>
               <div class="pillar-col-bg-8"></div>
               <div class="pillar-container gapped-h gapped-v images-only">
@@ -302,7 +302,7 @@
               <div class="pillar-col">
                 <div class="container-small">
                   <h2 id="implementation">{{ $t("heading_power-ui_implementation") }}</h2>
-                  <p>{{ $t("text_power-ui_implementation_intro") }}</p>
+                  <p>{{ $t("text_power-ui_implementation_intro").join("") }}</p>
                 </div>
               </div>
             </div>
@@ -352,8 +352,8 @@
             <div class="pillar-row">
               <div class="pillar-col-bg-4">
                 <h3 id="prototype-axure">{{ $t("heading_power-ui_prototype-axure") }}</h3>
-                <p>{{ $t("text_power-ui_implementation_prototype-axure_intro") }}</p>
-                <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-axure_pros-and-cons") }}</p>
+                <p v-html="$t('text_power-ui_implementation_prototype-axure_intro').join('')"></p>
+                <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-axure_pros-and-cons").join("") }}</p>
               </div>
               <div class="pillar-col-bg-8">
                 <simple-image
@@ -399,9 +399,9 @@
             <div class="pillar-row">
               <div class="pillar-col-bg-6">
                 <h3 id="prototype-unity">{{ $t("heading_power-ui_prototype-unity") }}</h3>
-                <p>{{ $t("text_power-ui_implementation_prototype-unity_intro") }}</p>
-                <p>{{ $t("text_power-ui_implementation_prototype-unity_unity") }}</p>
-                <p>{{ $t("text_power-ui_implementation_prototype-unity_features") }}</p>
+                <p v-html="$t('text_power-ui_implementation_prototype-unity_intro').join('')"></p>
+                <p v-html="$t('text_power-ui_implementation_prototype-unity_unity').join('')"></p>
+                <p>{{ $t("text_power-ui_implementation_prototype-unity_features").join("") }}</p>
               </div>
               <div class="pillar-col-bg-6">
                 <thumbnail-box
@@ -430,11 +430,11 @@
 
         <div class="container huge">
           <div class="container small">
-            <h3 id="prototype-phaser-and-vue-js">{{ $t("heading_power-ui_prototype-phaser-and-vue-js") }}</h3>
-            <p>{{ $t("text_power-ui_implementation_prototype-phaser_intro") }}</p>
-            <p>{{ $t("text_power-ui_implementation_prototype-phaser_architecture") }}</p>
-            <p>{{ $t("text_power-ui_implementation_prototype-phaser_features") }}</p>
-            <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-phaser_goal") }}</p>
+            <h3 id="prototype-phaser-and-vue-js" v-html="$t('heading_power-ui_prototype-phaser-and-vue-js')"></h3>
+            <p v-html="$t('text_power-ui_implementation_prototype-phaser_intro').join('')"></p>
+            <p v-html="$t('text_power-ui_implementation_prototype-phaser_architecture').join('')"></p>
+            <p>{{ $t("text_power-ui_implementation_prototype-phaser_features").join("") }}</p>
+            <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-phaser_goal").join("") }}</p>
           </div>
         </div>
 
@@ -471,12 +471,12 @@
             <div class="pillar-row">
               <div class="pillar-col-bg-4">
                 <h2 id="user-testing">{{ $t("heading_power-ui_user-testing") }}</h2>
-                <p>{{ $t("text_power-ui_user-testing_intro") }}</p>
-                <p>{{ $t("text_power-ui_user-testing_test-structure") }}</p>
+                <p>{{ $t("text_power-ui_user-testing_intro").join("") }}</p>
+                <p>{{ $t("text_power-ui_user-testing_test-structure").join("") }}</p>
               </div>
               <div class="pillar-col-bg-4">
-                <p>{{ $t("text_power-ui_user-testing_results") }}</p>
-                <p>{{ $t("text_power-ui_user-testing_global-game-jam") }}</p>
+                <p>{{ $t("text_power-ui_user-testing_results").join("") }}</p>
+                <p v-html="$t('text_power-ui_user-testing_global-game-jam').join('')"></p>
               </div>
               <div class="pillar-col-bg-4">
                 <simple-image
@@ -532,8 +532,8 @@
               </div>
               <div class="pillar-col-bg-4">
                 <h2 id="conclusion">{{ $t("heading_power-ui_conclusion") }}</h2>
-                <p>{{ $t("text_power-ui_conlusion_summary") }}</p>
-                <p>{{ $t("text_power-ui_conlusion_read-more") }}</p>
+                <p>{{ $t("text_power-ui_conlusion_summary").join("") }}</p>
+                <p>{{ $t("text_power-ui_conlusion_read-more").join("") }}</p>
               </div>
             </div>
           </div>
