@@ -90,7 +90,7 @@
           <div class="pillar-row">
             <div class="pillar-col-bg">
               <simple-image
-                class="standalone rounded fit-image shadow-medium-faint height-40"
+                class="standalone rounded fit-image shadow-medium-faint pad-caption height-40"
                 src="data-visualization/Questionnaire.jpg"
                 :alt="$t('alt_data-visualization_questionnaire')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
@@ -99,7 +99,7 @@
             </div>
             <div class="pillar-col-bg">
               <simple-image
-                class="standalone rounded fit-image shadow-medium-faint"
+                class="standalone rounded fit-image shadow-medium-faint pad-caption"
                 src="data-visualization/Data Analysis - Dataset.png"
                 :alt="$t('alt_data-visualization_data-analysis')"
                 :caption="$t('caption_data-visualization_data-analysis')"
@@ -107,7 +107,7 @@
             </div>
             <div class="pillar-col-bg">
               <simple-image
-                class="standalone rounded fit-image shadow-medium-faint"
+                class="standalone rounded fit-image shadow-medium-faint pad-caption"
                 src="data-visualization/Data Analysis - Pivot Table.png"
                 :alt="$t('alt_data-visualization_data-pivot')"
                 :caption="$t('caption_data-visualization_data-pivot')"
@@ -126,7 +126,7 @@
           <div class="pillar-row">
             <div class="pillar-col">
               <simple-image
-                class="standalone rounded fit-image shadow-medium-faint"
+                class="standalone rounded fit-image shadow-medium-faint pad-caption"
                 src="data-visualization/Sketch - Traffic Map.jpg"
                 :alt="$t('alt_data-visualization_sketch_traffic')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
@@ -141,7 +141,7 @@
             </div>
             <div class="pillar-col">
               <simple-image
-                class="standalone rounded fit-image shadow-medium-faint"
+                class="standalone rounded fit-image shadow-medium-faint pad-caption"
                 src="data-visualization/Sketch - Sunburst.jpg"
                 :alt="$t('alt_data-visualization_sketch_sunburst')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
@@ -156,7 +156,7 @@
             </div>
             <div class="pillar-col">
               <simple-image
-                class="standalone rounded fit-image shadow-medium-faint"
+                class="standalone rounded fit-image shadow-medium-faint pad-caption"
                 src="data-visualization/Sketch - Means of Transport.jpg"
                 :alt="$t('alt_data-visualization_sketch_transport-means')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
@@ -249,7 +249,7 @@
           <div class="pillar-row">
             <div class="pillar-col">
               <simple-image
-                class="standalone rounded fit-image shadow-medium-faint"
+                class="standalone rounded fit-image shadow-medium-faint pad-caption"
                 src="data-visualization/Making Of 1.jpg"
                 :alt="$t('alt_data-visualization_making-of-1')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
@@ -264,7 +264,7 @@
             </div>
             <div class="pillar-col">
               <simple-image
-                class="standalone rounded fit-image shadow-medium-faint"
+                class="standalone rounded fit-image shadow-medium-faint pad-caption"
                 src="data-visualization/Making Of 2.jpg"
                 :alt="$t('alt_data-visualization_sketch_sunburst')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
@@ -279,7 +279,7 @@
             </div>
             <div class="pillar-col">
               <simple-image
-                class="standalone rounded fit-image shadow-medium-faint"
+                class="standalone rounded fit-image shadow-medium-faint pad-caption"
                 src="data-visualization/Making Of 3.jpg"
                 :alt="$t('alt_data-visualization_sketch_transport-means')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
