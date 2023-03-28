@@ -480,7 +480,7 @@
               </div>
               <div class="pillar-col-bg-4">
                 <simple-image
-                  class="standalone rounded fit-image shadow-medium"
+                  class="standalone rounded fit-image shadow-medium pad-all"
                   src="power-ui/global-game-jam-group-shot.jpg"
                   :alt="$t('alt_power-ui_global-game-jam_group-shot')"
                   caption="The team 'Quick and Dirty' of the Global Game Jam 2020 in Ansbach. "
