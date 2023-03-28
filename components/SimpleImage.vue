@@ -165,6 +165,16 @@ figure {
       width: auto;
     }
   }
+
+  &.pad-all {
+    padding: 2rem;
+  }
+
+  &.pad-caption {
+    .simple-image-caption {
+      padding: 0 2rem 2rem;
+    }
+  }
 }
 
 .simple-image-media {
@@ -175,5 +185,9 @@ figure {
 
 .simple-image-caption {
   margin-top: 1em;
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 }
 </style>
