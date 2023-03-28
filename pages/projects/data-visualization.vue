@@ -29,15 +29,19 @@
           sizes="xs:400px sm:640px md:960px lg:1200px"
         ></simple-image>
         <parallax-box class="zero-height background" :speed-factor="0.12"
-          ><icon-living-with-parents class="icon font-white size-6 bottom-27 left-15 opacity-20 rotate-neg-5"></icon-living-with-parents
+          ><icon-living-with-parents
+            class="icon font-white size-6 bottom-27 left-15 opacity-20 rotate-neg-5"
+          ></icon-living-with-parents
         ></parallax-box>
-        <parallax-box class="zero-height background" :speed-factor="0.20"
+        <parallax-box class="zero-height background" :speed-factor="0.2"
           ><icon-going-by-car class="icon font-white size-10 bottom-4 rotate-5 right-0 opacity-40"></icon-going-by-car
         ></parallax-box>
         <parallax-box class="zero-height background" :speed-factor="0.18"
-          ><icon-living-with-partner class="icon font-white size-9 bottom-2 left-5 opacity-40"></icon-living-with-partner
+          ><icon-living-with-partner
+            class="icon font-white size-9 bottom-2 left-5 opacity-40"
+          ></icon-living-with-partner
         ></parallax-box>
-        <parallax-box class="zero-height background" :speed-factor="0.20"
+        <parallax-box class="zero-height background" :speed-factor="0.2"
           ><icon-going-by-bike class="icon font-white size-10 rotate-neg-10 bottom-12 opacity-50"></icon-going-by-bike
         ></parallax-box>
         <parallax-box class="zero-height background" :speed-factor="0.12"
@@ -50,10 +54,14 @@
           ><icon-commute class="icon font-white size-7 bottom-16 right-20 opacity-30"></icon-commute
         ></parallax-box>
         <parallax-box class="zero-height background" :speed-factor="0.14"
-          ><icon-living-in-shared-community class="icon font-white size-7 bottom-12 left-20 opacity-20 rotate-10"></icon-living-in-shared-community
+          ><icon-living-in-shared-community
+            class="icon font-white size-7 bottom-12 left-20 opacity-20 rotate-10"
+          ></icon-living-in-shared-community
         ></parallax-box>
         <parallax-box class="zero-height background" :speed-factor="0.14"
-          ><icon-driving-car-pool class="icon font-white size-7 top-0 right-30 opacity-20 rotate-10"></icon-driving-car-pool
+          ><icon-driving-car-pool
+            class="icon font-white size-7 top-0 right-30 opacity-20 rotate-10"
+          ></icon-driving-car-pool
         ></parallax-box>
       </div>
     </template>
@@ -71,9 +79,7 @@
         <div class="container huge">
           <div class="container small left no-padding">
             <h2 id="data-collection-and-evaluation">
-              {{
-                $t("heading_data-visualization_data-collection-and-evaluation")
-              }}
+              {{ $t("heading_data-visualization_data-collection-and-evaluation") }}
             </h2>
             <p>{{ $t("text_data-visualization_data-collection").join("") }}</p>
             <p>{{ $t("text_data-visualization_data-evaluation").join("") }}</p>
@@ -84,13 +90,7 @@
           <div class="pillar-row">
             <div class="pillar-col-bg">
               <simple-image
-                class="
-                  standalone
-                  rounded
-                  fit-image
-                  shadow-medium-faint
-                  height-40
-                "
+                class="standalone rounded fit-image shadow-medium-faint height-40"
                 src="data-visualization/Questionnaire.jpg"
                 :alt="$t('alt_data-visualization_questionnaire')"
                 sizes="xs:400px sm:640px md:960px lg:1200px"
@@ -192,66 +192,44 @@
                 </div>
               </div>
               <div class="pillar-col-bg-6 icon-item-list">
-                <icon-item :label="$t('label_data_visualization_icon_cost')"
-                  ><icon-cost></icon-cost
-                ></icon-item>
+                <icon-item :label="$t('label_data_visualization_icon_cost')"><icon-cost></icon-cost></icon-item>
                 <icon-item :label="$t('label_data_visualization_icon_commute')"
                   ><icon-commute></icon-commute
                 ></icon-item>
-                <icon-item
-                  :label="
-                    $t('label_data_visualization_icon_living-with-parents')
-                  "
+                <icon-item :label="$t('label_data_visualization_icon_living-with-parents')"
                   ><icon-living-with-parents></icon-living-with-parents
                 ></icon-item>
-                <icon-item
-                  :label="$t('label_data_visualization_icon_living-in-dorm')"
+                <icon-item :label="$t('label_data_visualization_icon_living-in-dorm')"
                   ><icon-living-in-dorm></icon-living-in-dorm
                 ></icon-item>
-                <icon-item
-                  :label="$t('label_data_visualization_icon_living-single')"
+                <icon-item :label="$t('label_data_visualization_icon_living-single')"
                   ><icon-living-single></icon-living-single
                 ></icon-item>
-                <icon-item
-                  :label="
-                    $t('label_data_visualization_icon_living-with-partner')
-                  "
+                <icon-item :label="$t('label_data_visualization_icon_living-with-partner')"
                   ><icon-living-with-partner></icon-living-with-partner
                 ></icon-item>
-                <icon-item
-                  :label="
-                    $t(
-                      'label_data_visualization_icon_living-in-shared-community'
-                    )
-                  "
+                <icon-item :label="$t('label_data_visualization_icon_living-in-shared-community')"
                   ><icon-living-in-shared-community></icon-living-in-shared-community
                 ></icon-item>
-                <icon-item
-                  :label="$t('label_data_visualization_icon_driving-alone')"
+                <icon-item :label="$t('label_data_visualization_icon_driving-alone')"
                   ><icon-driving-alone></icon-driving-alone
                 ></icon-item>
-                <icon-item
-                  :label="$t('label_data_visualization_icon_driving-car-pool')"
+                <icon-item :label="$t('label_data_visualization_icon_driving-car-pool')"
                   ><icon-driving-car-pool></icon-driving-car-pool
                 ></icon-item>
-                <icon-item
-                  :label="$t('label_data_visualization_icon_going-by-foot')"
+                <icon-item :label="$t('label_data_visualization_icon_going-by-foot')"
                   ><icon-going-by-foot></icon-going-by-foot
                 ></icon-item>
-                <icon-item
-                  :label="$t('label_data_visualization_icon_going-by-bike')"
+                <icon-item :label="$t('label_data_visualization_icon_going-by-bike')"
                   ><icon-going-by-bike></icon-going-by-bike
                 ></icon-item>
-                <icon-item
-                  :label="$t('label_data_visualization_icon_going-by-car')"
+                <icon-item :label="$t('label_data_visualization_icon_going-by-car')"
                   ><icon-going-by-car></icon-going-by-car
                 ></icon-item>
-                <icon-item
-                  :label="$t('label_data_visualization_icon_going-by-bus')"
+                <icon-item :label="$t('label_data_visualization_icon_going-by-bus')"
                   ><icon-going-by-bus></icon-going-by-bus
                 ></icon-item>
-                <icon-item
-                  :label="$t('label_data_visualization_icon_going-by-train')"
+                <icon-item :label="$t('label_data_visualization_icon_going-by-train')"
                   ><icon-going-by-train></icon-going-by-train
                 ></icon-item>
               </div>
