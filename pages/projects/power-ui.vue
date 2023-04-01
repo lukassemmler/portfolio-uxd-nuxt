@@ -46,6 +46,18 @@
         <div class="container huge">
           <div class="pillar-container gapped-h">
             <div class="pillar-row">
+              <div class="pillar-col-bg-4"></div>
+              <div class="pillar-col-bg-4">
+                <h2 id="overview" class="sr-only">{{ $t("heading_overview") }}</h2>
+                <p>{{ $t("text_power-ui_intro-1").join("") }}</p>
+                <aside class="quotation">
+                  <q>{{ $t("text_power-ui_intro-quote") }}</q>
+                </aside>
+                <markdown-block :markup="$t('text_power-ui_intro-2').join('')"></markdown-block>
+              </div>
+              <div class="pillar-col-bg-4"></div>
+            </div>
+            <div class="pillar-row">
               <div class="pillar-col-bg-8">
                 <div class="pillar-container gapped-v gapped-h">
                   <div class="pillar-row">
@@ -63,20 +75,15 @@
                   </div>
                 </div>
               </div>
-
               <div class="pillar-col-bg-4">
-                <h2 id="overview" class="sr-only">{{ $t("heading_overview") }}</h2>
-                <p>{{ $t("text_power-ui_intro-1").join("") }}</p>
-                <aside class="quotation">
-                  <q>{{ $t("text_power-ui_intro-quote") }}</q>
-                </aside>
-                <markdown-block :markup="$t('text_power-ui_intro-2').join('')"></markdown-block>
                 <h2 id="concept">{{ $t("heading_power-ui_concept") }}</h2>
                 <p v-html="$t('text_power-ui_concept_video-game-genre').join('')"></p>
                 <p v-html="$t('text_power-ui_concept_mobile-first').join('')"></p>
                 <p v-html="$t('text_power-ui_concept_theme-1').join('')"></p>
                 <p v-html="$t('text_power-ui_concept_theme-2').join('')"></p>
                 <p v-html="$t('text_power-ui_concept_tutorial_intro').join('')"></p>
+                <p>{{ $t("text_power-ui_concept_wireframes").join("") }}</p>
+
               </div>
             </div>
           </div>
@@ -170,10 +177,6 @@
             </template>
           </simple-carousel>
         </div>
-        <div class="container small">
-          <p>{{ $t("text_power-ui_concept_wireframes").join("") }}</p>
-        </div>
-        <div class="container medium"></div>
       </section>
 
       <section id="section-design" class="section">
@@ -358,36 +361,34 @@
           </div>
         </div>
 
-        <div class="container huge">
-          <div class="pillar-container gapped-h spaced-y">
-            <div class="pillar-row">
-              <div class="pillar-col-bg-4">
-                <h3 id="prototype-axure">{{ $t("heading_power-ui_prototype-axure") }}</h3>
-                <p v-html="$t('text_power-ui_implementation_prototype-axure_intro').join('')"></p>
-                <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-axure_pros-and-cons").join("") }}</p>
-              </div>
-              <div class="pillar-col-bg-8">
-                <simple-image
-                  class="standalone"
-                  src="power-ui/program--axure.png"
-                  alt="Axure Prototype with Logic Programming"
-                  caption="Axure Prototype with Logic Programming for Building menu."
-                  ratio="16-by-9"
-                ></simple-image>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="container bg-blue">
-          <!--
-      {{> phone-preview
-          src="static/power-prototype-1/_showcase/preview.html" 
-          id="power-ui-prototype-1" 
-          background="bg-blue" }}
-      -->
+        <div class="container bg-blue font-white">
           <div class="container huge">
-            <div class="pillar-container gapped-h gapped-v-big images-only">
+            <div class="pillar-container gapped-h gapped-v-big spaced-y">
+              <div class="pillar-row">
+                <div class="pillar-col-bg-4">
+                  <h3 id="prototype-axure">{{ $t("heading_power-ui_prototype-axure") }}</h3>
+                  <p v-html="$t('text_power-ui_implementation_prototype-axure_intro').join('')"></p>
+                  <p class="spaced-y">
+                    {{ $t("text_power-ui_implementation_prototype-axure_pros-and-cons").join("") }}
+                  </p>
+                </div>
+                <div class="pillar-col-bg-4">
+                  <simple-image
+                    class="standalone"
+                    src="power-ui/program--axure.png"
+                    alt="Axure Prototype with Logic Programming"
+                    caption="Axure Prototype with Logic Programming for Building menu."
+                    ratio="16-by-9"
+                  ></simple-image>
+                </div>
+                <div class="pillar-col-bg-4">
+                  <!--
+                {{> phone-preview
+                    src="static/power-prototype-1/_showcase/preview.html" 
+                    id="power-ui-prototype-1" 
+                    background="bg-blue" }}
+                --></div>
+              </div>
               <div class="pillar-row">
                 <div class="pillar-col-bg-6" v-for="index in 2" :key="'column-' + index">
                   <simple-image
@@ -439,25 +440,28 @@
           </div>
         </div>
 
-        <div class="container huge">
-          <div class="container small">
-            <h3 id="prototype-phaser-and-vue-js" v-html="$t('heading_power-ui_prototype-phaser-and-vue-js')"></h3>
-            <p v-html="$t('text_power-ui_implementation_prototype-phaser_intro').join('')"></p>
-            <p v-html="$t('text_power-ui_implementation_prototype-phaser_architecture').join('')"></p>
-            <p>{{ $t("text_power-ui_implementation_prototype-phaser_features").join("") }}</p>
-            <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-phaser_goal").join("") }}</p>
-          </div>
-        </div>
-
-        <div class="container bg-yellow">
-          <!--
-      {{> phone-preview
-          src="static/power-prototype-2/_showcase/preview.html" 
-          id="power-ui-prototype-2" 
-          background="bg-yellow" }}
-      -->
+        <div class="container bg-yellow font-white">
           <div class="container huge">
-            <div class="pillar-container gapped-h gapped-v-big images-only">
+            <div class="pillar-container gapped-h gapped-v-big">
+              <div class="pillar-row">
+                <div class="pillar-col-bg-4">
+                  <h3 id="prototype-phaser-and-vue-js" v-html="$t('heading_power-ui_prototype-phaser-and-vue-js')"></h3>
+                  <p v-html="$t('text_power-ui_implementation_prototype-phaser_intro').join('')"></p>
+                  <p v-html="$t('text_power-ui_implementation_prototype-phaser_architecture').join('')"></p>
+                </div>
+                <div class="pillar-col-bg-4">
+                  <p>{{ $t("text_power-ui_implementation_prototype-phaser_features").join("") }}</p>
+                  <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-phaser_goal").join("") }}</p>
+                </div>
+                <div class="pillar-col-bg-4">
+                  <!--
+                  {{> phone-preview
+                      src="static/power-prototype-2/_showcase/preview.html" 
+                      id="power-ui-prototype-2" 
+                      background="bg-yellow" }}
+                  -->
+                </div>
+              </div>
               <div class="pillar-row">
                 <div class="pillar-col-bg-6" v-for="index in 2" :key="'column-' + index">
                   <simple-image
