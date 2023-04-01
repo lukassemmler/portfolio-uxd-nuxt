@@ -232,13 +232,19 @@
             </div>
           </div>
         </div>
-        <div class="container small">
-          <h3 id="terrain">{{ $t("heading_power-ui_terrain") }}</h3>
-          <p v-html="$t('text_power-ui_design_terrain_intro').join('')"></p>
-          <p v-html="$t('text_power-ui_design_terrain_tools').join('')"></p>
-        </div>
-        <div class="container medium">
-          <!-- {{> iso-tiles-demo }} -->
+        <div class="container huge">
+          <div class="pillar-container gapped-h">
+            <div class="pillar-row">
+              <div class="pillar-col-bg-4">
+                <h3 id="terrain">{{ $t("heading_power-ui_terrain") }}</h3>
+                <p v-html="$t('text_power-ui_design_terrain_intro').join('')"></p>
+                <p v-html="$t('text_power-ui_design_terrain_tools').join('')"></p>
+              </div>
+              <div class="pillar-col-bg-8">
+                <iso-tiles-demo></iso-tiles-demo>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="container huge">
           <div class="pillar-container gapped-h">
