@@ -158,6 +158,7 @@ export default {
 
 <style lang="scss">
 @use "sass:math";
+@use "sass:map";
 
 .iso-world {
   // Isometric staggered grid, which is aligned to top center.
@@ -195,6 +196,34 @@ export default {
     top: $y * math.div($cell-size-y, 2);
     z-index: $y;
   }
+  
+    @mixin make-building-positions($positions, $x-label, $y-label) {
+      @each $position in $positions {
+        $label: map.get($position, "label");
+        $x: map.get($position, $x-label);
+        $y: map.get($position, $y-label);
+
+        .iso-world-object.pos-#{$label} {
+          @include pos-in-staggered-iso-grid($y, $x);
+        }
+      }
+    }
+    
+    $building-positions-bg:
+      ("label": "101", "x1":  1, "y1": 10, "x2":  0, "y2": 10, "x3": -2, "y3": 11),
+      ("label": "102", "x1": -1, "y1": 14, "x2":  1, "y2": 19, "x3":  1, "y3": 17),
+      ("label": "103", "x1":  1, "y1": 18, "x2": -2, "y2": 13, "x3": -2, "y3": 16),
+      ("label": "104", "x1": -1, "y1": 22, "x2": -2, "y2": 25, "x3": -1, "y3": 19),
+      ("label": "105", "x1":  1, "y1": 26, "x2":  0, "y2": 16, "x3":  0, "y3": 14),
+      ("label": "106", "x1": -1, "y1": 30, "x2":  1, "y2": 13, "x3":  2, "y3": 13),
+      ("label": "107", "x1":  1, "y1": 34, "x2": -1, "y2": 20, "x3":  1, "y3": 10),
+      ("label": "108", "x1": -1, "y1": 37, "x2":  0, "y2": 21, "x3": -3, "y3": 12),
+      ("label": "201", "x1": -1, "y1": -1, "x2": -1, "y2": -1, "x3": -3, "y3": 21),
+      ("label": "301", "x1":  0, "y1":  6, "x2":  1, "y2": 24, "x3":  2, "y3": 19),
+      ("label": "302", "x1": -1, "y1":  7, "x2":  1, "y2": 23, "x3":  3, "y3": 18),
+      ("label": "303", "x1": -1, "y1":  8, "x2":  2, "y2": 22, "x3":  3, "y3": 17),
+    ;
+    @include make-building-positions($building-positions-bg, "x1", "y1");
 
   .iso-world-background {
     position: absolute;
@@ -308,47 +337,15 @@ export default {
     @include make-size("2-by-2", 2);
     @include make-size("3-by-2", 3, 0.825, 1.3em);
 
-    &.pos-101 {
-      @include pos-in-staggered-iso-grid(10, 1);
-    }
-    &.pos-102 {
-      @include pos-in-staggered-iso-grid(14, -1);
-    }
-    &.pos-103 {
-      @include pos-in-staggered-iso-grid(18, 1);
-    }
-    &.pos-104 {
-      @include pos-in-staggered-iso-grid(22, -1);
-    }
-    &.pos-105 {
-      @include pos-in-staggered-iso-grid(26, 1);
-    }
-    &.pos-106 {
-      @include pos-in-staggered-iso-grid(30, -1);
-    }
-    &.pos-107 {
-      @include pos-in-staggered-iso-grid(34, 1);
-    }
-    &.pos-108 {
-      @include pos-in-staggered-iso-grid(37, -1);
-    }
-    &.pos-201 {
-      @include pos-in-staggered-iso-grid(-1, -1);
-    }
-    &.pos-301 {
-      @include pos-in-staggered-iso-grid(6, 0);
-    }
-    &.pos-302 {
-      @include pos-in-staggered-iso-grid(7, -1);
-    }
-    &.pos-303 {
-      @include pos-in-staggered-iso-grid(8, -1);
-    }
   }
 
   @media screen and (min-width: $breakpoint-semi-big) {
     height: 35em;
     font-size: 1.6rem; // Increase overall size of assets
+
+    @include make-building-positions($building-positions-bg, "x2", "y2");
+
+/*
     .iso-world-object {
       &.pos-101 {
         @include pos-in-staggered-iso-grid(10, 0);
@@ -387,10 +384,14 @@ export default {
         @include pos-in-staggered-iso-grid(22, 2);
       }
     }
+    */
   }
 
   @media screen and (min-width: $breakpoint-xl) {
     height: 31em;
+
+    @include make-building-positions($building-positions-bg, "x3", "y3");
+    /*
     .iso-world-object {
       &.pos-101 {
         @include pos-in-staggered-iso-grid(11, -2);
@@ -429,6 +430,7 @@ export default {
         @include pos-in-staggered-iso-grid(17, 3);
       }
     }
-  }
+    */
+    }
 }
 </style>
