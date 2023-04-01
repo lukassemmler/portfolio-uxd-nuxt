@@ -1,21 +1,22 @@
 <template>
   <div class="iso-world">
-    <div class="iso-world">
-      <div class="iso-world-background"></div>
-      <div class="iso-world-inner">
-        <div
-          v-for="building in buildings"
-          v-bind:key="building.id"
-          class="iso-world-object"
-          :class="[
-            'size-' + building.size,
-            'pos-' + building.position,
-            { interactive: building.interactive },
-            building.shadow ? 'with-' + building.shadow : '',
-          ]"
-        >
-          <simple-image :src="building.src" :alt="building.alt" :ratio="building.ratio"></simple-image>
-        </div>
+    <div class="iso-world-background"></div>
+    <div class="iso-world-inner">
+      <div class="iso-world-content">
+        <slot></slot>
+      </div>
+      <div
+        v-for="building in buildings"
+        v-bind:key="building.id"
+        class="iso-world-object"
+        :class="[
+          'size-' + building.size,
+          'pos-' + building.position,
+          { interactive: building.interactive },
+          building.shadow ? 'with-' + building.shadow : '',
+        ]"
+      >
+        <simple-image :src="building.src" :alt="building.alt" :ratio="building.ratio"></simple-image>
       </div>
     </div>
   </div>
