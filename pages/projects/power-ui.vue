@@ -288,7 +288,7 @@
           </div>
         </div>
         <div class="container full-bleed">
-          <!-- {{> iso-world }} -->
+          <iso-world></iso-world>
         </div>
         <div class="container small">
           <p class="spaced-y">{{ $t("text_power-ui_design_assets_3d-models").join("") }}</p>
