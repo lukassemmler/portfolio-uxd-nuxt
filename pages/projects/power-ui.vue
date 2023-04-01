@@ -287,12 +287,17 @@
             </div>
           </div>
         </div>
-        <div class="container full-bleed">
-          <iso-world></iso-world>
-        </div>
-        <div class="container small">
-          <p class="spaced-y">{{ $t("text_power-ui_design_assets_3d-models").join("") }}</p>
-        </div>
+        <iso-world>
+          <div class="container huge">
+            <div class="pillar-container">
+              <div class="pillar-row">
+                <div class="pillar-col-bg-4 font-white">
+                  <p class="spaced-y">{{ $t("text_power-ui_design_assets_3d-models").join("") }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </iso-world>
       </section>
 
       <section id="section-implementation" class="section">
