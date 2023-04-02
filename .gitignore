@@ -88,3 +88,7 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Extracted zip files
+static/power-ui/prototype-1
+static/power-ui/prototype-2
