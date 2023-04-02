@@ -16,6 +16,8 @@ export default {};
 </script>
 
 <style lang="scss">
+@use "sass:math";
+
 .iso-tiles-demo {
   position: relative;
   margin-bottom: 5em;
@@ -26,14 +28,14 @@ export default {};
 }
 
 .iso-tiles-demo-shadow {
-  $image-ratio: 3/2;
+  $image-ratio: math.div(3, 2);
 
   position: absolute;
   z-index: -1;
   top: 0;
   // Make square again
-  left: percentage(1 / $image-ratio / 4);
-  right: percentage(1 / $image-ratio / 4);
+  left: percentage(math.div(math.div(1, $image-ratio), 4));
+  right: percentage(math.div(math.div(1, $image-ratio), 4));
   bottom: 0;
   background-color: transparent;
   box-shadow: 20em 20em 4em $dark-20;
