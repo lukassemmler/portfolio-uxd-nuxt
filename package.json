@@ -6,7 +6,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "unpack": "node bin/unzip-prototypes.js"
   },
   "dependencies": {
     "@nuxtjs/i18n": "^7.2.0",
