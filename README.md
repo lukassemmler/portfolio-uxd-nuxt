@@ -1,6 +1,9 @@
 # portfolio-uxd-nuxt
 
 UX design portfolio.
+
+Run `npm run unpack` to unpack Power UI prototype zips into the `static folder`.
+
 Run `npm run generate` to create static files and upload them to a webhoster of your choice.
 
 Also check out the [development notes](docs/development-notes.md).
@@ -9,6 +12,9 @@ Also check out the [development notes](docs/development-notes.md).
 ## Build Setup
 
 ```bash
+# unpack zip files
+$ npm run unpack
+
 # install dependencies
 $ npm install
 
