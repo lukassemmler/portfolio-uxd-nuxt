@@ -98,6 +98,13 @@ export default {
     width: 100%;
     height: 0;
     padding: 0 0 56.25% 0;
+    box-shadow: 0 0 6rem $bright-50;
+    border: 0.3rem solid;
+    border-top-color: $black;
+    border-left-color: $gray-20;
+    border-right-color: $gray-26;
+    border-bottom-color: $gray-40;
+    border-radius: 0.2rem;
     iframe {
       position: absolute;
       width: 100%;
@@ -113,7 +120,6 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 80vw;
     margin: 0.8em auto 0;
     box-sizing: border-box;
   }
