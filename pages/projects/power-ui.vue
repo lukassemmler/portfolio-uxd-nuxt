@@ -488,14 +488,7 @@
                   <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-phaser_goal").join("") }}</p>
                 </div>
                 <div class="pillar-col-bg-4">
-                  <fullscreen-box :enabled="prototypePhaserInFullscreen"> This is nice </fullscreen-box>
-                  <button @click="prototypePhaserInFullscreen = !prototypePhaserInFullscreen">Fullscreen</button>
-                  <!--
-                  {{> phone-preview
-                      src="static/power-prototype-2/_showcase/preview.html" 
-                      id="power-ui-prototype-2" 
-                      background="bg-yellow" }}
-                  -->
+                  <phone-preview src="/power-ui/prototype-2/preview/">Testing</phone-preview>
                 </div>
               </div>
               <div class="pillar-row">

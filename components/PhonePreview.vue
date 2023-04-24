@@ -1,36 +1,38 @@
 <template>
-  <div class="phone-preview"
-   :class="{ 'with-background': background}">
-  <div class="phone-preview-body">
-    <div class="phone-shape">
-      <div class="phone-content">
-        <div class="iframe-container">
-          <iframe 
-              :id="id" 
-              :src="src" 
-              width="800" 
-              height="450"
-              :data-fullscreen-id="id"></iframe>
+  <div class="phone-preview" :class="{ 'with-background': background }">
+    <div class="phone-preview-body">
+      <div class="phone-shape">
+        <div class="phone-content">
+          <div class="iframe-container">
+            <fullscreen-box :enabled="fullscreen">
+              <iframe :src="src" width="800" height="450"></iframe>
+            </fullscreen-box>
+          </div>
         </div>
       </div>
     </div>
+    <div class="phone-preview-footer">
+      <button class="phone-preview-fullscreen-button" @click="onButtonClick">Vollbild öffnen</button>
+    </div>
   </div>
-  <div class="phone-preview-footer">
-      <button class="phone-preview-fullscreen-button">Vollbild öffnen</button>
-  </div>
-</div>
-
 </template>
 
 <script>
 export default {
-
-}
+  props: {
+    src: String,
+    fullscreen: false,
+  },
+  methods: {
+    onButtonClick: function (event) {
+      this.fullscreen = !this.fullscreen;
+    },
+  },
+};
 </script>
 
 <style lang="scss">
 .phone-preview {
-
   &.with-background {
     padding-top: 5rem;
     padding-bottom: 3rem;
@@ -39,7 +41,7 @@ export default {
     .phone-shape {
       background-color: $white;
       box-shadow: 0 1rem 3rem $dark-20;
-      
+
       &::before,
       &::after {
         background-color: $white;
@@ -90,7 +92,7 @@ export default {
   .phone-content {
     background-color: $gray-26;
   }
-  
+
   .iframe-container {
     position: relative;
     width: 100%;
@@ -128,9 +130,8 @@ export default {
 
   @media screen and (min-width: $breakpoint-3xl) {
     .phone-preview-body {
-      font-size: 19.2px; // 1920px / 100vw = 19.2px / 1vw 
+      font-size: 19.2px; // 1920px / 100vw = 19.2px / 1vw
     }
   }
 }
-
 </style>
