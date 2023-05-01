@@ -1,5 +1,5 @@
 <template>
-  <div class="phone-preview" :class="{ 'with-background': background }">
+  <div class="phone-preview">
     <div class="phone-preview-body">
       <div class="phone-shape">
         <div class="phone-content">
@@ -72,7 +72,8 @@ export default {
 
 <style lang="scss">
 .phone-preview {
-  &.with-background {
+  &.inverted {
+    // TODO: This is an optional class to invert the phone (make it white). Currently not fully implemented.
     padding-top: 5rem;
     padding-bottom: 3rem;
     background-color: $gray-93;
