@@ -27,4 +27,5 @@
   * The intention is that user can make their own simple minigames (not longer than 30 seconds)
   * Target market is mobile market, because play time there often gets interrupted
   * Also mobile market is the biggest gaming market in Germany in 2021: https://www.instagram.com/p/CgUD3g5siT8/ (by GAME Verband)
-  
+
+* Parallax scrolling for about section (peeking across the fence)
