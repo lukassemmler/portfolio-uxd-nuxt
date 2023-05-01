@@ -90,5 +90,4 @@ sw.*
 *.swp
 
 # Extracted zip files
-static/power-ui/prototype-1
-static/power-ui/prototype-2
+static/power-ui/prototype-?/prototype/

@@ -8,11 +8,11 @@ const { resolve, basename } = require('path');
 const paths = {
   prototype1: {
     input: resolve(__dirname, "../assets/raw/power-prototype-1.zip"),
-    output: resolve(__dirname, "../static/power-ui/prototype-1"),
+    output: resolve(__dirname, "../static/power-ui/prototype-1/prototype"),
   },
   prototype2: {
     input: resolve(__dirname, "../assets/raw/power-prototype-2.zip"),
-    output: resolve(__dirname, "../static/power-ui/prototype-2"),
+    output: resolve(__dirname, "../static/power-ui/prototype-2/prototype"),
   },
 }
 
