@@ -24,12 +24,44 @@ function getChildren(headings, depth = 0) {
   return children;
 }
 
+function traverseTree(node, onNode, depth = 1) {
+  const { element, children } = node;
+  for (const child of children) traverseTree(child, onNode, depth + 1);
+  onNode(node, depth);
+}
+
+function getSubTree(tree, minDepth = 1, maxDepth = Infinity) {
+  // Tree is expected to be an array of nodes, where each node can contain an array of children.
+  const subTree = [];
+  for (const root of tree)
+    traverseTree(root, function onNode(node, depth) {
+      const newNode = { ...node }; // we need to copy so we do not modify the original tree.
+      if (depth === minDepth) subTree.push(newNode);
+      if (depth === maxDepth) newNode.children = [];
+    });
+  return subTree;
+}
+
 export default {
+  props: {
+    minDepth: {
+      type: Number,
+      default: 2,
+    },
+    maxDepth: {
+      type: Number,
+      default: 6,
+    },
+    ignoredClasses: {
+      type: Array,
+      default: () => ["sr-only", "no-toc"],
+    },
+  },
   render(h) {
     const getList = (headings) => {
       if (headings.length === 0) return null;
-      const items = headings.map(heading => {
-        const { element, children} = heading;
+      const items = headings.map((heading) => {
+        const { element, children } = heading;
         const itemContent = [element.textContent];
         const childList = getList(children);
         if (childList) itemContent.push(childList);
@@ -37,9 +69,7 @@ export default {
       });
       return h("ol", items);
     };
-    return h("div", {class: "table-of-contents" }, [
-      getList(this.headingTree)
-    ]);
+    return h("div", { class: "table-of-contents" }, [getList(this.headingTree)]);
   },
   data: function () {
     return {
@@ -66,11 +96,15 @@ export default {
      *   <h2 id="user-testing" class="h2-pan">
      *   <h2 id="conclusion" class="h2-pan">
      */
+    const { ignoredClasses, minDepth, maxDepth } = this.$props;
     const headings = Array.from(document.querySelectorAll("h1, h2, h3, h4, h5, h6"));
-    const tree = getChildren(headings);
-    //console.log(headings)
-    //console.log(tree)
-    this.headingTree = tree;
+    const filteredHeadings = headings.filter((heading) => {
+      return ignoredClasses.every((ignoredClass) => !heading.classList.contains(ignoredClass));
+    });
+    const tree = getChildren(filteredHeadings);
+    const subtree = getSubTree(tree, this.$props.minDepth, this.$props.maxDepth);
+    if (subtree.length === 0) console.error(`Table of content has no headlines. `);
+    this.headingTree = subtree;
   },
 };
 </script>
