@@ -59,7 +59,7 @@
             </div>
             <div class="pillar-row">
               <div class="pillar-col">
-                <h2 id="concept">{{ $t("heading_power-ui_concept") }}</h2>
+                <h2 id="concept" class="h2-pan">{{ $t("heading_power-ui_concept") }}</h2>
               </div>
             </div>
             <div class="pillar-row">
@@ -187,13 +187,13 @@
           <div class="pillar-container gapped-h">
             <div class="pillar-row">
               <div class="pillar-col">
-                <h2 id="design">{{ $t("heading_power-ui_design") }}</h2>
+                <h2 id="design" class="h2-pan">{{ $t("heading_power-ui_design") }}</h2>
               </div>
             </div>
             <div class="pillar-row">
               <div class="pillar-col-bg-4">
                 <p v-html="$t('text_power-ui_design_intro').join('')"></p>
-                <h3 id="icon-design">{{ $t("heading_power-ui_icon-design") }}</h3>
+                <h3 id="icon-design" class="h3-pan">{{ $t("heading_power-ui_icon-design") }}</h3>
                 <p>{{ $t("text_power-ui_design_icon-design_intro").join("") }}</p>
                 <p v-html="$t('text_power-ui_design_icon-design_version-1').join('')"></p>
                 <p>{{ $t("text_power-ui_design_icon-design_version-2").join("") }}</p>
@@ -217,7 +217,7 @@
           <div class="pillar-container gapped-h">
             <div class="pillar-row">
               <div class="pillar-col">
-                <h3 id="screen-design">{{ $t("heading_power-ui_screen-design") }}</h3>
+                <h3 id="screen-design" class="h3-pan">{{ $t("heading_power-ui_screen-design") }}</h3>
               </div>
             </div>
             <div class="pillar-row">
@@ -249,7 +249,7 @@
           <div class="pillar-container gapped-h">
             <div class="pillar-row">
               <div class="pillar-col">
-                <h3 id="terrain">{{ $t("heading_power-ui_terrain") }}</h3>
+                <h3 id="terrain" class="h3-pan">{{ $t("heading_power-ui_terrain") }}</h3>
               </div>
             </div>
             <div class="pillar-row">
@@ -267,7 +267,7 @@
           <div class="pillar-container gapped-h">
             <div class="pillar-row">
               <div class="pillar-col">
-                <h3 id="assets">{{ $t("heading_power-ui_assets") }}</h3>
+                <h3 id="assets" class="h3-pan">{{ $t("heading_power-ui_assets") }}</h3>
               </div>
             </div>
             <div class="pillar-row">
@@ -333,7 +333,7 @@
             <div class="pillar-row">
               <div class="pillar-col">
                 <div class="container-small">
-                  <h2 id="implementation">{{ $t("heading_power-ui_implementation") }}</h2>
+                  <h2 id="implementation" class="h2-pan">{{ $t("heading_power-ui_implementation") }}</h2>
                   <p>{{ $t("text_power-ui_implementation_intro").join("") }}</p>
                 </div>
               </div>
@@ -384,7 +384,7 @@
             <div class="pillar-container gapped-h gapped-v spaced-y">
               <div class="pillar-row">
                 <div class="pillar-col">
-                  <h3 id="prototype-axure">{{ $t("heading_power-ui_prototype-axure") }}</h3>
+                  <h3 id="prototype-axure" class="h3-pan">{{ $t("heading_power-ui_prototype-axure") }}</h3>
                 </div>
               </div>
               <div class="pillar-row">
@@ -432,7 +432,7 @@
           <div class="pillar-container gapped-h gapped-v images-only">
             <div class="pillar-row">
               <div class="pillar-col">
-                <h3 id="prototype-unity">{{ $t("heading_power-ui_prototype-unity") }}</h3>
+                <h3 id="prototype-unity" class="h3-pan">{{ $t("heading_power-ui_prototype-unity") }}</h3>
               </div>
             </div>
             <div class="pillar-row">
@@ -475,7 +475,11 @@
             <div class="pillar-container gapped-h gapped-v">
               <div class="pillar-row">
                 <div class="pillar-col">
-                  <h3 id="prototype-phaser-and-vue-js" v-html="$t('heading_power-ui_prototype-phaser-and-vue-js')"></h3>
+                  <h3
+                    id="prototype-phaser-and-vue-js"
+                    class="h3-pan"
+                    v-html="$t('heading_power-ui_prototype-phaser-and-vue-js')"
+                  ></h3>
                 </div>
               </div>
               <div class="pillar-row">
@@ -514,7 +518,7 @@
           <div class="pillar-container gapped-h">
             <div class="pillar-row">
               <div class="pillar-col">
-                <h2 id="user-testing">{{ $t("heading_power-ui_user-testing") }}</h2>
+                <h2 id="user-testing" class="h2-pan">{{ $t("heading_power-ui_user-testing") }}</h2>
               </div>
             </div>
             <div class="pillar-row">
@@ -569,7 +573,7 @@
           <div class="pillar-container">
             <div class="pillar-row">
               <div class="pillar-col-bg-4">
-                <h2 id="conclusion">{{ $t("heading_power-ui_conclusion") }}</h2>
+                <h2 id="conclusion" class="h2-pan">{{ $t("heading_power-ui_conclusion") }}</h2>
                 <p>{{ $t("text_power-ui_conlusion_summary").join("") }}</p>
                 <p>{{ $t("text_power-ui_conlusion_read-more").join("") }}</p>
               </div>
