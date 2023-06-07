@@ -64,3 +64,14 @@ q {
   @extend %label-base;
   font-size: 3em;
 }
+
+// 'pan' stands for 'panoramic'
+.h2-pan {
+  font-size: calc(1em + 2vw);
+}
+.h3-pan {
+  font-size: calc(1em + 1.5vw);
+}
+.h4-pan {
+  font-size: calc(1em + 1vw);
+}
