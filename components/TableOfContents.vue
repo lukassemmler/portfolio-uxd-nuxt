@@ -56,20 +56,33 @@ export default {
       type: Array,
       default: () => ["sr-only", "no-toc"],
     },
+    showHeading: {
+      type: Boolean,
+      default: true,
+    },
   },
   render(h) {
     const getList = (headings) => {
       if (headings.length === 0) return null;
-      const items = headings.map((heading) => {
+      const items = headings.map((heading, index) => {
         const { element, children } = heading;
-        const itemContent = [element.textContent];
+        if (!element.id) element.id = index + 1;
+        console.log(element.id);
+        const itemContent = [h("a", { attrs: { href: "#" + element.id } }, [element.textContent])];
         const childList = getList(children);
         if (childList) itemContent.push(childList);
-        return h("li", itemContent);
+        return h("li", { class: "table-of-contents-item" }, itemContent);
       });
-      return h("ol", items);
+      return h("ol", { class: "table-of-contents-list" }, items);
     };
-    return h("div", { class: "table-of-contents" }, [getList(this.headingTree)]);
+    return h("div", { class: "table-of-contents" }, [
+      h(
+        "h2",
+        { class: ["table-of-contents-heading", "no-toc", { "sr-only": !this.$props.showHeading }] },
+        this.$t("label_table-of-contents")
+      ),
+      getList(this.headingTree),
+    ]);
   },
   data: function () {
     return {
@@ -109,5 +122,47 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+$padding: 0.25em;
+
+.table-of-contents {
+  background-color: $dark-05;
+  border-radius: 0.5em;
+  padding: 1.5em;
+}
+
+.table-of-contents-list {
+  counter-reset: item;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.table-of-contents-item {
+  display: block;
+  padding-top: $padding;
+  padding-bottom: $padding;
+
+  &:before {
+    //display: inline-flex;
+    //width: 1em;
+    //justify-content: end;
+    content: counters(item, ".") " ";
+    counter-increment: item;
+    margin-right: 0.25em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  & > .table-of-contents-list {
+    padding-left: 1.5em;
+    margin-top: $padding;
+    margin-bottom: -1 * $padding;
+  }
+}
+
+.table-of-contents-heading {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.02em;
+}
 </style>
