@@ -72,6 +72,8 @@ export default {
 
 <style lang="scss">
 .phone-preview {
+  container-type: inline-size;
+
   &.inverted {
     // TODO: This is an optional class to invert the phone (make it white). Currently not fully implemented.
     padding-top: 5rem;
@@ -90,8 +92,12 @@ export default {
   }
 
   .phone-preview-body {
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
+    width: 80em;
     font-size: 1vw;
+    font-size: 1.25cqw;
   }
 
   .phone-shape {
@@ -289,10 +295,11 @@ export default {
     margin-bottom: 5em;
   }
 
-  @media screen and (min-width: $breakpoint-3xl) {
-    .phone-preview-body {
-      font-size: 19.2px; // 1920px / 100vw = 19.2px / 1vw
-    }
-  }
+  //@media screen and (min-width: $breakpoint-3xl) {
+  //  .phone-preview-body {
+  //    $scaling-factor: 1.222;
+  //    font-size: 19.2px * $scaling-factor; // 1920px / 100vw = 19.2px / 1vw
+  //  }
+  //}
 }
 </style>
