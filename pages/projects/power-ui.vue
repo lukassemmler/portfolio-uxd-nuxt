@@ -321,6 +321,7 @@
             <div class="pillar-container">
               <div class="pillar-row">
                 <div class="pillar-col-bg-4 font-white">
+                  <h3 id="3d-models" class="h3-pan">{{ $t("heading_power-ui_3d-models")   }}</h3>
                   <p class="spaced-y">{{ $t("text_power-ui_design_assets_3d-models").join("") }}</p>
                 </div>
               </div>
