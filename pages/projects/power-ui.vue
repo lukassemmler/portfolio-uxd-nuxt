@@ -384,7 +384,7 @@
 
         <div class="container bg-blue font-white">
           <div class="container huge">
-            <div class="pillar-container gapped-h gapped-v spaced-y">
+            <div class="pillar-container gapped-h spaced-y">
               <div class="pillar-row">
                 <div class="pillar-col">
                   <h3 id="prototype-axure" class="h3-pan">{{ $t("heading_power-ui_prototype-axure") }}</h3>
@@ -396,8 +396,6 @@
                   <p class="spaced-y">
                     {{ $t("text_power-ui_implementation_prototype-axure_pros-and-cons").join("") }}
                   </p>
-                </div>
-                <div class="pillar-col-bg-4">
                   <simple-image
                     class="standalone"
                     src="power-ui/program--axure.png"
@@ -406,7 +404,8 @@
                     ratio="16-by-9"
                   ></simple-image>
                 </div>
-                <div class="pillar-col-bg-4">
+                <div class="pillar-col-bg-8">
+                  <phone-preview src="/power-ui/prototype-1/preview/">Testing</phone-preview>
                   <!--
                 {{> phone-preview
                     src="static/power-prototype-1/_showcase/preview.html" 
@@ -489,12 +488,10 @@
                 <div class="pillar-col-bg-4">
                   <p v-html="$t('text_power-ui_implementation_prototype-phaser_intro').join('')"></p>
                   <p v-html="$t('text_power-ui_implementation_prototype-phaser_architecture').join('')"></p>
-                </div>
-                <div class="pillar-col-bg-4">
                   <p>{{ $t("text_power-ui_implementation_prototype-phaser_features").join("") }}</p>
                   <p class="spaced-y">{{ $t("text_power-ui_implementation_prototype-phaser_goal").join("") }}</p>
                 </div>
-                <div class="pillar-col-bg-4">
+                <div class="pillar-col-bg-8">
                   <phone-preview src="/power-ui/prototype-2/preview/">Testing</phone-preview>
                 </div>
               </div>
