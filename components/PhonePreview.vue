@@ -51,7 +51,9 @@
       </div>
     </div>
     <div class="phone-preview-footer">
-      <button class="phone-preview-fullscreen-button" @click="onButtonClick">Vollbild öffnen</button>
+      <simple-button class="phone-preview-button" @click="onButtonClick">Vollbild öffnen</simple-button>
+      <!-- TODO: Open externally; TODO: Strings for button labels -->
+      <simple-button class="phone-preview-button" @click="onButtonClick">Extern öffnen</simple-button>
     </div>
   </div>
 </template>
@@ -172,9 +174,13 @@ export default {
     justify-content: center;
     margin: 0.8em auto 0;
     box-sizing: border-box;
+
+    & > *:not(:last-child) {
+      margin-right: 1em;
+    }
   }
 
-  .phone-preview-fullscreen-button {
+  .phone-preview-button {
     font-family: "Fira Sans", sans-serif;
     display: inline-flex;
     height: 2.5rem;
