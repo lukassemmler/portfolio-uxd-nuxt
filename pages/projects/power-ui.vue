@@ -46,7 +46,6 @@
         <div class="container huge">
           <div class="pillar-container gapped-h">
             <div class="pillar-row">
-              <div class="pillar-col-bg-4"></div>
               <div class="pillar-col-bg-4">
                 <h2 id="overview" class="sr-only">{{ $t("heading_overview") }}</h2>
                 <p>{{ $t("text_power-ui_intro-1").join("") }}</p>
@@ -54,6 +53,9 @@
                   <q>{{ $t("text_power-ui_intro-quote") }}</q>
                 </aside>
                 <markdown-block :markup="$t('text_power-ui_intro-2').join('')"></markdown-block>
+              </div>
+              <div class="pillar-col-bg-4">
+                <table-of-contents></table-of-contents>
               </div>
               <div class="pillar-col-bg-4"></div>
             </div>
