@@ -94,7 +94,7 @@
           </div>
         </div>
 
-        <div class="container full-bleed">
+        <div class="container full-bleed hide-overflow padded-vertical bg-dark-faint flush-last-item">
           <simple-carousel :numberOfPages="3" width="small">
             <template slot="1">
               <column-card

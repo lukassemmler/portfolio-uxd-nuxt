@@ -77,3 +77,5 @@
 @include make-bg-hover("blue", $turquoise-blue, $pastel-turquoise);
 @include make-bg-hover("pink", $rose-red, $light-pink);
 @include make-bg-hover("gray", $dusk-70, $dusk-50);
+
+@include make-bg-color("dark-faint", $dark-05);

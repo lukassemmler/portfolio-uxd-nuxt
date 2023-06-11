@@ -170,3 +170,17 @@ a.invisible-link {
 .spaced-bottom {
   margin-bottom: $sp * 3;
 }
+
+.hide-overflow {
+  overflow: hidden;
+}
+
+.padded-vertical {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.flush-last-item.flush-last-item > *:last-child {
+  // Increase specificy by repeating class
+  margin-bottom: 0;
+}
