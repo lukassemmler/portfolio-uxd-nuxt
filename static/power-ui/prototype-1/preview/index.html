@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power Prototype Axure Start</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, 
+    body,
+    .backdrop {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      font-family: 'Fira Sans',  'Segoe UI', 'Helvetica', 'Source Sans Pro', 'Roboto', sans-serif; 
+      color: #333333; 
+    }
+    .backdrop {
+      position: relative;
+      background-image: url("./prototype--axure-v0-6-overview-blurred.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .link-content {
+      position: relative;
+      width: 3em;
+      height: 3em;
+    }
+    .start-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      background-color: rgba(0,0,0,0.5);
+      text-decoration: none;
+      text-align: center;
+      font-weight: 600;
+      font-size: calc(12pt + 3vw);
+      color: white;
+      transition: font-size 0.15s ease-in-out;
+    }
+    .start-link:hover {
+      cursor: pointer;
+      font-size: calc(18pt + 3vw);
+    }
+    .start-link:hover .gamepad {
+      color: #FF4A26;
+    }
+    .gamepad {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin-top: 0.2em;
+      color: rgba(0,0,0,0.7);
+    }
+    .gamepad > svg {
+      display: block; 
+      width: 100%;
+      height: 100%;
+    }
+    .play {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.5em;
+      height: 1.5em;
+      margin-top: 0.75em;
+      margin-left: 0.75em;
+    }
+  </style>
+</head>
+<body>
+  <div class="backdrop">
+    <a href="../prototype/index.html" target="_self" class="start-link" title="Axure Prototyp">
+      <div class="link-content">
+        <div class="gamepad">
+          <svg version="1.1" id="Ebene_1" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 640 512" fill="currentColor" xml:space="preserve">
+           <path d="M638.6,368.2l-33.4-211.6c-8.9-50.3-48.4-90.8-100.7-103.1h-0.1c-121.3-28.6-247.7-28.6-369,0
+             C83.2,65.9,43.6,106.4,34.8,156.6L1.4,368.2C-8.9,426.7,38.8,480,101.5,480c49.7,0,93.8-30.1,109.5-74.6l7.5-21.4h203l7.5,21.4
+             c15.7,44.6,59.8,74.6,109.5,74.6C601.2,480,648.9,426.7,638.6,368.2L638.6,368.2z"/>
+          </svg>
+        </div>
+        <span class="play">&#9654;</span>
+      </div>
+    </a>
+</div>
+</body>
+</html>
