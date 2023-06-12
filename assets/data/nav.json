@@ -15,32 +15,58 @@
           {
             "id": "projects.3dModelling",
             "path": "/projects/3d-modelling",
-            "labelId": "meta-title_3d-modelling"
+            "labelId": "meta-title_3d-modelling",
+            "titleId": "project-nav_3d-modelling",
+            "enabled": true,
+            "color": "bg-hover-pink"
           },
           {
             "id": "projects.dataVisualization",
             "path": "/projects/data-visualization",
-            "labelId": "meta-title_data-visualization"
+            "labelId": "meta-title_data-visualization",
+            "titleId": "project-nav_data-visualization",
+            "enabled": true,
+            "color": "bg-hover-blue"
           },
           {
             "id": "projects.designBooklet",
             "path": "/projects/design-booklet",
-            "labelId": "meta-title_design-booklet"
+            "labelId": "meta-title_design-booklet",
+            "titleId": "project-nav_design-booklet",
+            "enabled": true,
+            "color": "bg-hover-gray"
           },
           {
             "id": "projects.infotainmentSystem",
             "path": "/projects/infotainment-system",
-            "labelId": "meta-title_infotainment-system"
+            "labelId": "meta-title_infotainment-system",
+            "titleId": "project-nav_infotainment-system",
+            "enabled": true,
+            "color": "bg-hover-red"
           },
           {
             "id": "projects.steeringWheel",
             "path": "/projects/steering-wheel",
-            "labelId": "meta-title_steering-wheel"
+            "labelId": "meta-title_steering-wheel",
+            "titleId": "project-nav_steering-wheel",
+            "enabled": true,
+            "color": "bg-hover-green"
+          },
+          {
+            "id": "projects.powerUi",
+            "path": "/projects/power-ui",
+            "labelId": "meta-title_power-ui",
+            "titleId": "project-nav_power-ui",
+            "enabled": true,
+            "color": "bg-hover-yellow"
           },
           {
             "id": "projects.thiMove",
             "path": "/projects/thi-move",
-            "labelId": "meta-title_thi-move"
+            "labelId": "meta-title_thi-move",
+            "titleId": "project-nav_thi-move",
+            "enabled": false,
+            "color": "bg-hover-yellow"
           }
         ]
       },
