@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema",
   "definitions": {
-    "NavNode": {
-      "title": "NavNode",
+    "Page": {
+      "title": "Page",
       "description": "A NavSite represented as node in a NavTree",
       "type": [
         "object"
@@ -17,11 +17,14 @@
         "labelId": {
           "type": "string"
         },
-        "children": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/NavNode"
-          }
+        "titleId": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "color": {
+          "type": "string"
         }
       },
       "additionalItems": false,
@@ -30,17 +33,67 @@
         "path",
         "labelId"
       ]
+    },
+    "TreeItem": {
+      "title": "TreeItem",
+      "description": "A TreeItem represents a page that can have other TreeItem's as children",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "$ref": "#/definitions/TreeItem"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        }
+      },
+      "additionalItems": false,
+      "required": [
+        "id",
+        "children"
+      ]
     }
   },
   "type": "object",
   "properties": {
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref": "#/definitions/Page"
+      }
+    },
     "trees": {
-      "type": "object",
-      "patternProperties": {
-        "^.*$": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/NavNode"
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "$ref": "#/definitions/TreeItem"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
           }
         }
       }
@@ -48,6 +101,7 @@
   },
   "additionalItems": false,
   "required": [
+    "pages",
     "trees"
   ]
 }
