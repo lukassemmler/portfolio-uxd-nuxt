@@ -9,12 +9,7 @@
     :meta-colleagues="'Alexander Beidoun, Maximilian Götz'"
     :meta-date="$t('project-summary-date_steering-wheel')"
     :project-tools="[{ iconId: 'Cinema4d', label: 'Cinema 4D' }]"
-    :nav-previous-title="$t('project-nav_3d-modelling')"
-    :nav-previous-link="'/projects/3d-modelling'"
-    :nav-previous-color="'bg-hover-pink'"
-    :nav-next-title="$t('project-nav_infotainment-system')"
-    :nav-next-link="'/projects/infotainment-system'"
-    :nav-next-color="'bg-hover-red'"
+    nav-id="projects.steeringWheel"
   >
     <template v-slot:header>
       <div class="container huge">

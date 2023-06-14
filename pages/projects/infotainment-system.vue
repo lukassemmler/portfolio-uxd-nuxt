@@ -11,9 +11,7 @@
       { iconId: 'AdobeIndesign', label: 'Indesign' },
       { iconId: 'AdobeIllustrator', label: 'Illustrator' },
     ]"
-    :nav-previous-title="$t('project-nav_steering-wheel')"
-    :nav-previous-link="'/projects/steering-wheel'"
-    :nav-previous-color="'bg-hover-green'"
+    nav-id="projects.infotainmentSystem"
   >
     <template v-slot:header>
       <div class="container huge">

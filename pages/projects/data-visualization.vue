@@ -11,12 +11,7 @@
       { iconId: 'AdobeIndesign', label: 'Indesign' },
       { iconId: 'AdobeIllustrator', label: 'Illustrator' },
     ]"
-    :nav-previous-title="$t('project-nav_power-ui')"
-    :nav-previous-link="'/projects/power-ui'"
-    :nav-previous-color="'bg-hover-yellow'"
-    :nav-next-title="$t('project-nav_design-booklet')"
-    :nav-next-link="'/projects/design-booklet'"
-    :nav-next-color="'bg-hover-gray'"
+    nav-id="projects.dataVisualization"
   >
     <template v-slot:header>
       <div class="container huge">

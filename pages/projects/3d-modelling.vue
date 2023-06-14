@@ -8,12 +8,7 @@
     :meta-lecture="$t('project-summary-client_3d-modelling')"
     :meta-date="$t('project-summary-date_3d-modelling')"
     :project-tools="[{ iconId: 'Blender', label: 'Blender' }]"
-    :nav-previous-title="$t('project-nav_design-booklet')"
-    :nav-previous-link="'/projects/design-booklet'"
-    :nav-previous-color="'bg-hover-gray'"
-    :nav-next-title="$t('project-nav_steering-wheel')"
-    :nav-next-link="'/projects/steering-wheel'"
-    :nav-next-color="'bg-hover-green'"
+    nav-id="projects.3dModelling"
   >
     <template v-slot:header>
       <!-- TODO: Add Sculptris as project tool -->

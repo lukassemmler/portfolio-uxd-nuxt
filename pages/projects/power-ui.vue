@@ -19,9 +19,7 @@
       { iconId: 'Phaser', label: 'Phaser' },
       { iconId: 'Sass', label: 'SASS' },
     ]"
-    :nav-previous-title="$t('project-nav_steering-wheel')"
-    :nav-previous-link="'/projects/steering-wheel'"
-    :nav-previous-color="'bg-hover-green'"
+    nav-id="projects.powerUi"
   >
     <template v-slot:header>
       <div class="container huge">
