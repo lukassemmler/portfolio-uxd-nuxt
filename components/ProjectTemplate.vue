@@ -45,7 +45,10 @@
 import { validateIconItemList } from "~/assets/lib/icon-item-list";
 import nav from "~/assets/data/nav.json";
 
-const projectPages = nav.pages.filter(page => page.id.startsWith("projects."));
+const projectPages = nav.pages.filter(page => {
+  const { id, enabled } = page;
+  return id.startsWith("projects.") && enabled;
+});
 
 export default {
   props: {
