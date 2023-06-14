@@ -30,12 +30,12 @@
     </header>
     <slot name="content"></slot>
     <project-pagination
-      :previousTitle="navPreviousTitle"
-      :previousLink="navPreviousLink"
-      :previousColor="navPreviousColor"
-      :nextTitle="navNextTitle"
-      :nextLink="navNextLink"
-      :nextColor="navNextColor"
+      :previousTitle="navPreviousTitle ? navPreviousTitle : navSetPreviousTitle"
+      :previousLink="navPreviousLink ? navPreviousLink : navSetPreviousLink"
+      :previousColor="navPreviousColor ? navPreviousColor : navSetPreviousColor"
+      :nextTitle="navNextTitle ? navNextTitle : navSetNextTitle"
+      :nextLink="navNextLink ? navNextLink : navSetNextLink"
+      :nextColor="navNextColor ? navNextColor : navSetNextColor"
     ></project-pagination>
     <page-footer></page-footer>
   </div>
@@ -43,6 +43,10 @@
 
 <script>
 import { validateIconItemList } from "~/assets/lib/icon-item-list";
+import nav from "~/assets/data/nav.json";
+
+const projectPages = nav.pages.filter(page => page.id.startsWith("projects."));
+
 export default {
   props: {
     title: {
@@ -76,6 +80,73 @@ export default {
     navNextTitle: String,
     navNextLink: String,
     navNextColor: String,
+    navSet: Array, // Automatically retrieves navigation info from nav set, can be overridden.
+    navId: String, // Necessary to determine own current position when reading from nav tree.
+  },
+  data: function () {
+    return {
+      projectPages: this.$props.navSet ?? projectPages,
+    };
+  },
+  computed: {
+    navSetPreviousTitle: function () {
+      const titleId = this.getNavSetEntryProp("previous", "titleId");
+      return titleId ? this.$t(titleId) : null;
+    },
+    navSetPreviousLink: function () {
+      return this.getNavSetEntryProp("previous", "path");
+    },
+    navSetPreviousColor: function () {
+      return this.getNavSetEntryProp("previous", "color");
+    },
+    navSetNextTitle: function () {
+      const titleId = this.getNavSetEntryProp("next", "titleId");
+      return titleId ? this.$t(titleId) : null;
+    },
+    navSetNextLink: function () {
+      return this.getNavSetEntryProp("next", "path");
+    },
+    navSetNextColor: function () {
+      return this.getNavSetEntryProp("next", "color");
+    },
+  },
+  methods: {
+    getNavSetEntry: function (id) {
+      if (!id || id.length === 0) {
+        console.warn("No nav id specified, so nav set cannot be searched. ");
+        return null;
+      }
+      if (!this.projectPages) return null;
+      const match = this.projectPages.find(page => page.id === id);
+      return match ?? null;
+    },
+    getRelevantPagesFromNavSet: function(id) {
+      const { projectPages } = this;
+      if (!projectPages) return null;
+      const currentPageIndex = projectPages.findIndex(page => page.id === id);
+      const currentPage = this.getNavSetEntry(id);
+      const previousPage = projectPages[currentPageIndex - 1]; // Will be 'undefined' if out of array
+      const nextPage = projectPages[currentPageIndex + 1]; // Will be 'undefined' if out of array
+      return { currentPage, previousPage, nextPage };
+    },
+    getNavSetEntryProp: function(page, prop) {
+      const relevantPages = this.getRelevantPagesFromNavSet(this.$props.navId);
+      if (!relevantPages) return null;
+      const { currentPage, previousPage, nextPage } = relevantPages;
+      switch (page) {
+        case "current":
+          if (!currentPage) return null;
+          return currentPage[prop];
+        case "previous":
+          if (!previousPage) return null;
+          return previousPage[prop];
+        case "next":
+          if (!nextPage) return null;
+          return nextPage[prop];
+        default:
+          throw new Error(`Unknown page type '${page}'. `);
+      }
+    }
   },
 };
 </script>
