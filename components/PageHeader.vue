@@ -61,11 +61,13 @@
 
 <script>
 import navigation from "assets/data/nav.json";
+import { getTreeFromNav } from "~/assets/lib/site-tree";
 import LukasLogo from "./LukasLogo.vue";
 import HeaderNav from "./HeaderNav.vue";
 import LangMenu from "./LangMenu.vue";
 import AnnouncementArea from "./AnnouncementArea.vue";
 import MobileMenu from "./MobileMenu.vue";
+
 export default {
   components: { LukasLogo, HeaderNav, LangMenu, AnnouncementArea, MobileMenu },
   props: {
@@ -85,7 +87,7 @@ export default {
   },
   data: function () {
     return {
-      navigation: navigation.trees.header,
+      navigation: getTreeFromNav(navigation, "header"),
     };
   },
   computed: {

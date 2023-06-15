@@ -20,17 +20,13 @@
 import SocialMediaList from "./SocialMediaList.vue";
 import FooterNav from "./FooterNav.vue";
 import navigation from "assets/data/nav.json";
-import { getTree } from "~/assets/lib/site-tree";
-
-const { pages, trees } = navigation;
-const rawFooterTree = trees.find(tree => tree.id === "footer");
-const footerTree = getTree(pages, rawFooterTree.children);
+import { getTreeFromNav } from "~/assets/lib/site-tree";
 
 export default {
   components: { SocialMediaList },
   data: function () {
     return {
-      navigation: footerTree,
+      navigation: getTreeFromNav(navigation, "footer"),
     };
   },
   computed: {

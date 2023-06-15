@@ -73,3 +73,10 @@ export function getTree(pages, rawTree) {
   }
   return tree;
 }
+
+export function getTreeFromNav(navigation, treeId) {
+  const { pages, trees } = navigation;
+  const rawTree = trees.find(tree => tree.id === treeId);
+  if (!rawTree) throw new Error(`There is no tree with id '${treeId}' in the navigation data. `);
+  return getTree(pages, rawTree.children);
+}
