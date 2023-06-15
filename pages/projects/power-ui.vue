@@ -24,7 +24,7 @@
     <template v-slot:header>
       <div class="container huge">
         <simple-image
-          class="standalone rounded fit-image"
+          class="standalone rounded fit-image spaced-y-neg"
           src="power-ui/Power-UI Color Board.png"
           :alt="$t('alt_power-ui_color-board')"
           sizes="xs:400px sm:640px md:960px lg:1200px"

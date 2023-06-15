@@ -175,6 +175,12 @@ figure {
       padding: 0 2rem 2rem;
     }
   }
+  
+  &.spaced-y-neg {
+    margin-top: -3%;
+    margin-bottom: -3%;
+  }
+
 }
 
 .simple-image-media {
