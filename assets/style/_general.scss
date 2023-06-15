@@ -184,3 +184,19 @@ a.invisible-link {
   // Increase specificy by repeating class
   margin-bottom: 0;
 }
+
+.tilt-1 {
+  transform: rotate(1deg);
+}
+
+.tilt-2 {
+  transform: rotate(2deg);
+}
+
+.tilt-n1 {
+  transform: rotate(-1deg);
+}
+
+.tilt-n2 {
+  transform: rotate(-2deg);
+}

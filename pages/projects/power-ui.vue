@@ -96,7 +96,7 @@
           <simple-carousel :numberOfPages="3" width="small">
             <template slot="1">
               <column-card
-                class="bg-pink font-white padded"
+                class="bg-pink font-white padded tilt-1"
                 href="#"
                 number="1"
                 src="power-ui/Power UI - Tutorial 1.jpg"
@@ -120,7 +120,7 @@
             </template>
             <template slot="3">
               <column-card
-                class="bg-pink font-white padded"
+                class="bg-pink font-white padded tilt-n1"
                 href="#"
                 number="3"
                 src="power-ui/Power UI - Tutorial 3.jpg"
@@ -132,7 +132,7 @@
             </template>
             <template slot="4">
               <column-card
-                class="bg-pink font-white padded"
+                class="bg-pink font-white padded tilt-1"
                 href="#"
                 number="4"
                 src="power-ui/Power UI - Tutorial 4.jpg"
@@ -156,7 +156,7 @@
             </template>
             <template slot="6">
               <column-card
-                class="bg-pink font-white padded"
+                class="bg-pink font-white padded tilt-n2"
                 href="#"
                 number="6"
                 src="power-ui/Power UI - Tutorial 6.jpg"
@@ -168,7 +168,7 @@
             </template>
             <template slot="7">
               <column-card
-                class="bg-pink font-white padded"
+                class="bg-pink font-white padded tilt-n1"
                 href="#"
                 number="7"
                 src="power-ui/Power UI - Tutorial 7.jpg"
