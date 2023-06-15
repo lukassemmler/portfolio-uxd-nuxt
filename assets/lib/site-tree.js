@@ -2,35 +2,35 @@ import navigation from "assets/data/nav.json";
 import Tree from "./generic-tree";
 
 function getPagesById(pages) {
-const pagesById = new Map();
-for (const page of pages) {
-  const { id } = page;
-  if (pagesById.has(id)) {
-    console.warn(`There are multiple pages with the same id '${id}'. Skipping entry. `);
-    continue;
+  const pagesById = new Map();
+  for (const page of pages) {
+    const { id } = page;
+    if (pagesById.has(id)) {
+      console.warn(`There are multiple pages with the same id '${id}'. Skipping entry. `);
+      continue;
+    }
+    pagesById.set(id, page);
   }
-  pagesById.set(id, page);
-}
-return pagesById;
+  return pagesById;
 }
 
 function traverseNode(node, onNode = () => { }, parent = undefined) {
-    const parentId = typeof parent === "string" ? parent : parent.id;
-    onNode({ node, parent: parentId });
-    if (typeof node !== "object") return;
-    const { children } = node;
-    if (!children) return;
-    for (const child of children)
-      traverseNode(child, onNode, node);
+  const parentId = typeof parent === "string" ? parent : parent.id;
+  onNode({ node, parent: parentId });
+  if (typeof node !== "object") return;
+  const { children } = node;
+  if (!children) return;
+  for (const child of children)
+    traverseNode(child, onNode, node);
 }
 
 function getTreeLinksFromRawTree(tree) {
   const treeLinks = [];
   for (const node of tree)
-    traverseNode(node, ({node, parent}) => {
+    traverseNode(node, ({ node, parent }) => {
       if (!parent) return;
       const nodeId = typeof node === "string" ? node : node.id;
-      treeLinks.push({from: parent, to: nodeId});
+      treeLinks.push({ from: parent, to: nodeId });
     });
   return treeLinks;
 }
@@ -38,7 +38,7 @@ function getTreeLinksFromRawTree(tree) {
 function getTrees(pages, rawTrees) {
   const trees = {};
   for (const tree of rawTrees) {
-    const {id, children} = tree;
+    const { id, children } = tree;
     const pagesById = getPagesById(pages);
     const treeLinks = getTreeLinksFromRawTree(children);
     trees[id] = new Tree(pagesById, treeLinks);
@@ -46,7 +46,30 @@ function getTrees(pages, rawTrees) {
   return trees;
 }
 
+/*
+function hydrateNode (pagesById, rawPage) {
+  if (typeof rawPage === "string") {
+    const page = pagesById.get(rawPage);
+    return { ...page, children: [] };
+  }
+  const { id, children } = rawPage;
+  const page = pagesById.get(id);
+  return { ...page, children };
+}
+*/
 // WARNING: Untested
 
-const { pages, trees } = navigation;
-export const nav = getTrees(pages, trees);
+//const { pages, trees } = navigation;
+//export const nav = getTrees(pages, trees);
+
+export function getTree(pages, rawTree) {
+  const pagesById = getPagesById(pages);
+  const tree = [];
+  for (const node of rawTree) { 
+    const pageId = typeof node === "string" ? node : node.id;
+    const children = typeof node === "string" ? [] : getTree(pages, node.children);
+    const page = pagesById.get(pageId);
+    tree.push({ ...page, children });
+  }
+  return tree;
+}
