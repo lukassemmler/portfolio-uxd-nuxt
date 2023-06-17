@@ -200,3 +200,18 @@ a.invisible-link {
 .tilt-n2 {
   transform: rotate(-2deg);
 }
+
+.list {
+  margin-top: 0;
+  line-height: 1.25;
+
+  & > *:not(:last-child) {
+    margin-bottom: 0.4em;
+  }
+}
+
+.list-none {
+  list-style-type: none;
+  padding-left: 0;
+  padding-right: 0;
+}

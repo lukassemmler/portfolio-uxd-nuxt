@@ -3,37 +3,41 @@
     <div class="pillar-container gapped-h">
       <div class="pillar-row">
         <div class="pillar-col">
-          <h2>{{ $t("heading_about_presentation") }}</h2>
+          <h2 class="sr-only">{{ $t("heading_about_presentation") }}</h2>
         </div>
       </div>
       <div class="pillar-row">
-        <div class="pillar-col-bg-4">
-          <h3>{{ $t("heading_about_liking") }}</h3>
-          <ul>
+        <div class="pillar-col-bg-3 center-vertically align-items-right">
+          <h3 class="h3-spaced">{{ $t("heading_about_liking") }}</h3>
+          <ul class="list list-none">
             <li>{{ $t("text_about_liking_1") }}</li>
             <li>{{ $t("text_about_liking_2") }}</li>
             <li>{{ $t("text_about_liking_3") }}</li>
             <li>{{ $t("text_about_liking_4") }}</li>
           </ul>
-          <h3>{{ $t("heading_about_offering") }}</h3>
-          <ul>
+          <h3 class="h3-spaced">{{ $t("heading_about_offering") }}</h3>
+          <ul class="list list-none">
             <li>{{ $t("text_about_offering_1") }}</li>
             <li>{{ $t("text_about_offering_2") }}</li>
             <li>{{ $t("text_about_offering_3") }}</li>
             <li>{{ $t("text_about_offering_4") }}</li>
           </ul>
         </div>
-        <div class="pillar-col-bg-4"></div>
-        <div class="pillar-col-bg-4">
-          <h3>{{ $t("heading_about_good-at") }}</h3>
-          <ul>
+        <div class="pillar-col-bg-6 center-vertically">
+          <simple-image 
+            src="lukas/lukas-working.png"
+            alt=""/>
+        </div>
+        <div class="pillar-col-bg-3 center-vertically">
+          <h3 class="h3-spaced">{{ $t("heading_about_good-at") }}</h3>
+          <ul class="list list-none">
             <li>{{ $t("text_about_good-at_1") }}</li>
             <li>{{ $t("text_about_good-at_2") }}</li>
             <li>{{ $t("text_about_good-at_3") }}</li>
             <li>{{ $t("text_about_good-at_4") }}</li>
           </ul>
-          <h3>{{ $t("heading_about_bad-at") }}</h3>
-          <ul>
+          <h3 class="h3-spaced">{{ $t("heading_about_bad-at") }}</h3>
+          <ul class="list list-none">
             <li>{{ $t("text_about_bad-at_1") }}</li>
             <li>{{ $t("text_about_bad-at_2") }}</li>
             <li>{{ $t("text_about_bad-at_3") }}</li>
@@ -124,9 +128,10 @@
 
 <script>
 import CvRecord from "~/components/CvRecord.vue";
+import SimpleImage from '~/components/SimpleImage.vue';
 export default {
   layout: "vanilla",
-  components: { CvRecord },
+  components: { CvRecord, SimpleImage },
 };
 </script>
 
