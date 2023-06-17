@@ -1,37 +1,46 @@
 <template>
   <div class="container huge">
-    <h2>Presentation</h2>
-
-    <h3>Things I <em>like</em></h3>
-    <ul>
-      <li>UI design</li>
-      <li>illustration</li>
-      <li>frontend coding</li>
-      <li>game development</li>
-    </ul>
-
-    <h3>What I can <em>offer</em></h3>
-    <ul>
-      <li>friendly and reliable</li>
-      <li>small ideas and questions</li>
-      <li>well-structured UI design</li>
-      <li>robust concepts and design</li>
-    </ul>
-
-    <h3>Things I'm <em>good</em> at</h3>
-    <ul>
-      <li>big projects with high complexity</li>
-      <li>organizing information (wikis and documentation)</li>
-      <li>design following accessability guidelines</li>
-      <li>automation of unefficient work steps</li>
-    </ul>
-
-    <h3>Things I'm <em>bad</em> at</h3>
-    <ul>
-      <li>quick-fire projects</li>
-      <li>dealing with uncertainty</li>
-      <li>straight-forward, repetitive tasks</li>
-    </ul>
+    <div class="pillar-container gapped-h">
+      <div class="pillar-row">
+        <div class="pillar-col">
+          <h2>{{ $t("heading_about_presentation") }}</h2>
+        </div>
+      </div>
+      <div class="pillar-row">
+        <div class="pillar-col-bg-4">
+          <h3>{{ $t("heading_about_liking") }}</h3>
+          <ul>
+            <li>{{ $t("text_about_liking_1") }}</li>
+            <li>{{ $t("text_about_liking_2") }}</li>
+            <li>{{ $t("text_about_liking_3") }}</li>
+            <li>{{ $t("text_about_liking_4") }}</li>
+          </ul>
+          <h3>{{ $t("heading_about_offering") }}</h3>
+          <ul>
+            <li>{{ $t("text_about_offering_1") }}</li>
+            <li>{{ $t("text_about_offering_2") }}</li>
+            <li>{{ $t("text_about_offering_3") }}</li>
+            <li>{{ $t("text_about_offering_4") }}</li>
+          </ul>
+        </div>
+        <div class="pillar-col-bg-4"></div>
+        <div class="pillar-col-bg-4">
+          <h3>{{ $t("heading_about_good-at") }}</h3>
+          <ul>
+            <li>{{ $t("text_about_good-at_1") }}</li>
+            <li>{{ $t("text_about_good-at_2") }}</li>
+            <li>{{ $t("text_about_good-at_3") }}</li>
+            <li>{{ $t("text_about_good-at_4") }}</li>
+          </ul>
+          <h3>{{ $t("heading_about_bad-at") }}</h3>
+          <ul>
+            <li>{{ $t("text_about_bad-at_1") }}</li>
+            <li>{{ $t("text_about_bad-at_2") }}</li>
+            <li>{{ $t("text_about_bad-at_3") }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <div class="pillar-container gapped-h">
       <div class="pillar-row">
