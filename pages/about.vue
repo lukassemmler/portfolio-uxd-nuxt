@@ -1,126 +1,129 @@
 <template>
-  <div class="container huge">
-    <div class="pillar-container gapped-h">
-      <div class="pillar-row">
-        <div class="pillar-col">
-          <h2 class="sr-only">{{ $t("heading_about_presentation") }}</h2>
+  <div class="content">
+    <header class="project-intro" :class="background">
+      <page-header :inverted="false"></page-header>
+      <h1 class="project-title" v-if="title" v-html="title"></h1>
+    </header>
+    <div class="container huge">
+      <div class="pillar-container gapped-h">
+        <div class="pillar-row">
+          <div class="pillar-col">
+            <h2 class="sr-only">{{ $t("heading_about_presentation") }}</h2>
+          </div>
+        </div>
+        <div class="pillar-row">
+          <div class="pillar-col-bg-3 center-vertically align-items-right">
+            <h3 class="h3-spaced">{{ $t("heading_about_liking") }}</h3>
+            <ul class="list list-none">
+              <li>{{ $t("text_about_liking_1") }}</li>
+              <li>{{ $t("text_about_liking_2") }}</li>
+              <li>{{ $t("text_about_liking_3") }}</li>
+              <li>{{ $t("text_about_liking_4") }}</li>
+            </ul>
+            <h3 class="h3-spaced">{{ $t("heading_about_offering") }}</h3>
+            <ul class="list list-none">
+              <li>{{ $t("text_about_offering_1") }}</li>
+              <li>{{ $t("text_about_offering_2") }}</li>
+              <li>{{ $t("text_about_offering_3") }}</li>
+              <li>{{ $t("text_about_offering_4") }}</li>
+            </ul>
+          </div>
+          <div class="pillar-col-bg-6 center-vertically">
+            <simple-image src="lukas/lukas-working.png" alt="" />
+          </div>
+          <div class="pillar-col-bg-3 center-vertically">
+            <h3 class="h3-spaced">{{ $t("heading_about_good-at") }}</h3>
+            <ul class="list list-none">
+              <li>{{ $t("text_about_good-at_1") }}</li>
+              <li>{{ $t("text_about_good-at_2") }}</li>
+              <li>{{ $t("text_about_good-at_3") }}</li>
+              <li>{{ $t("text_about_good-at_4") }}</li>
+            </ul>
+            <h3 class="h3-spaced">{{ $t("heading_about_bad-at") }}</h3>
+            <ul class="list list-none">
+              <li>{{ $t("text_about_bad-at_1") }}</li>
+              <li>{{ $t("text_about_bad-at_2") }}</li>
+              <li>{{ $t("text_about_bad-at_3") }}</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="pillar-row">
-        <div class="pillar-col-bg-3 center-vertically align-items-right">
-          <h3 class="h3-spaced">{{ $t("heading_about_liking") }}</h3>
-          <ul class="list list-none">
-            <li>{{ $t("text_about_liking_1") }}</li>
-            <li>{{ $t("text_about_liking_2") }}</li>
-            <li>{{ $t("text_about_liking_3") }}</li>
-            <li>{{ $t("text_about_liking_4") }}</li>
-          </ul>
-          <h3 class="h3-spaced">{{ $t("heading_about_offering") }}</h3>
-          <ul class="list list-none">
-            <li>{{ $t("text_about_offering_1") }}</li>
-            <li>{{ $t("text_about_offering_2") }}</li>
-            <li>{{ $t("text_about_offering_3") }}</li>
-            <li>{{ $t("text_about_offering_4") }}</li>
-          </ul>
+      <div class="pillar-container gapped-h">
+        <div class="pillar-row">
+          <section class="pillar-col-bg-6">
+            <h2 id="work-experience">
+              {{ $t("heading_about_work-experience") }}
+            </h2>
+            <cv-record
+              iconId="business"
+              :level="0"
+              :title="$t('text_about_work-experience-3_organization')"
+              :subtitle="$t('text_about_work-experience-3_title')"
+              :timespan="$t('text_about_work-experience-3_time-span')"
+              :location="$t('text_about_work-experience-3_location')"
+              :description="$t('text_about_work-experience-3_description').join('')"
+            ></cv-record>
+            <cv-record
+              iconId="business"
+              :level="0"
+              :title="$t('text_about_work-experience-2_organization')"
+              :subtitle="$t('text_about_work-experience-2_title')"
+              :timespan="$t('text_about_work-experience-2_time-span')"
+              :location="$t('text_about_work-experience-2_location')"
+              :description="$t('text_about_work-experience-2_description').join('')"
+            ></cv-record>
+            <cv-record
+              iconId="business"
+              :level="0"
+              :title="$t('text_about_work-experience-1_organization')"
+              :subtitle="$t('text_about_work-experience-1_title')"
+              :timespan="$t('text_about_work-experience-1_time-span')"
+              :location="$t('text_about_work-experience-1_location')"
+              :description="$t('text_about_work-experience-1_description').join('')"
+            ></cv-record>
+          </section>
+          <section class="pillar-col-bg-6">
+            <h2 id="education">{{ $t("heading_about_education") }}</h2>
+            <cv-record
+              iconId="school"
+              :level="0"
+              :title="$t('text_about_education-1_organization')"
+              :subtitle="$t('text_about_education-1_title')"
+              :timespan="$t('text_about_education-1_time-span')"
+              :location="$t('text_about_education-1_location')"
+              :description="$t('text_about_education-1_description').join('')"
+            ></cv-record>
+            <cv-record
+              iconId="school"
+              :level="1"
+              :title="$t('text_about_education-2_organization')"
+              :subtitle="$t('text_about_education-2_title')"
+              :timespan="$t('text_about_education-2_time-span')"
+              :location="$t('text_about_education-2_location')"
+              :description="$t('text_about_education-2_description').join('')"
+              ><template v-slot:extra>
+                <a href="download/BA Lukas Semmler.pdf" class="link-button">&#8594;PDF</a>
+              </template></cv-record
+            >
+            <cv-record
+              iconId="trophy"
+              :level="1"
+              :title="$t('text_about_education-3_organization')"
+              :subtitle="$t('text_about_education-3_title')"
+              :timespan="$t('text_about_education-3_time-span')"
+              :location="$t('text_about_education-3_location')"
+              :description="$t('text_about_education-3_description').join('')"
+            ></cv-record>
+            <cv-record
+              iconId="trophy"
+              :level="1"
+              :title="$t('text_about_education-4_organization')"
+              :subtitle="$t('text_about_education-4_title')"
+              :timespan="$t('text_about_education-4_time-span')"
+              :location="$t('text_about_education-4_location')"
+            ></cv-record>
+          </section>
         </div>
-        <div class="pillar-col-bg-6 center-vertically">
-          <simple-image 
-            src="lukas/lukas-working.png"
-            alt=""/>
-        </div>
-        <div class="pillar-col-bg-3 center-vertically">
-          <h3 class="h3-spaced">{{ $t("heading_about_good-at") }}</h3>
-          <ul class="list list-none">
-            <li>{{ $t("text_about_good-at_1") }}</li>
-            <li>{{ $t("text_about_good-at_2") }}</li>
-            <li>{{ $t("text_about_good-at_3") }}</li>
-            <li>{{ $t("text_about_good-at_4") }}</li>
-          </ul>
-          <h3 class="h3-spaced">{{ $t("heading_about_bad-at") }}</h3>
-          <ul class="list list-none">
-            <li>{{ $t("text_about_bad-at_1") }}</li>
-            <li>{{ $t("text_about_bad-at_2") }}</li>
-            <li>{{ $t("text_about_bad-at_3") }}</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="pillar-container gapped-h">
-      <div class="pillar-row">
-        <section class="pillar-col-bg-6">
-          <h2 id="work-experience">
-            {{ $t("heading_about_work-experience") }}
-          </h2>
-          <cv-record
-            iconId="business"
-            :level="0"
-            :title="$t('text_about_work-experience-3_organization')"
-            :subtitle="$t('text_about_work-experience-3_title')"
-            :timespan="$t('text_about_work-experience-3_time-span')"
-            :location="$t('text_about_work-experience-3_location')"
-            :description="$t('text_about_work-experience-3_description').join('')"
-          ></cv-record>
-          <cv-record
-            iconId="business"
-            :level="0"
-            :title="$t('text_about_work-experience-2_organization')"
-            :subtitle="$t('text_about_work-experience-2_title')"
-            :timespan="$t('text_about_work-experience-2_time-span')"
-            :location="$t('text_about_work-experience-2_location')"
-            :description="$t('text_about_work-experience-2_description').join('')"
-          ></cv-record>
-          <cv-record
-            iconId="business"
-            :level="0"
-            :title="$t('text_about_work-experience-1_organization')"
-            :subtitle="$t('text_about_work-experience-1_title')"
-            :timespan="$t('text_about_work-experience-1_time-span')"
-            :location="$t('text_about_work-experience-1_location')"
-            :description="$t('text_about_work-experience-1_description').join('')"
-          ></cv-record>
-        </section>
-        <section class="pillar-col-bg-6">
-          <h2 id="education">{{ $t("heading_about_education") }}</h2>
-          <cv-record
-            iconId="school"
-            :level="0"
-            :title="$t('text_about_education-1_organization')"
-            :subtitle="$t('text_about_education-1_title')"
-            :timespan="$t('text_about_education-1_time-span')"
-            :location="$t('text_about_education-1_location')"
-            :description="$t('text_about_education-1_description').join('')"
-          ></cv-record>
-          <cv-record
-            iconId="school"
-            :level="1"
-            :title="$t('text_about_education-2_organization')"
-            :subtitle="$t('text_about_education-2_title')"
-            :timespan="$t('text_about_education-2_time-span')"
-            :location="$t('text_about_education-2_location')"
-            :description="$t('text_about_education-2_description').join('')"
-            ><template v-slot:extra>
-              <a href="download/BA Lukas Semmler.pdf" class="link-button">&#8594;PDF</a>
-            </template></cv-record
-          >
-          <cv-record
-            iconId="trophy"
-            :level="1"
-            :title="$t('text_about_education-3_organization')"
-            :subtitle="$t('text_about_education-3_title')"
-            :timespan="$t('text_about_education-3_time-span')"
-            :location="$t('text_about_education-3_location')"
-            :description="$t('text_about_education-3_description').join('')"
-          ></cv-record>
-          <cv-record
-            iconId="trophy"
-            :level="1"
-            :title="$t('text_about_education-4_organization')"
-            :subtitle="$t('text_about_education-4_title')"
-            :timespan="$t('text_about_education-4_time-span')"
-            :location="$t('text_about_education-4_location')"
-          ></cv-record>
-        </section>
       </div>
     </div>
   </div>
@@ -128,9 +131,9 @@
 
 <script>
 import CvRecord from "~/components/CvRecord.vue";
-import SimpleImage from '~/components/SimpleImage.vue';
+import SimpleImage from "~/components/SimpleImage.vue";
 export default {
-  layout: "vanilla",
+  layout: "default",
   components: { CvRecord, SimpleImage },
 };
 </script>
