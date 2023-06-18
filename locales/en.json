@@ -594,9 +594,7 @@
     "This includes web dev and game dev as hobby. ",
     "I like to draw, because it helps a lot to sketch out ideas quickly. "
   ],
-  "text_about_description": [
-    "My name is Lukas and <br>I'm a UX Designer. "
-  ],
+  "text_about_description": "I'm Lukas and I'm a UX Designer. ",
   "text_about_drawing": [
     "Here are some drawings I made between November 2019 and July 2020. ",
     "Mostly anthropomorphic characters or portrait studies. ",
@@ -637,9 +635,7 @@
   "text_about_good-at_2": "organizing information (wikis and documentation)",
   "text_about_good-at_3": "design following accessability guidelines",
   "text_about_good-at_4": "automation of unefficient work steps",
-  "text_about_hello": [
-    "Hello! "
-  ],
+  "text_about_hello": "Hello!",
   "text_about_liking_1": "UX design",
   "text_about_liking_2": "illustration",
   "text_about_liking_3": "frontend coding",

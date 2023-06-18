@@ -594,9 +594,7 @@
     "Das umfasst Web- und Spiel-Entwicklung. ",
     "Daneben zeichne ich gern. "
   ],
-  "text_about_description": [
-    "Ich heiße Lukas und <br>ich bin ein UX Designer. "
-  ],
+  "text_about_description": "Ich bin Lukas, ein UX Designer. ",
   "text_about_drawing": [
     "Hier sind ein paar Zeichnungen, die ich zwischen November 2019 und Juli 2020 gemacht habe. ",
     "Hauptsächlich anthropomorphe Charakter oder Porträt-Studien. ",
@@ -637,9 +635,7 @@
   "text_about_good-at_2": "Organisieren von Infos (Wikis und Dokumentation)",
   "text_about_good-at_3": "Design nach Barrierefreiheits-Regeln",
   "text_about_good-at_4": "Automatisierung von aufwendigen Arbeitsschritten",
-  "text_about_hello": [
-    "Hallo! "
-  ],
+  "text_about_hello": "Hallo!",
   "text_about_liking_1": "UX-Design",
   "text_about_liking_2": "Illustration",
   "text_about_liking_3": "Frontend-Coding",
