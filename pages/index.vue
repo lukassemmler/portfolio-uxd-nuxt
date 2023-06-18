@@ -2,22 +2,13 @@
   <div class="container huge">
     <section>
       <h2 class="sr-only">{{ $t("meta-title_about") }}</h2>
-      <simple-billboard
-        class="spaced-bottom"
-        src="lukas/lukas-waving.png"
-        :alt="$t('alt_design-booklet_front')"
-      >
+      <simple-billboard class="spaced-bottom" src="lukas/lukas-waving.png" :alt="$t('alt_design-booklet_front')">
         <p>
-          <strong class="text-semi-big">Hallo!</strong> <br />Ich bin Lukas, ein
-          UX-Designer.
+          <strong class="text-semi-big">{{ $t("text_about_hello") }}</strong> <br />{{ $t("text_about_description") }}
         </p>
-        <simple-button
-          type="secondary"
-          prefixed-icon="east"
-          target="/about"
-          :alt="$t('meta-title_about')"
-          >{{ $t("meta-title_about") }}</simple-button
-        >
+        <simple-button type="secondary" prefixed-icon="east" target="/about" :alt="$t('meta-title_about')">{{
+          $t("meta-title_about")
+        }}</simple-button>
       </simple-billboard>
     </section>
 
