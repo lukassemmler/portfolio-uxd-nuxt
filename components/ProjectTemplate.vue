@@ -43,12 +43,8 @@
 
 <script>
 import { validateIconItemList } from "~/assets/lib/icon-item-list";
-import nav from "~/assets/data/nav.json";
-
-const projectPages = nav.pages.filter(page => {
-  const { id, enabled } = page;
-  return id.startsWith("projects.") && enabled;
-});
+import navigation from "assets/data/nav.json";
+import { getTreeFromNav } from "~/assets/lib/site-tree";
 
 export default {
   props: {
@@ -88,7 +84,7 @@ export default {
   },
   data: function () {
     return {
-      projectPages: this.$props.navSet ?? projectPages,
+      projectPages: this.$props.navSet ?? getTreeFromNav(navigation, "projects"),
     };
   },
   computed: {

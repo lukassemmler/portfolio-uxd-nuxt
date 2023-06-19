@@ -129,6 +129,17 @@
         "imprint",
         "privacyPolicy"
       ]
+    },
+    {
+      "id": "projects",
+      "children": [
+        "projects.3dModelling",
+        "projects.dataVisualization",
+        "projects.designBooklet",
+        "projects.infotainmentSystem",
+        "projects.steeringWheel",
+        "projects.powerUi"
+      ]
     }
   ]
 }
