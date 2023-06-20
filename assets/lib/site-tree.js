@@ -62,21 +62,41 @@ function hydrateNode (pagesById, rawPage) {
 //const { pages, trees } = navigation;
 //export const nav = getTrees(pages, trees);
 
-export function getTree(pages, rawTree) {
+function getTagsById(rawTags) {
+  const tagsById = new Map();
+  for (const rawTag of rawTags) {
+    const { id, stringId } = rawTag;
+    if (tagsById.has(rawTag)) {
+      console.warn(`Duplicate tag id '${id}', skipping adding tag to map. `);
+      continue;
+    }
+    tagsById.set(id, rawTag);
+  }
+  return tagsById;
+}
+
+export function getTree(pages, rawTree, tags = undefined) {
+  const tagsById = tags ? getTagsById(tags) : null;
   const pagesById = getPagesById(pages);
   const tree = [];
   for (const node of rawTree) { 
     const pageId = typeof node === "string" ? node : node.id;
     const children = typeof node === "string" ? [] : getTree(pages, node.children);
     const page = pagesById.get(pageId);
-    tree.push({ ...page, children });
+    const newPage = { ...page };
+    if (tagsById && page.tags) {
+      const rawTags = [...page.tags];
+      const hydratedTags = rawTags.map(tag => tagsById.get(tag));
+      newPage.tags = hydratedTags;
+    }
+    tree.push({ ...newPage, children });
   }
   return tree;
 }
 
-export function getTreeFromNav(navigation, treeId) {
+export function getTreeFromNav(navigation, treeId, tags = undefined) {
   const { pages, trees } = navigation;
   const rawTree = trees.find(tree => tree.id === treeId);
   if (!rawTree) throw new Error(`There is no tree with id '${treeId}' in the navigation data. `);
-  return getTree(pages, rawTree.children);
+  return getTree(pages, rawTree.children, tags);
 }
