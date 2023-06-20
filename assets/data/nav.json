@@ -16,6 +16,15 @@
       "path": "/projects/3d-modelling",
       "labelId": "meta-title_3d-modelling",
       "titleId": "project-nav_3d-modelling",
+      "subtitleId": "project-subtitle_3d-modelling",
+      "descriptionId": "project-description_3d-modelling",
+      "linkId": "project-link-title_3d-modelling",
+      "thumbnailSrc": "thumbnail/Thumbnail 3D Modelling.jpg",
+      "thumbnailAlt": "alt_thumbnail_3d-modelling",
+      "thumbnailRatio": "4-by-3",
+      "tags": [
+        "3dModelling"
+      ],
       "enabled": true,
       "color": "bg-hover-pink"
     },
@@ -24,6 +33,17 @@
       "path": "/projects/data-visualization",
       "labelId": "meta-title_data-visualization",
       "titleId": "project-nav_data-visualization",
+      "subtitleId": "project-subtitle_data-visualization",
+      "descriptionId": "project-description_data-visualization",
+      "linkId": "project-link-title_data-visualization",
+      "thumbnailSrc": "thumbnail/Thumbnail Data Visualization.jpg",
+      "thumbnailAlt": "alt_thumbnail_data-visualization",
+      "thumbnailRatio": "4-by-3",
+      "tags": [
+        "userSurvey",
+        "sketches",
+        "design.poster"
+      ],
       "enabled": true,
       "color": "bg-hover-blue"
     },
@@ -32,6 +52,15 @@
       "path": "/projects/design-booklet",
       "labelId": "meta-title_design-booklet",
       "titleId": "project-nav_design-booklet",
+      "subtitleId": "project-subtitle_design-booklet",
+      "descriptionId": "project-description_design-booklet",
+      "linkId": "project-link-title_design-booklet",
+      "thumbnailSrc": "thumbnail/Thumbnail Design Booklet.jpg",
+      "thumbnailAlt": "alt_thumbnail_design-booklet",
+      "thumbnailRatio": "4-by-3",
+      "tags": [
+        "layout"
+      ],
       "enabled": true,
       "color": "bg-hover-gray"
     },
@@ -40,6 +69,16 @@
       "path": "/projects/infotainment-system",
       "labelId": "meta-title_infotainment-system",
       "titleId": "project-nav_infotainment-system",
+      "subtitleId": "project-subtitle_infotainment-system",
+      "descriptionId": "project-description_infotainment-system",
+      "linkId": "project-link-title_infotainment-system",
+      "thumbnailSrc": "thumbnail/Thumbnail Infotainment System.jpg",
+      "thumbnailAlt": "alt_thumbnail_infotainment-system",
+      "thumbnailRatio": "4-by-3",
+      "tags": [
+        "design.ui",
+        "design.icon"
+      ],
       "enabled": true,
       "color": "bg-hover-red"
     },
@@ -48,6 +87,16 @@
       "path": "/projects/steering-wheel",
       "labelId": "meta-title_steering-wheel",
       "titleId": "project-nav_steering-wheel",
+      "subtitleId": "project-subtitle_steering-wheel",
+      "descriptionId": "project-description_steering-wheel",
+      "linkId": "project-link-title_steering-wheel",
+      "thumbnailSrc": "thumbnail/Thumbnail Steering Wheel.jpg",
+      "thumbnailAlt": "alt_thumbnail_steering-wheel",
+      "thumbnailRatio": "4-by-3",
+      "tags": [
+        "3dModelling",
+        "contest"
+      ],
       "enabled": true,
       "color": "bg-hover-green"
     },
@@ -56,6 +105,20 @@
       "path": "/projects/power-ui",
       "labelId": "meta-title_power-ui",
       "titleId": "project-nav_power-ui",
+      "subtitleId": "project-subtitle_power-ui",
+      "descriptionId": "project-description_power-ui",
+      "linkId": "project-link-title_power-ui",
+      "thumbnailSrc": "thumbnail/Thumbnail Power-UI.jpg",
+      "thumbnailAlt": "alt_thumbnail_power-ui",
+      "thumbnailRatio": "4-by-3",
+      "tags": [
+        "uxTesting",
+        "prototyping",
+        "design.ui",
+        "design.icon",
+        "assetCreation",
+        "codingGames"
+      ],
       "enabled": true,
       "color": "bg-hover-yellow"
     },
