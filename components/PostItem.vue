@@ -14,7 +14,7 @@
           {{ subtitle }}
         </p>
       <div class="post-item-tags" v-if="tags">
-        <ul class="post-item-tags-list">
+        <ul class="list-tags">
           <li v-for="tag in tags" :key="tag">
             <simple-tag :text="tag"></simple-tag>
           </li>
@@ -127,18 +127,6 @@ export default {
   font-size: 0.9em;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.post-item-tags-list {
-  list-style-type: none;
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0;
-  padding: 0;
-
-  & > *:not(:last-child) {
-    margin-right: 0.5rem;
-  }
 }
 
 .post-item-date {

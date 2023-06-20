@@ -232,3 +232,15 @@ a.invisible-link {
     border-top: $border;
   }
 }
+
+.list-tags {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+
+  & > *:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}
