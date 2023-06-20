@@ -1,0 +1,50 @@
+[
+  {
+    "id": "3dModelling",
+    "stringId": "label_tag_3d-modelling"
+  },
+  {
+    "id": "assetCreation",
+    "stringId": "label_tag_asset-creation"
+  },
+  {
+    "id": "codingGames",
+    "stringId": "label_tag_coding-games"
+  },
+  {
+    "id": "contest",
+    "stringId": "label_tag_contest"
+  },
+  {
+    "id": "design.icon",
+    "stringId": "label_tag_design-icon"
+  },
+  {
+    "id": "design.poster",
+    "stringId": "label_tag_design-poster"
+  },
+  {
+    "id": "design.ui",
+    "stringId": "label_tag_design-ui"
+  },
+  {
+    "id": "layout",
+    "stringId": "label_tag_layout"
+  },
+  {
+    "id": "prototyping",
+    "stringId": "label_tag_prototyping"
+  },
+  {
+    "id": "sketches",
+    "stringId": "label_tag_sketches"
+  },
+  {
+    "id": "userSurvey",
+    "stringId": "label_tag_user-survey"
+  },
+  {
+    "id": "uxTesting",
+    "stringId": "label_tag_ux-testing"
+  }
+]
