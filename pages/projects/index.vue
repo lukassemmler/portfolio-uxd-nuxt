@@ -1,6 +1,15 @@
 <template>
   <div class="container huge">
     <h1>{{ $t("heading_projects") }}</h1>
+    <button>Filter by tags</button>
+    <input type="radio" id="old-to-new" name="time-sorting"><label for="old-to-new">oldest first</label>
+    <input type="radio" id="new-to-old" name="time-sorting"><label for="new-to-old">newest first</label>
+    <span class="">showing X of X projects total</span>
+    <ul class="list-tags">
+      <li v-for="tag in usedTags" v-bind:key="tag.id">
+        <simple-tag :text="$t(tag.stringId)" />
+      </li>
+    </ul>
     <div class="list-filtering">
       <ul class="list-separated">
         <li v-for="project in projects" v-bind:key="project.id">
@@ -36,11 +45,27 @@ export default {
   data: function () {
     return {
       projects: getTreeFromNav(navigation, "projects", tags).reverse(),
+      usedTags: null,
     };
   },
-  //mounted: function () {
-  //  console.log(this.projects)
-  //},
+  created: function () {
+    const tagsById = new Map();
+    for (const project of this.projects) {
+      const { tags } = project;
+      for (const tag of tags) {
+        const { id } = tag;
+        if (tagsById.has(id)) continue;
+        tagsById.set(id, tag);
+      }
+    }
+    const usedTags = Array.from(tagsById, ([id, tag]) => tag);
+    const sortStringsByLocale = (a, b) => {
+      const localizedStringA = this.$t(a);
+      const localizedStringB = this.$t(b);
+      return localizedStringA.toLowerCase() > localizedStringB.toLowerCase();
+    };
+    this.usedTags = usedTags.sort((a, b) => sortStringsByLocale(a.stringId, b.stringId));
+  },
 };
 </script>
 
