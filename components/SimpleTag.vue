@@ -1,7 +1,7 @@
 <template>
-  <span class="simple-tag" @click="$emit('click', $event)"
+  <button class="simple-tag" @click="$emit('click', $event)"
     ><span class="simple-tag-head">&ZeroWidthSpace;</span><span class="simple-tag-body">{{ text }}</span>
-  </span>
+  </button>
 </template>
 
 <script>
@@ -29,7 +29,17 @@ $tag-hole-diameter: 0.8em;
   display: inline-flex;
   height: $tag-height;
   font-size: 0.9em;
-  margin-bottom: 0.5em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: inherit;
+  border-radius: 0.25em;
+
+  &:focus{
+    outline: 0.2rem solid $orange;
+    outline-offset: 0.2rem;
+  }
 
   &:hover {
     cursor: default;
