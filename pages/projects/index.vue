@@ -14,6 +14,7 @@
       <ul class="list-separated">
         <li v-for="project in projects" v-bind:key="project.id">
           <post-item
+            @tag-clicked="onTagClick"
             class="horizontal"
             :link="project.path"
             :linkTitle="$t(project.linkId)"
@@ -98,6 +99,7 @@ export default {
         const usedTag = this.usedTags.find((usedTag) => usedTag.id === id);
         if (!usedTag) console.warn(`Could not find post item tag with id '${id}'. `);
         return {
+          id: id,
           value: this.$t(stringId),
           active: usedTag.active,
         };

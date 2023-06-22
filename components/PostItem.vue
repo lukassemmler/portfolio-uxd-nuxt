@@ -16,7 +16,11 @@
         <div class="post-item-tags" v-if="tags">
           <ul class="list-tags">
             <li v-for="tag in tags" :key="tag.value">
-              <simple-tag :text="tag.value" :class="{ active: tag.active}"></simple-tag>
+              <simple-tag
+                :text="tag.value"
+                :class="{ active: tag.active }"
+                @click="$emit('tag-clicked', tag.id)"
+              ></simple-tag>
             </li>
           </ul>
         </div>
@@ -60,7 +64,7 @@ export default {
       default: "",
     },
     tags: {
-      // Should have shape `{ value: "some-string", active: false }`
+      // Should have shape `{ id: "someId", value: "some-string", active: false }`
       type: Array,
       required: false,
       validator: function (tags) {
@@ -72,7 +76,7 @@ export default {
   },
   methods: {
     isActiveTag: function (tag) {
-      const tagMatch = this.$props.activeTags.find(activeTag => activeTag === tag);
+      const tagMatch = this.$props.activeTags.find((activeTag) => activeTag === tag);
       return !!tagMatch;
     },
   },
