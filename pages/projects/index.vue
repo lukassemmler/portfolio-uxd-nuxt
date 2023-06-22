@@ -7,7 +7,7 @@
     <span class="">showing X of X projects total</span>
     <ul class="list-tags">
       <li v-for="tag in usedTags" v-bind:key="tag.id">
-        <simple-tag :text="$t(tag.stringId)" :active="isActiveTag(tag.id)" @click="onTagClick(tag.id)" />
+        <simple-tag :class="{ active: tag.active }" :text="$t(tag.stringId)" @click="onTagClick(tag.id)" />
       </li>
     </ul>
     <div class="list-filtering">
@@ -58,7 +58,8 @@ export default {
       for (const tag of tags) {
         const { id } = tag;
         if (tagsById.has(id)) continue;
-        tagsById.set(id, tag);
+        const newTag = { ...tag, active: false };
+        tagsById.set(id, newTag);
       }
     }
     const usedTags = Array.from(tagsById, ([id, tag]) => tag);
@@ -72,12 +73,13 @@ export default {
   },
   methods: {
     onTagClick: function (tagId) {
-      if (this.activeTags.has(tagId)) {
-        this.activeTags.delete(tagId);
-        console.log("bobo")
+      const tag = this.usedTags.find((tag) => tag.id === tagId);
+      if (!tag) {
+        console.warn(`There is no actively used tag with id '${tagId}'. `);
         return;
       }
-      this.activeTags.add(tagId);
+      tag.active = !tag.active;
+      console.log(tag.active);
     },
     getLocalizedDatetimeString: function (date) {
       const { locale, locales } = this.$i18n;
@@ -89,10 +91,6 @@ export default {
       const year = date.toLocaleString(isoCode, { year: "numeric" });
       const month = date.toLocaleString(isoCode, { month: "long" });
       return year + " " + month;
-    },
-    isActiveTag: function (tagId) {
-      console.log("active changed")
-      return this.activeTags.has(tagId);
     },
   },
 };

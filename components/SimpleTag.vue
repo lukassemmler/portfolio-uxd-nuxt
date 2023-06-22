@@ -1,5 +1,5 @@
 <template>
-  <span :class="['simple-tag', { active }]" @click="$emit('click', $event)"
+  <span class="simple-tag" @click="$emit('click', $event)"
     ><span class="simple-tag-head">&ZeroWidthSpace;</span><span class="simple-tag-body">{{ text }}</span>
   </span>
 </template>
@@ -12,7 +12,6 @@ export default {
       required: false,
       default: "Any text",
     },
-    active: Boolean,
   },
 };
 </script>
