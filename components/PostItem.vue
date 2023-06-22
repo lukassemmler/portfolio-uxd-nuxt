@@ -16,7 +16,7 @@
         <div class="post-item-tags" v-if="tags">
           <ul class="list-tags">
             <li v-for="tag in tags" :key="tag">
-              <simple-tag :text="tag"></simple-tag>
+              <simple-tag :text="tag" :active="true"></simple-tag>
             </li>
           </ul>
         </div>

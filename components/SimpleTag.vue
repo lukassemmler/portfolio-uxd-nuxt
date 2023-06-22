@@ -1,7 +1,6 @@
 <template>
-  <span class="simple-tag"
-    ><span class="simple-tag-head">&ZeroWidthSpace;</span
-    ><span class="simple-tag-body">{{ text }}</span>
+  <span :class="['simple-tag', { active }]" @click="$emit('click', $event)"
+    ><span class="simple-tag-head">&ZeroWidthSpace;</span><span class="simple-tag-body">{{ text }}</span>
   </span>
 </template>
 
@@ -13,6 +12,7 @@ export default {
       required: false,
       default: "Any text",
     },
+    active: Boolean,
   },
 };
 </script>
@@ -33,6 +33,8 @@ $tag-hole-diameter: 0.8em;
   margin-bottom: 0.5em;
 
   &:hover {
+    cursor: default;
+
     .simple-tag-head::before,
     .simple-tag-body {
       background-color: $dusk-20;
@@ -41,6 +43,26 @@ $tag-hole-diameter: 0.8em;
     .simple-tag-body::before {
       background-color: $white;
       border-color: $dusk-20;
+    }
+  }
+
+  &.active {
+    .simple-tag-head::before,
+    .simple-tag-body {
+      background-color: $pastel-yellow;
+      border-color: $orange;
+    }
+    .simple-tag-body::before {
+      background-color: $white;
+      border-color: $orange;
+    }
+
+    &:hover {
+      .simple-tag-head::before,
+      .simple-tag-body {
+        background-color: $orange;
+        color: $white;
+      }
     }
   }
 }
@@ -73,8 +95,7 @@ $tag-hole-diameter: 0.8em;
   // creates the hole in tag
   &::before {
     position: absolute;
-    top: math.div($tag-height, 2) - math.div($tag-hole-diameter, 2) -
-      $tag-border-width;
+    top: math.div($tag-height, 2) - math.div($tag-hole-diameter, 2) - $tag-border-width;
     left: $tag-hole-diameter * (-0.4);
     width: $tag-hole-diameter;
     height: $tag-hole-diameter;
@@ -92,12 +113,7 @@ $tag-hole-diameter: 0.8em;
   //  g: edge length of untilted box
   //  h: resulting height of box
   //  r: radius of rounded corner
-  $edge-length: (
-    math.div(
-      $tag-height + 2 * $tag-border-radius * ($math-sqrt-2 - 1),
-      $math-sqrt-2
-    )
-  );
+  $edge-length: (math.div($tag-height + 2 * $tag-border-radius * ($math-sqrt-2 - 1), $math-sqrt-2));
 
   position: relative;
   width: math.div($edge-length, 2) + $tag-border-width;

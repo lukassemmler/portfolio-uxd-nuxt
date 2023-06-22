@@ -2,12 +2,12 @@
   <div class="container huge">
     <h1>{{ $t("heading_projects") }}</h1>
     <button>Filter by tags</button>
-    <input type="radio" id="old-to-new" name="time-sorting"><label for="old-to-new">oldest first</label>
-    <input type="radio" id="new-to-old" name="time-sorting"><label for="new-to-old">newest first</label>
+    <input type="radio" id="old-to-new" name="time-sorting" /><label for="old-to-new">oldest first</label>
+    <input type="radio" id="new-to-old" name="time-sorting" /><label for="new-to-old">newest first</label>
     <span class="">showing X of X projects total</span>
     <ul class="list-tags">
       <li v-for="tag in usedTags" v-bind:key="tag.id">
-        <simple-tag :text="$t(tag.stringId)" />
+        <simple-tag :text="$t(tag.stringId)" :active="isActiveTag(tag.id)" @click="onTagClick(tag.id)" />
       </li>
     </ul>
     <div class="list-filtering">
@@ -48,6 +48,7 @@ export default {
     return {
       projects: getTreeFromNav(navigation, "projects", tags).reverse(),
       usedTags: null,
+      activeTags: new Set(),
     };
   },
   created: function () {
@@ -67,18 +68,31 @@ export default {
       return localizedStringA.toLowerCase() > localizedStringB.toLowerCase();
     };
     this.usedTags = usedTags.sort((a, b) => sortStringsByLocale(a.stringId, b.stringId));
-    console.log(this.$i18n.locale)
+    console.log(this.$i18n.locale);
   },
   methods: {
+    onTagClick: function (tagId) {
+      if (this.activeTags.has(tagId)) {
+        this.activeTags.delete(tagId);
+        console.log("bobo")
+        return;
+      }
+      this.activeTags.add(tagId);
+    },
     getLocalizedDatetimeString: function (date) {
       const { locale, locales } = this.$i18n;
-      const fullLocale = locales.find(presetLocale => presetLocale.code === locale);
-      const defaultIsoCode = 'en-US';
-      if (!fullLocale) console.warn(`Could not find an iso code for locale '${locale}'. Defaulting to '${defaultIsoCode}'. `);
+      const fullLocale = locales.find((presetLocale) => presetLocale.code === locale);
+      const defaultIsoCode = "en-US";
+      if (!fullLocale)
+        console.warn(`Could not find an iso code for locale '${locale}'. Defaulting to '${defaultIsoCode}'. `);
       const isoCode = fullLocale ? fullLocale.iso : defaultIsoCode;
-      const year = date.toLocaleString(isoCode, {year: "numeric"});
-      const month = date.toLocaleString(isoCode, {month: "long"});
+      const year = date.toLocaleString(isoCode, { year: "numeric" });
+      const month = date.toLocaleString(isoCode, { month: "long" });
       return year + " " + month;
+    },
+    isActiveTag: function (tagId) {
+      console.log("active changed")
+      return this.activeTags.has(tagId);
     },
   },
 };
