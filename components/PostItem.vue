@@ -13,24 +13,24 @@
         <p class="post-item-subtitle" v-if="subtitle">
           {{ subtitle }}
         </p>
-      <div class="post-item-tags" v-if="tags">
-        <ul class="list-tags">
-          <li v-for="tag in tags" :key="tag">
-            <simple-tag :text="tag"></simple-tag>
-          </li>
-        </ul>
-      </div>
+        <div class="post-item-tags" v-if="tags">
+          <ul class="list-tags">
+            <li v-for="tag in tags" :key="tag">
+              <simple-tag :text="tag"></simple-tag>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="post-item-footer">
-        <time class="post-item-date" datetime="2020-06">2020 June</time>
-      <simple-button :to="link" :title="linkTitle">{{ $t("label_continue-reading") }}</simple-button>
+        <time v-if="datetimeValue" class="post-item-date" datetime="datetimeValue">{{ datetimeString }}</time>
+        <simple-button :to="link" :title="linkTitle">{{ $t("label_continue-reading") }}</simple-button>
       </div>
     </main>
   </div>
 </template>
 
 <script>
-import SimpleButton from './SimpleButton.vue';
+import SimpleButton from "./SimpleButton.vue";
 export default {
   components: { SimpleButton },
   props: {
@@ -66,6 +66,8 @@ export default {
         return tags.every((tag) => typeof tag === "string");
       },
     },
+    datetimeValue: String,
+    datetimeString: String,
   },
 };
 </script>
