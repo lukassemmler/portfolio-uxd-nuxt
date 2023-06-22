@@ -24,6 +24,8 @@
             :title="$t(project.titleId)"
             :subtitle="$t(project.subtitleId)"
             :tags="project.tags.map((tag) => $t(tag.stringId))"
+            :datetimeValue="project.created"
+            :datetimeString="getLocalizedDatetimeString(new Date(project.created))"
           ></post-item>
         </li>
       </ul>
@@ -65,6 +67,19 @@ export default {
       return localizedStringA.toLowerCase() > localizedStringB.toLowerCase();
     };
     this.usedTags = usedTags.sort((a, b) => sortStringsByLocale(a.stringId, b.stringId));
+    console.log(this.$i18n.locale)
+  },
+  methods: {
+    getLocalizedDatetimeString: function (date) {
+      const { locale, locales } = this.$i18n;
+      const fullLocale = locales.find(presetLocale => presetLocale.code === locale);
+      const defaultIsoCode = 'en-US';
+      if (!fullLocale) console.warn(`Could not find an iso code for locale '${locale}'. Defaulting to '${defaultIsoCode}'. `);
+      const isoCode = fullLocale ? fullLocale.iso : defaultIsoCode;
+      const year = date.toLocaleString(isoCode, {year: "numeric"});
+      const month = date.toLocaleString(isoCode, {month: "long"});
+      return year + " " + month;
+    },
   },
 };
 </script>

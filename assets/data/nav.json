@@ -22,6 +22,7 @@
       "thumbnailSrc": "thumbnail/Thumbnail 3D Modelling.jpg",
       "thumbnailAlt": "alt_thumbnail_3d-modelling",
       "thumbnailRatio": "4-by-3",
+      "created": "2018-03",
       "tags": [
         "3dModelling"
       ],
@@ -39,6 +40,7 @@
       "thumbnailSrc": "thumbnail/Thumbnail Data Visualization.jpg",
       "thumbnailAlt": "alt_thumbnail_data-visualization",
       "thumbnailRatio": "4-by-3",
+      "created": "2017-07",
       "tags": [
         "userSurvey",
         "sketches",
@@ -58,6 +60,7 @@
       "thumbnailSrc": "thumbnail/Thumbnail Design Booklet.jpg",
       "thumbnailAlt": "alt_thumbnail_design-booklet",
       "thumbnailRatio": "4-by-3",
+      "created": "2017-01",
       "tags": [
         "layout"
       ],
@@ -75,6 +78,7 @@
       "thumbnailSrc": "thumbnail/Thumbnail Infotainment System.jpg",
       "thumbnailAlt": "alt_thumbnail_infotainment-system",
       "thumbnailRatio": "4-by-3",
+      "created": "2017-05",
       "tags": [
         "design.ui",
         "design.icon"
@@ -93,6 +97,7 @@
       "thumbnailSrc": "thumbnail/Thumbnail Steering Wheel.jpg",
       "thumbnailAlt": "alt_thumbnail_steering-wheel",
       "thumbnailRatio": "4-by-3",
+      "created": "2018-04",
       "tags": [
         "3dModelling",
         "contest"
@@ -111,6 +116,7 @@
       "thumbnailSrc": "thumbnail/Thumbnail Power-UI.jpg",
       "thumbnailAlt": "alt_thumbnail_power-ui",
       "thumbnailRatio": "4-by-3",
+      "created": "2020-03",
       "tags": [
         "uxTesting",
         "prototyping",
