@@ -186,6 +186,23 @@ export default {
     defaultLocale: 'de',
     vueI18n: {
       fallbackLocale: 'de',
+      dateTimeFormats: {
+        'en-US': {
+          short: {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          },
+          long: {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            weekday: 'long',
+            hour: 'numeric',
+            minute: 'numeric'
+          }
+        },
+      }
     },
     strategy: 'prefix_and_default', //doesnt seem to work; default locale is supposed to show up in path
     seo: true,
