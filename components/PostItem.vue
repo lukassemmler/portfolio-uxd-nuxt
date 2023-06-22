@@ -15,8 +15,8 @@
         </p>
         <div class="post-item-tags" v-if="tags">
           <ul class="list-tags">
-            <li v-for="tag in tags" :key="tag">
-              <simple-tag :text="tag" :active="true"></simple-tag>
+            <li v-for="tag in tags" :key="tag.value">
+              <simple-tag :text="tag.value" :class="{ active: tag.active}"></simple-tag>
             </li>
           </ul>
         </div>
@@ -60,14 +60,21 @@ export default {
       default: "",
     },
     tags: {
+      // Should have shape `{ value: "some-string", active: false }`
       type: Array,
       required: false,
       validator: function (tags) {
-        return tags.every((tag) => typeof tag === "string");
+        return tags.every((tag) => typeof tag === "object");
       },
     },
     datetimeValue: String,
     datetimeString: String,
+  },
+  methods: {
+    isActiveTag: function (tag) {
+      const tagMatch = this.$props.activeTags.find(activeTag => activeTag === tag);
+      return !!tagMatch;
+    },
   },
 };
 </script>

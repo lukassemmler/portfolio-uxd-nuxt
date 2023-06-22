@@ -23,7 +23,7 @@
             sizes="xs:400px sm:640px md:960px lg:1200px"
             :title="$t(project.titleId)"
             :subtitle="$t(project.subtitleId)"
-            :tags="project.tags.map((tag) => $t(tag.stringId))"
+            :tags="getPostItemTags(project.tags)"
             :datetimeValue="project.created"
             :datetimeString="getLocalizedDatetimeString(new Date(project.created))"
           ></post-item>
@@ -91,6 +91,17 @@ export default {
       const year = date.toLocaleString(isoCode, { year: "numeric" });
       const month = date.toLocaleString(isoCode, { month: "long" });
       return year + " " + month;
+    },
+    getPostItemTags: function (rawTags) {
+      return rawTags.map((tag) => {
+        const { id, stringId } = tag;
+        const usedTag = this.usedTags.find((usedTag) => usedTag.id === id);
+        if (!usedTag) console.warn(`Could not find post item tag with id '${id}'. `);
+        return {
+          value: this.$t(stringId),
+          active: usedTag.active,
+        };
+      });
     },
   },
 };
