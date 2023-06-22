@@ -12,7 +12,7 @@
     </ul>
     <div class="list-filtering">
       <ul class="list-separated">
-        <li v-for="project in projects" v-bind:key="project.id">
+        <li v-for="project in displayedProjects" v-bind:key="project.id">
           <post-item
             @tag-clicked="onTagClick"
             class="horizontal"
@@ -49,8 +49,20 @@ export default {
     return {
       projects: getTreeFromNav(navigation, "projects", tags).reverse(),
       usedTags: null,
-      activeTags: new Set(),
     };
+  },
+  computed: {
+    activeTags: function() {
+      return this.usedTags.filter(tag => tag.active).map(tag => tag.id);
+    },
+    displayedProjects: function () {
+      if (this.activeTags.length === 0) return this.projects;
+      const activeProjects = this.projects.filter(project => {
+        console.log(project);
+        return project.tags.some(tag => this.activeTags.includes(tag.id));
+      });
+      return activeProjects;
+    },
   },
   created: function () {
     const tagsById = new Map();
