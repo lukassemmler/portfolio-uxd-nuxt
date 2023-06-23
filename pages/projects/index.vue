@@ -1,10 +1,13 @@
 <template>
   <div class="container huge">
-    <h1>{{ $t("heading_projects") }}</h1>
+    <div class="show-as-baseline">
+      <h1>{{ $t("heading_projects") }}</h1><span class="results-count h3">showing X of X total</span>
+    </div>
+    <!--
     <button>Filter by tags</button>
     <input type="radio" id="old-to-new" name="time-sorting" /><label for="old-to-new">oldest first</label>
     <input type="radio" id="new-to-old" name="time-sorting" /><label for="new-to-old">newest first</label>
-    <span class="">showing X of X projects total</span>
+    -->
     <ul class="list-tags">
       <li v-for="tag in usedTags" v-bind:key="tag.id">
         <simple-tag :class="{ active: tag.active }" :text="$t(tag.stringId)" @click="onTagClick(tag.id)" />
@@ -128,10 +131,16 @@ export default {
 </script>
 
 <style lang="scss">
+
 .list-filtering {
   position: relative;
 }
+
 .list-filtering-info {
   position: absolute;
+}
+
+.results-count {
+  opacity: 0.5;
 }
 </style>

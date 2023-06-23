@@ -8,14 +8,14 @@
   flex-direction: column;
   justify-content: center;
 
-  & > * {
+  &>* {
     flex-grow: 0;
   }
 }
 
 .align-items-right {
   text-align: right;
-  
+
   ul {
     display: flex;
     flex-direction: column;
@@ -69,4 +69,24 @@
 .center-all-children-row {
   @extend .center-children-row;
   text-align: center;
+}
+
+.show-as-baseline {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+
+  &> :not(:last-child) {
+    margin-bottom: 0.25em;
+  }
+
+  @include breakpoint-upwards($breakpoint-semi-big) {
+    flex-direction: row;
+    align-items: baseline;
+
+    &> :not(:last-child) {
+      margin-bottom: unset;
+      margin-right: 0.5em;
+    }
+  }
 }
