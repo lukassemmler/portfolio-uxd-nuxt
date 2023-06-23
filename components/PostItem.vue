@@ -26,8 +26,8 @@
         </div>
       </div>
       <div class="post-item-footer">
-        <time v-if="datetimeValue" class="post-item-date" datetime="datetimeValue">{{ datetimeString }}</time>
         <simple-button :to="link" :title="linkTitle">{{ $t("label_continue-reading") }}</simple-button>
+        <time v-if="datetimeValue" class="post-item-date" datetime="datetimeValue">{{ datetimeString }}</time>
       </div>
     </main>
   </div>
@@ -86,15 +86,13 @@ export default {
 <style lang="scss">
 .post-item {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
 }
 
 .post-item-content {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 1em;
+  flex-direction: column;
+  padding: 1em 0;
   flex-grow: 1;
 
   & > *:not(:last-child) {
@@ -117,14 +115,14 @@ export default {
 }
 
 .post-item-title {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   margin-bottom: 0.4rem;
   line-height: 1.125;
 }
 
 .post-item-subtitle {
   font-style: italic;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   line-height: 1.125;
   margin-top: 0;
   margin-bottom: 1rem;
@@ -132,8 +130,7 @@ export default {
 }
 
 .post-item-figure {
-  width: 12em;
-  flex-shrink: 0;
+  width: 100%;
 }
 
 .post-item-tags {
@@ -148,12 +145,47 @@ export default {
 
 .post-item-footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  margin-left: auto;
 
   & > *:not(:last-child) {
-    margin-bottom: 0.2em;
+    margin-right: 0.5em;
+  }
+}
+
+@include breakpoint-upwards($breakpoint-semi-big) {
+  .post-item-title {
+    font-size: 2.5rem;
+  }
+
+  .post-item-subtitle {
+    font-size: 1.75rem;
+  }
+
+  .post-item,
+  .post-item-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .post-item-content {
+    padding: 1em;
+  }
+
+  .post-item-figure {
+    width: 12em;
+    flex-shrink: 0;
+  }
+
+  .post-item-footer {
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+
+    & > *:not(:last-child) {
+      margin-right: unset;
+      margin-bottom: 0.2em;
+    }
   }
 }
 </style>
