@@ -12,7 +12,8 @@
     </ul>
     <div class="list-filtering">
       <ul class="list-separated">
-        <li v-for="project in displayedProjects" v-bind:key="project.id">
+        <transition-group name="list">
+        <li class="list-separated-item" v-for="project in displayedProjects" v-bind:key="project.id">
           <post-item
             @tag-clicked="onTagClick"
             class="horizontal"
@@ -29,6 +30,7 @@
             :datetimeString="getLocalizedDatetimeString(new Date(project.created))"
           ></post-item>
         </li>
+        </transition-group>
       </ul>
     </div>
   </div>

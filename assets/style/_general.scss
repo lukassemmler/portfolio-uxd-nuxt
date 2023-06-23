@@ -218,19 +218,21 @@ a.invisible-link {
 
 .list-separated {
   $border: 0.1em solid $dusk-20;
+  position: relative;
   list-style-type: none;
   padding-left: 0;
   padding-right: 0;
-
-  & > * {
+  
+  .list-separated-item {
     padding-top: 1em;
     padding-bottom: 1em;
     border-bottom: $border;
+
+    &:first-child {
+      border-top: $border;
+    }
   }
 
-  & > *:first-child {
-    border-top: $border;
-  }
 }
 
 .list-tags {

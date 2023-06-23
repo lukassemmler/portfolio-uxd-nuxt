@@ -173,3 +173,27 @@
     animation: none;
   }
 }
+
+
+.list-move {
+  transition: all 250ms ease;
+}
+
+.list-enter-active {
+  animation-duration: 250ms;
+  animation-name: fade-in;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+}
+
+.list-leave-active {
+  animation-duration: 250ms;
+  animation-name: fade-out;
+  position: absolute; // has to be absolute so movement animation is calculated correctly
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+}
