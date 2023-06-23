@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="post-item-footer">
-        <simple-button :to="link" :title="linkTitle">{{ $t("label_continue-reading") }}</simple-button>
+        <simple-button :target="link" :title="linkTitle">{{ $t("label_continue-reading") }}</simple-button>
         <time v-if="datetimeValue" class="post-item-date" datetime="datetimeValue">{{ datetimeString }}</time>
       </div>
     </main>
