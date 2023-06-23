@@ -416,6 +416,7 @@
   "label_project-summary_name": "Name",
   "label_project-summary_tasks": "Aufgaben",
   "label_project-summary_tools": "Werkzeuge",
+  "label_projects_count": "zeigt {current} von {total} insgesamt",
   "label_select-language": "Sprache auswählen",
   "label_site-name": "Lukas Semmler Portfolio",
   "label_step": "Schritt",

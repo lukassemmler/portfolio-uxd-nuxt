@@ -1,7 +1,10 @@
 <template>
   <div class="container huge">
     <div class="show-as-baseline">
-      <h1>{{ $t("heading_projects") }}</h1><span class="results-count h3">showing X of X total</span>
+      <h1>{{ $t("heading_projects") }}</h1>
+      <span class="results-count h3">{{
+        $t("label_projects_count", { current: displayedProjects.length, total: projects.length })
+      }}</span>
     </div>
     <!--
     <button>Filter by tags</button>
@@ -131,7 +134,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .list-filtering {
   position: relative;
 }
@@ -141,6 +143,7 @@ export default {
 }
 
 .results-count {
-  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.6;
 }
 </style>
