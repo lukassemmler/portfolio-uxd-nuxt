@@ -11,25 +11,28 @@
       </li>
     </ul>
     <div class="list-filtering">
+      <p class="list-filtering-info" v-show="displayedProjects.length === 0">
+        {{ $t("label_info_tag-list_no-results") }}
+      </p>
       <ul class="list-separated">
         <transition-group name="list">
-        <li class="list-separated-item" v-for="project in displayedProjects" v-bind:key="project.id">
-          <post-item
-            @tag-clicked="onTagClick"
-            class="horizontal"
-            :link="project.path"
-            :linkTitle="$t(project.linkId)"
-            :src="project.thumbnailSrc"
-            :alt="$t(project.thumbnailAlt)"
-            :ratio="project.thumbnailRatio"
-            sizes="xs:400px sm:640px md:960px lg:1200px"
-            :title="$t(project.titleId)"
-            :subtitle="$t(project.subtitleId)"
-            :tags="getPostItemTags(project.tags)"
-            :datetimeValue="project.created"
-            :datetimeString="getLocalizedDatetimeString(new Date(project.created))"
-          ></post-item>
-        </li>
+          <li class="list-separated-item" v-for="project in displayedProjects" v-bind:key="project.id">
+            <post-item
+              @tag-clicked="onTagClick"
+              class="horizontal"
+              :link="project.path"
+              :linkTitle="$t(project.linkId)"
+              :src="project.thumbnailSrc"
+              :alt="$t(project.thumbnailAlt)"
+              :ratio="project.thumbnailRatio"
+              sizes="xs:400px sm:640px md:960px lg:1200px"
+              :title="$t(project.titleId)"
+              :subtitle="$t(project.subtitleId)"
+              :tags="getPostItemTags(project.tags)"
+              :datetimeValue="project.created"
+              :datetimeString="getLocalizedDatetimeString(new Date(project.created))"
+            ></post-item>
+          </li>
         </transition-group>
       </ul>
     </div>
@@ -54,14 +57,15 @@ export default {
     };
   },
   computed: {
-    activeTags: function() {
-      return this.usedTags.filter(tag => tag.active).map(tag => tag.id);
+    activeTags: function () {
+      return this.usedTags.filter((tag) => tag.active).map((tag) => tag.id);
     },
     displayedProjects: function () {
       if (this.activeTags.length === 0) return this.projects;
-      const activeProjects = this.projects.filter(project => {
+      const activeProjects = this.projects.filter((project) => {
         console.log(project);
-        return project.tags.some(tag => this.activeTags.includes(tag.id));
+        const projectTagIds = project.tags.map((tag) => tag.id);
+        return this.activeTags.every((activeTag) => projectTagIds.includes(activeTag));
       });
       return activeProjects;
     },
@@ -123,5 +127,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.list-filtering {
+  position: relative;
+}
+.list-filtering-info {
+  position: absolute;
+}
 </style>
