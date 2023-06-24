@@ -52,5 +52,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.markdown-block {
+  li {
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+  }
+}
 </style>
