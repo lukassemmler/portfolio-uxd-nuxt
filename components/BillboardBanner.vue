@@ -64,27 +64,20 @@ export default {
   //position: absolute;
   top: 0;
   bottom: 0;
-  width: 50%;
+  //width: 50%;
   flex: 1 1 0;
 }
 
-.billboard-banner-start {
-  left: 0;
-  padding-right: 1em;
+.billboard-banner-start,
+.billboard-banner-end {
   box-sizing: border-box;
-  text-align: right;
+  text-align: center;
 
   ul {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
   }
-}
-
-.billboard-banner-end {
-  right: 0;
-  padding-left: 1em;
-  box-sizing: border-box;
 }
 
 .billboard-banner-center {
@@ -96,16 +89,42 @@ export default {
   margin-top: -6em;
 }
 
-.billboard-banner-text {
-  display: flex;
-  flex-direction: row;
-}
-
 .billboard-banner-content {
   display: flex;
   max-width: 30em;
   align-items: center;
   justify-content: center;
+}
+
+@include breakpoint-upwards($breakpoint-semi-big) {
+.billboard-banner-start {
+  padding-right: 1em;
+  text-align: right;
+
+  ul {
+    align-items: flex-end;
+  }
+}
+
+.billboard-banner-end {
+  padding-left: 1em;
+  text-align: left;
+
+  ul {
+    align-items: flex-start;
+  }
+}
+
+.billboard-banner-end {
+  right: 0;
+  padding-left: 1em;
+  box-sizing: border-box;
+}
+
+.billboard-banner-text {
+  display: flex;
+  flex-direction: row;
+}
 }
 
 @include breakpoint-upwards($breakpoint-xl) {
