@@ -198,7 +198,7 @@
   "heading_imprint": "Impressum",
   "heading_imprint_accountability-for-content": "Haftung für Inhalte",
   "heading_imprint_accountability-for-links": "Haftung für Links",
-  "heading_imprint_address": "Angaben gemäß § 5 TMG:",
+  "heading_imprint_address": "Angaben gemäß § 5 TMG",
   "heading_imprint_contact": "Kontakt",
   "heading_imprint_copyright": "Urheberrecht",
   "heading_index_projects": "Projekte",
@@ -742,8 +742,8 @@
   ],
   "text_imprint_address": [
     "Lukas Semmler\n",
-    "Kevenhüll H 4\n",
-    "92339 Beilngries"
+    "Brehmstraße 2\n",
+    "81543 München"
   ],
   "text_imprint_contact": [
     "Telefon: [+49 176 39203916](tel:+4917639203916)\n",
