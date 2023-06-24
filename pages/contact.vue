@@ -1,6 +1,5 @@
 <template>
   <div>
-    <page-header></page-header>
     <header>
       <div class="container small">
         <h1 class="sr-only">{{ $t("heading_contact") }}</h1>
@@ -31,6 +30,7 @@ import PageHeader from "~/components/PageHeader.vue";
 import SocialMediaList from "~/components/SocialMediaList.vue";
 export default {
   components: { PageHeader, SocialMediaList, MarkdownBlock },
+  layout: "vanilla",
   computed: {
     currentYear: function () {
       return new Date().getFullYear();
