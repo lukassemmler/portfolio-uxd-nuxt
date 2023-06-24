@@ -55,7 +55,7 @@ export default {
   layout: "vanilla",
   data: function () {
     return {
-      projects: getTreeFromNav(navigation, "projects", tags).reverse(),
+      projects: getTreeFromNav(navigation, "projects", tags),
     };
   },
 };

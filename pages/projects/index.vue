@@ -58,7 +58,7 @@ export default {
   components: { PageHeader, PageFooter, PostTeaser },
   data: function () {
     return {
-      projects: getTreeFromNav(navigation, "projects", tags).reverse(),
+      projects: getTreeFromNav(navigation, "projects", tags),
       usedTags: null,
     };
   },
