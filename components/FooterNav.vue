@@ -62,6 +62,10 @@ export default {
   }
 }
 
+.link-exact-active {
+  color: $orange;
+}
+
 .footer-nav-link {
   display: inline-block;
   padding: 0.5em 0.8em;
