@@ -48,7 +48,8 @@ export default {};
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -6em;
+  margin-top: -7em;
+  margin-bottom: -1em;
 }
 
 .billboard-banner-figure {
@@ -96,7 +97,7 @@ export default {};
   }
 
   .billboard-banner-center {
-    margin-top: unset;
+    margin-top: -2em;
     margin-left: -10em;
   }
 }
