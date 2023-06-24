@@ -11,7 +11,7 @@
             <h2 class="sr-only">{{ $t("heading_about_presentation") }}</h2>
           </div>
         </div>
-        <div class="pillar-row">
+        <div class="pillar-row about-intro">
           <div class="pillar-col-bg-3 center-vertically align-items-right">
             <h3 class="h3-spaced">{{ $t("heading_about_liking") }}</h3>
             <ul class="list list-none">
@@ -29,7 +29,7 @@
             </ul>
           </div>
           <div class="pillar-col-bg-6 center-vertically">
-            <simple-image src="lukas/lukas-working.png" alt="" />
+            <simple-image class="about-image" src="lukas/lukas-working.png" alt="" />
           </div>
           <div class="pillar-col-bg-3 center-vertically">
             <h3 class="h3-spaced">{{ $t("heading_about_good-at") }}</h3>
@@ -138,5 +138,17 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.about-intro {
+  border-radius: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  background-color: $dark-05;
+}
+.about-image {
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
