@@ -85,12 +85,12 @@ export default {
 }
 
 .anchor-heading-anchor {
-  position: absolute;
   display: inline-block;
   width: 0.8em;
   text-align: center;
   left: 0;
-  margin-left: -1.1em;
+  margin-left: 0.2em;
+  user-select: none;
   font-weight: normal;
   text-decoration: none;
   color: rgba($orange, 0.4);
