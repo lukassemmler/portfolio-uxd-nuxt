@@ -1,53 +1,43 @@
 <template>
   <div class="content">
-    <header class="project-intro" :class="background">
-      <page-header :inverted="false"></page-header>
-      <h1 class="project-title" v-if="title" v-html="title"></h1>
-    </header>
     <div class="container huge">
-      <div class="pillar-container gapped-h">
-        <div class="pillar-row">
-          <div class="pillar-col">
-            <h2 class="sr-only">{{ $t("heading_about_presentation") }}</h2>
-          </div>
-        </div>
-        <div class="pillar-row about-intro">
-          <div class="pillar-col-bg-3 center-vertically align-items-right">
-            <h3 class="h3-spaced">{{ $t("heading_about_liking") }}</h3>
-            <ul class="list list-none">
-              <li>{{ $t("text_about_liking_1") }}</li>
-              <li>{{ $t("text_about_liking_2") }}</li>
-              <li>{{ $t("text_about_liking_3") }}</li>
-              <li>{{ $t("text_about_liking_4") }}</li>
-            </ul>
-            <h3 class="h3-spaced">{{ $t("heading_about_offering") }}</h3>
-            <ul class="list list-none">
-              <li>{{ $t("text_about_offering_1") }}</li>
-              <li>{{ $t("text_about_offering_2") }}</li>
-              <li>{{ $t("text_about_offering_3") }}</li>
-              <li>{{ $t("text_about_offering_4") }}</li>
-            </ul>
-          </div>
-          <div class="pillar-col-bg-6 center-vertically">
-            <simple-image class="about-image" src="lukas/lukas-working.png" alt="" />
-          </div>
-          <div class="pillar-col-bg-3 center-vertically">
-            <h3 class="h3-spaced">{{ $t("heading_about_good-at") }}</h3>
-            <ul class="list list-none">
-              <li>{{ $t("text_about_good-at_1") }}</li>
-              <li>{{ $t("text_about_good-at_2") }}</li>
-              <li>{{ $t("text_about_good-at_3") }}</li>
-              <li>{{ $t("text_about_good-at_4") }}</li>
-            </ul>
-            <h3 class="h3-spaced">{{ $t("heading_about_bad-at") }}</h3>
-            <ul class="list list-none">
-              <li>{{ $t("text_about_bad-at_1") }}</li>
-              <li>{{ $t("text_about_bad-at_2") }}</li>
-              <li>{{ $t("text_about_bad-at_3") }}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <h2 class="sr-only">{{ $t("heading_about_presentation") }}</h2>
+      <billboard-banner>
+        <template v-slot:start>
+          <h3 class="h3-spaced">{{ $t("heading_about_liking") }}</h3>
+          <ul class="list list-none">
+            <li>{{ $t("text_about_liking_1") }}</li>
+            <li>{{ $t("text_about_liking_2") }}</li>
+            <li>{{ $t("text_about_liking_3") }}</li>
+            <li>{{ $t("text_about_liking_4") }}</li>
+          </ul>
+          <h3 class="h3-spaced">{{ $t("heading_about_offering") }}</h3>
+          <ul class="list list-none">
+            <li>{{ $t("text_about_offering_1") }}</li>
+            <li>{{ $t("text_about_offering_2") }}</li>
+            <li>{{ $t("text_about_offering_3") }}</li>
+            <li>{{ $t("text_about_offering_4") }}</li>
+          </ul>
+        </template>
+        <template v-slot:center>
+          <simple-image class="about-image" src="lukas/lukas-working.png" alt="" />
+        </template>
+        <template v-slot:end>
+          <h3 class="h3-spaced">{{ $t("heading_about_good-at") }}</h3>
+          <ul class="list list-none">
+            <li>{{ $t("text_about_good-at_1") }}</li>
+            <li>{{ $t("text_about_good-at_2") }}</li>
+            <li>{{ $t("text_about_good-at_3") }}</li>
+            <li>{{ $t("text_about_good-at_4") }}</li>
+          </ul>
+          <h3 class="h3-spaced">{{ $t("heading_about_bad-at") }}</h3>
+          <ul class="list list-none">
+            <li>{{ $t("text_about_bad-at_1") }}</li>
+            <li>{{ $t("text_about_bad-at_2") }}</li>
+            <li>{{ $t("text_about_bad-at_3") }}</li>
+          </ul>
+        </template>
+      </billboard-banner>
       <div class="pillar-container gapped-h">
         <div class="pillar-row">
           <section class="pillar-col-bg-6">
@@ -130,25 +120,14 @@
 </template>
 
 <script>
+import BillboardBanner from "~/components/BillboardBanner.vue";
 import CvRecord from "~/components/CvRecord.vue";
 import SimpleImage from "~/components/SimpleImage.vue";
 export default {
-  layout: "default",
-  components: { CvRecord, SimpleImage },
+  layout: "vanilla",
+  components: { CvRecord, SimpleImage, BillboardBanner },
 };
 </script>
 
 <style lang="scss">
-.about-intro {
-  border-radius: 3em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  margin-bottom: 2em;
-  background-color: $dark-05;
-}
-.about-image {
-  max-width: 30em;
-  margin-left: auto;
-  margin-right: auto;
-}
 </style>
