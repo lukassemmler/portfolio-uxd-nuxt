@@ -209,10 +209,10 @@
       "id": "projects",
       "children": [
         "projects.powerUi",
+        "projects.dataVisualization",
+        "projects.designBooklet",
         "projects.steeringWheel",
         "projects.infotainmentSystem",
-        "projects.designBooklet",
-        "projects.dataVisualization",
         "projects.3dModelling"
       ]
     }
