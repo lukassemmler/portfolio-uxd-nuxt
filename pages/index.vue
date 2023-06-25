@@ -13,7 +13,12 @@
     </section>
 
     <section>
-      <h2 class="sr-only">{{ $t("heading_index_projects") }}</h2>
+      <div class="show-as-baseline">
+        <h2>{{ $t("heading_index_projects") }}</h2>
+          <simple-button type="secondary small" prefixed-icon="east" target="/about" :alt="$t('meta-title_about')">{{
+            $t("meta-title_about")
+          }}</simple-button>
+      </div>
       <div class="pillar-container gapped-h gapped-v">
         <div class="pillar-row">
           <div
@@ -55,7 +60,7 @@ export default {
   layout: "vanilla",
   data: function () {
     return {
-      projects: getTreeFromNav(navigation, "projects", tags),
+      projects: getTreeFromNav(navigation, "projects", tags).slice(0, 3),
     };
   },
 };
