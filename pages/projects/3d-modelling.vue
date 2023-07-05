@@ -7,7 +7,7 @@
     :meta-format="$t('project-summary-format_3d-modelling')"
     :meta-lecture="$t('project-summary-client_3d-modelling')"
     :meta-date="$t('project-summary-date_3d-modelling')"
-    :project-tools="[{ iconId: 'Blender', label: 'Blender' }]"
+    :project-tools="[{ iconId: 'Blender', label: $t('label_product_blender') }]"
     nav-id="projects.3dModelling"
   >
     <template v-slot:header>

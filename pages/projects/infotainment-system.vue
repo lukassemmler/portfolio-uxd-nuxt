@@ -8,8 +8,8 @@
     :meta-lecture="$t('project-summary-client_infotainment-system')"
     :meta-date="$t('project-summary-date_infotainment-system')"
     :project-tools="[
-      { iconId: 'AdobeIndesign', label: 'Indesign' },
-      { iconId: 'AdobeIllustrator', label: 'Illustrator' },
+      { iconId: 'AdobeIndesign', label: $t('label_product_adobe-indesign') },
+      { iconId: 'AdobeIllustrator', label: $t('label_product_adobe-illustrator') },
     ]"
     nav-id="projects.infotainmentSystem"
   >

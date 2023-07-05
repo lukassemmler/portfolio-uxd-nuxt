@@ -9,9 +9,9 @@
     :meta-lecture="$t('project-summary-client_design-booklet')"
     :meta-date="$t('project-summary-date_design-booklet')"
     :project-tools="[
-      { iconId: 'AdobeIndesign', label: 'Indesign' },
-      { iconId: 'AdobeIllustrator', label: 'Illustrator' },
-      { iconId: 'AdobePhotoshop', label: 'Photoshop' },
+      { iconId: 'AdobeIndesign', label: $t('label_product_adobe-indesign') },
+      { iconId: 'AdobeIllustrator', label: $t('label_product_adobe-illustrator') },
+      { iconId: 'AdobePhotoshop', label: $t('label_product_adobe-photoshop') },
     ]"
     nav-id="projects.designBooklet"
   >

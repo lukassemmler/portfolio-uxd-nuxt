@@ -8,7 +8,7 @@
     :meta-lecture="$t('project-summary-client_steering-wheel')"
     :meta-colleagues="'Alexander Beidoun, Maximilian Götz'"
     :meta-date="$t('project-summary-date_steering-wheel')"
-    :project-tools="[{ iconId: 'Cinema4d', label: 'Cinema 4D' }]"
+    :project-tools="[{ iconId: 'Cinema4d', label: $t('label_product_cinema-4d') }]"
     nav-id="projects.steeringWheel"
   >
     <template v-slot:header>

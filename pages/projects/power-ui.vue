@@ -8,16 +8,16 @@
     :meta-lecture="$t('project-summary-client_power-ui')"
     :meta-date="$t('project-summary-date_power-ui')"
     :project-tools="[
-      { iconId: 'Axure', label: 'Axure' },
-      { iconId: 'AdobePhotoshop', label: 'Photoshop' },
-      { iconId: 'Blender', label: 'Blender' },
-      { iconId: 'Unity', label: 'Unity' },
-      { iconId: 'VisualStudioCode', label: 'VS Code' },
-      //{ iconId: 'Javascript', label: 'JavaScript' },
-      //{ iconId: 'NodeJs', label: 'NodeJS' },
-      { iconId: 'VueJs', label: 'VueJS' },
-      { iconId: 'Phaser', label: 'Phaser' },
-      { iconId: 'Sass', label: 'SASS' },
+      { iconId: 'Axure', label: $t('label_product_axure') },
+      { iconId: 'AdobePhotoshop', label: $t('label_product_adobe-photoshop') },
+      { iconId: 'Blender', label: $t('label_product_blender') },
+      { iconId: 'Unity', label: $t('label_product_unity') },
+      { iconId: 'VisualStudioCode', label: $t('label_product_visual-studio-code') },
+      //{ iconId: 'Javascript', label: $t('label_product_javascript') },
+      //{ iconId: 'NodeJs', label: $t('label_product_node-js') },
+      { iconId: 'VueJs', label: $t('label_product_vue-js') },
+      { iconId: 'Phaser', label: $t('label_product_phaser') },
+      { iconId: 'Sass', label: $t('label_product_sass') },
     ]"
     nav-id="projects.powerUi"
   >
