@@ -8,7 +8,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "unpack": "node bin/unzip-prototypes.js",
-    "locales-check": "node bin/locales-parity.js"
+    "locales-check": "node bin/locales-parity.js",
+    "locales-use": "node bin/locales-usage.js"
   },
   "dependencies": {
     "@nuxtjs/i18n": "^7.2.0",
