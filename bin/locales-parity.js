@@ -16,11 +16,11 @@ const path = require('path');
 const {Color} = require(path.resolve(__filename + './../../assets/lib/color'));
 
 function readJsonFilesInDir(dir, onJson = () => { }) {
-  const files = fs.readdirSync(directoryPath);
+  const files = fs.readdirSync(dir);
   for (const file of files) {
     const fileName = path.extname(file).toLowerCase();
     if (fileName !== '.json') continue;
-    const filePath = path.join(directoryPath, file);
+    const filePath = path.join(dir, file);
     const content = fs.readFileSync(filePath, 'utf8');
     const json = JSON.parse(content);
     onJson({ json, file, path: filePath });
