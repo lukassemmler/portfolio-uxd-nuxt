@@ -5,8 +5,8 @@ const {Color} = require(path.resolve(__filename + './../../assets/lib/color'));
 function readJsonFilesInDir(dir, onJson = () => { }) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
-    const fileName = path.extname(file).toLowerCase();
-    if (fileName !== '.json') continue;
+    const extension = path.extname(file).toLowerCase();
+    if (extension !== '.json') continue;
     const filePath = path.join(dir, file);
     const content = fs.readFileSync(filePath, 'utf8');
     const json = JSON.parse(content);
@@ -17,8 +17,8 @@ function readJsonFilesInDir(dir, onJson = () => { }) {
 function readFilesInDirRecursively(dir, onFile = () => { }, whitelist = []) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
-    const fileName = path.extname(file).toLowerCase();
-    if (whitelist.length > 0 && !whitelist.includes(fileName)) continue;
+    const extension = path.extname(file).toLowerCase();
+    if (whitelist.length > 0 && !whitelist.includes(extension)) continue;
     const filePath = path.join(dir, file);
     const stats = fs.statSync(filePath);
     if (stats.isDirectory()) {
@@ -26,7 +26,7 @@ function readFilesInDirRecursively(dir, onFile = () => { }, whitelist = []) {
       continue;
     }
     const content = fs.readFileSync(filePath, 'utf8');
-    onFile({ content, file, path: filePath });
+    onFile({ content, file, path: filePath, extension });
   }
 }
 
@@ -47,20 +47,32 @@ const targetDirsRaw = [
   '../pages',
   '../components',
   '../layouts',
-  //'../assets/data',
+  '../assets/data',
 ];
 const targetDirs = targetDirsRaw.map(dir => getAbsolutePath(dir));
 //console.log(targetDirs);
+const i18nProps = [
+  "stringId",
+  "labelId",
+  "titleId",
+  "titleRawId",
+  "subtitleId",
+  "descriptionId",
+  "linkId",
+  ];
+  const rawJsonRegex = `"(?:${i18nProps.join('|')})":."([^"]+)"`;
+  const jsonRegex = new RegExp(rawJsonRegex, "g");
+  const textRegex = /\$t\(['"]([^'"]+?)['"]\)/g;
 const occurrences = {};
 for (const dir of targetDirs)
-readFilesInDirRecursively(dir, ({content, file, path}) => {
-  const matches = content.matchAll(/\$t\(['"]([^'"]+?)['"]\)/g);
+readFilesInDirRecursively(dir, ({content, file, path, extension}) => {
+  const regex = extension === ".json" ? jsonRegex : textRegex;
+  const matches = content.matchAll(regex);
   const ids = Array.from(matches).map(match => match[1]);
   const uniqueIds = new Set(ids);
   occurrences[path] = Array.from(uniqueIds.values()).sort();
 });
 console.log(occurrences);
-// TODO: Hande 'nav.json'
 
 // Step 3: Check if all definitions are used
 const usedIds = new Set();
@@ -82,7 +94,7 @@ for (const definition of definitionsAsArray) {
   unusedIds.push(definition);
 }
 const stats = {
-  usedIds: Array.from(usedIds.values()).sort(),
+  //usedIds: Array.from(usedIds.values()).sort(),
   unusedIds: unusedIds,
   undefinedIds: Array.from(undefinedIds.values()).sort(),
 };
