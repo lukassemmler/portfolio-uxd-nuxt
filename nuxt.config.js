@@ -81,9 +81,11 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  // How to write plugins for Nuxt 2: https://v2.nuxt.com/docs/directory-structure/plugins/
   plugins: [
     '~/plugins/directive.client.js',
     '~/plugins/directive.js',
+    {src: '~/plugins/meta.js', mode: 'server'},  
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
