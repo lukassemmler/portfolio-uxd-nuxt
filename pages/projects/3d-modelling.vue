@@ -7,6 +7,10 @@
     :meta-format="$t('project-summary-format_3d-modelling')"
     :meta-lecture="$t('project-summary-client_3d-modelling')"
     :meta-date="$t('project-summary-date_3d-modelling')"
+    :meta-title="$t('meta-title_3d-modelling')"
+    :meta-author="$t('meta-author_3d-modelling')"
+    :meta-description="$t('meta-description_3d-modelling')"
+    :meta-keywords="$t('meta-keywords_3d-modelling')"
     :project-tools="[{ iconId: 'Blender', label: $t('label_product_blender') }]"
     nav-id="projects.3dModelling"
   >

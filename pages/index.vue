@@ -54,10 +54,25 @@ import SimpleButton from "~/components/SimpleButton.vue";
 import navigation from "assets/data/nav.json";
 import tags from "assets/data/tags.json";
 import { getTreeFromNav } from "~/assets/lib/site-tree";
+import { getMetaData } from "~/assets/lib/meta-data";
 
 export default {
   components: { SimpleBillboard, SimpleButton, PostTeaser },
   layout: "vanilla",
+  head() {
+    return getMetaData({
+      url: this.$config.baseUrl + this.$route.path,
+      siteName: this.$t("label_site-name"),
+      title: this.$t("label_owner"),
+      //titleTemplate: "%s \u2013 Lukas Semmler",
+      description: this.$t("meta-description_index"),
+      keywords: this.$t("meta-keywords_index"),
+      author: this.$t("meta-author_index"),
+      thumbnail: "/thumbnail/Thumbnail Design Booklet.jpg",
+      thumbnailAlt: this.$t("alt_thumbnail_general"),
+      themeColor: "#4a4a4a",
+    });
+  },
   data: function () {
     return {
       projects: getTreeFromNav(navigation, "projects", tags).slice(0, 3),

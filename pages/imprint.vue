@@ -71,14 +71,30 @@
         <markdown-block :markup="$t('text_imprint_source')"></markdown-block>
       </div>
     </section>
+    Test {{ $pagemeta('test-man')}}
   </div>
 </template>
 
 <script>
 import MarkdownBlock from "~/components/MarkdownBlock.vue";
+import { getMetaData } from "~/assets/lib/meta-data";
 export default {
   components: { MarkdownBlock },
   layout: "vanilla",
+  head() {
+    return getMetaData({
+      url: this.$config.baseUrl + this.$route.path,
+      siteName: this.$t("label_site-name"),
+      title: this.$t(""),
+      titleTemplate: "%s \u2013 Lukas Semmler",
+      description: this.$t("meta-description_imprint"),
+      keywords: this.$t("meta-keywords_imprint"),
+      author: this.$t("meta-author_imprint"),
+      thumbnail: "/thumbnail/Thumbnail Design Booklet.jpg",
+      thumbnailAlt: this.$t("alt_thumbnail_general"),
+      themeColor: "#4a4a4a",
+    });
+  },
 };
 </script>
 

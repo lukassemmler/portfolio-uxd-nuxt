@@ -7,6 +7,10 @@
     :meta-format="$t('project-summary-format_data-visualization')"
     :meta-lecture="$t('project-summary-client_data-visualization')"
     :meta-date="$t('project-summary-date_data-visualization')"
+    :meta-title="$t('meta-title_data-visualization')"
+    :meta-author="$t('meta-author_data-visualization')"
+    :meta-description="$t('meta-description_data-visualization')"
+    :meta-keywords="$t('meta-keywords_data-visualization')"
     :project-tools="[
       { iconId: 'AdobeIndesign', label: $t('label_product_adobe-indesign') },
       { iconId: 'AdobeIllustrator', label: $t('label_product_adobe-illustrator') },

@@ -7,6 +7,10 @@
     :meta-format="$t('project-summary-format_power-ui')"
     :meta-lecture="$t('project-summary-client_power-ui')"
     :meta-date="$t('project-summary-date_power-ui')"
+    :meta-title="$t('meta-title_power-ui')"
+    :meta-author="$t('meta-author_power-ui')"
+    :meta-description="$t('meta-description_power-ui')"
+    :meta-keywords="$t('meta-keywords_power-ui')"
     :project-tools="[
       { iconId: 'Axure', label: $t('label_product_axure') },
       { iconId: 'AdobePhotoshop', label: $t('label_product_adobe-photoshop') },
@@ -319,7 +323,7 @@
             <div class="pillar-container">
               <div class="pillar-row">
                 <div class="pillar-col-bg-4 font-white">
-                  <h3 id="3d-models" class="h3-pan">{{ $t("heading_power-ui_3d-models")   }}</h3>
+                  <h3 id="3d-models" class="h3-pan">{{ $t("heading_power-ui_3d-models") }}</h3>
                   <p class="spaced-y">{{ $t("text_power-ui_design_assets_3d-models").join("") }}</p>
                 </div>
               </div>
@@ -1412,6 +1416,16 @@ export default {
   },
   methods: {
     columnizeArray: columnizeArray,
+  },
+  head() {
+    return {
+      title: this.$t("meta-title_power-ui"),
+      meta: [
+        { hid: "author", name: "author", content: this.$t("meta-author_power-ui") },
+        { hid: "description", name: "description", content: this.$t("meta-description_power-ui") },
+        { hid: "keywords", name: "keywords", content: this.$t("meta-keywords_power-ui") },
+      ],
+    };
   },
 };
 </script>

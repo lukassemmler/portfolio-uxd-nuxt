@@ -7,6 +7,10 @@
     :meta-format="$t('project-summary-format_infotainment-system')"
     :meta-lecture="$t('project-summary-client_infotainment-system')"
     :meta-date="$t('project-summary-date_infotainment-system')"
+    :meta-title="$t('meta-title_infotainment-system')"
+    :meta-author="$t('meta-author_infotainment-system')"
+    :meta-description="$t('meta-description_infotainment-system')"
+    :meta-keywords="$t('meta-keywords_infotainment-system')"
     :project-tools="[
       { iconId: 'AdobeIndesign', label: $t('label_product_adobe-indesign') },
       { iconId: 'AdobeIllustrator', label: $t('label_product_adobe-illustrator') },

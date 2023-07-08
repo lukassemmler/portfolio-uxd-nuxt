@@ -8,6 +8,10 @@
     :meta-format="$t('project-summary-format_design-booklet')"
     :meta-lecture="$t('project-summary-client_design-booklet')"
     :meta-date="$t('project-summary-date_design-booklet')"
+    :meta-title="$t('meta-title_design-booklet')"
+    :meta-author="$t('meta-author_design-booklet')"
+    :meta-description="$t('meta-description_design-booklet')"
+    :meta-keywords="$t('meta-keywords_design-booklet')"
     :project-tools="[
       { iconId: 'AdobeIndesign', label: $t('label_product_adobe-indesign') },
       { iconId: 'AdobeIllustrator', label: $t('label_product_adobe-illustrator') },

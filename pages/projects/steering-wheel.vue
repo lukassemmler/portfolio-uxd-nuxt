@@ -8,6 +8,10 @@
     :meta-lecture="$t('project-summary-client_steering-wheel')"
     :meta-colleagues="'Alexander Beidoun, Maximilian Götz'"
     :meta-date="$t('project-summary-date_steering-wheel')"
+    :meta-title="$t('meta-title_steering-wheel')"
+    :meta-author="$t('meta-author_steering-wheel')"
+    :meta-description="$t('meta-description_steering-wheel')"
+    :meta-keywords="$t('meta-keywords_steering-wheel')"
     :project-tools="[{ iconId: 'Cinema4d', label: $t('label_product_cinema-4d') }]"
     nav-id="projects.steeringWheel"
   >
