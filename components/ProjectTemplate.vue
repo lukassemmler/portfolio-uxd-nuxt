@@ -18,11 +18,7 @@
               ></project-meta>
             </div>
             <div class="pillar-col-xl-4">
-              <project-tools
-                v-if="projectTools"
-                :tools="projectTools"
-                size="small"
-              ></project-tools>
+              <project-tools v-if="projectTools" :tools="projectTools" size="small"></project-tools>
             </div>
           </div>
         </div>
@@ -68,6 +64,10 @@ export default {
     metaLecture: String,
     metaDate: String,
     metaColleagues: String,
+    metaTitle: String, // <meta> tag element
+    metaAuthor: String, // <meta> tag element
+    metaKeywords: String, // <meta> tag element
+    metaDescription: String, // <meta> tag element
     projectTools: {
       type: Array,
       required: false,
@@ -116,19 +116,19 @@ export default {
         return null;
       }
       if (!this.projectPages) return null;
-      const match = this.projectPages.find(page => page.id === id);
+      const match = this.projectPages.find((page) => page.id === id);
       return match ?? null;
     },
-    getRelevantPagesFromNavSet: function(id) {
+    getRelevantPagesFromNavSet: function (id) {
       const { projectPages } = this;
       if (!projectPages) return null;
-      const currentPageIndex = projectPages.findIndex(page => page.id === id);
+      const currentPageIndex = projectPages.findIndex((page) => page.id === id);
       const currentPage = this.getNavSetEntry(id);
       const previousPage = projectPages[currentPageIndex - 1]; // Will be 'undefined' if out of array
       const nextPage = projectPages[currentPageIndex + 1]; // Will be 'undefined' if out of array
       return { currentPage, previousPage, nextPage };
     },
-    getNavSetEntryProp: function(page, prop) {
+    getNavSetEntryProp: function (page, prop) {
       const relevantPages = this.getRelevantPagesFromNavSet(this.$props.navId);
       if (!relevantPages) return null;
       const { currentPage, previousPage, nextPage } = relevantPages;
@@ -145,7 +145,17 @@ export default {
         default:
           throw new Error(`Unknown page type '${page}'. `);
       }
-    }
+    },
+  },
+  head() {
+    return {
+      title: this.$props.metaTitle + " \u2013 " + this.$t('label_owner'),
+      meta: [
+        { hid: "author", name: "author", content: this.$props.metaAuthor },
+        { hid: "description", name: "description", content: this.$props.metaDescription },
+        { hid: "keywords", name: "keywords", content: this.$props.metaKeywords },
+      ],
+    };
   },
 };
 </script>
