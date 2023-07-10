@@ -36,6 +36,9 @@ export default {
       return new Date().getFullYear();
     },
   },
+  mounted() {
+console.log(this.$route.path);
+  },
 };
 </script>
 

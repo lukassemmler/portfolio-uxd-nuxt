@@ -1,5 +1,8 @@
 <template>
-  <Nuxt />
+  <div>
+    {{$route.name}}
+    <Nuxt />
+  </div>
 </template>
 
 <script>
@@ -7,6 +10,11 @@ export default {
   head() {
     // $nuxtI18nHead might be null when running the static generation and could crash: https://i18n.nuxtjs.org/seo#setup
     return this.$nuxtI18nHead({ addSeoAttributes: true });
+  },
+  mounted() {
+console.log(this.$nuxt.$route.name);
+//console.log(this.$nuxt.$route.name);
+alert("bobo");
   },
 };
 </script>
