@@ -155,12 +155,26 @@
     {
       "id": "imprint",
       "path": "/imprint",
-      "labelId": "meta-title_imprint"
+      "labelId": "meta-title_imprint",
+      "titleId": "meta-title_imprint",
+      "thumbnailSrc": null,
+      "thumbnailAltId": null,
+      "metaAuthorId": "meta-author_imprint",
+      "metaKeywordsId": "meta-keywords_imprint",
+      "metaDescriptionId": "meta-description_imprint",
+      "metaColor": null
     },
     {
       "id": "privacyPolicy",
       "path": "/privacy-policy",
-      "labelId": "meta-title_privacy-policy"
+      "labelId": "meta-title_privacy-policy",
+      "titleId": "meta-title_privacy-policy",
+      "thumbnailSrc": null,
+      "thumbnailAltId": null,
+      "metaAuthorId": "meta-author_privacy-policy",
+      "metaKeywordsId": "meta-keywords_privacy-policy",
+      "metaDescriptionId": "meta-description_privacy-policy",
+      "metaColor": null
     }
   ],
   "trees": [
