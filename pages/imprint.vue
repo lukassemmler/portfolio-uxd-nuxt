@@ -71,16 +71,15 @@
         <markdown-block :markup="$t('text_imprint_source')"></markdown-block>
       </div>
     </section>
-    Test {{ $pagemeta('test-man')}}
   </div>
 </template>
 
 <script>
 import MarkdownBlock from "~/components/MarkdownBlock.vue";
-import { getMetaData } from "~/assets/lib/meta-data";
 export default {
   components: { MarkdownBlock },
   layout: "vanilla",
+  /*
   head() {
     return getMetaData({
       url: this.$config.baseUrl + this.$route.path,
@@ -95,6 +94,7 @@ export default {
       themeColor: "#4a4a4a",
     });
   },
+  */
 };
 </script>
 
