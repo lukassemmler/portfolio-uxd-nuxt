@@ -1,15 +1,27 @@
-# portfolio-uxd-nuxt
+# Portfolio UXD Nuxt
 
-UX design portfolio.
+* User Experience Design (UXD) portfolio of [Lukas Semmler](https://lukassemmler.de).
+* Written with the Nuxt 2 framework, which is based on Vue.js.
+* Third iteration of the portfolio (first was built with PHP, second one was built with Handlebars).
+
+
+## Docs
+
+* [Development notes](/docs/development-notes.md)
+* [Favicon handling](/docs/favicon.md)
+* [Locale tools](/docs/locale-tools.md)
+* [Nuxt v2 → v3 migration](/docs/migration.md)
+* [Project ideas](/docs/project-ideas.md)
+
+
+## Installation
 
 Run `npm run unpack` to unpack Power UI prototype zips into the `static folder`.
 
 Run `npm run generate` to create static files and upload them to a webhoster of your choice.
 
-Also check out the [development notes](docs/development-notes.md).
 
-
-## Build Setup
+## Development
 
 ```bash
 # unpack zip files
@@ -32,7 +44,9 @@ $ npm run generate
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
 
-## Generate in Powershell
+## Deploying
+
+1. 
 
 ```powershell
 # generate static project with base url in PowerShell
@@ -49,66 +63,93 @@ $env:BASE_URL="https://example.org"; npm run generate
   * I don't like this solution, because now you cannot set a `BASE_URL`. Instead it is dependent on the run mode.
 
 
-## Special Directories
+## Directory tree
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
 
+<table><thead><tr><th>
+Dir entry
+</th><th>
+Explanation
+</th></tr></thead><tbody><tr><td>
 
-### `assets`
+`/assets`
+</td><td>
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+* The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+* More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+</td></tr><tr><td>
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+`/bin`
+</td><td>
+
+* Custom scripts that can be run to help automate processes.
+</td></tr><tr><td>
+
+`/components`
+</td><td>
+
+* The components directory contains your Vue.js components. 
+* Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+* More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+
+</td></tr><tr><td>
+
+`/layouts`
+</td><td>
+
+* Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+* More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+
+</td></tr><tr><td>
+
+`/pages`
+</td><td>
+
+* This directory contains your application views and routes. 
+* Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+* More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+
+</td></tr><tr><td>
+
+`/plugins`
+</td><td>
+
+* The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. 
+* This is the place to add Vue plugins and to inject functions or constants. 
+* Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+* More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+
+</td></tr><tr><td>
+
+`/static`
+</td><td>
+
+* This directory contains your static files. Each file inside this directory is mapped to `/`.
+* Example: `/static/robots.txt` is mapped as `/robots.txt`.
+* More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+
+</td></tr><tr><td>
+
+`/store`
+</td><td>
+
+* This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+* More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+</td></tr><tr><td>
+
+</td><td>
+
+</td></tr><tr><td>
+
+</td><td>
+
+</td></tr></tbody></table>
 
 
-### `components`
+## Credits
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+Created by Lukas Semmler (c) 2021 – 2023.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
-
-
-## Future migration of Nuxt
-
-## vue-i18n
-
-* The package `@nuxtjs/i18n` v7.2.0 uses `vue-i18n` v8 under the hood.
-* There are some breaking changes from `vue-i18n` v8 to `vue-i18n` v9+.
-* One of them is that we can no longer use `$t('messageKey')[0]` to return items of a message array. 
-* See https://vue-i18n.intlify.dev/guide/migration/breaking.html#translation-api-return-value.
+For license, see [LICENSE](/license).
