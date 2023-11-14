@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Ebene_1"
+   data-name="Ebene 1"
+   viewBox="0 0 16 16"
+   version="1.1"
+   sodipodi:docname="CV Default.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:export-filename="CV Default.png"
+   inkscape:export-xdpi="3072"
+   inkscape:export-ydpi="3072"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview483"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="26.15625"
+     inkscape:cx="14.145759"
+     inkscape:cy="10.590203"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Ebene_1" />
+  <defs
+     id="defs474">
+    <style
+       id="style472">.cls-1{fill:#ff4a26;}</style>
+  </defs>
+  <rect
+     class="cls-1"
+     width="16"
+     height="16"
+     rx="3"
+     id="rect476"
+     style="fill:#19a7ff;fill-opacity:1" />
+  <path
+     d="M4.18,4.37V11H7.29L7.17,12h-4V4.37Z"
+     id="path478"
+     style="fill:#ffffff" />
+  <path
+     d="M12.81,12h-.87l-.07-.9a2.19,2.19,0,0,1-.76.78,2,2,0,0,1-1,.25,1.55,1.55,0,0,1-1.19-.46,1.87,1.87,0,0,1-.42-1.31V6.15h1v4a1.29,1.29,0,0,0,.21.84.82.82,0,0,0,.68.25,1.71,1.71,0,0,0,1.45-1V6.15h1Z"
+     id="path480"
+     style="fill:#ffffff" />
+</svg>
