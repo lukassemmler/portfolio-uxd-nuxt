@@ -26,7 +26,7 @@
             <post-item
               @tag-clicked="onTagClick"
               class="horizontal"
-              :link="project.path"
+              :link="localePath(project.path)"
               :linkTitle="$t(project.linkId)"
               :src="project.thumbnailSrc"
               :alt="$t(project.thumbnailAlt)"
