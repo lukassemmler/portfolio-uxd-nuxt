@@ -90,3 +90,13 @@
     }
   }
 }
+
+.flex-end {
+  align-items: flex-end;
+}
+
+@include breakpoint-upwards($breakpoint-semi-big) {
+  .flex-end-sbg {
+    align-items: flex-end;
+  }
+}

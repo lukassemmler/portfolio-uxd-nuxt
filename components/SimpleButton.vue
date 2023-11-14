@@ -55,6 +55,7 @@ export default {
           "square",
           "big-icon",
           "big",
+          "small",
           "outline-bright",
         ];
         const types = value.split(" ");
@@ -221,6 +222,12 @@ export default {
       width: 3em;
       padding: 0.75em;
     }
+  }
+
+  &.small {
+    font-size: 0.8em;
+    height: 2.25em;
+    padding: 0.5em 0.75em;
   }
 
   &.outline-bright {

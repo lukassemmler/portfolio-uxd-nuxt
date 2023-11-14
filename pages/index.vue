@@ -13,11 +13,11 @@
     </section>
 
     <section>
-      <div class="show-as-baseline">
+      <div class="show-as-baseline flex-end-sbg">
         <h2>{{ $t("heading_index_projects") }}</h2>
-          <simple-button type="secondary small" prefixed-icon="east" target="/about" :alt="$t('meta-title_about')">{{
-            $t("meta-title_about")
-          }}</simple-button>
+        <simple-button type="secondary small" prefixed-icon="east" target="/projects" :alt="$t('label_all-projects')">{{
+          $t("label_all-projects")
+        }}</simple-button>
       </div>
       <div class="pillar-container gapped-h gapped-v">
         <div class="pillar-row">
